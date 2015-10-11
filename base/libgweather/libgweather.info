@@ -1,0 +1,5 @@
+PKGNAM="libgweather"
+VERSION="3.16.1"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/libgweather/3.16/libgweather-3.16.1.tar.xz"
+MD5SUM="6960114adbfa2728815b4bd2b14b1a54"
