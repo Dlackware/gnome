@@ -1,0 +1,5 @@
+PKGNAM="gnome-common"
+VERSION="3.14.0"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/gnome-common/3.14/gnome-common-3.14.0.tar.xz"
+MD5SUM="ba58c61d0d81b7c3ff8452c620513a9d"

@@ -1,0 +1,5 @@
+PKGNAM="vala"
+VERSION="0.28.1"
+HOMEPAGE="http://live.gnome.org/Vala"
+DOWNLOAD="http://download.gnome.org/sources/vala/0.28/vala-0.28.1.tar.xz"
+MD5SUM="9e2e9e3dffccf8a158fa988688cd82c9"
