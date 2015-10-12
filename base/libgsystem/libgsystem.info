@@ -1,0 +1,5 @@
+PKGNAM="libgsystem"
+VERSION="2014.1"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/libgsystem/2014.1/libgsystem-2014.1.tar.xz"
+MD5SUM="5d4d4cd4ae0cf7f774d87ebccf5615f2"

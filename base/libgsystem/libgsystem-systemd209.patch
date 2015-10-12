@@ -1,0 +1,11 @@
+--- configure.ac	2014-02-06 10:14:32.000000000 +0100
++++ configure.ac.new	2014-10-27 00:25:25.619126246 +0100
+@@ -48,7 +48,7 @@
+ 	    AS_HELP_STRING([--without-systemd-journal], [Use systemd journal @<:@default=auto@:>@]),
+ 	    [], [with_systemd_journal=auto])
+ AS_IF([test x$with_systemd_journal != xno], [
+-  PKG_CHECK_MODULES([SYSTEMD_JOURNAL], [libsystemd-journal >= 200], have_systemd_journal=yes, have_systemd_journal=no)
++  PKG_CHECK_MODULES([SYSTEMD_JOURNAL], [libsystemd >= 209], have_systemd_journal=yes, have_systemd_journal=no)
+   ])
+ AM_CONDITIONAL(ENABLE_SYSTEMD_JOURNAL, test x$have_systemd_journal = xyes)
+ 
