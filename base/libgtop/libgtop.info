@@ -1,0 +1,5 @@
+PKGNAM="libgtop"
+VERSION="2.30.0"
+HOMEPAGE="http://library.gnome.org/devel/libgtop/"
+DOWNLOAD="http://ftp.gnome.org/pub/gnome/sources/libgtop/2.30/libgtop-2.30.0.tar.xz"
+MD5SUM="ee29a9ef60659ebf4b075ac281f71cb2"
