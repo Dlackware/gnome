@@ -1,0 +1,5 @@
+PKGNAM="libquvi-scripts"
+VERSION="0.9.20131130"
+HOMEPAGE="http://quvi.sourceforge.net"
+DOWNLOAD="http://downloads.sourceforge.net/quvi/libquvi-scripts-0.9.20131130.tar.xz"
+MD5SUM="46ddfd887260a515199c2e1ba8c46d8a"
