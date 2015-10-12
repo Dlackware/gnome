@@ -1,0 +1,5 @@
+PKGNAM="gupnp-av"
+VERSION="0.12.7"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/gupnp-av/0.12/gupnp-av-0.12.7.tar.xz"
+MD5SUM="7c8681df5610c582bfc178e215f849b6"
