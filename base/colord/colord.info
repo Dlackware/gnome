@@ -1,0 +1,5 @@
+PKGNAM="colord"
+VERSION="1.2.12"
+HOMEPAGE="http://www.freedesktop.org/"
+DOWNLOAD="http://www.freedesktop.org/software/colord/releases/colord-1.2.12.tar.xz"
+MD5SUM="80b106ba18a43c7eeaf2d9a2b8c5725b"
