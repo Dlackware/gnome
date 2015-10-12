@@ -1,0 +1,5 @@
+PKGNAM="nautilus"
+VERSION="3.16.2"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/nautilus/3.16/nautilus-3.16.2.tar.xz"
+MD5SUM="4a5c73bac8e26a883684b591b380f930"
