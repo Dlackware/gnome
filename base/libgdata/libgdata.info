@@ -1,0 +1,5 @@
+PKGNAM="libgdata"
+VERSION="0.16.1"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/libgdata/0.16/libgdata-0.16.1.tar.xz"
+MD5SUM="eb552a8a8482e4231a3d1baf7262e64d"
