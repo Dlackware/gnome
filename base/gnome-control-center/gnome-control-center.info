@@ -1,0 +1,5 @@
+PKGNAM="gnome-control-center"
+VERSION="3.16.3"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/gnome-control-center/3.16/gnome-control-center-3.16.3.tar.xz"
+MD5SUM="7be38ffb887fec83b3c5c245bd3744a1"
