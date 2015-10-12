@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+        |-----handy-ruler------------------------------------------------------|
+liboauth: libOAuth (Implementation of the OAuth Core RFC 5849)
+liboauth:
+liboauth: liboauth is a collection of POSIX-c functions implementing the OAuth
+liboauth: Core RFC 5849 standard. liboauth provides functions to escape and
+liboauth: encode parameters according to OAuth specification and offers
+liboauth: high-level functionality to sign requests or verify OAuth signatures
+liboauth: as well as perform HTTP requests.
+liboauth:
+liboauth:
+liboauth:
+liboauth:
