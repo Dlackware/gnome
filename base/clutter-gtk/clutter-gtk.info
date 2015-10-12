@@ -1,0 +1,12 @@
+PKGNAM="clutter-gtk"
+VERSION="1.6.2"
+HOMEPAGE="https://wiki.gnome.org/Projects/Clutter"
+DOWNLOAD="http://download.gnome.org/sources/clutter-gtk/1.6/clutter-gtk-1.6.2.tar.xz"
+MD5SUM="557d814c3e70cc3a2d1cf3816919b14f"
+
+
+##############################################
+# 
+#  clutter-gtk-1.6.4 is for clutter-1.24.x
+#
+##############################################
