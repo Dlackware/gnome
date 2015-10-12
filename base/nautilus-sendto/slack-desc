@@ -1,0 +1,18 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+               |-----handy-ruler------------------------------------------------------|
+nautilus-sendto: nautilus-sendto (file manager plugin)
+nautilus-sendto:
+nautilus-sendto: The nautilus-sendto package provides a Nautilus context menu
+nautilus-sendto: for sending files via other desktop applications. These
+nautilus-sendto: functions are implemented as plugins, so nautilus-sendto can
+nautilus-sendto: be extended with additional features. This package provides 
+nautilus-sendto: default plugins for Evolution and GAIM integration.
+nautilus-sendto:
+nautilus-sendto:
+nautilus-sendto:
