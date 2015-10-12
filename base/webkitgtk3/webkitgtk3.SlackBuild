@@ -1,0 +1,176 @@
+#!/bin/sh
+#
+# Slackware build script for WebKitGTK+3
+#
+# Copyright 2014  Bart van der Hall, Almere, NL
+# All rights reserved.
+#
+# Redistribution and use of this script, with or without modification, is
+# permitted provided that the following conditions are met:
+#
+# 1. Redistributions of this script must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR ''AS IS'' AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+# EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+# OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+# ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+PKGNAM=webkitgtk3
+SRCNAM=webkitgtk
+VERSION=${VERSION:-2.4.9}
+BUILD=${BUILD:-1}
+TAG=${TAG:-_dlack}
+
+NJOBS=${NJOBS:-7}
+
+CWD=$(pwd)
+TMP=${TMP:-/tmp/dlackware}
+PKG=$TMP/package-$PKGNAM
+OUTPUT=${OUTPUT:-/var/cache/dlackware}
+
+DOCDIR=/usr/doc/$PKGNAM-$VERSION
+
+wget -c http://webkitgtk.org/releases/$SRCNAM-$VERSION.tar.xz
+
+if [ -z "$ARCH" ]; then
+  case "$( uname -m )" in
+    i?86) ARCH=i486 ;;
+    arm*) ARCH=arm ;;
+       *) ARCH=$( uname -m ) ;;
+  esac
+fi
+
+if [ "$ARCH" = "i486" ]; then
+  SLKCFLAGS="-O2 -march=i486 -mtune=i686"
+  LIBDIRSUFFIX=""
+elif [ "$ARCH" = "i686" ]; then
+  SLKCFLAGS="-O2 -march=i686 -mtune=i686"
+  LIBDIRSUFFIX=""
+elif [ "$ARCH" = "x86_64" ]; then
+  SLKCFLAGS="-O2 -fPIC"
+  LIBDIRSUFFIX="64"
+else
+  SLKCFLAGS="-O2"
+  LIBDIRSUFFIX=""
+fi
+
+set -eu
+
+rm -rf $TMP
+mkdir -p $TMP $PKG $OUTPUT
+cd $TMP
+rm -rf $SRCNAM-$VERSION
+tar xvf $CWD/$SRCNAM-$VERSION.tar.xz
+cd $SRCNAM-$VERSION
+chown -R root:root .
+find -L . \
+ \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
+  -o -perm 511 \) -exec chmod 755 {} \; -o \
+ \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
+ -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
+
+#patch -p1 -E --backup --verbose -i $CWD/webkitgtk-2.4.8-gmutexlocker.patch || exit 1
+#patch -p1 -E --backup --verbose -i $CWD/webkitgtk-fix-build.patch || exit 1
+
+## We don't like pre-built binaries, especially ones for other OSes. =)
+rm -rf WebKitLibraries/{*.a,win/}
+
+autoreconf -ivf
+
+CFLAGS="${SLKCFLAGS}" \
+CXXFLAGS="${SLKCFLAGS}" \
+./configure \
+  --prefix=/usr \
+  --libdir=/usr/lib${LIBDIRSUFFIX} \
+  --libexecdir=/usr/libexec/${PKGNAM} \
+  --sysconfdir=/etc \
+  --localstatedir=/var/lib \
+  --infodir=/usr/info \
+  --mandir=/usr/man \
+  --docdir=/usr/doc/${PKGNAM}-${VERSION} \
+  --disable-silent-rules \
+  --disable-debug \
+  --enable-dependency-tracking \
+  --enable-webkit2 \
+  --enable-svg-fonts \
+  --enable-jit \
+  --enable-geolocation \
+  --enable-webgl \
+  --enable-introspection \
+  --disable-schemas-compile \
+  --disable-gtk-doc \
+  --with-gtk=3.0 \
+  --build=$ARCH-slackware-linux || exit 1
+
+mkdir -p DerivedSources/webkit
+mkdir -p DerivedSources/WebCore
+mkdir -p DerivedSources/ANGLE
+mkdir -p DerivedSources/WebKit2
+mkdir -p DerivedSources/webkitdom/
+mkdir -p DerivedSources/InjectedBundle
+mkdir -p DerivedSources/Platform
+
+sed -i 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+
+make DerivedSources/WebCore/JSNode.h
+make -j${NJOBS} -k || make || exit 1
+make install DESTDIR=${PKG} || exit 1
+
+mkdir -p ${PKG}/usr/libexec/${PKGNAM}
+
+install -m 755 Programs/GtkLauncher \
+  ${PKG}/usr/libexec/${PKGNAM}/ || exit 1
+install -m 755 Programs/MiniBrowser ${PKG}/usr/libexec/${PKGNAM}/ || exit 1
+
+
+if [ -x /usr/bin/chrpath ] ;then
+  chrpath --delete ${PKG}/usr/bin/jsc-3
+  chrpath --delete ${PKG}/usr/lib${LIBDIRSUFFIX}/libwebkitgtk-3.0.so.*
+  chrpath --delete ${PKG}/usr/lib${LIBDIRSUFFIX}/libwebkit2gtk-3.0.so.*
+  chrpath --delete ${PKG}/usr/libexec/${PKGNAM}/GtkLauncher
+  chrpath --delete ${PKG}/usr/libexec/${PKGNAM}/WebKitPluginProcess
+  chrpath --delete ${PKG}/usr/libexec/${PKGNAM}/WebKitWebProcess
+  chrpath --delete ${PKG}/usr/libexec/${PKGNAM}/MiniBrowser
+fi
+
+find ${PKG}/usr/lib${LIBDIRSUFFIX} -name '*.la' -delete
+
+find ${PKG} | xargs file | grep -e "executable" -e "shared object" | grep ELF \
+  | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null
+
+# Compress and link manpages, if any:
+if [ -d ${PKG}/usr/share/man ]; then
+  mv ${PKG}/usr/share/man ${PKG}/usr/man
+  rmdir -p ${PKG}/usr/share
+fi
+if [ -d ${PKG}/usr/man ]; then
+  ( cd ${PKG}/usr/man
+    for manpagedir in $(find . -type d -name "man*") ; do
+      ( cd ${manpagedir}
+        for eachpage in $( find . -type l -maxdepth 1) ; do
+          ln -s $( readlink ${eachpage} ).gz ${eachpage}.gz
+          rm -f ${eachpage}
+        done
+        gzip -9 *.?
+        # Prevent errors
+        rm -f *.gz.gz
+      )
+    done
+  )
+fi
+
+mkdir -p ${PKG}/install
+cat ${CWD}/slack-desc > ${PKG}/install/slack-desc
+
+
+cd $PKG
+/sbin/makepkg -l y -c n $OUTPUT/$PKGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-txz}

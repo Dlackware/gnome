@@ -1,0 +1,5 @@
+PKGNAM="webkitgtk3"
+VERSION="2.4.9"
+HOMEPAGE="http://webkitgtk.org/"
+DOWNLOAD="http://www.webkitgtk.org/releases/webkitgtk-2.4.9.tar.xz"
+MD5SUM="312fd29eb7f5970660c6a64b8bf8420e"
