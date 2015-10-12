@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+          |-----handy-ruler------------------------------------------------------|
+PackageKit: PackageKit (A DBUS packaging abstraction layer)
+PackageKit:
+PackageKit: PackageKit is a DBUS abstraction layer that allows the session user to
+PackageKit: manage packages in a secure way using a cross-distro,
+PackageKit: cross-architecture API.
+PackageKit:
+PackageKit: For more information, please see http://www.packagekit.org
+PackageKit:
+PackageKit:
+PackageKit:
+PackageKit:
