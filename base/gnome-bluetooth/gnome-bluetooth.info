@@ -1,0 +1,5 @@
+PKGNAM="gnome-bluetooth"
+VERSION="3.16.1"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/gnome-bluetooth/3.16/gnome-bluetooth-3.16.1.tar.xz"
+MD5SUM="de7eb807e3ae913bca53917b195d9d9f"

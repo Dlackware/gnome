@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+               |-----handy-ruler------------------------------------------------------|
+gnome-bluetooth: GNOME Bluetooth (an application to manage Bluetooth devices)
+gnome-bluetooth:
+gnome-bluetooth: gnome-bluetooth is a fork of bluez-gnome focused on integration with
+gnome-bluetooth: the GNOME desktop environment.
+gnome-bluetooth:
+gnome-bluetooth: bluez-gnome analyzer nor the proximity tool are a part of this
+gnome-bluetooth: package.
+gnome-bluetooth:
+gnome-bluetooth:
+gnome-bluetooth:
+gnome-bluetooth:
