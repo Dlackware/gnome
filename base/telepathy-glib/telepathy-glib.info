@@ -1,0 +1,5 @@
+PKGNAM="telepathy-glib"
+VERSION="0.24.1"
+HOMEPAGE="http://telepathy.freedesktop.org/"
+DOWNLOAD="http://telepathy.freedesktop.org/releases/telepathy-glib/telepathy-glib-0.24.1.tar.gz"
+MD5SUM="cbeb0a24acc26e7f095be281c324da69"
