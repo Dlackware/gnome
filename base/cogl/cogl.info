@@ -1,0 +1,5 @@
+PKGNAM="cogl"
+VERSION="1.20.0"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/cogl/1.20/cogl-1.20.0.tar.xz"
+MD5SUM="5b28897194d9ff76a574a9493d1f7ee0"
