@@ -1,0 +1,5 @@
+PKGNAM="farstream"
+VERSION="0.2.7"
+HOMEPAGE="http://farstream.freedesktop.org/"
+DOWNLOAD="http://freedesktop.org/software/farstream/releases/farstream/farstream-0.2.7.tar.gz"
+MD5SUM="bb56af4cbf2cd42f35353f20cf04bc17"

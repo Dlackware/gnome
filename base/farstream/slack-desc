@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+         |-----handy-ruler------------------------------------------------------|
+farstream: Farstream (Farstream communications framework)
+farstream:
+farstream: Farstream is an effort to create a framework to deal with all known
+farstream: audio/video conferencing protocols for use by applications such as
+farstream: instant messaging. These applications are able to use Farstream for
+farstream: all their Audio/Video conferencing needs without having to worry
+farstream: about any of the lower level streaming and NAT traversal issues.
+farstream: 
+farstream: Farstream forms an integral part of the Telepathy framework.
+farstream:
+farstream:
