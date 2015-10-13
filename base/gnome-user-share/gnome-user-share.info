@@ -1,0 +1,5 @@
+PKGNAM="gnome-user-share"
+VERSION="3.14.2"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/gnome-user-share/3.14/gnome-user-share-3.14.2.tar.xz"
+MD5SUM="ccf4bb24067b6e85f0d40c131cfaaf4f"
