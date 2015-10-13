@@ -1,0 +1,5 @@
+PKGNAM="gnome-backgrounds"
+VERSION="3.16.0"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/gnome-backgrounds/3.16/gnome-backgrounds-3.16.0.tar.xz"
+MD5SUM="eeb8a369f5f0c5daca0bb57c88acfbdf"
