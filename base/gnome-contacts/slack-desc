@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+              |-----handy-ruler------------------------------------------------------|
+gnome-contacts: GNOME Contacts (Contact Management Application)
+gnome-contacts:
+gnome-contacts: GNOME Contacts is a new feature that includes both a GNOME-wide
+gnome-contacts: contacts framework that can be used by different applications as well
+gnome-contacts: as a dedicated contacts application.
+gnome-contacts:
+gnome-contacts: GNOME Contacts will pull together your contacts from your different
+gnome-contacts: online accounts and integrate them into a single address book. This
+gnome-contacts: means that looking up someone in GNOME Contacts will give you access
+gnome-contacts: to a summary of all your online relationships with that person.
+gnome-contacts:
