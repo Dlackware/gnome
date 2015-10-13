@@ -1,0 +1,5 @@
+PKGNAM="gnome-session"
+VERSION="3.16.0"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/gnome-session/3.16/gnome-session-3.16.0.tar.xz"
+MD5SUM="092e9227a775c0c8852471a5fd2869aa"

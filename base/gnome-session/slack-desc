@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+             |-----handy-ruler------------------------------------------------------|
+gnome-session: gnome-session (Session management library)
+gnome-session:
+gnome-session: Gnome-session includes the session handling code for GNOME, allowing
+gnome-session: users to save their desktop and later restore it exactly as it was
+gnome-session: before they last signed off.
+gnome-session:
+gnome-session:
+gnome-session:
+gnome-session:
+gnome-session:
+gnome-session:
