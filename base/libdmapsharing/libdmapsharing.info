@@ -1,0 +1,5 @@
+PKGNAM="libdmapsharing"
+VERSION="2.9.31"
+HOMEPAGE="https://www.flyn.org/projects/libdmapsharing/"
+DOWNLOAD="https://www.flyn.org/projects/libdmapsharing/libdmapsharing-2.9.31.tar.gz"
+MD5SUM="bb9fb29645ba8eaea63c8b000a9ad3df"
