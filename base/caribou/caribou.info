@@ -1,0 +1,5 @@
+PKGNAM="caribou"
+VERSION="0.4.19"
+HOMEPAGE="https://wiki.gnome.org/action/show/Projects/Caribou"
+DOWNLOAD="http://download.gnome.org/sources/caribou/0.4/caribou-0.4.19.tar.xz"
+MD5SUM="b2472b5001b09c6bc2d9ac3a072c0187"
