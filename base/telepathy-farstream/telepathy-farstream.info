@@ -1,0 +1,5 @@
+PKGNAM="telepathy-farstream"
+VERSION="0.6.2"
+HOMEPAGE="http://telepathy.freedesktop.org/"
+DOWNLOAD="http://telepathy.freedesktop.org/releases/telepathy-farstream/telepathy-farstream-0.6.2.tar.gz"
+MD5SUM="20bdc61ea3f3a01df41068006b62641b"
