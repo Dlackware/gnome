@@ -1,0 +1,10 @@
+Please remove the following lines from /etc/dbus-1/system.conf to get GDM working properly:
+  <!-- Allow root to do anything over the messagebus.
+       Don't whine about "security" - anyone with root privileges
+       can edit this file anyway, so -ENOHOLE here. -->
+  <policy user="root">
+    <allow send_destination="*"/>
+    <allow send_interface="*"/>
+  </policy>
+
+or replace /etc/dbus-1/system.conf with the standard DBus configuration file (Slackware modifies this one).

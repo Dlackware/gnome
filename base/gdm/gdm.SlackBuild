@@ -1,0 +1,165 @@
+#!/bin/sh
+
+# Copyright 2013, 2014, 2015  Bart van der Hall, Almere, NL
+# All rights reserved.
+#
+#   Permission to use, copy, modify, and distribute this software for
+#   any purpose with or without fee is hereby granted, provided that
+#   the above copyright notice and this permission notice appear in all
+#   copies.
+#
+#   THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED
+#   WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+#   MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+#   IN NO EVENT SHALL THE AUTHORS AND COPYRIGHT HOLDERS AND THEIR
+#   CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+#   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF
+#   USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+#   ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+#   OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+#   OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+#   SUCH DAMAGE.
+# -----------------------------------------------------------------------------
+
+PKGNAM=gdm
+VERSION=${VERSION:-3.16.4}
+BUILD=${BUILD:-1}
+TAG=${TAG:-_dlack}
+
+if [ -z "$ARCH" ]; then
+  case "$( uname -m )" in
+    i?86) ARCH=i486 ;;
+    arm*) ARCH=arm ;;
+       *) ARCH=$( uname -m ) ;;
+  esac
+fi
+
+wget -c http://download.gnome.org/sources/$PKGNAM/3.16/$PKGNAM-$VERSION.tar.xz
+
+NUMJOBS=${NUMJOBS:--j7}
+
+CWD=$(pwd)
+TMP=${TMP:-/tmp/dlackware}
+PKG=$TMP/package-$PKGNAM
+OUTPUT=${OUTPUT:-/var/cache/dlackware}
+
+if [ "$ARCH" = "i486" ]; then
+  SLKCFLAGS="-O2 -march=i486 -mtune=i686"
+  LIBDIRSUFFIX=""
+elif [ "$ARCH" = "i686" ]; then
+  SLKCFLAGS="-O2 -march=i686 -mtune=i686"
+  LIBDIRSUFFIX=""
+elif [ "$ARCH" = "x86_64" ]; then
+  SLKCFLAGS="-O2 -fPIC"
+  LIBDIRSUFFIX="64"
+else
+  SLKCFLAGS="-O2"
+  LIBDIRSUFFIX=""
+fi
+
+set -e # Exit on most errors
+
+rm -rf $TMP
+mkdir -p $TMP $PKG $OUTPUT
+cd $TMP
+rm -rf $PKGNAM-$VERSION
+tar xvf $CWD/$PKGNAM-$VERSION.tar.?z*
+cd $PKGNAM-$VERSION
+chown -R root:root .
+find . \
+ \( -perm 777 -o -perm 775 -o -perm 711 -o -perm 555 -o -perm 511 \) \
+ -exec chmod 755 {} \; -o \
+ \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
+ -exec chmod 644 {} \;
+
+patch -p0 -E --verbose -i $CWD/gdm-systemd209.patch
+
+autoreconf -ivf
+
+CFLAGS="${SLKCFLAGS}"
+CXXFLAGS="${SLKCFLAGS}" \
+./configure \
+  --prefix=/usr \
+  --libdir=/usr/lib${LIBDIRSUFFIX} \
+  --sysconfdir=/etc \
+  --localstatedir=/var \
+  --infodir=/usr/info \
+  --mandir=/usr/man \
+  --docdir=/usr/doc/${PKGNAM}-${VERSION} \
+  --enable-authentication-scheme=pam \
+  --without-selinux \
+  --with-log-dir=/var/log/gdm \
+  --with-initial-vt=7 \
+  --with-default-pam-config=redhat \
+  --with-tcp-wrappers \
+  --with-systemd \
+  --with-systemdsystemunitdir=/lib/systemd/system \
+  --with-dbus-sys=/etc/dbus-1/system.d \
+  --with-dbus-services=/usr/share/dbus-1/services \
+  --libexecdir=/usr/libexec \
+  --enable-introspection=yes \
+  --with-user=gdm \
+  --with-group=gdm \
+  --build=$ARCH-slackware-linux
+
+make $NUMJOBS || make || exit 1
+make install DESTDIR=$PKG || exit 1
+
+# Install the xinitrc.gnome file that starts GNOME *correctly*
+mkdir -p $PKG/etc/X11/xinit
+install -m 755 $CWD/xinitrc.gnome $PKG/etc/X11/xinit/xinitrc.gnome
+ln -sf $PKG/etc/X11/xinit/xinitrc.gnome $PKG/etc/X11/xinit/xinitrc
+
+# Copy all those little .desktop files (for the things Slackware ships only)
+mkdir -p $PKG/usr/share/xsessions
+for file in blackbox fluxbox fvwm2 kde twm windowmaker ; do
+  install -m 755 $CWD/desktop/$file.desktop $PKG/usr/share/xsessions/$file.desktop
+done
+
+mkdir -p $PKG/etc/gdm
+install -m 644 $CWD/custom.conf $PKG/etc/gdm/custom.conf
+
+mkdir -p $PKG/etc/pam.d
+cp $CWD/pamd/gdmpin-pamd $PKG/etc/pam.d/gdm-pin
+cp $CWD/pamd/gdmauto-pamd $PKG/etc/pam.d/gdm-autologin
+cp $CWD/pamd/gdmcard-pamd $PKG/etc/pam.d/gdm-smartcard
+cp $CWD/pamd/gdmfinger-pamd $PKG/etc/pam.d/gdm-fingerprint
+cp $CWD/pamd/gdmpass-pamd $PKG/etc/pam.d/gdm-password
+
+install -m 644 $CWD/system.conf $PKG/etc/dbus-1/system.conf
+
+# Add a documentation directory:
+mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
+cp -a \
+  README NEWS TODO \
+  $PKG/usr/doc/$PKGNAM-$VERSION
+cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
+
+# Compress and link manpages, if any:
+if [ -d ${PKG}/usr/share/man ]; then
+  mv ${PKG}/usr/share/man ${PKG}/usr/man
+  rmdir ${PKG}/usr/share
+fi
+if [ -d ${PKG}/usr/man ]; then
+  ( cd ${PKG}/usr/man
+    for manpagedir in $(find . -type d -name "man*") ; do
+      ( cd ${manpagedir}
+        for eachpage in $( find . -type l -maxdepth 1) ; do
+          ln -s $( readlink ${eachpage} ).gz ${eachpage}.gz
+          rm -f ${eachpage}
+        done
+        gzip -9 *.?
+        # Prevent errors
+        rm -f *.gz.gz
+      )
+    done
+  )
+fi
+
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+cat $CWD/doinst.sh > $PKG/install/doinst.sh
+
+cd $PKG
+/sbin/makepkg -l y -c n $OUTPUT/$PKGNAM-$VERSION-$ARCH-$BUILD$TAG.txz

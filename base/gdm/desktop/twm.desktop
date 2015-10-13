@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Twm
+Comment=This session logs you into Twm
+Exec=twm
+# no icon yet, only the top three are currently used
+Icon=
+Type=Application

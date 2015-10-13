@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=KDE
+Comment=This session logs you into KDE
+Exec=startkde
+# no icon yet, only the top three are currently used
+Icon=
+Type=Application
