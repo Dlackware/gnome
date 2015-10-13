@@ -1,0 +1,5 @@
+PKGNAM="libgee"
+VERSION="0.18.0"
+HOMEPAGE="https://wiki.gnome.org/action/show/Projects/Libgee"
+DOWNLOAD="http://download.gnome.org/sources/libgee/0.18/libgee-0.18.0.tar.xz"
+MD5SUM="29ea6125e653d7e60b49a9a9544abc96"
