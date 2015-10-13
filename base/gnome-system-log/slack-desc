@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+                |-----handy-ruler------------------------------------------------------|
+gnome-system-log: GNOME System Log (Log File Viewer)
+gnome-system-log:
+gnome-system-log: GNOME System Log is a graphical, menu-driven viewer that you can use
+gnome-system-log: to view and monitor your system logs. Log File Viewer comes with a few
+gnome-system-log: functions that can help you manage your logs, including a log monitor
+gnome-system-log: and log statistics display.
+gnome-system-log:
+gnome-system-log: GNOME System Log is useful only to those who have access to the system
+gnome-system-log: log files, which generally requires root access.
+gnome-system-log:
+gnome-system-log:

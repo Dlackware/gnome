@@ -1,0 +1,5 @@
+PKGNAM="gnome-system-log"
+VERSION="3.9.90"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/gnome-system-log/3.9/gnome-system-log-3.9.90.tar.xz"
+MD5SUM="d5299de7badbfefce6d7ae26dd031cce"
