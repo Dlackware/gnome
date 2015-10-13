@@ -1,0 +1,5 @@
+PKGNAM="gtksourceview"
+VERSION="3.16.1"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/gtksourceview/3.16/gtksourceview-3.16.1.tar.xz"
+MD5SUM="e727db8202d23a54b54b69ebc66f5331"
