@@ -1,0 +1,5 @@
+PKGNAM="baobab"
+VERSION="3.16.1"
+HOMEPAGE="https://wiki.gnome.org/Apps/Baobab"
+DOWNLOAD="http://download.gnome.org/sources/baobab/3.16/baobab-3.16.1.tar.xz"
+MD5SUM="e70b4b79ff18d6984b5d04faa2f63b35"

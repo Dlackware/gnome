@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+      |-----handy-ruler------------------------------------------------------|
+baobab: Baobab (A graphical directory tree analyzer)
+baobab:
+baobab: Baobab is able to scan either specific directories or the whole
+baobab: filesystem, in order to give the user a graphical tree representation
+baobab: including each directory size or percentage in the branch.
+baobab: It also auto-detects any mounted/unmounted device.
+baobab:
+baobab: A detailed documentation of the program could be read at:
+baobab: http://live.gnome.org/Baobab.
+baobab:
+baobab:
