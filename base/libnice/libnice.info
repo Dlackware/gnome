@@ -1,0 +1,5 @@
+PKGNAM="libnice"
+VERSION="0.1.13"
+HOMEPAGE="http://nice.freedesktop.org/"
+DOWNLOAD="http://nice.freedesktop.org/releases/libnice-0.1.13.tar.gz"
+MD5SUM="3226faeaf48a9150ada00da2e2865959"
