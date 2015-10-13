@@ -1,0 +1,5 @@
+PKGNAM="gnome-screenshot"
+VERSION="3.16.2"
+HOMEPAGE="https://git.gnome.org/browse/gnome-screenshot/"
+DOWNLOAD="http://download.gnome.org/sources/gnome-screenshot/3.16/gnome-screenshot-3.16.2.tar.xz"
+MD5SUM="8f67ae3b0746dab15e417f64a4d7fd13"
