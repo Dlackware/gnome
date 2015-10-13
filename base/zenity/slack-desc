@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+      |-----handy-ruler------------------------------------------------------|
+zenity: Zenity (visual scripting language)
+zenity:
+zenity: Zenity is a basic rewrite of gdialog, without the pain involved
+zenity: of trying to figure out commandline parsing.  Zenity is
+zenity: zen-like; simple and easy to use.
+zenity: 
+zenity: Zenity Dialogs: Calendar, Forms, Text Entry, Error, Information,
+zenity: File Selection, List, Progress, Question, Text Information, Scale,
+zenity: Notification Icon, Password Entry, Color Selection and Warning.
+zenity:
+zenity:
