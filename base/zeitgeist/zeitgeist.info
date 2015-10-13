@@ -1,0 +1,5 @@
+PKGNAM="zeitgeist"
+VERSION="0.9.14"
+HOMEPAGE="http://lauchpad.net/zeitgeist"
+DOWNLOAD="https://launchpad.net/zeitgeist/0.9/0.9.14/+download/zeitgeist-0.9.14.tar.xz"
+MD5SUM="92371b864515389ffe7d70569f0bc9ed"

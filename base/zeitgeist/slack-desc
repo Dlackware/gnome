@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+         |-----handy-ruler------------------------------------------------------|
+zeitgeist: zeitgeist (client log service)
+zeitgeist:
+zeitgeist: The zeitgeist package contains a client library used to access
+zeitgeist: and manage the Zeitgeist event log from languages
+zeitgeist: such as C and Vala. Zeitgeist is a service which logs the user's
+zeitgeist: activities and events (files opened, websites visited,
+zeitgeist: conversations hold with other people, etc.) and makes
+zeitgeist: the relevant information available to other applications.   
+zeitgeist:
+zeitgeist:
+zeitgeist:
