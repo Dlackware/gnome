@@ -2,13 +2,16 @@
 -----
 
 [VERSIONS]
+
 Gnome-3.16 -- Slackware-14.2 <-- build against current okt. 2015) -- beta status
 
 [NOTES]
+
 The SlackBuilds found here can be used seperatly,
 but are ment to work as a set on top of https://github.com/Dlackware/systemd
 
 [INSTALL]
+
 Requirements:
 - Full Install of Slackware
 - All the packages from https://github.com/Dlackware/systemd that are required
