@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+       |-----handy-ruler------------------------------------------------------|
+mozjs24: mozjs24 (SpiderMonkey - Mozilla's JavaScript Engine)
+mozjs24:
+mozjs24: SpiderMonkey is Mozilla's JavaScript engine written in C/C++. 
+mozjs24: It is used in various Mozilla products (including Firefox) and is 
+mozjs24: available under MPL/GPL/LGPL tri-license.
+mozjs24:
+mozjs24: Homepage: http://www.mozilla.org/js/spidermonkey
+mozjs24:
+mozjs24:
+mozjs24:
+mozjs24:
