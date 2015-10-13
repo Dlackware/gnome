@@ -1,0 +1,5 @@
+PKGNAM="gnome-system-monitor"
+VERSION="3.16.0"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/gnome-system-monitor/3.16/gnome-system-monitor-3.16.0.tar.xz"
+MD5SUM="8c9dcf6bf26d7c8d531e646f0b714bdc"
