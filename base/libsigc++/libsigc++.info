@@ -1,0 +1,5 @@
+PKGNAM="libsigc++"
+VERSION="2.4.1"
+HOMEPAGE="http://libsigc.sourceforge.net/"
+DOWNLOAD="http://download.gnome.org/sources/libsigc++/2.4/libsigc++-2.4.1.tar.xz"
+MD5SUM="55945ba6e1652f89999e910f6b52047c"
