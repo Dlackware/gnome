@@ -1,0 +1,5 @@
+PKGNAM="glibmm2"
+VERSION="2.44.0"
+HOMEPAGE="http://www.gtkmm.org/"
+DOWNLOAD="http://download.gnome.org/sources/glibmm/2.44/glibmm-2.44.0.tar.xz"
+MD5SUM="32ee4150b436d097fe2506d0b0b13a75"
