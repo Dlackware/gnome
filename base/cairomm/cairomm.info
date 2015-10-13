@@ -1,0 +1,5 @@
+PKGNAM="cairomm"
+VERSION="1.11.2"
+HOMEPAGE="http://cairographics.org/"
+DOWNLOAD="http://cairographics.org/releases/cairomm-1.11.2.tar.gz"
+MD5SUM="732a3ff5b57401eb5dfeef795a2a0c52"
