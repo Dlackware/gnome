@@ -1,0 +1,5 @@
+PKGNAM="seed"
+VERSION="3.8.1"
+HOMEPAGE="https://wiki.gnome.org/action/show/Projects/Seed?action=show&redirect=Seed"
+DOWNLOAD="http://download.gnome.org/sources/seed/3.8/seed-3.8.1.tar.xz"
+MD5SUM="f5afeb04343e0cb56d2396f0d0458988"
