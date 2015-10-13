@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+                |-----handy-ruler------------------------------------------------------|
+telepathy-logger: telepathy-logger (session daemon for the Telepathy framework)
+telepathy-logger:
+telepathy-logger: tp-logger is a headless Observer client that logs information received 
+telepathy-logger: by the Telepathy framework. It features pluggable backends to log
+telepathy-logger: different sorts of messages, in different formats.
+telepathy-logger:
+telepathy-logger: tp-logger features a Telepathy-style D-Bus API to expose logs and
+telepathy-logger: interesting information related to logging (most frequent contacts,
+telepathy-logger: etc.). It also provides a GLib-compatible client API for making bulk
+telepathy-logger: log requests (e.g. for display logs in applications without having to
+telepathy-logger: provide lots of information over D-Bus).
