@@ -1,0 +1,5 @@
+PKGNAM="gnome-menus"
+VERSION="3.13.3"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/gnome-menus/3.13/gnome-menus-3.13.3.tar.xz"
+MD5SUM="eef5ef2308d7afc56119d7248f2aa6db"
