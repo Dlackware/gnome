@@ -1,0 +1,5 @@
+PKGNAM="atkmm"
+VERSION="2.22.7"
+HOMEPAGE="http://www.gtkmm.org/"
+DOWNLOAD="http://download.gnome.org/sources/atkmm/2.22/atkmm-2.22.7.tar.xz"
+MD5SUM="fec7db3fc47ba2e0c95d130ec865a236"
