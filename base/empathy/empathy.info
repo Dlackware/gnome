@@ -1,0 +1,5 @@
+PKGNAM="empathy"
+VERSION="3.12.10"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/empathy/3.12/empathy-3.12.10.tar.xz"
+MD5SUM="973441ea1db00d9c3b0e9bc90292601d"
