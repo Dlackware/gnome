@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+   |-----handy-ruler------------------------------------------------------|
+libpeas: Libpeas (Gobject plugin)
+libpeas:
+libpeas: libpeas is a GObject based plugins engine,
+libpeas: and is targeted at giving every application
+libpeas: the chance to assume its own extensibility.
+libpeas:
+libpeas:
+libpeas:
+libpeas:
+libpeas:
+libpeas:
