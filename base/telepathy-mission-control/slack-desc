@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+                         |-----handy-ruler------------------------------------------------------|
+telepathy-mission-control: telepathy-mission-control 
+telepathy-mission-control:
+telepathy-mission-control: Mission Control is a Telepathy component providing a way for "end-
+telepathy-mission-control: user" applications to abstract some of the details of connection
+telepathy-mission-control: managers, to provide a simple way to manipulate a bunch of connection
+telepathy-mission-control: managers at once, and to remove the need to have in each program the
+telepathy-mission-control: account definitions and credentials.
+telepathy-mission-control:
+telepathy-mission-control:
+telepathy-mission-control:
+telepathy-mission-control:
