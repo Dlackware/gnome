@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+      |-----handy-ruler------------------------------------------------------|
+mutter: mutter (Metacity branch)
+mutter:
+mutter: mutter is a minimal X window manager aimed at nontechnical users and
+mutter: is designed to integrate well with the GNOME desktop. mutter lacks
+mutter: some features that may be expected by traditional UNIX or other
+mutter: technical users; these users may want to investigate other available
+mutter: window managers for use with GNOME or standalone.
+mutter:
+mutter:
+mutter:
+mutter:
