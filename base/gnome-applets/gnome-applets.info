@@ -1,0 +1,5 @@
+PKGNAM="gnome-applets"
+VERSION="3.16.1"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/gnome-applets/3.16/gnome-applets-3.16.1.tar.xz"
+MD5SUM="c4736735244bec56d838174f6d398eb6"
