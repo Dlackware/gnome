@@ -1,0 +1,5 @@
+PKGNAM="mousetweaks"
+VERSION="3.12.0"
+HOMEPAGE="https://wiki.gnome.org/action/show/Projects/Mousetweaks"
+DOWNLOAD="http://download.gnome.org/sources/mousetweaks/3.12/mousetweaks-3.12.0.tar.xz"
+MD5SUM="08799c2059b40bf3275e7f69a62eb144"

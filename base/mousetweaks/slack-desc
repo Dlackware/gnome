@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+           |-----handy-ruler------------------------------------------------------|
+mousetweaks: mousetweaks (Mouse accessibility enhancements for the GNOME desktop)
+mousetweaks:
+mousetweaks: The Mousetweaks package provides mouse accessibility enhancements for
+mousetweaks: the GNOME desktop.
+mousetweaks:
+mousetweaks: It offers a way to perform the various clicks without using any
+mousetweaks: hardware button; allows users to perform a right click by doing a
+mousetweaks: click&hold of the left mouse button; It provides an applet that the
+mousetweaks: user can install on a panel.
+mousetweaks:
+mousetweaks:
