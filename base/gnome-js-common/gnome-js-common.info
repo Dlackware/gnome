@@ -1,0 +1,5 @@
+PKGNAM="gnome-js-common"
+VERSION="0.1.2"
+HOMEPAGE="https://github.com/GNOME/gnome-js-common"
+DOWNLOAD="http://download.gnome.org/sources/gnome-js-common/0.1/gnome-js-common-0.1.2.tar.gz"
+MD5SUM="70078f9ef6fb4d273d9fdf14cebb94de"
