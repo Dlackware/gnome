@@ -1,0 +1,5 @@
+PKGNAM="libssh2"
+VERSION="1.6.0"
+HOMEPAGE="http://www.libssh2.org"
+DOWNLOAD="http://www.libssh2.org/download/libssh2-1.6.0.tar.gz"
+MD5SUM="00aabd6e714a5f42a4fb82ace20db1dd"
