@@ -1,0 +1,5 @@
+PKGNAM="gtk-engines"
+VERSION="2.20.2"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/gtk-engines/2.20/gtk-engines-2.20.2.tar.bz2"
+MD5SUM="5deb287bc6075dc21812130604c7dc4f"
