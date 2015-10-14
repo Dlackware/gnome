@@ -1,0 +1,5 @@
+PKGNAM="bijiben"
+VERSION="3.16.2"
+HOMEPAGE="https://wiki.gnome.org/action/show/Apps/Bejijben"
+DOWNLOAD="http://download.gnome.org/sources/bijiben/3.16/bijiben-3.16.2.tar.xz"
+MD5SUM="1007b9feddde8a2bcd04c08079b486bd"
