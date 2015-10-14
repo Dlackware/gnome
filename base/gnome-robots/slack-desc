@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+            |-----handy-ruler------------------------------------------------------|
+gnome-robots: GNOME Robots (GNOME desktop game)
+gnome-robots:
+gnome-robots: GNOME Robots is a game where you try and avoid a band of marauding
+gnome-robots: robots which are, for no adequately explained reason, trying to kill
+gnome-robots: you. It is based on the text-based robots game which can be found on a
+gnome-robots: number of UNIX systems.
+gnome-robots:
+gnome-robots: This new version includes two types of robots, movable junkheaps,
+gnome-robots: multiple game configurations, user definable keyboard layouts, and
+gnome-robots: sound, as well as all of the features which were present in the
+gnome-robots: original GNOME Robots game. 
