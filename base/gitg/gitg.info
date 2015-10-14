@@ -1,0 +1,5 @@
+PKGNAM="gitg"
+VERSION="3.16.1"
+HOMEPAGE=""
+DOWNLOAD="http://download.gnome.org/sources/gitg/3.16/gitg-3.16.1.tar.xz"
+MD5SUM="ea69e7d33d8d05fa86a9ba43769aa2cd"
