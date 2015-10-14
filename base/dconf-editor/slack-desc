@@ -1,0 +1,17 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+            |-----handy-ruler------------------------------------------------------|
+dconf-editor: dconf-editor (graphical frontend-editor to dconf)
+dconf-editor:
+dconf-editor: dconf is a simple key-based configuration system. Keys exist in an
+dconf-editor: unstructured database (but it is intended that keys that logically
+dconf-editor: belong together are grouped together).
+dconf-editor:
+dconf-editor: Change notification, stacking of multiple configuration sources, and
+dconf-editor: mandatory keys are supported.
+dconf-editor:

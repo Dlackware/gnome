@@ -1,0 +1,5 @@
+PKGNAM="dconf-editor"
+VERSION="3.16.1"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/dconf-editor/3.16/dconf-editor-3.16.1.tar.xz"
+MD5SUM="cefbc473bd6773cd3b92f2e5cf793ee8"
