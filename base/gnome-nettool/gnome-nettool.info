@@ -1,0 +1,5 @@
+PKGNAM="gnome-nettool"
+VERSION="3.8.1"
+HOMEPAGE=""
+DOWNLOAD="http://download.gnome.org/sources/gnome-nettool/3.8/gnome-nettool-3.8.1.tar.xz"
+MD5SUM="d4fc944b7ba8fd5f49f04a73e0d37e80"

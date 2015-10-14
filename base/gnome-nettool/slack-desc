@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+             |-----handy-ruler------------------------------------------------------|
+gnome-nettool: gnome-nettool (Graphical frontends for network diagnostic tools)
+gnome-nettool:
+gnome-nettool: GNOME Nettool is a set of front-ends to various networking 
+gnome-nettool: command-line tools, like ping, netstat, ifconfig, whois, 
+gnome-nettool: traceroute, finger.
+gnome-nettool:
+gnome-nettool:
+gnome-nettool:
+gnome-nettool:
+gnome-nettool:
+gnome-nettool:
