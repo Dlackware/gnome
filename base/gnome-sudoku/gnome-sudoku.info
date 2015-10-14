@@ -1,0 +1,5 @@
+PKGNAM="gnome-sudoku"
+VERSION="3.16.0"
+HOMEPAGE=""
+DOWNLOAD="http://download.gnome.org/sources/gnome-sudoku/3.16/gnome-sudoku-3.16.0.tar.xz"
+MD5SUM="4e6e4715347aff5e7b9bfcf6589b3a8e"

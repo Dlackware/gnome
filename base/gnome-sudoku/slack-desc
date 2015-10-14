@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+            |-----handy-ruler------------------------------------------------------|
+gnome-sudoku: Gnome Sudoku (Sudoku game for GNOME desktop)
+gnome-sudoku:
+gnome-sudoku: 
+gnome-sudoku: Gnome Sudoku is based on the popular number-based logic puzzle in
+gnome-sudoku: which one must fill a 9 X 9 square with the correct digits. The unique
+gnome-sudoku: puzzles can be played on screen or printed to take along. All games
+gnome-sudoku: persist across sessions and you can resume any old game at any time,
+gnome-sudoku: as well as replay any game you've already won.
+gnome-sudoku:
+gnome-sudoku:
+gnome-sudoku:
