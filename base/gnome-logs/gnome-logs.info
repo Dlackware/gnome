@@ -1,0 +1,5 @@
+PKGNAM="gnome-logs"
+VERSION="3.16.2"
+HOMEPAGE=""
+DOWNLOAD="http://download.gnome.org/sources/gnome-logs/3.16/gnome-logs-3.16.2.tar.xz"
+MD5SUM="8da362feb647c715ccffa92236117867"
