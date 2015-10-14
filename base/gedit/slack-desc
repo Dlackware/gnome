@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+     |-----handy-ruler------------------------------------------------------|
+gedit: gEdit (Text editor)
+gedit:
+gedit: gEdit is a small but powerful text editor designed for GNOME.
+gedit: It includes such features as split-screen mode, a plugin API, which
+gedit: allows gEdit to be extended to support many features while remaining
+gedit: small at its core, multiple document editing through the use of a
+gedit: 'tabbed' notebook, and many more functions.
+gedit:
+gedit:
+gedit:
+gedit:
