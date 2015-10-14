@@ -146,18 +146,11 @@ file-roller
 five-or-more
 four-in-a-row
 gedit
+libssh2
 libgit2
 libgit2-glib
 gtkspell3
-####
-#
-## Not sure Yet what to write here
-## a little problem with gitg, will see how to solve it
-##
-#
-#gitg
-#
-####
+gitg
 gnome-chess
 gsound
 gnome-clocks
