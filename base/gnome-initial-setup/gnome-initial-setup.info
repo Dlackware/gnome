@@ -1,0 +1,5 @@
+PKGNAM="gnome-initial-setup"
+VERSION="3.16.3"
+HOMEPAGE=""
+DOWNLOAD="http://download.gnome.org/sources/gnome-initial-setup/3.16/gnome-initial-setup-3.16.3.tar.xz"
+MD5SUM="414e251645242b0ae20fa8c88f15b2b6"
