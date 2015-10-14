@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+       |-----handy-ruler------------------------------------------------------|
+vinagre: vinagre (VNC client for the GNOME Desktop)
+vinagre:
+vinagre: Vinagre is a VNC (a "remote desktop" protocol) client for the GNOME
+vinagre: Desktop. With it, you can connect to several machines at the same time,
+vinagre: keep track of your most used connections, keep track of your recently
+vinagre: used connections, browse your network for VNC servers, and also don't
+vinagre: need to supply the password on every connection.
+vinagre:
+vinagre:
+vinagre:
+vinagre:
