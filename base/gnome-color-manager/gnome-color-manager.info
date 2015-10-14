@@ -1,0 +1,5 @@
+PKGNAM="gnome-color-manager"
+VERSION="3.16.0"
+HOMEPAGE=""
+DOWNLOAD="http://download.gnome.org/sources/gnome-color-manager/3.16/gnome-color-manager-3.16.0.tar.xz"
+MD5SUM="f4b80672303ec2acae325f44c373c448"
