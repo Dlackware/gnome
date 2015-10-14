@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+               |-----handy-ruler------------------------------------------------------|
+gtksourceviewmm: gtksourceviewmm (C++ wrapper for gtksourceview)
+gtksourceviewmm:
+gtksourceviewmm: gtksourceviewmm is a C++ wrapper for the gtksourceview widget library.
+gtksourceviewmm: It offers all the power of gtksourceview with an interface familiar to
+gtksourceviewmm: C++ developers, including users of the gtkmm library.
+gtksourceviewmm:
+gtksourceviewmm: gtksourceviewmm wraps all relevant parts of the gtksourceview library
+gtksourceviewmm: and has proven to be useable so far.
+gtksourceviewmm:
+gtksourceviewmm: See: http://git.gnome.org/browse/gtksourceviewmm/
+gtksourceviewmm:
