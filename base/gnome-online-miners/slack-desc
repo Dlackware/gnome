@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+                   |-----handy-ruler------------------------------------------------------|
+gnome-online-miners: gnome-online-miners (framework used to access GNOME online accounts)
+gnome-online-miners:
+gnome-online-miners: GNOME Online Miners provides a set of crawlers that go through
+gnome-online-miners: your online content and index them locally in Tracker.
+gnome-online-miners: It has miners for Facebook, Flickr, Google, ownCloud and SkyDrive.
+gnome-online-miners:
+gnome-online-miners:
+gnome-online-miners:
+gnome-online-miners:
+gnome-online-miners:
+gnome-online-miners:
