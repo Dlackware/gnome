@@ -1,0 +1,5 @@
+PKGNAM="gtkhtml"
+VERSION="4.10.0"
+HOMEPAGE="https://wiki.gnome.org/action/show/Apps/gtkhtml"
+DOWNLOAD="http://download.gnome.org/sources/gtkhtml/4.10/gtkhtml-4.10.0.tar.xz"
+MD5SUM="a8538daed73de3fb5c7747d05139ef79"
