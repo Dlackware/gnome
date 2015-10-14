@@ -1,0 +1,5 @@
+PKGNAM="gupnp-dlna"
+VERSION="0.10.2"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/gupnp-dlna/0.10/gupnp-dlna-0.10.2.tar.xz"
+MD5SUM="091f1ef019e0777f4409434018d3b3f3"
