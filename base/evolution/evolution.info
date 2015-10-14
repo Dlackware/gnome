@@ -1,0 +1,5 @@
+PKGNAM="evolution"
+VERSION="3.16.5"
+HOMEPAGE="https://wiki.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/evolution/3.16/evolution-3.16.5.tar.xz"
+MD5SUM="f9182138883391727e78a6ac7f7b80d7"
