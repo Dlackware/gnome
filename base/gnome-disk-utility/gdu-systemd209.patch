@@ -1,0 +1,19 @@
+--- configure.ac.orig	2014-11-02 11:34:59.084360033 +0100
++++ configure.ac	2014-11-02 11:38:24.299370628 +0100
+@@ -139,13 +139,13 @@
+ msg_libsystemd_login=no
+ LIBSYSTEMD_LOGIN_LIBS=
+ LIBSYSTEMD_LOGIN_CFLAGS=
+-LIBSYSTEMD_LOGIN_REQUIRED=44
++LIBSYSTEMD_LOGIN_REQUIRED=209
+ 
+ if test "x$enable_libsystemd_login" != "xno"; then
+-  PKG_CHECK_EXISTS([libsystemd-login >= $LIBSYSTEMD_LOGIN_REQUIRED], msg_libsystemd_login=yes)
++  PKG_CHECK_EXISTS([libsystemd >= $LIBSYSTEMD_LOGIN_REQUIRED], msg_libsystemd_login=yes)
+ 
+   if test "x$msg_libsystemd_login" = "xyes"; then
+-    PKG_CHECK_MODULES([LIBSYSTEMD_LOGIN],[libsystemd-login >= $LIBSYSTEMD_LOGIN_REQUIRED])
++    PKG_CHECK_MODULES([LIBSYSTEMD_LOGIN],[libsystemd >= $LIBSYSTEMD_LOGIN_REQUIRED])
+     AC_DEFINE(HAVE_LIBSYSTEMD_LOGIN, 1, [Define to 1 if liblibsystemd_login is available])
+   fi
+ fi
