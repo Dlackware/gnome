@@ -164,16 +164,7 @@ gnome-mahjongg
 gnome-mines
 gnome-nettool
 gnome-nibbles
-####
-#
-## I guess we either need parallel installation of gegl.
-## or 3.14.x version of gnome-photos
-##
-## Needs gegl-0.3
-#
-#gnome-photos
-#
-####
+gnome-photos
 gnome-robots
 qqwing
 gnome-sudoku
