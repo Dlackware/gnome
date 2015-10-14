@@ -1,0 +1,11 @@
+diff -Nur adwaita-icon-theme-3.14.0.orig/index.theme.in.in adwaita-icon-theme-3.14.0/index.theme.in.in
+--- adwaita-icon-theme-3.14.0.orig/index.theme.in.in	2014-04-26 09:09:02.000000000 -0500
++++ adwaita-icon-theme-3.14.0/index.theme.in.in	2014-09-23 00:18:46.390551084 -0500
+@@ -2,6 +2,7 @@
+ _Name=Adwaita
+ _Comment=The Only One
+ Example=folder
++Inherits=hicolor
+ 
+ # KDE Specific Stuff
+ DisplayDepth=32

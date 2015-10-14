@@ -22,7 +22,7 @@
 
 PKGNAM=adwaita-icon-theme
 VERSION=${VERSION:-3.16.2.2}
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:
@@ -65,6 +65,16 @@ cd $TMP
 rm -rf $PKGNAM-$VERSION
 tar xvf $CWD/$PKGNAM-$VERSION.tar.?z*
 cd $PKGNAM-$VERSION
+
+# Add Inherits=hicolor to the index.theme
+cat $CWD/inherit-hicolor-theme.diff | patch -p1 --verbose || exit 1
+
+# Fix locale directory location:
+cat $CWD/adwaita.locale.diff | patch -p1 --verbose || exit 1
+
+# Above patch to configure.ac requires autoreconf:
+autoreconf -vif
+
 chown -R root:root .
 find -L . \
  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
@@ -76,7 +86,7 @@ find -L . \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
-  --localstatedir=/var/lib \
+  --localstatedir=/var \
   --disable-silent-rules \
   --enable-introspection \
   --mandir=/usr/man \
@@ -98,6 +108,12 @@ if [ -r ChangeLog ]; then
   cat ChangeLog | head -n 1000 > $DOCSDIR/ChangeLog
   touch -r ChangeLog $DOCSDIR/ChangeLog
 fi
+
+# It's a bad idea to ship these in the packages.  If they aren't kept
+# updated, there will be missing icons.  Let the user create them if
+# they care to.
+find $PKG -name icon-theme.cache -exec rm "{}" \;
+
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
