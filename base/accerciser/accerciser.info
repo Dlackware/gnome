@@ -1,0 +1,5 @@
+PKGNAM="accerciser"
+VERSION="3.14.0"
+HOMEPAGE="https://wiki.gnome.org/action/show/Apps/Accerciser"
+DOWNLOAD="http://download.gnome.org/sources/accerciser/3.14/accerciser-3.14.0.tar.xz"
+MD5SUM="9d391df9a02f3a011a0ba6cf8838800d"

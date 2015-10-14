@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+          |-----handy-ruler------------------------------------------------------|
+accerciser: Accerciser (GNOME accessibility testing tool)
+accerciser:
+accerciser: Accerciser is an interactive Python accessibility explorer for the
+accerciser: GNOME desktop. It uses AT-SPI to inspect and control widgets,
+accerciser: allowing you to check if an application is providing correct
+accerciser: information to assistive technologies and automated test frameworks.
+accerciser: Accerciser has a simple plugin framework which you can use to
+accerciser: create custom views of accessibility information.
+accerciser: 
+accerciser: In essence, Accerciser is a next generation at-poke tool.
+accerciser:
