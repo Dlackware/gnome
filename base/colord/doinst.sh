@@ -83,6 +83,8 @@ rm -f var/lib/colord/storage.db.new
 # Fix permissions
 ${CHROOT} /bin/chown colord.colord /var/lib/colord
 ${CHROOT} /bin/chown colord.colord /var/lib/colord/icc
+${CHROOT} /bin/chown colord.colord /var/lib/colord/mapping.db
+${CHROOT} /bin/chown colord.colord /var/lib/colord/storage.db
 
 if [ -x bin/systemctl ] ; then
   ${CHROOT} /bin/systemctl --system daemon-reload >/dev/null 2>&1
