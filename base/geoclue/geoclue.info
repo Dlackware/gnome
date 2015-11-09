@@ -1,5 +1,5 @@
 PKGNAM="geoclue"
-VERSION="2.2.0"
+VERSION="2.4.0"
 HOMEPAGE="http://geoclue.freedesktop.org/"
-DOWNLOAD="http://www.freedesktop.org/software/geoclue/releases/2.2/geoclue-2.2.0.tar.xz"
-MD5SUM="c1970e4ec6f2af6591a75294fc6fb4fa"
+DOWNLOAD="http://www.freedesktop.org/software/geoclue/releases/2.4/geoclue-2.4.0.tar.xz"
+MD5SUM=""
