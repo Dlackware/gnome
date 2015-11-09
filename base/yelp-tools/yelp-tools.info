@@ -1,5 +1,5 @@
 PKGNAM="yelp-tools"
-VERSION="3.16.1"
+VERSION="3.18.0"
 HOMEPAGE="http://projects.gnome.org/yelp/"
-DOWNLOAD="http://download.gnome.org/sources/yelp-tools/3.16/yelp-tools-3.16.1.tar.xz"
-MD5SUM="2430db2d69241d217fe0af5c1458aa30"
+DOWNLOAD="http://download.gnome.org/sources/yelp-tools/3.18/yelp-tools-3.18.0.tar.xz"
+MD5SUM="ceca436ff2ab3900dde718c0f0286f3f"
