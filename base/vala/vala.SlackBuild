@@ -23,7 +23,7 @@
 # Modified 2014 by Bart van der Hall for dlackware
 
 PKGNAM=vala
-VERSION=${VERSION:-0.28.1}
+VERSION=${VERSION:-0.30.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -35,7 +35,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://download.gnome.org/sources/$PKGNAM/0.28/$PKGNAM-$VERSION.tar.xz
+wget -c http://download.gnome.org/sources/$PKGNAM/0.30/$PKGNAM-$VERSION.tar.xz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
