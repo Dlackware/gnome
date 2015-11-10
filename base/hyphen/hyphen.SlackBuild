@@ -1,0 +1,127 @@
+#!/bin/sh
+#-- hyphen for Slackware --
+# Build script by Phantom X <megaphantomx at bol.com.br>
+# Suggested usage: $ hyphen.SlackBuild 2>&1 | tee build.log
+#--
+# Copyright 2008-2012 Phantom X, Goiania, Brazil.
+# Copyright 2006 Martijn Dekker, Groningen, Netherlands.
+#
+# Redistribution and use of this script, with or without modification, is
+# permitted provided that the following conditions are met:
+#
+# 1. Redistributions of this script must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE AUTHOR `AS IS'' AND ANY EXPRESS OR IMPLIED
+#  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+#  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO
+#  EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+#  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+#  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+#  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+#  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# http://hunspell.sf.net
+
+PKGNAM=hyphen
+VERSION=${VERSION:-2.8.8}
+BUILD=${BUILD:-1}
+TAG=${TAG:-_dlack}
+
+# Automatically determine the architecture we're building on:
+if [ -z "$ARCH" ]; then
+  case "$( uname -m )" in
+    i?86) export ARCH=i486 ;;
+    arm*) export ARCH=arm ;;
+        *) export ARCH=$( uname -m ) ;;
+  esac
+fi
+
+wget -c http://downloads.sourceforge.net/project/hunspell/Hyphen/2.8/hyphen-2.8.8.tar.gz
+
+NUMJOBS=${NUMJOBS:-"-j4"}
+
+CWD=$(pwd)
+TMP=${TMP:-/tmp/dlackware}
+PKG=$TMP/package-$PKGNAM
+OUTPUT=${OUTPUT:-/var/cache/dlackware}
+
+if [ "$ARCH" = "i486" ]; then
+  SLKCFLAGS="-O2 -march=i486 -mtune=i686"
+  LIBDIRSUFFIX=""
+elif [ "$ARCH" = "i686" ]; then
+  SLKCFLAGS="-O2 -march=i686 -mtune=i686"
+  LIBDIRSUFFIX=""
+elif [ "$ARCH" = "x86_64" ]; then
+  SLKCFLAGS="-O2 -fPIC"
+  LIBDIRSUFFIX="64"
+else
+  SLKCFLAGS="-O2"
+  LIBDIRSUFFIX=""
+fi
+
+set -e # Exit on most errors
+
+rm -rf $PKG
+mkdir -p $TMP $PKG $OUTPUT
+cd $TMP
+rm -rf $PKGNAM-$VERSION
+tar xvf $CWD/$PKGNAM-$VERSION.tar.?z*
+cd $PKGNAM-$VERSION
+
+chown -R root:root .
+find -L . \
+ \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
+  -o -perm 511 \) -exec chmod 755 {} \; -o \
+ \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
+ -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
+
+CFLAGS="${SLKCFLAGS}" \
+CXXFLAGS="${SLKCFLAGS}" \
+./configure \
+  --prefix=/usr \
+  --libdir=/usr/lib${LIBDIRSUFFIX} \
+  --sysconfdir=/etc \
+  --localstatedir=/var/lib \
+  --infodir=/usr/info \
+  --mandir=/usr/man \
+  --docdir=/usr/doc/${PKGNAM}-${VERSION} \
+  --disable-static \
+  --build=${ARCH}-slackware-linux || exit 1
+
+make ${NUMJOBS} || make || exit 1
+make install DESTDIR=${PKG} || exit 1
+
+rm -f ${PKG}/usr/lib*/*.la
+
+( cd ${PKG}/usr/share/hyphen || exit 1
+  en_US_aliases="en_AG en_AU en_BS en_BW en_BZ en_CA en_DK en_GB en_GH en_HK en_IE en_IN en_JM en_NA en_NZ en_PH en_SG en_TT en_ZA en_ZW"
+  for lang in ${en_US_aliases}; do
+    ln -s hyph_en_US.dic hyph_${lang}.dic
+  done
+) || exit 1
+
+find ${PKG} | xargs file | grep -e "executable" -e "shared object" | grep ELF \
+  | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null
+
+
+mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
+cp -a \
+  AUTHORS COPYING ChangeLog INSTALL NEWS README \
+  $PKG/usr/doc/$PKGNAM-$VERSION
+
+# If there's a ChangeLog, installing at least part of the recent history
+# is useful, but don't let it get totally out of control:
+if [ -r ChangeLog ]; then
+  DOCSDIR=$(echo $PKG/usr/doc/${PKGNAM}-$VERSION)
+  cat ChangeLog | head -n 1000 > $DOCSDIR/ChangeLog
+  touch -r ChangeLog $DOCSDIR/ChangeLog
+fi
+
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd $PKG
+/sbin/makepkg -l y -c n $OUTPUT/$PKGNAM-$VERSION-$ARCH-$BUILD$TAG.txz

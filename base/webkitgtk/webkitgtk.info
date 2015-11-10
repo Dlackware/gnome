@@ -1,5 +1,5 @@
 PKGNAM="webkitgtk"
-VERSION="2.4.9"
+VERSION="2.10.3"
 HOMEPAGE="http://webkitgtk.org/"
-DOWNLOAD="http://www.webkitgtk.org/releases/webkitgtk-2.4.9.tar.xz"
-MD5SUM="312fd29eb7f5970660c6a64b8bf8420e"
+DOWNLOAD="http://www.webkitgtk.org/releases/webkitgtk-2.10.3.tar.xz"
+MD5SUM=""

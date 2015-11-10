@@ -1,4 +1,4 @@
-PKGNAM="webkitgtk3"
+PKGNAM="webkitgtk1"
 VERSION="2.4.9"
 HOMEPAGE="http://webkitgtk.org/"
 DOWNLOAD="http://www.webkitgtk.org/releases/webkitgtk-2.4.9.tar.xz"
