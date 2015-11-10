@@ -8,9 +8,8 @@ geocode-glib
 libgweather
 GeoIP
 geoclue
+webkitgtk1
 webkitgtk
-webkitgtk3
-webkitgtk4
 rest
 telepathy-glib
 gnome-online-accounts
