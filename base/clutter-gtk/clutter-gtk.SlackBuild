@@ -24,7 +24,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=clutter-gtk
-VERSION=${VERSION:-1.6.2}
+VERSION=${VERSION:-1.6.6}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
