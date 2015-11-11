@@ -9,6 +9,7 @@ libgweather
 GeoIP
 geoclue
 webkitgtk1
+hyphen
 webkitgtk
 rest
 telepathy-glib

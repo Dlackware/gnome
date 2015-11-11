@@ -21,7 +21,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=cogl
-VERSION=${VERSION:-1.20.0}
+VERSION=${VERSION:-1.22.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -34,10 +34,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-# Set YES to set systemd as default init
-#SBO_WAYLAND=${SBO_WAYLAND:-YES}
-
-wget -c http://download.gnome.org/sources/$PKGNAM/1.20/$PKGNAM-$VERSION.tar.xz
+wget -c http://download.gnome.org/sources/$PKGNAM/1.22/$PKGNAM-$VERSION.tar.xz
 
 NUMJOBS=${NUMJOBS:-"-j4"}
 
@@ -75,9 +72,6 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-#unset SBO_WAYLANDOPTS
-#[ "${SBO_WAYLAND}" = "YES" ] || SB_WAYLANDOPTS='--disable-wayland-egl-platform --disable-wayland-egl-server'
-
 ./configure \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
@@ -98,7 +92,7 @@ find -L . \
   --with-x \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --build=$ARCH-slackware-linux
+  --build=$ARCH-slackware-linux || exit 1
 
 make $NUMJOBS || make || exit 1
 make install DESTDIR=$PKG || exit 1
