@@ -21,8 +21,8 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=libgtop
-VERSION=${VERSION:-2.30.0}
-BUILD=${BUILD:-2}
+VERSION=${VERSION:-2.32.0}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 if [ -z "$ARCH" ]; then
@@ -38,7 +38,7 @@ TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-$PKGNAM
 OUTPUT=${OUTPUT:-/var/cache/dlackware}
 
-wget -c http://download.gnome.org/sources/$PKGNAM/2.30/$PKGNAM-$VERSION.tar.xz
+wget -c http://download.gnome.org/sources/$PKGNAM/2.32/$PKGNAM-$VERSION.tar.xz
 
 if [ "$ARCH" = "i486" ]; then
   SLKCFLAGS="-O2 -march=i486 -mtune=i686"
