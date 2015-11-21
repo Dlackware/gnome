@@ -1,5 +1,5 @@
 PKGNAM="libwacom"
-VERSION="0.15"
+VERSION="0.16"
 HOMEPAGE="http://linuxwacom.sourceforge.net/wiki/index.php/Main_Page"
-DOWNLOAD="https://downloads.sourceforge.net/project/linuxwacom/libwacom/libwacom-0.15.tar.bz2"
-MD5SUM="692f0e7b10d6587c344ba5970f11bbb3"
+DOWNLOAD="https://downloads.sourceforge.net/project/linuxwacom/libwacom/libwacom-0.16.tar.bz2"
+MD5SUM="4e2269a22db00bb2fbed7fb01c9d2970"
