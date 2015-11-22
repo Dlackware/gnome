@@ -23,8 +23,8 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=gdm
-VERSION=${VERSION:-3.16.4}
-BUILD=${BUILD:-2}
+VERSION=${VERSION:-3.18.2}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 if [ -z "$ARCH" ]; then
@@ -35,7 +35,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://download.gnome.org/sources/$PKGNAM/3.16/$PKGNAM-$VERSION.tar.xz
+wget -c http://download.gnome.org/sources/$PKGNAM/3.18/$PKGNAM-$VERSION.tar.xz
 
 NUMJOBS=${NUMJOBS:--j7}
 
@@ -73,10 +73,6 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-patch -p0 -E --verbose -i $CWD/gdm-systemd209.patch
-
-autoreconf -ivf
-
 CFLAGS="${SLKCFLAGS}"
 CXXFLAGS="${SLKCFLAGS}" \
 ./configure \
@@ -92,8 +88,9 @@ CXXFLAGS="${SLKCFLAGS}" \
   --with-log-dir=/var/log/gdm \
   --with-initial-vt=7 \
   --with-default-pam-config=redhat \
+  --enable-wayland-support \
+  --enable-systemd-journal \
   --with-tcp-wrappers \
-  --with-systemd \
   --with-systemdsystemunitdir=/lib/systemd/system \
   --with-dbus-sys=/etc/dbus-1/system.d \
   --with-dbus-services=/usr/share/dbus-1/services \
@@ -130,6 +127,7 @@ cp $CWD/pamd/gdmpass-pamd $PKG/etc/pam.d/gdm-password
 install -m 644 $CWD/system.conf $PKG/etc/dbus-1/system.conf
 
 #Install an autostart script for creating xdg-user-dirs
+mkdir -p $PKG/etc/xdg/autostart
 install -m 644 $CWD/xdg-user-dirs.desktop $PKG/etc/xdg/autostart/xdg-user-dirs.desktop
 
 
