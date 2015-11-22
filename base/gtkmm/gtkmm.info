@@ -1,5 +1,5 @@
 PKGNAM="gtkmm"
-VERSION="3.16.0"
+VERSION="3.18.0"
 HOMEPAGE="http://www.gtkmm.org/"
-DOWNLOAD="http://download.gnome.org/sources/gtkmm/3.16/gtkmm-3.16.0.tar.xz"
-MD5SUM="daa0c2407e50ff0602236c334c775717"
+DOWNLOAD="http://download.gnome.org/sources/gtkmm/3.18/gtkmm-3.18.0.tar.xz"
+MD5SUM="1f056682a0ffbe8b8678be79b69f7169"
