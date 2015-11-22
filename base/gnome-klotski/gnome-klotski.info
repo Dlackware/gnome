@@ -1,5 +1,6 @@
+# [GAMES]
 PKGNAM="gnome-klotski"
-VERSION="3.16.2"
+VERSION="3.18.2"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/gnome-klotski/3.16/gnome-klotski-3.16.2.tar.xz"
-MD5SUM="4df3076ede402f4915a784d64bd953d5"
+DOWNLOAD="http://download.gnome.org/sources/gnome-klotski/3.18/gnome-klotski-3.18.2.tar.xz"
+MD5SUM="4810bc4db1402e785094182c9dc774b3"
