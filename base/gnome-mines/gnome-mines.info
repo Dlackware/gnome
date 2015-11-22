@@ -1,5 +1,6 @@
+# [GAMES]
 PKGNAM="gnome-mines"
-VERSION="3.16.1"
+VERSION="3.18.2"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/gnome-mines/3.16/gnome-mines-3.16.1.tar.xz"
-MD5SUM="1ae482efccb602e0c713a394da8294e1"
+DOWNLOAD="http://download.gnome.org/sources/gnome-mines/3.18/gnome-mines-3.18.2.tar.xz"
+MD5SUM="9fdd48f5578d01484fe394035340338e"
