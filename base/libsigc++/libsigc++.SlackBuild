@@ -24,7 +24,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=libsigc++
-VERSION=${VERSION:-2.4.1}
+VERSION=${VERSION:-2.6.2}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -39,7 +39,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://download.gnome.org/sources/$PKGNAM/2.4/$PKGNAM-$VERSION.tar.xz
+wget -c http://download.gnome.org/sources/$PKGNAM/2.6/$PKGNAM-$VERSION.tar.xz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
