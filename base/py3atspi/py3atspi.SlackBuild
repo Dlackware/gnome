@@ -25,7 +25,7 @@
 
 PKGNAM=py3atspi
 SRCNAM=pyatspi
-VERSION=${VERSION:-2.16.0}
+VERSION=${VERSION:-2.18.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -37,7 +37,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://download.gnome.org/sources/$SRCNAM/2.16/$SRCNAM-$VERSION.tar.xz
+wget -c http://download.gnome.org/sources/$SRCNAM/2.18/$SRCNAM-$VERSION.tar.xz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}

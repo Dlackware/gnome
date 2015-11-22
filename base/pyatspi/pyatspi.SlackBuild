@@ -24,7 +24,7 @@
 # Modified 2014 by Bart van der Hall for dlackware
 
 PKGNAM=pyatspi
-VERSION=${VERSION:-2.16.0}
+VERSION=${VERSION:-2.18.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -36,7 +36,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c ftp://ftp.gnome.org/pub/gnome/sources/$PKGNAM/2.16/$PKGNAM-$VERSION.tar.xz
+wget -c http://download.gnome.org/sources/$PKGNAM/2.18/$PKGNAM-$VERSION.tar.xz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
