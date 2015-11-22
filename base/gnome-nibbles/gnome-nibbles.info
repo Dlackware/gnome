@@ -1,5 +1,6 @@
+# [GAMES]
 PKGNAM="gnome-nibbles"
-VERSION="3.16.1"
+VERSION="3.18.2"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/gnome-nibbles/3.16/gnome-nibbles-3.16.1.tar.xz"
-MD5SUM="0513f988e7fbed2d74e1064c87459e9b"
+DOWNLOAD="http://download.gnome.org/sources/gnome-nibbles/3.18/gnome-nibbles-3.18.2.tar.xz"
+MD5SUM="e4adb6cfdd55b60e9aeecad978bc5257"
