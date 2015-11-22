@@ -40,7 +40,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://ftp.mozilla.org/pub/mozilla.org/js/mozjs-24.2.0.tar.bz2
+wget -c http://ftp.mozilla.org/pub/mozilla.org/js/mozjs-$VERSION.tar.bz2
 
 NUMJOBS=${NUMJOBS:-" -j7 "}
 
@@ -76,7 +76,12 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
+rm -rf mozjs-$VERSION/js/src/editline
+rm -rf mozjs-$VERSION/js/src/ctypes/libffi
+
 cd js/src
+
+sed -i 's/(defined\((@TEMPLATE_FILE)\))/\1/' config/milestone.pl
 
 CXXFLAGS="$SLKCFLAGS" \
 CFLAGS="$SLKCFLAGS" \
@@ -84,22 +89,30 @@ CFLAGS="$SLKCFLAGS" \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
-  --localstatedir=/var \
+  --localstatedir=/var/lib \
   --mandir=/usr/man \
-  --build=$ARCH-slackware-linux \
   --enable-optimize="-O2" \
   --enable-threadsafe \
+  --enable-system-ffi \
+  --disable-static \
   --with-system-nspr \
-  --with-nspr-prefix=/usr || exit 1
+  --enable-xterm-updates \
+  --with-nspr-prefix=/usr \
+  --build=$ARCH-slackware-linux  || exit 1
 
 make $NUMJOBS || make || exit 1
 make install DESTDIR=$PKG || exit 1
 
-# Oops, Makefile missed this:
-cp -a shell/js $PKG/usr/bin
+# For some reason the headers and pkg-config file are executable
+find ${PKG}/usr/include -type f -exec chmod 644 {} ';'
+chmod 644 ${PKG}/usr/lib*/pkgconfig/*.pc
 
-# No need for this:
-rm -f $PKG/usr/lib${LIBDIRSUFFIX}/*.a
+# Upstream does not honor --disable-static yet
+rm -f ${PKG}/usr/lib*/*.a
+
+# This is also statically linked; once that is fixed that we could
+# consider shipping it.
+rm -f ${PKG}/usr/bin/js24
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp ../../README README.html $PKG/usr/doc/$PKGNAM-$VERSION
@@ -119,4 +132,4 @@ mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
 
 cd $PKG
-/sbin/makepkg -l y -c n $OUTPUT/$PKGNAM-$TARVERS-$ARCH-$BUILD$TAG.txz
+/sbin/makepkg -l y -c n $OUTPUT/$PKGNAM-$VERSION-$ARCH-$BUILD$TAG.txz
