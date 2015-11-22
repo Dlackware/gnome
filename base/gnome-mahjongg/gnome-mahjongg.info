@@ -1,5 +1,6 @@
+# [GAMES]
 PKGNAM="gnome-mahjongg"
-VERSION="3.16.2"
+VERSION="3.18.0"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/gnome-mahjongg/3.16/gnome-mahjongg-3.16.2.tar.xz"
-MD5SUM="f907e171ebbaebb0ea9e28e0d9fb9af4"
+DOWNLOAD="http://download.gnome.org/sources/gnome-mahjongg/3.18/gnome-mahjongg-3.18.0.tar.xz"
+MD5SUM="2b44ce67c1bdb63823930466a4ab7078"
