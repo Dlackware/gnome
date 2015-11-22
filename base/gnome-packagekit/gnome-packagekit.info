@@ -1,5 +1,5 @@
 PKGNAM="gnome-packagekit"
-VERSION="3.16.0"
+VERSION="3.18.0"
 HOMEPAGE="http://www.freedesktop.org/software/PackageKit/"
-DOWNLOAD="http://download.gnome.org/sources/gnome-packagekit/3.16/gnome-packagekit-3.16.0.tar.xz"
-MD5SUM="583ed7a6dc511de3a5f15b288813b891"
+DOWNLOAD="http://download.gnome.org/sources/gnome-packagekit/3.18/gnome-packagekit-3.18.0.tar.xz"
+MD5SUM="e24d383b4bcaeb642b0082600ae417b0"
