@@ -95,7 +95,8 @@ zeitgeist
 folks
 telepathy-farstream
 libchamplain
-empathy
+# Dropping empathy
+# empathy
 epiphany
 glade
 gnome-js-common
