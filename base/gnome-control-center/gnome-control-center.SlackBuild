@@ -21,7 +21,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=gnome-control-center
-VERSION=${VERSION:-3.16.3}
+VERSION=${VERSION:-3.18.2}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -34,7 +34,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://download.gnome.org/sources/$PKGNAM/3.16/$PKGNAM-$VERSION.tar.xz
+wget -c http://download.gnome.org/sources/$PKGNAM/3.18/$PKGNAM-$VERSION.tar.xz
 
 NUMJOBS=${NUMJOBS:-"-j4"}
 
@@ -72,23 +72,13 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-patch -p1 --verbose -i ${CWD}/gnome-control-center-Pyongyang-Time.patch
-patch -p1 --verbose -i ${CWD}/gnome-control-center-3.14.1-optional.patch
-
-cp $CWD/timezone_8.5.png panels/datetime/data
-cp $CWD/timezone_8.5_dim.png panels/datetime/data
-cp $CWD/timezone_9.png panels/datetime/data
-cp $CWD/timezone_9_dim.png panels/datetime/data
-
-autoreconf -ivf
-
 ./configure \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   --localstatedir=/var \
   --disable-silent-rules \
-  --disable-kerberos \
+  --enable-kerberos \
   --with-cheese \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
