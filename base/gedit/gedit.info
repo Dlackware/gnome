@@ -1,5 +1,5 @@
 PKGNAM="gedit"
-VERSION="3.16.4"
+VERSION="3.18.2"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/gedit/3.16/gedit-3.16.4.tar.xz"
-MD5SUM="bfd1537f3e2d908fdae674430ae74a09"
+DOWNLOAD="http://download.gnome.org/sources/gedit/3.18/gedit-3.18.2.tar.xz"
+MD5SUM="3468eb857dc33c99dfde838d9bbebf2d"
