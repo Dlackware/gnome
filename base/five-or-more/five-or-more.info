@@ -1,5 +1,6 @@
+# [GAMES]
 PKGNAM="five-or-more"
-VERSION="3.16.1"
+VERSION="3.18.0"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/five-or-more/3.16/five-or-more-3.16.1.tar.xz"
-MD5SUM="cad737743896a1a06dea51bc2ef1aa56"
+DOWNLOAD="http://download.gnome.org/sources/five-or-more/3.18/five-or-more-3.18.0.tar.xz"
+MD5SUM="f2f6fe100d49a4b9ba75d99675e4dc03"
