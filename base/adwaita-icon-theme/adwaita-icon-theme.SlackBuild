@@ -21,7 +21,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=adwaita-icon-theme
-VERSION=${VERSION:-3.16.2.2}
+VERSION=${VERSION:-3.18.0}
 BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
@@ -34,7 +34,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://download.gnome.org/sources/$PKGNAM/3.16/$PKGNAM-$VERSION.tar.xz
+wget -c http://download.gnome.org/sources/$PKGNAM/3.18/$PKGNAM-$VERSION.tar.xz
 
 NUMJOBS=${NUMJOBS:-"-j4"}
 
@@ -68,12 +68,6 @@ cd $PKGNAM-$VERSION
 
 # Add Inherits=hicolor to the index.theme
 cat $CWD/inherit-hicolor-theme.diff | patch -p1 --verbose || exit 1
-
-# Fix locale directory location:
-cat $CWD/adwaita.locale.diff | patch -p1 --verbose || exit 1
-
-# Above patch to configure.ac requires autoreconf:
-autoreconf -vif
 
 chown -R root:root .
 find -L . \
