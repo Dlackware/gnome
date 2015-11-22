@@ -6,14 +6,14 @@
 # leave one space after the ':'.
 
            |-----handy-ruler------------------------------------------------------|
-py2gobject3: py2gobject for GTK+3 (GObject bindings for Python v2)
-py2gobject3:
-py2gobject3: This archive contains bindings for the GObject, to be used in Python.
-py2gobject3: It is a fairly complete set of bindings, it's already rather useful,
-py2gobject3: and is usable to write moderately complex programs.
-py2gobject3:
-py2gobject3: pygobject's home page:  http://www.pygtk.org/
-py2gobject3:
-py2gobject3:
-py2gobject3:
-py2gobject3:
+py3gobject3: py3gobject for GTK+3 (GObject bindings for Python v3)
+py3gobject3:
+py3gobject3: This archive contains bindings for the GObject, to be used in Python.
+py3gobject3: It is a fairly complete set of bindings, it's already rather useful,
+py3gobject3: and is usable to write moderately complex programs.
+py3gobject3:
+py3gobject3: pygobject's home page:  http://www.pygtk.org/
+py3gobject3:
+py3gobject3:
+py3gobject3:
+py3gobject3:

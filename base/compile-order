@@ -54,7 +54,8 @@ clutter-gst3
 gnome-video-effects
 cheese
 gnome-control-center
-adwaita-icon-theme
+# Using slackware stock adwaita-icon-theme
+# adwaita-icon-theme
 gnome-menus
 gnome-packagekit
 gnome-session
@@ -62,8 +63,9 @@ libwnck3
 gnome-panel
 gnome-applets
 py3cairo
-pygobject3
-py2gobject3
+# Using slackware stock pygobject3
+# pygobject3
+py3gobject3
 pyatspi
 py3atspi
 libgee

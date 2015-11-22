@@ -25,7 +25,7 @@
 
 PKGNAM=pygobject3
 SRCNAM=pygobject
-VERSION=${VERSION:-3.16.2}
+VERSION=${VERSION:-3.18.2}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlackware}
 
@@ -37,7 +37,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://download.gnome.org/sources/$SRCNAM/3.16/$SRCNAM-$VERSION.tar.xz
+wget -c http://download.gnome.org/sources/$SRCNAM/3.18/$SRCNAM-$VERSION.tar.xz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
@@ -79,12 +79,15 @@ find -L . \
 #  ./autogen.sh
 #fi
 
+export PYTHON=/usr/bin/python
+
 CFLAGS="$SLKCFLAGS" \
 ./configure \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   --localstatedir=/var \
+  --with-python=python2 \
   --build=$ARCH-slackware-linux
 
 make

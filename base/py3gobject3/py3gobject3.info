@@ -1,5 +1,5 @@
-PKGNAM="pygobject3"
+PKGNAM="py3gobject3"
 VERSION="3.18.2"
-HOMEPAGE="https://wiki.gnome.org/Projects/PyGObject"
+HOMEPAGE="http://www.pygtk.org/"
 DOWNLOAD="http://download.gnome.org/sources/pygobject/3.18/pygobject-3.18.2.tar.xz"
 MD5SUM="0a956f3e785e23b0f136832f2e57a862"
