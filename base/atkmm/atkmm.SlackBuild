@@ -24,8 +24,8 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=atkmm
-VERSION=${VERSION:-2.22.7}
-BUILD=${BUILD:-2}
+VERSION=${VERSION:-2.24.1}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 NUMJOBS=${NUMJOBS:--j7}
@@ -39,7 +39,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://download.gnome.org/sources/$PKGNAM/2.22/$PKGNAM-$VERSION.tar.xz
+wget -c http://download.gnome.org/sources/$PKGNAM/2.24/$PKGNAM-$VERSION.tar.xz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
