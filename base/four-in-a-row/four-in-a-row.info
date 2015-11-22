@@ -1,5 +1,6 @@
+# [GAMES]
 PKGNAM="four-in-a-row"
-VERSION="3.16.2"
+VERSION="3.18.2"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/four-in-a-row/3.16/four-in-a-row-3.16.2.tar.xz"
-MD5SUM="0d532689e7a9b30eea12da57d1f5f7ff"
+DOWNLOAD="http://download.gnome.org/sources/four-in-a-row/3.18/four-in-a-row-3.18.2.tar.xz"
+MD5SUM="01c9c52553c65d9e953f458bb05c0fb2"
