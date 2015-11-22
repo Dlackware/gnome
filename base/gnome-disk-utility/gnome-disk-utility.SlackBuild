@@ -24,7 +24,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=gnome-disk-utility
-VERSION=${VERSION:-3.16.2}
+VERSION=${VERSION:-3.18.2}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -39,7 +39,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://download.gnome.org/sources/$PKGNAM/3.16/$PKGNAM-$VERSION.tar.xz
+wget -c http://download.gnome.org/sources/$PKGNAM/3.18/$PKGNAM-$VERSION.tar.xz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
@@ -75,10 +75,6 @@ find . \
  -exec chmod 755 {} \; -o \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
-
-patch -p0 -E --backup --verbose -i $CWD/gdu-systemd209.patch
-
-autoreconf -ivf
 
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
