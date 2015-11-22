@@ -1,5 +1,5 @@
 PKGNAM="gnome-clocks"
-VERSION="3.16.2"
+VERSION="3.18.0"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/gnome-clocks/3.16/gnome-clocks-3.16.2.tar.xz"
-MD5SUM="a6e32b33f87da80d5a08905846bc9bfa"
+DOWNLOAD="http://download.gnome.org/sources/gnome-clocks/3.18/gnome-clocks-3.18.0.tar.xz"
+MD5SUM="40bf750917a9d16637899963508c8523"
