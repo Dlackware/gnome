@@ -23,7 +23,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=zeitgeist
-VERSION=${VERSION:-0.9.14}
+VERSION=${VERSION:-0.9.16}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -77,9 +77,9 @@ find -L . \
 patch -p0 -E --backup --verbose -i ${CWD}/${PKGNAM}-dso-build-fix.patch
 
 sed -i -e 's|"/lib /usr/lib|"/lib${LIBDIRSUFFIX} /usr/lib${LIBDIRSUFFIX}|' configure
-sed -i 's/python -/$PYTHON -/' configure configure.ac
+#sed -i 's/python -/$PYTHON -/' configure configure.ac
 
-export PYTHON=/usr/bin/python2
+#export PYTHON=/usr/bin/python2
 
 autoreconf -fi
 
