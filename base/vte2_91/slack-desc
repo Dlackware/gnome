@@ -6,14 +6,14 @@
 # leave one space after the ':'.
 
        |-----handy-ruler------------------------------------------------------|
-vte2_90: vte (anti-aliased terminal widget)
-vte2_90:
-vte2_90: VTE is a library (libvte) which implements a terminal emulator widget
-vte2_90: for GTK+ 2.0 and supports better internationaliztion than the old ZVT 
-vte2_90: widget, plus anti-aliased fonts.
-vte2_90:
-vte2_90:
-vte2_90:
-vte2_90:
-vte2_90:
-vte2_90:
+vte2_91: vte (anti-aliased terminal widget)
+vte2_91:
+vte2_91: VTE is a library (libvte) which implements a terminal emulator widget
+vte2_91: for GTK+ 2.0 and supports better internationaliztion than the old ZVT 
+vte2_91: widget, plus anti-aliased fonts.
+vte2_91:
+vte2_91:
+vte2_91:
+vte2_91:
+vte2_91:
+vte2_91:
