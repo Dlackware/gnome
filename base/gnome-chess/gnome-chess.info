@@ -1,5 +1,6 @@
+# [GAMES]
 PKGNAM="gnome-chess"
-VERSION="3.16.2"
+VERSION="3.18.0"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/gnome-chess/3.16/gnome-chess-3.16.2.tar.xz"
-MD5SUM="e121475df325cebdf4032af5203a3d33"
+DOWNLOAD="http://download.gnome.org/sources/gnome-chess/3.18/gnome-chess-3.18.0.tar.xz"
+MD5SUM="ada63751e7e0e1d843e5a4683757e0e2"
