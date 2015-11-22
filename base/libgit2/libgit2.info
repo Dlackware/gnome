@@ -1,5 +1,5 @@
 PKGNAM="libgit2"
-VERSION="0.22.3"
+VERSION="0.23.4"
 HOMEPAGE=""
-DOWNLOAD="https://github.com/libgit2/libgit2/archive/v0.22.3.tar.gz"
-MD5SUM="0ada1f2780e6a1863a96ee3e616d6857"
+DOWNLOAD="https://github.com/libgit2/libgit2/archive/v0.23.4.tar.gz"
+MD5SUM="b7db3ab71dfa19fe1dc7fef76d6af216"
