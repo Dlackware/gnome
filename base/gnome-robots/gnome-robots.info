@@ -1,5 +1,6 @@
+# [GAMES]
 PKGNAM="gnome-robots"
-VERSION="3.16.1"
+VERSION="3.18.1"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/gnome-robots/3.16/gnome-robots-3.16.1.tar.xz"
-MD5SUM="554d94b67f6e27917da40604821851ed"
+DOWNLOAD="http://download.gnome.org/sources/gnome-robots/3.18/gnome-robots-3.18.1.tar.xz"
+MD5SUM="1a64b6c59faf03932d033c0a29cdc320"
