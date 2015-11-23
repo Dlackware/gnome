@@ -1,5 +1,5 @@
 PKGNAM="gnome-tweak-tool"
-VERSION="3.16.2"
+VERSION="3.18.1"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/gnome-tweak-tool/3.16/gnome-tweak-tool-3.16.2.tar.xz"
-MD5SUM="8e56a73ddefe2ae6294b7f096c74fad0"
+DOWNLOAD="http://download.gnome.org/sources/gnome-tweak-tool/3.18/gnome-tweak-tool-3.18.1.tar.xz"
+MD5SUM="02ba598d92e37fb20eac60cc185f873c"
