@@ -1,5 +1,6 @@
+# [GAMES]
 PKGNAM="tali"
-VERSION="3.16.2"
+VERSION="3.18.0"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/tali/3.16/tali-3.16.2.tar.xz"
-MD5SUM="121321b37e2a9b5c7e6cc39e6e3e8d69"
+DOWNLOAD="http://download.gnome.org/sources/tali/3.18/tali-3.18.0.tar.xz"
+MD5SUM="c655388993f02823ed15c11b3f7583f3"
