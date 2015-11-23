@@ -1,5 +1,5 @@
 PKGNAM="gnome-power-manager"
-VERSION="3.16.1"
+VERSION="3.18.0"
 HOMEPAGE="https://wiki.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/gnome-power-manager/3.16/gnome-power-manager-3.16.1.tar.xz"
-MD5SUM="dfe80c3fe370e790bac0a8837f2f5bc9"
+DOWNLOAD="http://download.gnome.org/sources/gnome-power-manager/3.18/gnome-power-manager-3.18.0.tar.xz"
+MD5SUM="8281dc3a6c5c7ee52068e5027ee195c8"
