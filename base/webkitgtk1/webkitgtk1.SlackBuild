@@ -98,14 +98,17 @@ CXXFLAGS="${SLKCFLAGS}" \
   --disable-debug \
   --enable-dependency-tracking \
   --enable-svg-fonts \
-  --disable-webkit2 \
+  --enable-webkit1 \
+  --enable-webkit2 \
+  --enable-x11-target \
+  --enable-wayland-target \
   --enable-jit \
   --enable-geolocation \
   --enable-webgl \
   --enable-introspection \
   --disable-schemas-compile \
   --disable-gtk-doc \
-  --with-gtk=2.0 \
+  --with-gtk=3.0 \
   --build=$ARCH-slackware-linux || exit 1
 
 mkdir -p DerivedSources/webkit
