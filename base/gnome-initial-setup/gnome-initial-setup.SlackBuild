@@ -24,13 +24,13 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=gnome-initial-setup
-VERSION=${VERSION:-3.16.3}
+VERSION=${VERSION:-3.18.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 NUMJOBS=${NUMJOBS:--j7}
 
-wget -c http://download.gnome.org/sources/$PKGNAM/3.16/$PKGNAM-$VERSION.tar.xz
+wget -c http://download.gnome.org/sources/$PKGNAM/3.18/$PKGNAM-$VERSION.tar.xz
 
 # Automatically determine the architecture we're building on:
 if [ -z "$ARCH" ]; then
