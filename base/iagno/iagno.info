@@ -1,5 +1,6 @@
+# [GAMES]
 PKGNAM="iagno"
-VERSION="3.16.1"
+VERSION="3.18.2"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/iagno/3.16/iagno-3.16.1.tar.xz"
-MD5SUM="3cdcf8c1aaeeec5e57090a0582d16328"
+DOWNLOAD="http://download.gnome.org/sources/iagno/3.18/iagno-3.18.2.tar.xz"
+MD5SUM="88831e4827d5e88bfb9b89d2fa6ba217"
