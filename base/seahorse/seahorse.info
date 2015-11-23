@@ -1,5 +1,5 @@
 PKGNAM="seahorse"
-VERSION="3.16.0"
+VERSION="3.18.0"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/seahorse/3.16/seahorse-3.16.0.tar.xz"
-MD5SUM="3416abb33183285a5e69fe0a058c39de"
+DOWNLOAD="http://download.gnome.org/sources/seahorse/3.18/seahorse-3.18.0.tar.xz"
+MD5SUM="758204ac248e1fb3b3767ce84d2795b4"
