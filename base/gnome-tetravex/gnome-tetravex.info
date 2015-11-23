@@ -1,5 +1,6 @@
+# [GAMES]
 PKGNAM="gnome-tetravex"
-VERSION="3.16.0"
+VERSION="3.18.0"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/gnome-tetravex/3.16/gnome-tetravex-3.16.0.tar.xz"
-MD5SUM="bbb796e3d2576e11d6c1a127ac6959db"
+DOWNLOAD="http://download.gnome.org/sources/gnome-tetravex/3.18/gnome-tetravex-3.18.0.tar.xz"
+MD5SUM="1ac936a705f3792107b7bc15ff56070f"
