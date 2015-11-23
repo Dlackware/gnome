@@ -1,5 +1,6 @@
+# [GAMES]
 PKGNAM="swell-foop"
-VERSION="3.16.2"
+VERSION="3.18.1"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/swell-foop/3.16/swell-foop-3.16.2.tar.xz"
-MD5SUM="797b7ac7cae26c721a79fc6c105a82a5"
+DOWNLOAD="http://download.gnome.org/sources/swell-foop/3.18/swell-foop-3.18.1.tar.xz"
+MD5SUM="17ecb7b09972311f78b027c40d64e203"
