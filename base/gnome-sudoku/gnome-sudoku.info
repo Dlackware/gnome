@@ -1,5 +1,6 @@
+# [GAMES]
 PKGNAM="gnome-sudoku"
-VERSION="3.16.0"
+VERSION="3.18.2"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/gnome-sudoku/3.16/gnome-sudoku-3.16.0.tar.xz"
-MD5SUM="4e6e4715347aff5e7b9bfcf6589b3a8e"
+DOWNLOAD="http://download.gnome.org/sources/gnome-sudoku/3.18/gnome-sudoku-3.18.2.tar.xz"
+MD5SUM="6cb96c609526c77d7d79dab55c219651"
