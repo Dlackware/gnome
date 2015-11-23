@@ -95,8 +95,7 @@ zeitgeist
 folks
 telepathy-farstream
 libchamplain
-# Dropping empathy
-# empathy
+empathy
 epiphany
 glade
 gnome-js-common
@@ -165,6 +164,8 @@ gnome-mahjongg
 gnome-mines
 gnome-nettool
 gnome-nibbles
+babl
+gegl3
 gnome-photos
 gnome-robots
 qqwing
