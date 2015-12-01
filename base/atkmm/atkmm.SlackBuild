@@ -24,7 +24,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=atkmm
-VERSION=${VERSION:-2.24.1}
+VERSION=${VERSION:-2.24.2}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
