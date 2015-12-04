@@ -1,5 +1,5 @@
 PKGNAM="gssdp"
-VERSION="0.14.11"
+VERSION="0.14.12.1"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/gssdp/0.14/gssdp-0.14.11.tar.xz"
-MD5SUM="43907464a6090b1d7e736c6b3b822983"
+DOWNLOAD="http://download.gnome.org/sources/gssdp/0.14/gssdp-0.14.12.1.tar.xz"
+MD5SUM="74925fe73538cfcc5f53475d1856b56c"
