@@ -1,5 +1,5 @@
 PKGNAM="evolution"
-VERSION="3.18.2"
+VERSION="3.18.3"
 HOMEPAGE="https://wiki.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/evolution/3.18/evolution-3.18.2.tar.xz"
-MD5SUM="03e7f441df2ed6692ced4d9db33f3bed"
+DOWNLOAD="http://download.gnome.org/sources/evolution/3.18/evolution-3.18.3.tar.xz"
+MD5SUM="83bdff7421ae30a9c3ef187eb0eeb4d2"
