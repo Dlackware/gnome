@@ -1,5 +1,5 @@
 PKGNAM="grilo"
-VERSION="0.2.14"
+VERSION="0.2.15"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http:/download.gnome.org/sources/grilo/0.2/grilo-0.2.14.tar.xz"
-MD5SUM="fce7eba405ada20fefcb877d534d9d4f"
+DOWNLOAD="http:/download.gnome.org/sources/grilo/0.2/grilo-0.2.15.tar.xz"
+MD5SUM="85904d51db61c1cf7a1298442b82f788"
