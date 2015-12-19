@@ -41,7 +41,7 @@ fi
 wget -c https://github.com/maxmind/geoip-api-c/releases/download/v${VERSION}/$PKGNAM-$VERSION.tar.gz
 
 CWD=$(pwd)
-TMP=${TMP:-/tmp/dlack}
+TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-$PKGNAM
 OUTPUT=${OUTPUT:-/var/cache/dlackware}
 
