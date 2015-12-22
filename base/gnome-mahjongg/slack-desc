@@ -6,13 +6,13 @@
 # leave one space after the ':'.
 
               |-----handy-ruler------------------------------------------------------|
-gnome-mahjongg: gnome-mahjongg (Gnome mahjongg game)
+gnome-mahjongg: gnome-mahjongg (GNOME mahjongg game)
 gnome-mahjongg:
-gnome-mahjongg: Mahjongg game for gnome desktop.
+gnome-mahjongg: Mahjongg is a solitaire (one player) version of the classic Eastern
+gnome-mahjongg: tile game, Mahjongg. The objective is to select pairs of similar
+gnome-mahjongg: tiles.
 gnome-mahjongg:
-gnome-mahjongg:
-gnome-mahjongg:
-gnome-mahjongg:
+gnome-mahjongg: Homepage: https://wiki.gnome.org/Apps/Mahjongg
 gnome-mahjongg:
 gnome-mahjongg:
 gnome-mahjongg:
