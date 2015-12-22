@@ -6,12 +6,12 @@
 # leave one space after the ':'.
 
        |-----handy-ruler------------------------------------------------------|
-libwebp: libwebp (WebP, a new image format.)
+libwebp: libwebp (a new image format)
 libwebp:
 libwebp: WebP is a new image format that provides loseless and lossy
 libwebp: compression for images on the web.
 libwebp:
-libwebp:
+libwebp: Homepage: https://developers.google.com/speed/webp/
 libwebp:
 libwebp:
 libwebp:
