@@ -6,11 +6,14 @@
 # leave one space after the ':'.
 
         |-----handy-ruler------------------------------------------------------|
-plymouth: plymouth ()
+plymouth: plymouth (graphical boot animation and logger)
 plymouth:
-plymouth: better discription needed
+plymouth: Plymouth is an application that runs very early in the boot process
+plymouth: (even before the root filesystem is mounted!) that provides a
+plymouth: graphical boot animation while the boot process happens in the
+plymouth: background.
 plymouth:
-plymouth:
+plymouth: Homepage: http://www.freedesktop.org/software/plymouth
 plymouth:
 plymouth:
 plymouth:
