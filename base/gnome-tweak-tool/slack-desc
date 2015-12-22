@@ -6,11 +6,11 @@
 # leave one space after the ':'.
 
                 |-----handy-ruler------------------------------------------------------|
-gnome-tweak-tool: GNOME Tweak Tool
+gnome-tweak-tool: GNOME Tweak Tool (GNOME's tool for tweaking the shell)
 gnome-tweak-tool:
-gnome-tweak-tool: GNOME's tool for tweaking the shell. 
-gnome-tweak-tool: 
-gnome-tweak-tool: It permits to customize few things more than a standard gnome shell.
+gnome-tweak-tool: It permits to customize few things more than a standard gnome shell.  
+gnome-tweak-tool:
+gnome-tweak-tool: Homepage: https://wiki.gnome.org/action/show/Apps/GnomeTweakTool
 gnome-tweak-tool:
 gnome-tweak-tool:
 gnome-tweak-tool:
