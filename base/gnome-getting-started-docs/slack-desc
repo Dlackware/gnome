@@ -1,7 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+                          |-----handy-ruler------------------------------------------------------|
+gnome-getting-started-docs: gnome-getting-started-docs (help a new user get started in GNOME)
 gnome-getting-started-docs:
-gnome-getting-started-docs: Ups name says it all.
+gnome-getting-started-docs: GNOME getting started docs contains a intuitive 'Getting Started'
+gnome-getting-started-docs: guide (with video guides), that can be viewed with Yelp. It is
+gnome-getting-started-docs: normally used together with gnome-initial-setup, but is also very
+gnome-getting-started-docs: useful as tutorial and 'users guide' for new (or not experienced)
+gnome-getting-started-docs: users.
 gnome-getting-started-docs:
-gnome-getting-started-docs:
-gnome-getting-started-docs:
+gnome-getting-started-docs: Homepage: https://git.gnome.org/browse/gnome-getting-started-docs/
 gnome-getting-started-docs:
 gnome-getting-started-docs:
