@@ -1,17 +1,18 @@
 # HOW TO EDIT THIS FILE:
 # The "handy ruler" below makes it easier to edit a package description.  Line
-# up the first '|' above the ':' following the base package name, and the '|' on# the right side marks the last column you can put a character in.  You must make
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
 # exactly 11 lines for the formatting to be correct.  It's also customary to
 # leave one space after the ':'.
 
      |-----handy-ruler------------------------------------------------------|
-atkmm: atkmm (atk bindings)
+atkmm: atkmm (ATK bindings)
 atkmm:
-atkmm: atk bindings needed by gtkmm2
+atkmm: atkmm is the official C++ interface for the ATK accessibility toolkit
+atkmm: library. It may be used, for instance, by user interfaces implemented
+atkmm: with gtkmm.
 atkmm:
-atkmm:
-atkmm:
-atkmm:
+atkmm: Homepage: https://developer.gnome.org/atkmm/stable/
 atkmm:
 atkmm:
 atkmm:
