@@ -1,16 +1,17 @@
 # HOW TO EDIT THIS FILE:
 # The "handy ruler" below makes it easier to edit a package description.  Line
-# up the first '|' above the ':' following the base package name, and the '|' on# the right side marks the last column you can put a character in.  You must make
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
 # exactly 11 lines for the formatting to be correct.  It's also customary to
 # leave one space after the ':'.
 
              |-----handy-ruler------------------------------------------------------|
-gnome-klotski: gnome-klotski (Klotski game for gnome.)
+gnome-klotski: GNOME Klotski (GNOME desktop game)
 gnome-klotski:
-gnome-klotski: Gnome desktop game Klotski.
+gnome-klotski: This game is a clone of the Klotski game. The objective is to move
+gnome-klotski: the patterned block to the area bordered by green markers.
 gnome-klotski:
-gnome-klotski:
-gnome-klotski:
+gnome-klotski: Homepage: https://wiki.gnome.org/Apps/Klotski
 gnome-klotski:
 gnome-klotski:
 gnome-klotski:
