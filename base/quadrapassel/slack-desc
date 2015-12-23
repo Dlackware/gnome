@@ -1,18 +1,19 @@
 # HOW TO EDIT THIS FILE:
 # The "handy ruler" below makes it easier to edit a package description.  Line
-# up the first '|' above the ':' following the base package name, and the '|' on# the right side marks the last column you can put a character in.  You must make
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
 # exactly 11 lines for the formatting to be correct.  It's also customary to
 # leave one space after the ':'.
 
             |-----handy-ruler------------------------------------------------------|
-quadrapassel: quadrapassel (Gnome game quadrapassel.)
+quadrapassel: quadrapassel (GNOME desktop game)
 quadrapassel:
-quadrapassel: Quadrapassel is a gnome desktop game.
+quadrapassel: Quadrapassel comes from the classic falling-block game, Tetris. The
+quadrapassel: goal of the game is to create complete horizontal lines of blocks,
+quadrapassel: which will disappear. The blocks come in seven different shapes made
+quadrapassel: from four blocks each: one straight, two L-shaped, one square, and
+quadrapassel: two S-shaped. The blocks fall from the top center of the screen in a
+quadrapassel: random order. You rotate the blocks and move them across the screen
+quadrapassel: to drop them in complete lines.
 quadrapassel:
-quadrapassel:
-quadrapassel:
-quadrapassel:
-quadrapassel:
-quadrapassel:
-quadrapassel:
-quadrapassel:
+quadrapassel: Homepage: https://wiki.gnome.org/Apps/Quadrapassel
