@@ -1,18 +1,19 @@
 # HOW TO EDIT THIS FILE:
 # The "handy ruler" below makes it easier to edit a package description.  Line
-# up the first '|' above the ':' following the base package name, and the '|' on# the right side marks the last column you can put a character in.  You must make
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
 # exactly 11 lines for the formatting to be correct.  It's also customary to
 # leave one space after the ':'.
 
           |-----handy-ruler------------------------------------------------------|
-swell-foop: swell-foop (Gnome game swell-foop.)
+swell-foop: Swell Foop (GNOME desktop game)
 swell-foop:
-swell-foop: Gnome game swell-foop.
+swell-foop: Swell Foop is a puzzle game, previously known as Same GNOME. The goal
+swell-foop: is to remove the objects in as few moves as possible. Similar objects
+swell-foop: that are adjacent to each other are removed as a group. The remaining
+swell-foop: objects then collapse to fill in the gaps and new groups are formed.
+swell-foop: You cannot remove single objects. 
 swell-foop:
-swell-foop:
-swell-foop:
-swell-foop:
-swell-foop:
-swell-foop:
+swell-foop: Homepage: https://wiki.gnome.org/Apps/Swell%20Foop
 swell-foop:
 swell-foop:
