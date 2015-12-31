@@ -13,7 +13,7 @@ gupnp: creating UPnP devices and control points, written in C, using GObject
 gupnp: and libsoup. The GUPnP API is intended to be easy to use, efficient
 gupnp: and flexible. It provides the same set of features as libupnp, but
 gupnp: shields the developer from most of UPnP's internals.
-gupnp: See more on http://www.gupnp.org
+gupnp: See more on https://wiki.gnome.org/Projects/GUPnP
 gupnp:
 gupnp:
 gupnp:
