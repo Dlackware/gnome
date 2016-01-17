@@ -54,6 +54,8 @@ clutter-gst3
 gnome-video-effects
 cheese
 gnome-control-center
+# Using slackware stock adwaita-icon-theme
+# adwaita-icon-theme
 gnome-menus
 gnome-packagekit
 gnome-session
@@ -61,6 +63,8 @@ libwnck3
 gnome-panel
 gnome-applets
 py3cairo
+# Using slackware stock pygobject3
+# pygobject3
 py3gobject3
 pyatspi
 py3atspi
@@ -109,6 +113,13 @@ gnome-font-viewer
 gnome-screenshot
 gnome-system-log
 mm-common
+## These are now included in Slackware 
+#libsigc++
+#glibmm2
+#cairomm
+#pangomm
+#atkmm
+#gtkmm
 libxml++
 gnome-system-monitor
 vte2_91
