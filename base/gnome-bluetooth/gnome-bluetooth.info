@@ -1,5 +1,5 @@
 PKGNAM="gnome-bluetooth"
-VERSION="3.18.1"
+VERSION="3.18.2"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/gnome-bluetooth/3.18/gnome-bluetooth-3.18.1.tar.xz"
-MD5SUM="5435eb9c05eac3c8308a7b2f9fa0421c"
+DOWNLOAD="http://download.gnome.org/sources/gnome-bluetooth/3.18/gnome-bluetooth-3.18.2.tar.xz"
+MD5SUM="75d09c924468ec0c687f9ab3acf7f113"
