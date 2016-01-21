@@ -7,7 +7,6 @@
 
             |-----handy-ruler------------------------------------------------------|
 gnome-sudoku: Gnome Sudoku (Sudoku game for GNOME desktop)
-gnome-sudoku:
 gnome-sudoku: 
 gnome-sudoku: Gnome Sudoku is based on the popular number-based logic puzzle in
 gnome-sudoku: which one must fill a 9 X 9 square with the correct digits. The unique
@@ -15,5 +14,6 @@ gnome-sudoku: puzzles can be played on screen or printed to take along. All game
 gnome-sudoku: persist across sessions and you can resume any old game at any time,
 gnome-sudoku: as well as replay any game you've already won.
 gnome-sudoku:
+gnome-sudoku: https://wiki.gnome.org/Apps/Sudoku
 gnome-sudoku:
 gnome-sudoku:
