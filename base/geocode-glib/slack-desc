@@ -6,14 +6,14 @@
 # leave one space after the ':'.
 
             |-----handy-ruler------------------------------------------------------|
-geocode-glib: geocode-glib (geocode-glib)
+geocode-glib: geocode-glib (convenience library for the geocoding)
 geocode-glib:
-geocode-glib: better description needed
+geocode-glib: geocode-glib is a convenience library for the geocoding (finding
+geocode-glib: longitude, and latitude from an address) and reverse geocoding
+geocode-glib: (finding an address from coordinates). It uses Nominatim service to
+geocode-glib: achieve that. It also caches (reverse-)geocoding requests for faster
+geocode-glib: results and to avoid unnecessary server load.
 geocode-glib:
-geocode-glib:
-geocode-glib:
-geocode-glib:
-geocode-glib:
-geocode-glib:
+geocode-glib: https://git.gnome.org/browse/geocode-glib
 geocode-glib:
 geocode-glib:
