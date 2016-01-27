@@ -1,0 +1,5 @@
+PRGNAM="python-requests"
+VERSION="2.9.1"
+HOMEPAGE="http://pypi.python.org/pypi/requests"
+DOWNLOAD="http://pypi.python.org/packages/source/r/requests/requests-2.9.1.tar.gz"
+MD5SUM="0b7f480d19012ec52bab78292efd976d"

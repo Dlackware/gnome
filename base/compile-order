@@ -177,6 +177,8 @@ gtk-vnc
 vinagre
 gnome-power-manager
 dconf-editor
+dbus-python3
+python-requests
 gnome-music
 gnome-builder
 gnome-initial-setup
