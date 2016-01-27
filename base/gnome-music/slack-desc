@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+           |-----handy-ruler------------------------------------------------------|
+gnome-music: Gnome Music (Music is the new GNOME music playing application)
+gnome-music:
+gnome-music: Music is the new GNOME music playing application. It aims to combine
+gnome-music: an elegant and immersive browsing experience with simple and
+gnome-music: straightforward controls.
+gnome-music:
+gnome-music: https://wiki.gnome.org/Apps/Music
+gnome-music:
+gnome-music:
+gnome-music:
+gnome-music:
