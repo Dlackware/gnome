@@ -1,4 +1,4 @@
-PKGNAM="nautilus"
+PKGNAM="gnome-music"
 VERSION="3.18.2"
 HOMEPAGE="https://wiki.gnome.org/Apps/Music"
 DOWNLOAD="http://download.gnome.org/sources/gnome-music/3.18/gnome-music-3.18.2.tar.xz"
