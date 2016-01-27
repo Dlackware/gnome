@@ -1,0 +1,5 @@
+PKGNAM="grilo-plugins"
+VERSION="0.2.17"
+HOMEPAGE="https://wiki.gnome.org/Projects/Grilo"
+DOWNLOAD="http:/download.gnome.org/sources/grilo-plugins/0.2/grilo-plugins-0.2.17.tar.xz"
+MD5SUM="691621488045512ff002591631fc7c59"

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright 2016 Eugene Wissner, Dachau, Germanz
+# Copyright 2016  Bart van der Hall, Almere, NL
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -20,9 +20,9 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-PKGNAM=gnome-music
-VERSION=${VERSION:-3.18.2}
-BUILD=${BUILD:-4}
+PKGNAM=grilo-plugins
+VERSION=${VERSION:-0.2.17}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:
@@ -34,7 +34,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://download.gnome.org/sources/$PKGNAM/3.18/$PKGNAM-$VERSION.tar.xz
+wget -c http://download.gnome.org/sources/$PKGNAM/0.2/$PKGNAM-$VERSION.tar.xz
 
 NUMJOBS=${NUMJOBS:-"-j4"}
 
@@ -78,7 +78,6 @@ find -L . \
   --sysconfdir=/etc \
   --localstatedir=/var/lib \
   --disable-silent-rules \
-  --enable-introspection \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
   --build=$ARCH-slackware-linux
@@ -88,7 +87,7 @@ make install DESTDIR=$PKG || exit 1
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a \
-  COPYING NEWS README \
+  COPYING ChangeLog NEWS README \
   $PKG/usr/doc/$PKGNAM-$VERSION
 
 # If there's a ChangeLog, installing at least part of the recent history
@@ -101,7 +100,6 @@ fi
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
-cat $CWD/doinst.sh > $PKG/install/doinst.sh
 
 cd $PKG
 /sbin/makepkg -l y -c n $OUTPUT/$PKGNAM-$VERSION-$ARCH-$BUILD$TAG.txz

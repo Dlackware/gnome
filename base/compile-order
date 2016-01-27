@@ -116,6 +116,7 @@ gnome-terminal
 libmusicbrainz5
 sushi
 pylint
+grilo-plugins
 totem
 yelp
 gnome-disk-utility
