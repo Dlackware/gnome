@@ -10,7 +10,7 @@ dbus-python3: dbus-python3 (Python bindings for dbus)
 dbus-python3:
 dbus-python3: This package includes python bindings for the D-Bus messagebus.
 dbus-python3:
-dbus-python3:
+dbus-python3: https://pypi.python.org/pypi/dbus-python/
 dbus-python3:
 dbus-python3:
 dbus-python3:
