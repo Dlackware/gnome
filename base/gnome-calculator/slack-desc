@@ -10,10 +10,10 @@ gnome-calculator: Calculator (GNOME calculator utility)
 gnome-calculator:
 gnome-calculator: Calculator is an application that solves mathematical equations and is
 gnome-calculator: suitable as a default application in a Desktop environment.
-gnome-calculator:
 gnome-calculator: What Calculator is: 
 gnome-calculator:   * A tool for calculating mathematical equations 
 gnome-calculator:   * Easy enough to use for simple maths
 gnome-calculator:   * Powerful enough for mid-level mathematics
 gnome-calculator:   * Fast to load and responsive to input
 gnome-calculator:
+gnome-calculator: https://wiki.gnome.org/Apps/Calculator
