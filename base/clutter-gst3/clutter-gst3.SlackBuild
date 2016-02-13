@@ -22,7 +22,7 @@
 
 PKGNAM=clutter-gst3
 SRCNAM=clutter-gst
-VERSION=${VERSION:-3.0.14}
+VERSION=${VERSION:-3.0.16}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
