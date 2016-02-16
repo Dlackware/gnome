@@ -24,7 +24,7 @@
 
 PKGNAM=gdm
 VERSION=${VERSION:-3.18.2}
-BUILD=${BUILD:-2}
+BUILD=${BUILD:-3}
 TAG=${TAG:-_dlack}
 
 if [ -z "$ARCH" ]; then
@@ -118,11 +118,11 @@ mkdir -p $PKG/etc/gdm
 install -m 644 $CWD/custom.conf $PKG/etc/gdm/custom.conf
 
 mkdir -p $PKG/etc/pam.d
-cp $CWD/pamd/gdmpin-pamd $PKG/etc/pam.d/gdm-pin
-cp $CWD/pamd/gdmauto-pamd $PKG/etc/pam.d/gdm-autologin
-cp $CWD/pamd/gdmcard-pamd $PKG/etc/pam.d/gdm-smartcard
-cp $CWD/pamd/gdmfinger-pamd $PKG/etc/pam.d/gdm-fingerprint
-cp $CWD/pamd/gdmpass-pamd $PKG/etc/pam.d/gdm-password
+# cp $CWD/pamd/gdmpin-pamd $PKG/etc/pam.d/gdm-pin
+# cp $CWD/pamd/gdmauto-pamd $PKG/etc/pam.d/gdm-autologin
+# cp $CWD/pamd/gdmcard-pamd $PKG/etc/pam.d/gdm-smartcard
+# cp $CWD/pamd/gdmfinger-pamd $PKG/etc/pam.d/gdm-fingerprint
+# cp $CWD/pamd/gdmpass-pamd $PKG/etc/pam.d/gdm-password
 
 install -m 644 $CWD/system.conf $PKG/etc/dbus-1/system.conf
 
