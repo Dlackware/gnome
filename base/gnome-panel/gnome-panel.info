@@ -1,5 +1,5 @@
 PKGNAM="gnome-panel"
-VERSION="3.18.1"
+VERSION="3.18.2"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/gnome-panel/3.18/gnome-panel-3.18.1.tar.xz"
-MD5SUM="c2f7309b1c8b8e61b9de7e94a390ce27"
+DOWNLOAD="http://download.gnome.org/sources/gnome-panel/3.18/gnome-panel-3.18.2.tar.xz"
+MD5SUM="05951941e015dff534da9a3ed7c13286"
