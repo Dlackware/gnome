@@ -1,5 +1,5 @@
 PKGNAM="cantarell-fonts"
-VERSION="0.0.22"
+VERSION="0.0.23"
 HOMEPAGE="https://wiki.gnome.org/action/show/Projects/CantarellFonts"
-DOWNLOAD="http://download.gnome.org/sources/cantarell-fonts/0.0/cantarell-fonts-0.0.22.tar.xz"
-MD5SUM="7c8e354336f6f358410b7b1f046c160f"
+DOWNLOAD="http://download.gnome.org/sources/cantarell-fonts/0.0/cantarell-fonts-0.0.23.tar.xz"
+MD5SUM="ee8036120375c312692450899bbd41d0"
