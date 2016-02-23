@@ -26,7 +26,7 @@
 
 PKGNAM=webkitgtk
 SRCNAM=webkitgtk
-VERSION=${VERSION:-2.10.4}
+VERSION=${VERSION:-2.10.7}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
