@@ -3,7 +3,7 @@
 
 [VERSIONS]
 
-Gnome-3.16 -- Slackware-14.2 <-- build against current okt. 2015) -- beta status
+Gnome-3.18 -- Slackware-14.2 <-- build against beta 2) -- beta status
 
 [NOTES]
 
@@ -26,7 +26,7 @@ It can also download the latest scripts install from compiled packages.
 The Installer can be found here https://github.com/Dlackware/dlackware
 
 Finished, what now ?
-- enable or disable services in /lib/systemd/system/ (dont forget gdm)
-- set graphical-target (init 4) as default
+- enable or disable services in /lib/systemd/system/ (dont forget gdm) (systemctl enable gdm.service)
+- set graphical-target (init 4) as default (systemctl set-default graphical.target)
 - or anything else you might forget
 Reboot and have fun.
