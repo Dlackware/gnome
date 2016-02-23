@@ -1,7 +1,7 @@
 accerciser
 telepathy-farstream
 empathy
-### [delug] begin
+### [deluge] begin
 pysetuptools
 pyxdg
 python-chardet
@@ -20,3 +20,15 @@ cffi
 cryptography
 pyOpenSSL
 deluge
+### [deluge] ends
+### [gnome-boxes] begin
+yajl
+libvirt
+libvirt-glib
+pyparsing
+celt051
+spice-protocol
+spice
+spice-gtk
+gnome-boxes
+### [gnome-boxes] ends

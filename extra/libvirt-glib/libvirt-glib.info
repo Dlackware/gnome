@@ -1,0 +1,6 @@
+PRGNAM="libvirt-glib"
+VERSION="0.2.3"
+HOMEPAGE="http://libvirt.org/"
+DOWNLOAD="ftp://libvirt.org/libvirt/glib/libvirt-glib-0.2.3.tar.gz"
+MD5SUM="a19c9b644dd5f2b9e3e1a4a21f34e2e0"
+REQUIRES="libvirt vala"

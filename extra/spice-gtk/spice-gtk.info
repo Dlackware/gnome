@@ -1,0 +1,6 @@
+PRGNAM="spice-gtk"
+VERSION="0.30"
+HOMEPAGE="http://spice-space.org"
+DOWNLOAD="http://spice-space.org/download/gtk/spice-gtk-0.30.tar.bz2"
+MD5SUM="723e0e9ce9d507ba5d6cd331a3a9b7fb"
+REQUIRES="spice vala"

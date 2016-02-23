@@ -1,0 +1,6 @@
+PRGNAM="pyparsing"
+VERSION="2.0.3"
+HOMEPAGE="http://pyparsing.wikispaces.com/"
+DOWNLOAD="http://downloads.sourceforge.net/pyparsing/pyparsing-2.0.3.tar.gz"
+MD5SUM="0fe479be09fc2cf005f753d3acc35939"
+REQUIRES=""

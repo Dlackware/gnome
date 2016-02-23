@@ -1,0 +1,6 @@
+PKGNAM="gnome-boxes"
+VERSION="3.18.1"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/gnome-boxes/3.18/gnome-boxes-3.18.1.tar.xz"
+MD5SUM="746c09d9f6fb4fff170e222389699de7"
+REQUIRES=""

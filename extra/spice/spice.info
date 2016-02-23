@@ -1,0 +1,6 @@
+PRGNAM="spice"
+VERSION="0.12.6"
+HOMEPAGE="http://spice-space.org"
+DOWNLOAD="http://spice-space.org/download/releases/spice-0.12.6.tar.bz2"
+MD5SUM="605a8c8ea80bc95076c4b3539c6dd026"
+REQUIRES="celt051 pyparsing six spice-protocol"
