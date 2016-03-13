@@ -1,5 +1,5 @@
 PKGNAM="webkitgtk"
-VERSION="2.10.7"
+VERSION="2.10.8"
 HOMEPAGE="http://webkitgtk.org/"
-DOWNLOAD="http://www.webkitgtk.org/releases/webkitgtk-2.10.7.tar.xz"
-MD5SUM="84832b9d8329413b4f1d87df5f7e8efe"
+DOWNLOAD="http://www.webkitgtk.org/releases/webkitgtk-2.10.8.tar.xz"
+MD5SUM="252aad5319aa59d940b3d8161c5a9dc0"
