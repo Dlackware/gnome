@@ -24,7 +24,7 @@
 
 PKGNAM=gdm
 VERSION=${VERSION:-3.18.2}
-BUILD=${BUILD:-4}
+BUILD=${BUILD:-5}
 TAG=${TAG:-_dlack}
 
 if [ -z "$ARCH" ]; then
@@ -130,6 +130,9 @@ install -m 644 $CWD/system.conf $PKG/etc/dbus-1/system.conf
 mkdir -p $PKG/etc/xdg/autostart
 install -m 644 $CWD/xdg-user-dirs.desktop $PKG/etc/xdg/autostart/xdg-user-dirs.desktop
 
+mkdir -p $PKG/usr/share/gnome-shell/theme
+install -m 644 $CWD/login-background.png $PKG/usr/share/gnome-shell/theme/login-background.png
+install -m 644 $CWD/gnome-shell-theme.gresource $PKG/usr/share/gnome-shell/gnome-shell-theme.gresource
 
 # Add a documentation directory:
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
