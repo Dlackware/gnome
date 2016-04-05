@@ -1,5 +1,5 @@
 PKGNAM="clutter-gst"
-VERSION="2.0.16"
+VERSION="2.0.18"
 HOMEPAGE="https://wiki.gnome.org/Projects/Clutter"
-DOWNLOAD="http://download.gnome.org/sources/clutter-gst/2.0/clutter-gst-2.0.16.tar.xz"
-MD5SUM="52c43827cdde234852b55e2b8b097902"
+DOWNLOAD="http://download.gnome.org/sources/clutter-gst/2.0/clutter-gst-2.0.18.tar.xz"
+MD5SUM="45d1c60d65fd6f1be94fbce4d8ebeabb"
