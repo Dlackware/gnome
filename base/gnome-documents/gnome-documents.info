@@ -1,5 +1,5 @@
 PKGNAM="gnome-documents"
-VERSION="3.18.2"
+VERSION="3.18.3"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/gnome-documents/3.18/gnome-documents-3.18.2.tar.xz"
-MD5SUM="550a3897a1e6a729d8f6647d963a0a3f"
+DOWNLOAD="http://download.gnome.org/sources/gnome-documents/3.18/gnome-documents-3.18.3.tar.xz"
+MD5SUM="53dfbbbf1e91af7a576afb988d54d0a7"
