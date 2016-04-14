@@ -1,5 +1,5 @@
 PKGNAM="epiphany"
-VERSION="3.18.5"
+VERSION="3.18.6"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/epiphany/3.18/epiphany-3.18.5.tar.xz"
-MD5SUM="625c84c0dc9da137aeeb2ad4d930cfea"
+DOWNLOAD="http://download.gnome.org/sources/epiphany/3.18/epiphany-3.18.6.tar.xz"
+MD5SUM="d286dda45157393a5364253734a5d72c"
