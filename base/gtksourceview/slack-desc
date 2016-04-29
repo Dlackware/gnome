@@ -14,6 +14,6 @@ gtksourceview:
 gtksourceview: It improves GtkTextView by implementing syntax highlighting and other
 gtksourceview: features typical of a source code editor.
 gtksourceview:
-gtksourceview:
+gtksourceview: Homepage: https://wiki.gnome.org/Projects/GtkSourceView
 gtksourceview:
 gtksourceview:
