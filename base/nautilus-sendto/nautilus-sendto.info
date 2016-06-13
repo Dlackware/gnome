@@ -1,5 +1,5 @@
 PKGNAM="nautilus-sendto"
-VERSION="3.8.3"
+VERSION="3.8.4"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/nautilus-sendto/3.8/nautilus-sendto-3.8.3.tar.xz"
-MD5SUM="e0ccb3fea33e66deedbd848df470acc5"
+DOWNLOAD="http://download.gnome.org/sources/nautilus-sendto/3.8/nautilus-sendto-3.8.4.tar.xz"
+MD5SUM="b76f9c9610f8d1a434f782a6a05a22af"
