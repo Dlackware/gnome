@@ -1,4 +1,5 @@
 ### [gnome-suites-core-deps] begin
+autoconf-archive
 yelp-xsl
 yelp-tools
 gnome-common

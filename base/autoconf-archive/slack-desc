@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+               |-----handy-ruler------------------------------------------------------|
+autoconf-archive: GNU Autoconf Archive (freely re-usable Autoconf macros collection)
+autoconf-archive:
+autoconf-archive: The GNU Autoconf Archive is a collection of more than 500 macros for
+autoconf-archive: GNU Autoconf that have been contributed as free software by
+autoconf-archive: friendly supporters of the cause from all over the Internet.
+autoconf-archive: Every single one of those macros can be re-used without imposing any
+autoconf-archive: restrictions whatsoever on the licensing of the generated configure
+autoconf-archive: script.
+autoconf-archive:
+autoconf-archive: Homepage: https://www.gnu.org/software/autoconf-archive/
+autoconf-archive:

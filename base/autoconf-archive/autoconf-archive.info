@@ -1,0 +1,5 @@
+PKGNAM="autoconf-archive"
+VERSION="2016.03.20"
+HOMEPAGE="https://www.gnu.org/software/autoconf-archive/"
+DOWNLOAD="autoconf-archive-2016.03.20.tar.xz"
+MD5SUM="99c4167b8107189bb6dcb98b09956829"
