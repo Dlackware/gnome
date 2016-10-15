@@ -40,8 +40,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c https://pypi.python.org/packages/source/T/$SRCNAM/$SRCNAM-$VERSION.tar.bz2
-
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-$PRGNAM

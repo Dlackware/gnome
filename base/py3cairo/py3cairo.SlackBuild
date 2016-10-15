@@ -36,8 +36,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://cairographics.org/releases/pycairo-1.10.0.tar.bz2
-
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-$PRGNAM

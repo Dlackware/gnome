@@ -27,8 +27,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://www.lua.org/ftp/lua-5.1.5.tar.gz
-
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-$PKGNAM

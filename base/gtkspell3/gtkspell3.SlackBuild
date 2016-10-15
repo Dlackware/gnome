@@ -39,8 +39,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://gtkspell.sourceforge.net/download/$PKGNAM-$VERSION.tar.gz
-
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-$PKGNAM

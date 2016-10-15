@@ -27,8 +27,6 @@ VERSION=${VERSION:-1.2.2}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
-wget -c http://dbus.freedesktop.org/releases/$SRCNAM/$SRCNAM-$VERSION.tar.gz
-
 # Automatically determine the architecture we're building on:
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in

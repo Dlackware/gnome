@@ -34,8 +34,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c https://github.com/metabrainz/libmusicbrainz/archive/release-$VERSION.tar.gz
-
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}

@@ -37,8 +37,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://telepathy.freedesktop.org/releases/telepathy-mission-control/telepathy-mission-control-5.16.3.tar.gz
-
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-$PKGNAM

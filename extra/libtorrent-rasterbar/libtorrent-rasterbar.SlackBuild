@@ -32,8 +32,6 @@ TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-$PRGNAM
 OUTPUT=${OUTPUT:-/var/cache/dlackware}
 
-wget -c http://downloads.sourceforge.net/project/libtorrent/libtorrent/$PRGNAM-$VERSION.tar.gz
-
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
     i?86) export ARCH=i486 ;;

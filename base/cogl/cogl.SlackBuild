@@ -34,8 +34,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://download.gnome.org/sources/$PKGNAM/1.22/$PKGNAM-$VERSION.tar.xz
-
 NUMJOBS=${NUMJOBS:-"-j4"}
 
 CWD=$(pwd)

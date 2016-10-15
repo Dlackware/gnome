@@ -34,8 +34,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://www.freedesktop.org/software/colord/releases/$PKGNAM-$VERSION.tar.xz
-
 NUMJOBS=${NUMJOBS:-"-j4"}
 
 CWD=$(pwd)

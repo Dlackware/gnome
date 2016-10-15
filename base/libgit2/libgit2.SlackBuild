@@ -37,8 +37,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c https://github.com/${PKGNAM}/${PKGNAM}/archive/v${VERSION}.tar.gz
-
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-$PKGNAM

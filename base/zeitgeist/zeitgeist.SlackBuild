@@ -36,8 +36,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://launchpad.net/${PKGNAM}/0.9/${VERSION}/+download/${PKGNAM}-${VERSION}.tar.xz
-
 NUMJOBS=${NUMJOBS:-"-j4"}
 
 CWD=$(pwd)

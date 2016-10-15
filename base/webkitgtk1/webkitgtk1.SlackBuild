@@ -39,8 +39,6 @@ OUTPUT=${OUTPUT:-/var/cache/dlackware}
 
 DOCDIR=/usr/doc/$PKGNAM-$VERSION
 
-wget -c http://webkitgtk.org/releases/$SRCNAM-$VERSION.tar.xz
-
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
     i?86) ARCH=i486 ;;

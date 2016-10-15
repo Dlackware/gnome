@@ -40,8 +40,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c https://ibus.googlecode.com/files/ibus-1.5.5.tar.gz
-
 if [ "$ARCH" = "i486" ]; then
   SLKCFLAGS="-O2 -march=i486 -mtune=i686"
   LIBDIRSUFFIX=""

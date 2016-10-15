@@ -36,8 +36,6 @@ if [ -z "$ARCH" ]; then
   export ARCH
 fi
 
-wget -c http://download.gnome.org/sources/$PKGNAM/3.18/$PKGNAM-$VERSION.tar.xz
-
 NUMJOBS=${NUMJOBS:-" -j4 "}
 
 CWD=$(pwd)

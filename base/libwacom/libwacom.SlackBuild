@@ -37,8 +37,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c https://downloads.sourceforge.net/project/linuxwacom/$PKGNAM/$PKGNAM-$VERSION.tar.bz2
-
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}

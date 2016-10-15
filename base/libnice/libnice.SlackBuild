@@ -34,8 +34,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://nice.freedesktop.org/releases/$PKGNAM-$VERSION.tar.gz
-
 NUMJOBS=${NUMJOBS:-"-j4"}
 
 CWD=$(pwd)

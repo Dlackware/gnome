@@ -40,8 +40,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://ftp.mozilla.org/pub/mozilla.org/js/mozjs-$VERSION.tar.bz2
-
 NUMJOBS=${NUMJOBS:-" -j7 "}
 
 CWD=$(pwd)

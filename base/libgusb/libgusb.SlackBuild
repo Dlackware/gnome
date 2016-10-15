@@ -34,8 +34,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://people.freedesktop.org/~hughsient/releases/$PKGNAM-$VERSION.tar.xz
-
 
 NUMJOBS=${NUMJOBS:-" -j7 "}
 

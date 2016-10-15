@@ -18,8 +18,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://github.com/lloyd/yajl/tarball/2.1.0/lloyd-yajl-2.1.0-0-ga0ecdde.tar.gz
-
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-$PKGNAM

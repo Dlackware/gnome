@@ -36,8 +36,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://ftp.gimp.org/pub/gegl/0.3/gegl-$VERSION.tar.bz2
-
 NUMJOBS=${NUMJOBS:-" -j7 "}
 
 CWD=$(pwd)

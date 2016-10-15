@@ -38,8 +38,6 @@ else
   LIBDIRSUFFIX=""
 fi
 
-wget -c ftp://libvirt.org/$PKGNAM/$PKGNAM-$VERSION.tar.gz
-
 VIRTGROUP=${VIRTGROUP:-users}
 
 set -e

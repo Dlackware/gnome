@@ -39,8 +39,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://downloads.sourceforge.net/project/hunspell/Hyphen/2.8/hyphen-2.8.8.tar.gz
-
 NUMJOBS=${NUMJOBS:-"-j4"}
 
 CWD=$(pwd)

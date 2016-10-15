@@ -34,8 +34,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://download.videolan.org/pub/$PKGNAM/$VERSION/$PKGNAM-$VERSION.tar.bz2
-
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-$PKGNAM
