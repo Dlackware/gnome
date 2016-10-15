@@ -1,5 +1,5 @@
 PKGNAM="libxml++"
-VERSION="2.40.1"
+VERSION="3.0.0"
 HOMEPAGE="https://wiki.gnome.org/Projects/Libxml++"
-DOWNLOAD="http://download.gnome.org/sources/libxml++/2.40/libxml++-2.40.1.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/libxml++/2.40/libxml++-3.0.0.tar.xz"
 MD5SUM="377a87bea899f2b4ff62df2418c3d8a6"

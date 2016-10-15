@@ -1,5 +1,5 @@
 PKGNAM="pangomm"
-VERSION="2.38.1"
+VERSION="2.40.1"
 HOMEPAGE="http://www.gtkmm.org/"
-DOWNLOAD="http://download.gnome.org/sources/pangomm/2.38/pangomm-2.38.1.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/pangomm/2.38/pangomm-2.40.1.tar.xz"
 MD5SUM="734fc6bf8f91c94383ca10d24705ce25"

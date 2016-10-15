@@ -1,5 +1,5 @@
 PKGNAM="libgweather"
-VERSION="3.18.1"
+VERSION="3.20.3"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/libgweather/3.18/libgweather-3.18.1.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/libgweather/3.22/libgweather-3.20.3.tar.xz"
 MD5SUM="0a4bd5421c9cd2d845d0a91c8caa6117"

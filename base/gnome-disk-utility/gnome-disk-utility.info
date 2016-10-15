@@ -1,5 +1,5 @@
 PKGNAM="gnome-disk-utility"
-VERSION="3.18.3.1"
+VERSION="3.22.0"
 HOMEPAGE="https://wiki.gnome.org/Design/Apps/Disks"
-DOWNLOAD="http://download.gnome.org/sources/gnome-disk-utility/3.18/gnome-disk-utility-3.18.3.1.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/gnome-disk-utility/3.22/gnome-disk-utility-3.22.0.tar.xz"
 MD5SUM="1506870cceaea1311af3e95e063d6b7a"

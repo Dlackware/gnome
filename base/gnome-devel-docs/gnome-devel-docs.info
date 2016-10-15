@@ -1,5 +1,5 @@
 PKGNAM="gnome-devel-docs"
-VERSION="3.18.1"
+VERSION="3.22.1"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/gnome-devel-docs/3.18/gnome-devel-docs-3.18.1.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/gnome-devel-docs/3.22/gnome-devel-docs-3.22.1.tar.xz"
 MD5SUM="f7cdcfcdd236c92d853d3cfb49875c32"

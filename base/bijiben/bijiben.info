@@ -1,5 +1,5 @@
 PKGNAM="bijiben"
-VERSION="3.18.2"
+VERSION="3.21.2"
 HOMEPAGE="https://wiki.gnome.org/action/show/Apps/Bejijben"
-DOWNLOAD="http://download.gnome.org/sources/bijiben/3.18/bijiben-3.18.2.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/bijiben/3.22/bijiben-3.21.2.tar.xz"
 MD5SUM="66f45dfe887239a56cc707457bf3a303"

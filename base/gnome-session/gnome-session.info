@@ -1,5 +1,5 @@
 PKGNAM="gnome-session"
-VERSION="3.18.1.2"
+VERSION="3.22.1"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/gnome-session/3.18/gnome-session-3.18.1.2.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/gnome-session/3.22/gnome-session-3.22.1.tar.xz"
 MD5SUM="36cf2abe3f54197e7edd72d6011507b3"

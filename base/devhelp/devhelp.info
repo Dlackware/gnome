@@ -1,5 +1,5 @@
 PKGNAM="devhelp"
-VERSION="3.18.1"
+VERSION="3.22.0"
 HOMEPAGE="https://wiki.gnome.org/Apps/Devhelp"
-DOWNLOAD="http://download.gnome.org/sources/devhelp/3.18/devhelp-3.18.1.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/devhelp/3.22/devhelp-3.22.0.tar.xz"
 MD5SUM="d3f36ccd54eecda822db59a45f2b83b7"

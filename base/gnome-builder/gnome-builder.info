@@ -1,5 +1,5 @@
 PKGNAM="gnome-builder"
-VERSION="3.18.1"
+VERSION="3.22.1"
 HOMEPAGE="https://www.gnome.org/Apps/Builder"
-DOWNLOAD="http://download.gnome.org/sources/gnome-builder/3.18/gnome-builder-3.18.1.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/gnome-builder/3.22/gnome-builder-3.22.1.tar.xz"
 MD5SUM="9d8c049b867a150a483ad92bd5408bc7"

@@ -23,7 +23,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=gnome-documents
-VERSION=${VERSION:-3.18.3}
+VERSION=${VERSION:-3.22.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 

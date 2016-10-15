@@ -22,7 +22,7 @@
 
 
 PKGNAM=gtk-engines
-VERSION=${VERSION:-2.20.2}
+VERSION=${VERSION:-2.91.1}
 BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 

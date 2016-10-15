@@ -1,5 +1,5 @@
 PKGNAM="gtksourceview"
-VERSION="3.18.4"
+VERSION="3.22.0"
 HOMEPAGE="https://wiki.gnome.org/Projects/GtkSourceView"
-DOWNLOAD="http://download.gnome.org/sources/gtksourceview/3.18/gtksourceview-3.18.4.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/gtksourceview/3.22/gtksourceview-3.22.0.tar.xz"
 MD5SUM="b2fa71fc6b63c9ffb7aaed6c20859f4d"

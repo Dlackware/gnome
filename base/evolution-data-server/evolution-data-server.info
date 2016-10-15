@@ -1,5 +1,5 @@
 PKGNAM="evolution-data-server"
-VERSION="3.18.5"
+VERSION="3.22.1"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/evolution-data-server/3.18/evolution-data-server-3.18.5.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/evolution-data-server/3.22/evolution-data-server-3.22.1.tar.xz"
 MD5SUM="9ebf160a827ebdcf556f1147734ceb6c"

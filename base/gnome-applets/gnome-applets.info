@@ -1,5 +1,5 @@
 PKGNAM="gnome-applets"
-VERSION="3.18.1"
+VERSION="3.22.0"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/gnome-applets/3.18/gnome-applets-3.18.1.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/gnome-applets/3.22/gnome-applets-3.22.0.tar.xz"
 MD5SUM="dbabd755d154e70e0b6323713556b1b4"

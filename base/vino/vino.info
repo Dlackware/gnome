@@ -1,5 +1,5 @@
 PKGNAM="vino"
-VERSION="3.18.1"
+VERSION="3.22.0"
 HOMEPAGE="https://wiki.gnome.org/action/show/Projects/Vino"
-DOWNLOAD="http://download.gnome.org/sources/vino/3.18/vino-3.18.1.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/vino/3.22/vino-3.22.0.tar.xz"
 MD5SUM="f9f4a343a3dca9457213fe6da83ceb2b"

@@ -1,5 +1,5 @@
 PKGNAM="gnome-settings-daemon"
-VERSION="3.18.3"
+VERSION="3.22.1"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/gnome-settings-daemon/3.18/gnome-settings-daemon-3.18.3.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/gnome-settings-daemon/3.22/gnome-settings-daemon-3.22.1.tar.xz"
 MD5SUM="0af3272172259cbf12aab4f4cbff89c0"

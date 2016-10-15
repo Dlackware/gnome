@@ -1,5 +1,5 @@
 PKGNAM="cogl"
-VERSION="1.22.0"
+VERSION="1.22.2"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/cogl/1.22/cogl-1.22.0.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/cogl/1.22/cogl-1.22.2.tar.xz"
 MD5SUM="ab684ec96848d79d22757fb3064820c8"

@@ -24,7 +24,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=gnome-terminal
-VERSION=${VERSION:-3.18.3}
+VERSION=${VERSION:-3.22.0}
 BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
