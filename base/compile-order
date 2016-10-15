@@ -4,7 +4,6 @@ yelp-xsl
 yelp-tools
 gnome-common
 vala
-json-glib
 geocode-glib
 libgweather
 GeoIP
