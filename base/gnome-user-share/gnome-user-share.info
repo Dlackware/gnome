@@ -1,5 +1,5 @@
 PKGNAM="gnome-user-share"
-VERSION="3.22.3"
+VERSION="3.18.3"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/gnome-user-share/3.22/gnome-user-share-3.22.3.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/gnome-user-share/3.18/gnome-user-share-3.18.3.tar.xz"
 MD5SUM="f039a12e5847c91f64ce71566f650add"
