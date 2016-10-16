@@ -76,6 +76,7 @@ find -L . \
   --sysconfdir=/etc \
   --localstatedir=/var/lib \
   --disable-silent-rules \
+  --disable-selinux \
   --enable-introspection \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
