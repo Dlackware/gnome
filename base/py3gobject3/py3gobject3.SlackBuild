@@ -24,9 +24,9 @@
 
 PKGNAM=py3gobject3
 SRCNAM=pygobject
-VERSION=${VERSION:-3.18.2}
+VERSION=${VERSION:-3.22.0}
 BUILD=${BUILD:-1}
-TAG=${TAG:-_dlackware}
+TAG=${TAG:-_dlack}
 
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
