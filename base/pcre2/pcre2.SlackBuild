@@ -51,7 +51,7 @@ else
 fi
 
 CWD=$(pwd)
-TMP=${TMP:-/tmp/dlack}
+TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-$PKGNAM
 OUTPUT=${OUTPUT:-/var/cache/dlackware}
 
