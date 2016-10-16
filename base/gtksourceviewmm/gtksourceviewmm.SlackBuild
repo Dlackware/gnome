@@ -23,11 +23,9 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=gtksourceviewmm
-VERSION=${VERSION:-3.21.2}
+VERSION=${VERSION:-3.18.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
-
-NUMJOBS=${NUMJOBS:--j7}
 
 # Automatically determine the architecture we're building on:
 if [ -z "$ARCH" ]; then
@@ -84,7 +82,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
   --build=$ARCH-slackware-linux
 
-make $NUMJOBS
+make
 make install DESTDIR=$PKG
 
 # Strip binaries:

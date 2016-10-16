@@ -1,5 +1,5 @@
 PRGNAM="dbus-python3"
-VERSION="1.2.2"
+VERSION="1.2.4"
 HOMEPAGE="http://pypi.python.org/pypi/requests"
-DOWNLOAD="http://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.0.tar.gz"
+DOWNLOAD="http://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.4.tar.gz"
 MD5SUM="d1f2c7ba976d457206caf57d20b5cb5d"
