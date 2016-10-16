@@ -1,7 +1,8 @@
 #!/bin/sh
 
-# Copyright 2014 Eugene Wissner (belka.ew@gmail.com)
+# Copyright 2016 Eugene Wissner, Dachau, Germany
 # Copyright 2015  Bart van der Hall, Almere, NL
+#
 # All rights reserved.
 #
 #   Permission to use, copy, modify, and distribute this software for
@@ -23,8 +24,8 @@
 #   SUCH DAMAGE.
 # -----------------------------------------------------------------------------
 
-PKGNAM=atkmm
-VERSION=${VERSION:-2.24.2}
+PKGNAM=atk
+VERSION=${VERSION:-2.22.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -83,7 +84,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
   --build=$ARCH-slackware-linux
 
-make
+make $NUMJOBS
 make install DESTDIR=$PKG
 
 # Strip binaries:
