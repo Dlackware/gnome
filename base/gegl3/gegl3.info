@@ -1,5 +1,5 @@
 PKGNAM="gegl3"
-VERSION="0.3.2"
-HOMEPAGE=""
-DOWNLOAD="http://ftp.gimp.org/pub/gegl/0.3/gegl-0.3.2.tar.bz2"
+VERSION="0.3.6"
+HOMEPAGE="http://gegl.org"
+DOWNLOAD="http://ftp.gimp.org/pub/gegl/0.3/gegl-0.3.6.tar.bz2"
 MD5SUM="6955dd2ac208448c8a2a4bc7c7f37869"
