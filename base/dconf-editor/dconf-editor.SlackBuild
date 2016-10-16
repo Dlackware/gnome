@@ -36,8 +36,6 @@ if [ -z "$ARCH" ]; then
   export ARCH
 fi
 
-NUMJOBS=${NUMJOBS:-" -j4 "}
-
 CWD=$(pwd)
 TMP=${TMP:-/tmp}
 PKG=$TMP/package-$PKGNAM
@@ -81,7 +79,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
   --build=$ARCH-slackware-linux || exit 1
 
-make $NUMJOBS || make || exit 1
+make || exit 1
 make install DESTDIR=$PKG || exit 1
 
 # Compress manual pages:
