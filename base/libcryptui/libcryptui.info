@@ -1,5 +1,5 @@
 PKGNAM="libcryptui"
 VERSION="3.12.2"
-HOMEPAGE=""
+HOMEPAGE="https://github.com/GNOME/libcryptui"
 DOWNLOAD="http://download.gnome.org/sources/libcryptui/3.12/libcryptui-3.12.2.tar.xz"
 MD5SUM="da0ca49a8854e33aecce949f62def9d7"

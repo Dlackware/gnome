@@ -21,7 +21,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=bijiben
-VERSION=${VERSION:-3.21.2}
+VERSION=${VERSION:-3.20.2}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -33,8 +33,6 @@ if [ -z "$ARCH" ]; then
         *) export ARCH=$( uname -m ) ;;
   esac
 fi
-
-NUMJOBS=${NUMJOBS:-"-j4"}
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
@@ -82,7 +80,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
   --build=$ARCH-slackware-linux
 
-make $NUMJOBS
+make
 make install DESTDIR=$PKG
 
 rm -rf $PKG/usr/lib*/valgrind
