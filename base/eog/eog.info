@@ -1,5 +1,5 @@
 PKGNAM="eog"
 VERSION="3.20.5"
 HOMEPAGE="https://wiki.gnome.org/Apps/EyeOfGnome"
-DOWNLOAD="http://download.gnome.org/sources/eog/3.22/eog-3.20.5.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/eog/3.20/eog-3.20.5.tar.xz"
 MD5SUM="b498457854fb458909124b5a034a6cb0"
