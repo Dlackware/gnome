@@ -1,5 +1,5 @@
 PRGNAM="python-requests"
 VERSION="2.11.1"
 HOMEPAGE="http://pypi.python.org/pypi/requests"
-DOWNLOAD="http://pypi.python.org/packages/source/r/requests/requests-2.11.1.tar.gz"
+DOWNLOAD="https://pypi.python.org/packages/2e/ad/e627446492cc374c284e82381215dcd9a0a87c4f6e90e9789afefe6da0ad/requests-2.11.1.tar.gz"
 MD5SUM="0b7f480d19012ec52bab78292efd976d"
