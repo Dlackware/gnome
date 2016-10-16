@@ -28,7 +28,7 @@
 # Feedback (especially improvements) is encouraged!  :-)
 
 PKGNAM=ibus
-VERSION=${VERSION:-1.5.5}
+VERSION=${VERSION:-1.5.14}
 BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 

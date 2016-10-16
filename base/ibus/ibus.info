@@ -1,5 +1,5 @@
 PKGNAM="ibus"
-VERSION="1.5.5"
-HOMEPAGE="http://code.google.com/p/ibus/"
-DOWNLOAD="http://ibus.googlecode.com/files/ibus-1.5.5.tar.gz"
+VERSION="1.5.14"
+HOMEPAGE="https://github.com/ibus/ibus/wiki"
+DOWNLOAD="https://github.com/ibus/ibus/releases/download/1.5.14/ibus-1.5.14.tar.gz"
 MD5SUM="59b8d2fbed3ceb14edac130f882ccfd4"
