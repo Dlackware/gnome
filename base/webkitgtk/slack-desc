@@ -6,7 +6,7 @@
 # leave one space after the ':'.
 
          |-----handy-ruler------------------------------------------------------|
-webkitgtk: webkit2gtk3 (An opensource browser engine)
+webkitgtk: WebKitGTK+ (An opensource browser engine)
 webkitgtk:
 webkitgtk: WebKit is an open source web browser engine. It is able to display
 webkitgtk: content such as HTML, SVG, XML, and others. It also supports DOM,
