@@ -1,6 +1,10 @@
 accerciser
 telepathy-farstream
 empathy
+### [games] begin
+qqwing
+gnome-sudoku
+### [games] end
 ### [deluge] begin
 pysetuptools
 pyxdg
