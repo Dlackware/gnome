@@ -60,6 +60,8 @@ gnome-menus
 gnome-packagekit
 gnome-session
 libwnck3
+plymouth
+gdm
 gnome-panel
 gnome-applets
 py3cairo
@@ -69,8 +71,6 @@ py3atspi
 libgee
 caribou
 libdmapsharing
-plymouth
-gdm
 mozjs24
 gjs
 zenity
