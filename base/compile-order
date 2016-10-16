@@ -99,6 +99,7 @@ epiphany
 glade
 gnome-js-common
 seed
+dconf
 libdvdcss
 libpeas
 eog
