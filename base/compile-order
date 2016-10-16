@@ -1,4 +1,5 @@
 ### [gnome-suites-core-deps] begin
+gobject-introspection
 autoconf-archive
 yelp-xsl
 yelp-tools
