@@ -1,5 +1,5 @@
 PKGNAM="gtkspell3"
 VERSION="3.0.9"
 HOMEPAGE="http://gtkspell.sourceforge.net"
-DOWNLOAD="http://gtkspell.sourceforge.net/download/gtkspell3-3.0.9.tar.gz
+DOWNLOAD="http://sourceforge.net/projects/gtkspell/files/3.0.9/gtkspell3-3.0.9.tar.xz"
 MD5SUM="f15a7c29b71d6ae343c783af3571c8d2"
