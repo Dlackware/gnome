@@ -59,9 +59,6 @@ TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-$PKGNAM
 OUTPUT=${OUTPUT:-/var/cache/dlackware}
 
-CONF_OPT="--enable-dconf --disable-gconf --disable-gtk2 --enable-python-library"
-# This second one is for wayland enabled aswell
-# CONF_OPT="--enable-dconf --disable-gconf --disable-gtk2 --enable-wayland --enable-python-library"
 
 set -e
 
@@ -78,11 +75,7 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-
-patch -p1 -E --backup --verbose -i ${CWD}/ibus.skip-dconf-update-if-DESTDIR-is-set.patch
-
-autoreconf -ivf
-
+# Don't know if emoji.json is needed at the runtime - Eugene
 
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
@@ -92,7 +85,12 @@ CXXFLAGS="$SLKCFLAGS" \
   --sysconfdir=/etc \
   --localstatedir=/var \
   --with-html-dir=/usr/share/gtk-doc/html \
-  $CONF_OPT \
+  --enable-dconf \
+  --disable-gconf \
+  --disable-gtk2 \
+  --enable-wayland \
+  --enable-python-library \
+  --with-emoji-json-file=$CWD/emoji.json \
   --build=$ARCH-slackware-linux
 
 make
@@ -112,7 +110,7 @@ cp -a \
   AUTHORS COPYING ChangeLog NEWS README \
   $PKG/usr/doc/$PKGNAM-$VERSION
 cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
-cat $CWD/README.SBO > $PKG/usr/doc/$PKGNAM-$VERSION/README.SBO
+cat $CWD/README > $PKG/usr/doc/$PKGNAM-$VERSION/README
 cd $PKG/usr/doc/$PKGNAM-$VERSION
   ln -s ../../share/gtk-doc/html/ibus html
 cd -
