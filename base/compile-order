@@ -112,6 +112,7 @@ gnome-system-log
 mm-common
 libxml++
 gnome-system-monitor
+pcre2
 vte2_91
 gnome-terminal
 libmusicbrainz5
