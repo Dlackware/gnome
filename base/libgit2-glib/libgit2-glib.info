@@ -1,5 +1,5 @@
 PKGNAM="libgit2-glib"
 VERSION="0.24.4"
-HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/libgit2-glib/0.23/libgit2-glib-0.24.4.tar.xz"
+HOMEPAGE="https://github.com/GNOME/libgit2-glib"
+DOWNLOAD="http://download.gnome.org/sources/libgit2-glib/0.24/libgit2-glib-0.24.4.tar.xz"
 MD5SUM="12800befaf5a599be97c7b111dd84dc3"
