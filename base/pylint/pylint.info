@@ -1,5 +1,5 @@
 PKGNAM="pylint"
 VERSION="1.6.4"
-HOMEPAGE="http://www.logilab.org/project/pylint"
-DOWNLOAD="http://pypi.python.org/packages/source/p/pylint/pylint-1.6.4.tar.gz"
+HOMEPAGE="https://www.pylint.org"
+DOWNLOAD="https://pypi.python.org/packages/4e/4b/2f14a233e6c86bbfff9568d3357860573dea51be7c96eecab9471ab6ca6f/pylint-1.6.4.tar.gz"
 MD5SUM="017299b5911838a9347a71de5f946afc"
