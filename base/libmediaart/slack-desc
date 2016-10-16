@@ -6,9 +6,10 @@
 # leave one space after the ':'.
 
            |-----handy-ruler------------------------------------------------------|
-libmediaart: libmediaart (What to write)
+libmediaart: libmediaart (Library for handling media art)
 libmediaart:
-libmediaart: This needs a proper description.
+libmediaart: Library tasked with managing, extracting and handling media art
+libmediaart: caches.
 libmediaart:
 libmediaart:
 libmediaart:
