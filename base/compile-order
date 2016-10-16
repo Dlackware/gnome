@@ -1,5 +1,7 @@
 ### [gnome-suites-core-deps] begin
 gobject-introspection
+atk
+atkmm
 autoconf-archive
 yelp-xsl
 yelp-tools
@@ -152,6 +154,7 @@ gnome-logs
 gnome-mahjongg
 gnome-nettool
 gegl3
+gexiv2
 gnome-photos
 gnome-tweak-tool
 gnome-weather

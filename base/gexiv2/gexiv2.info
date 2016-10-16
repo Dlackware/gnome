@@ -1,0 +1,5 @@
+PKGNAM="gexiv2"
+VERSION="0.10.4"
+HOMEPAGE="https://wiki.gnome.org/gexiv2"
+DOWNLOAD="http://download.gnome.org/sources/gexiv2/0.10/gexiv2-0.10.4.tar.xz"
+MD5SUM="6852d6286683728e0ea40ca9b5d2416f"
