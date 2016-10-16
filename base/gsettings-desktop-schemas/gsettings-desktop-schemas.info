@@ -1,0 +1,5 @@
+PKGNAM="gsettings-desktop-schemas"
+VERSION="3.22.0"
+HOMEPAGE="https://github.com/GNOME/gsettings-desktop-schemas"
+DOWNLOAD="http://ftp.gnome.org/mirror/gnome.org/sources/gsettings-desktop-schemas/3.22/gsettings-desktop-schemas-3.22.0.tar.xz"
+MD5SUM="59b8d2fbed3ceb14edac130f882ccfd4"
