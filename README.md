@@ -1,16 +1,37 @@
-# Gnome 3 Desktop for Slackware Linux
------
+# Gnome 3 for Slackware Linux
 
-[VERSIONS]
 
-Gnome-3.18 -- Slackware-14.2 <-- build against beta 2) -- beta status
+## About
 
-[NOTES]
+Dlackware provides SlackBuild scripts for Gnome 3. The SlackBuilds found here
+can be used seperatly, but are ment to work as a set on top of PAM and
+systemd.
 
-The SlackBuilds found here can be used seperatly,
-but are ment to work as a set on top of https://github.com/Dlackware/systemd
+It is a sources based project. We currently don't provide pre-built packages.
+Since there are a lot of packages to build, we developed a small build
+system which helps to build and install Gnome and its dependencies.
 
-[INSTALL]
+Our package set isn't the full Gnome distribution, but it isn't
+minimalistic neither. If you miss some packages and you would like to
+maintain them, fill free to create a pull request.
+
+
+## Development
+
+master branch is used for development for the latest Slackware stable.
+
+
+### Current work
+
+master is now updated for Gnome 3.22. And you can already get a working
+desktop with them. But some work on the build system and some updates
+are still needed.
+
+There is `3.18/14.2` branch, but it is unstable, partly because of
+Xwayland issues. So we hope make 3.22 to the first stable release. 
+
+
+## Install
 
 Requirements:
 - Full Install of Slackware
