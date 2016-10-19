@@ -1,4 +1,4 @@
-PRGNAM="dbus-python3"
+PKGNAM="dbus-python3"
 VERSION="1.2.4"
 HOMEPAGE="http://pypi.python.org/pypi/requests"
 DOWNLOAD="http://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.4.tar.gz"
