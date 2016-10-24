@@ -60,7 +60,7 @@ usermod -a -G video gdm
 
 
 if [ ! -d var/lib/gdm ]; then
-        mkdir -p /var/lib/gdm
+  mkdir -p /var/lib/gdm
 fi
 
 chroot . chown -R gdm:gdm /var/lib/gdm /var/cache/gdm /var/log/gdm
@@ -73,4 +73,5 @@ chroot . chmod 1777 /var/run/gdm
 
 if [ -x bin/systemctl ] ; then
   /bin/systemctl --system daemon-reload >/dev/null 2>&1
+  /bin/systemctl enable gdm.service
 fi
