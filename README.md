@@ -45,7 +45,7 @@ It reads the compile-order file and builds and installs everything on that list.
 1. git clone https://github.com/Dlackware/dlackware
 2. cd dlackware
 3. ./dlackware.SlackBuild
-4. upgradepkg --install-new /var/cache/dlackware/dlackware-*-noarch-*_dlack.txz
+4. upgradepkg --install-new /var/cache/dlackware/dlackware-\*-noarch-\*_dlack.txz
 
 ### Build Gnome:
 1. git clone https://github.com/Dlackware/gnome
