@@ -33,20 +33,27 @@ Xwayland issues. So we hope make 3.22 to the first stable release.
 
 ## Install
 
-Requirements:
-- Full Install of Slackware
-- All the packages from https://github.com/Dlackware/systemd that are required
+Full Slackware installation is required.
 
-In the directory base/ you can find the file compile-order
-Build and install all the files on that list
+In the directory base/ you can find the file compile-order.
+Build and install all the files on that list.
 
-Alternative method:
-We have a build system that makes everything easier,
-the build system reads the compile-order file and builds and installs everything on that list.
-It can also download the latest scripts install from compiled packages.
-The Installer can be found here https://github.com/Dlackware/dlackware
+Alternative we have developed a build system that makes everything easier.
+It reads the compile-order file and builds and installs everything on that list.
 
-Finished, what now ?
+### Install the build system:
+1. git clone https://github.com/Dlackware/dlackware
+2. cd dlackware
+3. ./dlackware.SlackBuild
+4. upgradepkg --install-new /var/cache/dlackware/dlackware-*-noarch-*_dlack.txz
+
+### Build Gnome:
+1. git clone https://github.com/Dlackware/gnome
+2. cd gnome
+3. git submodule update --recursive --init
+4. dlackware build
+
+### Finished, what now?
 - enable or disable services in /lib/systemd/system/ (dont forget gdm) (systemctl enable gdm.service)
 - set graphical-target (init 4) as default (systemctl set-default graphical.target)
 - or anything else you might forget
