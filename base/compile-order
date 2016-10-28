@@ -23,6 +23,8 @@ libgdata
 evolution-data-server
 accountsservice
 cogl
+libsigc++
+glibmm
 gdk-pixbuf2
 clutter
 clutter-gtk

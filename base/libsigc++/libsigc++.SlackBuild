@@ -24,7 +24,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=libsigc++
-VERSION=${VERSION:-2.99.7}
+VERSION=${VERSION:-2.10.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
