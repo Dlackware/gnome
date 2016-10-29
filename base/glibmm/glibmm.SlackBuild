@@ -23,8 +23,7 @@
 #   SUCH DAMAGE.
 # -----------------------------------------------------------------------------
 
-PKGNAM=glibmm2
-SRCNAM=glibmm
+PKGNAM=glibmm
 VERSION=${VERSION:-2.50.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
@@ -64,9 +63,9 @@ set -e # Exit on most errors
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $SRCNAM-$VERSION
-tar xvf $CWD/${SRCNAM}-$VERSION.tar.?z*
-cd $SRCNAM-$VERSION
+rm -rf $PKGNAM-$VERSION
+tar xvf $CWD/${PKGNAM}-$VERSION.tar.?z*
+cd $PKGNAM-$VERSION
 
 chown -R root:root .
 find . \
