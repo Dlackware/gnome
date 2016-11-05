@@ -6,12 +6,12 @@
 # leave one space after the ':'.
 
             |-----handy-ruler------------------------------------------------------|
-gnome-photos: gnome-photos (access, organize and share your photos on GNOME)
+gnome-photos: GNOME Photos (access, organize and share your photos on GNOME)
 gnome-photos:
-gnome-photos: Gnome photos allows you to organize your photos.
-gnome-photos:
-gnome-photos:
-gnome-photos:
+gnome-photos: A simple application to access, organize and share your photos on
+gnome-photos: GNOME. It is meant to be a simple and elegant replacement for using a
+gnome-photos: file manager to deal with photos. Seamless cloud integration is
+gnome-photos: offered through GNOME Online Accounts.
 gnome-photos:
 gnome-photos:
 gnome-photos:
