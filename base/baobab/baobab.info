@@ -1,5 +1,5 @@
 PKGNAM="baobab"
-VERSION="3.22.0"
+VERSION="3.22.1"
 HOMEPAGE="https://wiki.gnome.org/Apps/Baobab"
-DOWNLOAD="http://download.gnome.org/sources/baobab/3.22/baobab-3.22.0.tar.xz"
-MD5SUM="299cc7e2ebbdde1813453074c88aa6de"
+DOWNLOAD="http://download.gnome.org/sources/baobab/3.22/baobab-3.22.1.tar.xz"
+MD5SUM="422a2b6cfa57f3dba92fac2cb13b9ffb"
