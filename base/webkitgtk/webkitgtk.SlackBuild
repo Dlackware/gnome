@@ -3,6 +3,7 @@
 # Slackware build script for WebKitGTK+3
 #
 # Copyright 2014, 2015  Bart van der Hall, Almere, NL
+# Copyright 2016 Eugene Wissner Dachau, Germany
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -22,15 +23,12 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
-
 PKGNAM=webkitgtk
-SRCNAM=webkitgtk
-VERSION=${VERSION:-2.14.1}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
-NJOBS=${NJOBS:-7}
+NUMJOBS=${NUMJOBS:-"-j7"}
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
@@ -66,9 +64,9 @@ set -eu
 rm -rf $TMP
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $SRCNAM-$VERSION
-tar xvf $CWD/$SRCNAM-$VERSION.tar.xz
-cd $SRCNAM-$VERSION
+rm -rf $PKGNAM-$VERSION
+tar xvf $CWD/$PKGNAM-$VERSION.tar.xz
+cd $PKGNAM-$VERSION
 chown -R root:root .
 find -L . \
  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
@@ -85,7 +83,7 @@ cmake -DCMAKE_BUILD_TYPE=Release  \
       -DCMAKE_INSTALL_DOCDIR=/usr/share/doc \
       -DCMAKE_INSTALL_LIBDIR=lib64
 
-make -j${NJOBS} -k || make || exit 1
+make ${NUMJOBS} -k || exit 1
 make install DESTDIR=${PKG} || exit 1
 
 find ${PKG}/usr/lib${LIBDIRSUFFIX} -name '*.la' -delete
