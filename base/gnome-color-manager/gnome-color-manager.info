@@ -1,5 +1,5 @@
 PKGNAM="gnome-color-manager"
-VERSION="3.22.1"
+VERSION="3.22.2"
 HOMEPAGE=""
-DOWNLOAD="http://download.gnome.org/sources/gnome-color-manager/3.22/gnome-color-manager-3.22.1.tar.xz"
-MD5SUM="2449922874fc93801dc8cd41b2528090"
+DOWNLOAD="http://download.gnome.org/sources/gnome-color-manager/3.22/gnome-color-manager-3.22.2.tar.xz"
+MD5SUM="436139955795313e8c776297359af704"
