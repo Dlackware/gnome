@@ -1,5 +1,5 @@
 PKGNAM="gnome-system-monitor"
-VERSION="3.22.0"
+VERSION="3.22.2"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/gnome-system-monitor/3.22/gnome-system-monitor-3.22.0.tar.xz"
-MD5SUM="7979c3d773aa72924dd539f6bcedf367"
+DOWNLOAD="http://download.gnome.org/sources/gnome-system-monitor/3.22/gnome-system-monitor-3.22.2.tar.xz"
+MD5SUM="5d12860ddcf55d7116602ae22b6793fd"
