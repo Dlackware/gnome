@@ -1,5 +1,5 @@
 PKGNAM="gnome-power-manager"
-VERSION="3.22.1"
+VERSION="3.22.2"
 HOMEPAGE="https://wiki.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/gnome-power-manager/3.22/gnome-power-manager-3.22.1.tar.xz"
-MD5SUM="8281dc3a6c5c7ee52068e5027ee195c8"
+DOWNLOAD="http://download.gnome.org/sources/gnome-power-manager/3.22/gnome-power-manager-3.22.2.tar.xz"
+MD5SUM="da7f9dda4b26d2e7a38f7a844b80298b"
