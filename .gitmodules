@@ -4,4 +4,4 @@
 [submodule "systemd"]
 	path = systemd
 	url = https://github.com/Dlackware/systemd.git
-	branch = 3.22/14.2
+	branch = master
