@@ -21,9 +21,11 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=evolution
-VERSION=${VERSION:-3.22.1}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
+
+NUMJOBS=${NUMJOBS:-"-j4"}
 
 # Automatically determine the architecture we're building on:
 if [ -z "$ARCH" ]; then
@@ -33,8 +35,6 @@ if [ -z "$ARCH" ]; then
         *) export ARCH=$( uname -m ) ;;
   esac
 fi
-
-NUMJOBS=${NUMJOBS:-"-j4"}
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
