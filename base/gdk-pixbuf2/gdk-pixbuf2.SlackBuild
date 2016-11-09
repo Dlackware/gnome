@@ -24,7 +24,7 @@
 PKGNAM=gdk-pixbuf2
 SRCNAM=gdk-pixbuf
 VERSION=${VERSION:-$(echo $SRCNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:
@@ -71,7 +71,7 @@ find . \
 
 # There's been this long standing debate about PNG and -lz
 # and this patch is the workaround.  ;-)
-cat $CWD/gdk-pixbuf.pnglz.diff.gz | patch -p1 || exit 1
+cat $CWD/gdk-pixbuf.pnglz.diff | patch -p1 || exit 1
 
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
