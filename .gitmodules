@@ -1,6 +1,7 @@
 [submodule "pam"]
 	path = pam
 	url = https://github.com/Dlackware/pam.git
+	branch = 3.22/14.2
 [submodule "systemd"]
 	path = systemd
 	url = https://github.com/Dlackware/systemd.git
