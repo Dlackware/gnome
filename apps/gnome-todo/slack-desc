@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+          |-----handy-ruler------------------------------------------------------|
+gnome-todo: GNOME To Do (minimalistic personal task manager)
+gnome-todo:
+gnome-todo: GNOME To Do is a simplistic personal task manager designed to
+gnome-todo: perfectly fit the GNOME desktop. Designed from ground up to
+gnome-todo: seamlessly integrate with the GNOME desktop environment, To Do
+gnome-todo: enables you to be as productive as you want.
+gnome-todo:
+gnome-todo: https://wiki.gnome.org/Apps/Todo
+gnome-todo:
+gnome-todo:
+gnome-todo:
