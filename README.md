@@ -1,5 +1,10 @@
 # Gnome 3 for Slackware Linux
 
+<img src="screenshots/3.22.1.png" width="33%" alt="Gnome 3.22 on Slackware 14.2">
+<img src="screenshots/3.22.2.png" width="33%" alt="Gnome 3.22 on Slackware 14.2">
+<img src="screenshots/3.22.3.png" width="33%" alt="Gnome 3.22 on Slackware 14.2">
+<img src="screenshots/3.22.4.png" width="33%" alt="Gnome 3.22 on Slackware 14.2">
+<img src="screenshots/3.22.5.png" width="33%" alt="Gnome 3.22 on Slackware 14.2">
 
 ## About
 
