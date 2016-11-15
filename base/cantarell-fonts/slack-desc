@@ -6,14 +6,14 @@
 # leave one space after the ':'.
 
                |-----handy-ruler------------------------------------------------------|
-cantarell-fonts: Cantarell (contemporary Humanist sans serif typeface family)
+cantarell-fonts: cantarell-fonts (The Cantarell typeface family)
+cantarell-fonts:
+cantarell-fonts: The Cantarell typeface family is a contemporary
+cantarell-fonts: Humanist sans serif. This is the open font officially chosen by
+cantarell-fonts: default for the GNOME 3.
 cantarell-fonts:
 cantarell-fonts: Cantarell was originally designed by Dave Crossland as part of his
 cantarell-fonts: coursework for the MA Typeface Design programme at the Department of
 cantarell-fonts: Typography in the University of Reading, England.
-cantarell-fonts:
-cantarell-fonts: Cantarell was originally aimed at on-screen reading in a specific 
-cantarell-fonts: use-case and environment: reading web pages on an HTC Dream mobile
-cantarell-fonts: phone.
 cantarell-fonts:
 cantarell-fonts: Homepage: https://wiki.gnome.org/action/show/Projects/CantarellFonts
