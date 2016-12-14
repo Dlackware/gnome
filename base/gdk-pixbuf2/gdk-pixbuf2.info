@@ -1,5 +1,5 @@
 PKGNAM="gdk-pixbuf2"
-VERSION="2.36.0"
+VERSION="2.36.1"
 HOMEPAGE="https://developer.gnome.org/gdk-pixbuf/"
-DOWNLOAD="http://download.gnome.org/sources/gdk-pixbuf/2.36/gdk-pixbuf-2.36.0.tar.xz"
-MD5SUM="f2f6fe100d49a4b9ba75d99675e4dc03"
+DOWNLOAD="http://download.gnome.org/sources/gdk-pixbuf/2.36/gdk-pixbuf-2.36.1.tar.xz"
+MD5SUM="fe30b0420e013f2c4590ae6226d895d4"
