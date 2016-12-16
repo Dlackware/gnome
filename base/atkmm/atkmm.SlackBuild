@@ -25,7 +25,8 @@
 
 PKGNAM=atkmm
 VERSION=${VERSION:-2.24.2}
-BUILD=${BUILD:-1}
+LIBVERSION=${LIBVERSION:-1.6}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:
@@ -90,8 +91,27 @@ make install DESTDIR=$PKG
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
 	  | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
-mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
-cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
+# Compress and link manpages, if any:
+if [ -d $PKG/usr/man ]; then
+  ( cd $PKG/usr/man
+    for manpagedir in $(find . -type d -name "man*") ; do
+      ( cd $manpagedir
+        for eachpage in $( find . -type l -maxdepth 1) ; do
+          ln -s $( readlink $eachpage ).gz $eachpage.gz
+          rm $eachpage
+        done
+        gzip -9 *.?
+      )
+    done
+  )
+fi
+
+mkdir -p $PKG/usr/doc
+
+# Copy all contents from usr/share/doc to usr/doc and remove usr/share/doc
+cp -a $PKG/usr/share/doc/$PKGNAM-$LIBVERSION $PKG/usr/doc
+rm -rf $PKG/usr/share/doc
+cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$LIBVERSION/$PKGNAM.SlackBuild
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc

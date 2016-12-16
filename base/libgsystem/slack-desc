@@ -7,7 +7,7 @@
 
           |-----handy-ruler------------------------------------------------------|
 libgsystem: libgsystem (GIO-based library)
-libgsystem: 
+libgsystem:
 libgsystem: Provide macros for the GCC attribute(cleanup)
 libgsystem: that work with GLib data types. Using these can dramatically
 libgsystem: simplify local memory management inside functions.

@@ -24,7 +24,7 @@
 
 PKGNAM=plymouth
 VERSION=${VERSION:-0.9.2}
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 NUMJOBS=${NUMJOBS:--j7}
@@ -83,6 +83,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --enable-gdm-transition \
   --enable-pango \
   --enable-gtk \
+  --mandir=/usr/man \
   --localstatedir=/var \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
   --build=$ARCH-slackware-linux || exit 1
@@ -97,8 +98,8 @@ find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | gr
 	  | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
 # Compress man pages:
-find $PKG/usr/share/man -type f -exec gzip -9 {} \;
-for i in $( find $PKG/usr/share/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
+find $PKG/usr/man -type f -exec gzip -9 {} \;
+for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild

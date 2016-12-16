@@ -22,7 +22,7 @@
 
 PKGNAM=gnome-power-manager
 VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:
@@ -84,6 +84,21 @@ CXXFLAGS="$SLKCFLAGS" \
 
 make $NUMJOBS
 make install DESTDIR=$PKG
+
+# Compress and link manpages, if any:
+if [ -d $PKG/usr/man ]; then
+  ( cd $PKG/usr/man
+    for manpagedir in $(find . -type d -name "man*") ; do
+      ( cd $manpagedir
+        for eachpage in $( find . -type l -maxdepth 1) ; do
+          ln -s $( readlink $eachpage ).gz $eachpage.gz
+          rm $eachpage
+        done
+        gzip -9 *.?
+      )
+    done
+  )
+fi
 
 # Strip binaries:
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \

@@ -25,7 +25,7 @@
 
 PKGNAM=gedit
 VERSION=${VERSION:-3.22.0}
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:
@@ -78,19 +78,27 @@ CXXFLAGS="$SLKCFLAGS" \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
+  --mandir=/usr/man \
   --localstatedir=/var/lib \
+  --enable-python  \
   --build=$ARCH-slackware-linux
 
 make
 make install DESTDIR=$PKG
+
+# Move python3 files to the correct directory
+mkdir -p $PKG/usr/lib64/python3.5/site-packages/gi/overrides/
+cp -R $PKG/usr/lib/python3.5/site-packages/gi/overrides/* $PKG/usr/lib64/python3.5/site-packages/gi/overrides/
+rm -rf $PKG/usr/lib/
+
 
 # Strip binaries:
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
 	  | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
 # Compress man pages:
-find $PKG/usr/share/man -type f -exec gzip -9 {} \;
-for i in $( find $PKG/usr/share/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
+find $PKG/usr/man -type f -exec gzip -9 {} \;
+for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild

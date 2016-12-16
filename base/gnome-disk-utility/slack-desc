@@ -7,13 +7,13 @@
 
                   |-----handy-ruler------------------------------------------------------|
 gnome-disk-utility: gnome-disk-utility (Disk Management Utility for GNOME)
-gnome-disk-utility: 
+gnome-disk-utility:
 gnome-disk-utility: gnome-disk-utility provides libraries and applications for dealing
 gnome-disk-utility: with storage devices.
 gnome-disk-utility:
-gnome-disk-utility: 
-gnome-disk-utility: 
-gnome-disk-utility: 
-gnome-disk-utility: 
-gnome-disk-utility: 
-gnome-disk-utility: 
+gnome-disk-utility:
+gnome-disk-utility:
+gnome-disk-utility:
+gnome-disk-utility:
+gnome-disk-utility:
+gnome-disk-utility:

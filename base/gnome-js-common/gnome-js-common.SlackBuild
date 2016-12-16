@@ -25,7 +25,7 @@
 
 PKGNAM=gnome-js-common
 VERSION=${VERSION:-0.1.2}
-BUILD=${BUILD:-2}
+BUILD=${BUILD:-3}
 TAG=${TAG:-_dlack}
 
 NUMJOBS=${NUMJOBS:--j7}
@@ -91,7 +91,10 @@ make install DESTDIR=$PKG
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
 	  | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
+
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
+cp -R $PKG/usr/share/doc/gnome_js_common/* $PKG/usr/doc/$PKGNAM-$VERSION
+rm -rf $PKG/usr/share/doc
 cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
 
 mkdir -p $PKG/install

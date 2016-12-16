@@ -13,7 +13,7 @@ farstream: audio/video conferencing protocols for use by applications such as
 farstream: instant messaging. These applications are able to use Farstream for
 farstream: all their Audio/Video conferencing needs without having to worry
 farstream: about any of the lower level streaming and NAT traversal issues.
-farstream: 
+farstream:
 farstream: Farstream forms an integral part of the Telepathy framework.
 farstream:
 farstream:

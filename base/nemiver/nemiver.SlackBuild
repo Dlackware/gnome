@@ -25,7 +25,7 @@
 
 PKGNAM=nemiver
 VERSION=${VERSION:-0.9.6}
-BUILD=${BUILD:-2}
+BUILD=${BUILD:-3}
 TAG=${TAG:-_dlack}
 
 NUMJOBS=${NUMJOBS:--j7}
@@ -82,6 +82,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
+  --mandir=/usr/man \
   --localstatedir=/var/lib \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
   --build=$ARCH-slackware-linux
@@ -94,8 +95,8 @@ find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | gr
 	  | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
 # Compress man pages:
-find $PKG/usr/share/man -type f -exec gzip -9 {} \;
-for i in $( find $PKG/usr/share/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
+find $PKG/usr/man -type f -exec gzip -9 {} \;
+for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild

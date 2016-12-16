@@ -17,4 +17,3 @@ libsigc++: libsigc++ is used by gtkmm to wrap the GTK+ signal system. It does
 libsigc++: not depend on GTK or gtkmm.
 libsigc++:
 libsigc++:
-libsigc++:

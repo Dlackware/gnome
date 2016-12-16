@@ -27,7 +27,7 @@
 
 PKGNAM=hyphen
 VERSION=${VERSION:-2.8.8}
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:

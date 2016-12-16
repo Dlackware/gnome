@@ -7,13 +7,13 @@
 
     |-----handy-ruler--------------------------------------------------------|
 gegl3: GEGL (Generic Graphics Library)
-gegl3: 
+gegl3:
 gegl3: GEGL (Generic Graphics Library) is a graph based image processing
 gegl3: framework.
-gegl3: 
+gegl3:
 gegl3: GEGL provides infrastructure to do demand based cached non destructive
 gegl3: image editing on larger than RAM buffers. Through babl it provides
 gegl3: support for a wide range of color models and pixel storage formats for
 gegl3: input and output.
-gegl3: 
-gegl3: 
+gegl3:
+gegl3:

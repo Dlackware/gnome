@@ -12,7 +12,7 @@ gnome-builder: Builder attempts to be an IDE for writing software for GNOME. It 
 gnome-builder: not try to be a generic IDE, but one specialized for writing GNOME
 gnome-builder: software. We believe that this focus will help us to build something
 gnome-builder: great.
-gnome-builder: 
+gnome-builder:
 gnome-builder: https://www.gnome.org/Apps/Builder
 gnome-builder:
 gnome-builder:
