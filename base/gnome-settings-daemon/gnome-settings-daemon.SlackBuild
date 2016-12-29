@@ -24,7 +24,7 @@
 
 PKGNAM=gnome-settings-daemon
 VERSION=${VERSION:-3.22.1}
-BUILD=${BUILD:-2}
+BUILD=${BUILD:-3}
 TAG=${TAG:-_dlack}
 
 if [ -z "$ARCH" ]; then
@@ -83,6 +83,10 @@ CXXFLAGS="$SLKCFLAGS" \
 
 make $NUMJOBS || make
 make install DESTDIR=$PKG
+
+mkdir -p $PKG/lib/udev/rules.d/
+mv $PKG/usr/lib/udev/rules.d/* $PKG/lib/udev/rules.d/
+rm -rf $PKG/usr/lib
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
