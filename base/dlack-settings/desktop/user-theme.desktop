@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=gsettings set org.gnome.shell.extensions.user-theme name "Dlackware"
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Default user-theme
+Comment=Default dlackware user-theme

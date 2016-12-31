@@ -1,0 +1,5 @@
+PKGNAM="dlack-settings"
+VERSION="3.22.2"
+HOMEPAGE="http://www.dlackware.com/"
+DOWNLOAD="https://github.com/Dlackware/gnome/base/dlack-settings"
+MD5SUM=""

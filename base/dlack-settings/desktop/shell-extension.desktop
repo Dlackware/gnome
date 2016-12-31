@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=gsettings set org.gnome.shell enabled-extensions "['user-theme@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com']"
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Default Extensions
+Comment=Default enabled extensions on boot if no user settings present.

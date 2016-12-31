@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/gnome/dlackware.jpg
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Default background
+Comment=Default dlackware background
