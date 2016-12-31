@@ -1,5 +1,5 @@
 PKGNAM="gitg"
 VERSION="3.22.0"
-HOMEPAGE=""
+HOMEPAGE="http://www.gnome.org"
 DOWNLOAD="http://download.gnome.org/sources/gitg/3.22/gitg-3.22.0.tar.xz"
 MD5SUM="9d656124955e01e6c3c07fd40415a779"

@@ -1,5 +1,5 @@
 PKGNAM="seahorse"
 VERSION="3.20.0"
-HOMEPAGE=""
+HOMEPAGE="http://www.gnome.org"
 DOWNLOAD="http://download.gnome.org/sources/seahorse/3.20/seahorse-3.20.0.tar.xz"
 MD5SUM="758204ac248e1fb3b3767ce84d2795b4"
