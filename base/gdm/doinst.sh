@@ -79,7 +79,7 @@ ${CHROOT} /usr/bin/dconf update
 ${CHROOT} chown -R root:gdm /var/run/gdm
 ${CHROOT} chmod 1777 /var/run/gdm
 
-if [ -x ${CHROOT} /bin/systemctl ] ; then
+if [ -x bin/systemctl ] ; then
   ${CHROOT} /bin/systemctl --system daemon-reload >/dev/null 2>&1
   ${CHROOT} /bin/systemctl enable gdm.service
 fi
