@@ -21,9 +21,11 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=dconf-editor
-VERSION=${VERSION:-3.22.1}
-BUILD=${BUILD:-2}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
+
+NUMJOBS=${NUMJOBS:--j4}
 
 # Automatically determine the architecture we're building on:
 if [ -z "$ARCH" ]; then
@@ -79,7 +81,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
   --build=$ARCH-slackware-linux || exit 1
 
-make || exit 1
+make $NUMJOBS || exit 1
 make install DESTDIR=$PKG || exit 1
 
 # Compress manual pages:
