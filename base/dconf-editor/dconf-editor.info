@@ -1,5 +1,5 @@
 PKGNAM="dconf-editor"
-VERSION="3.22.1"
+VERSION="3.22.3"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/dconf-editor/3.22/dconf-editor-3.22.1.tar.xz"
-MD5SUM="9292d9b96b0d9f87f6589a7d1d0ca388"
+DOWNLOAD="http://download.gnome.org/sources/dconf-editor/3.22/dconf-editor-3.22.3.tar.xz"
+MD5SUM="80f7b39976eb2040bc8ea6635d48a763"
