@@ -1,5 +1,5 @@
 PKGNAM="libgtop"
-VERSION="2.34.1"
+VERSION="2.34.2"
 HOMEPAGE="http://library.gnome.org/devel/libgtop/"
-DOWNLOAD="http://download.gnome.org/sources/libgtop/2.34/libgtop-2.34.1.tar.xz"
-MD5SUM="887491e96841eff68cfacd1ed8872e56"
+DOWNLOAD="http://download.gnome.org/sources/libgtop/2.34/libgtop-2.34.2.tar.xz"
+MD5SUM="8635ded0968cacd93cadd15453812257"
