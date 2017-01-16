@@ -2,6 +2,7 @@
 
 # Copyright 2008 Stylianos Tsampas <ztsampas@otenet.gr>
 # Copyright 2015  Bart van der Hall, Almere, NL
+# Copyright 2017  Eugene Wissner, Dachau, Germany
 #
 # Redistribution and use of this script, with or without modification, is
 # permitted provided that the following conditions are met:
@@ -21,9 +22,11 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=libgtop
-VERSION=${VERSION:-2.34.1}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
+
+NUMJOBS=${NUMJOBS:-"-j4"}
 
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
@@ -83,7 +86,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --disable-hacker-mode \
   --build=$ARCH-slackware-linux
 
-make
+make $NUMJOBS
 make install DESTDIR=$PKG
 
 find $PKG | xargs file | grep -e "executable" -e "shared object" | grep ELF \
