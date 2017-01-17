@@ -24,7 +24,7 @@
 # Modified 2014 by Bart van der Hall for dlackware
 
 PKGNAM=pyatspi
-VERSION=${VERSION:-2.20.2}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
