@@ -1,5 +1,5 @@
 PKGNAM="epiphany"
-VERSION="3.22.4"
+VERSION="3.22.5"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/epiphany/3.22/epiphany-3.22.4.tar.xz"
-MD5SUM="e2ca9b87eb7550ad31fff6ff17f009e5"
+DOWNLOAD="http://download.gnome.org/sources/epiphany/3.22/epiphany-3.22.5.tar.xz"
+MD5SUM="2b37ee5dd2e12ea2c2ab56a80fdee199"
