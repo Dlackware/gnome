@@ -1,5 +1,5 @@
 PKGNAM="pyatspi"
-VERSION="2.20.2"
+VERSION="2.20.3"
 HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/accessibility/atk/at-spi/at-spi_on_d-bus"
-DOWNLOAD="http://download.gnome.org/sources/pyatspi/2.20/pyatspi-2.20.2.tar.xz"
-MD5SUM="63784b21c759452e6506e1f7a4d7913e"
+DOWNLOAD="http://download.gnome.org/sources/pyatspi/2.20/pyatspi-2.20.3.tar.xz"
+MD5SUM="990c77c1f3c08bf29919858a4cb9040d"

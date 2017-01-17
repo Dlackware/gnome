@@ -25,7 +25,7 @@
 
 PKGNAM=py3atspi
 SRCNAM=pyatspi
-VERSION=${VERSION:-2.18.0}
+VERSION=${VERSION:-$(echo $SRCNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
