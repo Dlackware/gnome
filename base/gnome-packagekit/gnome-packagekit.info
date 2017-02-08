@@ -1,5 +1,0 @@
-PKGNAM="gnome-packagekit"
-VERSION="3.22.1"
-HOMEPAGE="http://www.freedesktop.org/software/PackageKit/"
-DOWNLOAD="http://download.gnome.org/sources/gnome-packagekit/3.22/gnome-packagekit-3.22.1.tar.xz"
-MD5SUM="e24d383b4bcaeb642b0082600ae417b0"
