@@ -1,5 +1,5 @@
 PKGNAM="gnome-video-effects"
-VERSION="0.4.1"
+VERSION="0.4.3"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/gnome-video-effects/0.4/gnome-video-effects-0.4.1.tar.xz"
-MD5SUM="aa0838f5be12f524ba5622e1b61d21b1"
+DOWNLOAD="http://download.gnome.org/sources/gnome-video-effects/0.4/gnome-video-effects-0.4.3.tar.xz"
+MD5SUM="decfd1264c00deb5b7ac12b483d21cda"
