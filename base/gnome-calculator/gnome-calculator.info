@@ -1,5 +1,5 @@
 PKGNAM="gnome-calculator"
-VERSION="3.22.2"
+VERSION="3.22.3"
 HOMEPAGE="https://wiki.gnome.org/Apps/Calculator"
-DOWNLOAD="http://download.gnome.org/sources/gnome-calculator/3.22/gnome-calculator-3.22.2.tar.xz"
-MD5SUM="fa5cbcf3c4a825384f06c9b33352e5b5"
+DOWNLOAD="http://download.gnome.org/sources/gnome-calculator/3.22/gnome-calculator-3.22.3.tar.xz"
+MD5SUM="de10518203fad44c2598cdaa8a44abbf"
