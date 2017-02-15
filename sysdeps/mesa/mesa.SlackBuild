@@ -1,0 +1,191 @@
+#!/bin/sh
+# Copyright 2006, 2007, 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016  Patrick J. Volkerding, Sebeka, MN, USA
+# Copyright 2014-2016  Bart van der Hall, Istanbul, TR
+# All rights reserved.
+#
+#   Permission to use, copy, modify, and distribute this software for
+#   any purpose with or without fee is hereby granted, provided that
+#   the above copyright notice and this permission notice appear in all
+#   copies.
+#
+#   THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED
+#   WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+#   MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+#   IN NO EVENT SHALL THE AUTHORS AND COPYRIGHT HOLDERS AND THEIR
+#   CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+#   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF
+#   USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+#   ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+#   OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+#   OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+#   SUCH DAMAGE.
+# -----------------------------------------------------------------------------
+
+PKGNAM=mesa
+VERSION=${VERSION:-13.0.2}
+BUILD=${BUILD:-1}
+TAG=${TAG:-_dlack}
+
+# Be sure this list is up-to-date:
+DRI_DRIVERS="i915,i965,nouveau,r200,radeon,swrast"
+GALLIUM_DRIVERS="nouveau,r300,r600,svga,radeonsi,swrast"
+EGL_PLATFORMS="wayland,drm,x11"
+
+NUMJOBS=${NUMJOBS:--j7}
+
+# Automatically determine the architecture we're building on:
+if [ -z "$ARCH" ]; then
+  case "$( uname -m )" in
+    i?86) export ARCH=i486 ;;
+    arm*) export ARCH=arm ;;
+       *) export ARCH=$( uname -m ) ;;
+  esac
+fi
+
+wget -c ftp://ftp.freedesktop.org/pub/$PKGNAM/$VERSION/$PKGNAM-$VERSION.tar.xz
+
+CWD=$(pwd)
+TMP=${TMP:-/tmp/dlackware}
+PKG=$TMP/package-$PKGNAM
+OUTPUT=${OUTPUT:-/var/cache/dlackware}
+
+if [ "$ARCH" = "i486" ]; then
+  SLKCFLAGS="-O2 -march=i486 -mtune=i686"
+  LIBDIRSUFFIX=""
+elif [ "$ARCH" = "i686" ]; then
+  SLKCFLAGS="-O2 -march=i686 -mtune=i686"
+  LIBDIRSUFFIX=""
+elif [ "$ARCH" = "x86_64" ]; then
+  SLKCFLAGS="-O2 -fPIC"
+  LIBDIRSUFFIX="64"
+else
+  SLKCFLAGS="-O2"
+  LIBDIRSUFFIX=""
+fi
+
+rm -rf $TMP
+mkdir -p $TMP $PKG $OUTPUT
+cd $TMP
+rm -rf Mesa-$VERSION
+tar xvf $CWD/$PKGNAM-$VERSION.tar.?z*
+cd $PKGNAM-$VERSION
+
+# Let's kill the warning about operating on a dangling symlink:
+rm -f src/gallium/state_trackers/d3d1x/w32api
+
+# Make sure ownerships and permissions are sane:
+chown -R root:root .
+find . \
+  \( -perm 777 -o -perm 775 -o -perm 711 -o -perm 555 -o -perm 511 \) \
+  -exec chmod 755 {} \; -o \
+  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
+  -exec chmod 644 {} \;
+
+# Apply patches from git (and maybe elsewhere):
+# Patches obtained by:
+#   git checkout origin/11.0
+#   git format-patch 4c0b48461269d3ede0c5446d86ebe3e81f16788e # 11.0.2 release
+if /bin/ls $CWD/patches/*.patch 1> /dev/null 2> /dev/null ; then
+  for patch in $CWD/patches/*.patch ; do
+    patch -p1 < $patch || exit 1 ;
+  done
+fi
+
+# Don't worry if Mako is not present:
+#sed -i "s,AX_CHECK_PYTHON_MAKO_MODULE(\$PYTHON_MAKO_REQUIRED),,g" configure.ac
+cat $CWD/mesa.no.mako.diff | patch -p1 --verbose || exit 1
+
+# Fix detection of libLLVM when built with CMake
+sed -i 's/LLVM_SO_NAME=.*/LLVM_SO_NAME=LLVM/' configure.ac
+
+# Seems to need this to avoid tripping over a different libtool version:
+autoreconf -fi
+
+CFLAGS="$SLKCFLAGS" \
+./configure \
+  --prefix=/usr \
+  --sysconfdir=/etc \
+  --libdir=/usr/lib${LIBDIRSUFFIX} \
+  --mandir=/usr/man \
+  --docdir=/usr/doc/mesa-$VERSION \
+  --with-dri-driverdir=/usr/lib${LIBDIRSUFFIX}/xorg/modules/dri \
+  --with-dri-drivers="$DRI_DRIVERS" \
+  --with-gallium-drivers="$GALLIUM_DRIVERS" \
+  --with-egl-platforms="$EGL_PLATFORMS" \
+  --enable-gallium-llvm \
+  --enable-llvm-shared-libs \
+  --enable-egl \
+  --enable-texture-float \
+  --enable-shared-glapi \
+  --enable-xa \
+  --enable-nine \
+  --enable-osmesa \
+  --enable-dri \
+  --enable-dri3 \
+  --enable-gbm \
+  --enable-glx \
+  --enable-glx-tls \
+  --enable-gles1 \
+  --enable-gles2 \
+  --enable-vdpau \
+  --enable-gallium-gbm \
+  --enable-gallium-egl \
+  --build=$ARCH-slackware-linux || exit 1
+
+make $NUMJOBS || make || exit 1
+make install DESTDIR=$PKG || exit 1
+
+# Now install the demos
+( cd $TMP
+  rm -rf mesa-demos-$DEMOVERS
+  tar xvf $CWD/mesa-demos-$DEMOVERS.tar.?z* || exit 1
+  cd mesa-demos-$DEMOVERS
+  chown -R root:root .
+  find . \
+    \( -perm 777 -o -perm 775 -o -perm 711 -o -perm 555 -o -perm 511 \) \
+    -exec chmod 755 {} \; -o \
+    \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
+    -exec chmod 644 {} \;
+  CFLAGS="$SLKCFLAGS" \
+  ./configure \
+    --prefix=/usr \
+    --build=$ARCH-slackware-linux
+  # Build and install gears and glinfo, as well as a few other demos
+  make -C src/demos gears glinfo
+  make -C src/xdemos \
+    glthreads glxcontexts glxdemo glxgears glxgears_fbconfig \
+    glxheads glxinfo glxpbdemo glxpixmap
+  mkdir -p $PKG/usr/bin
+  cp -a src/demos/{gears,glinfo} $PKG/usr/bin
+  for i in glthreads glxcontexts glxdemo glxgears glxgears_fbconfig \
+      glxheads glxinfo glxpbdemo glxpixmap ; do
+        cp -a src/xdemos/$i $PKG/usr/bin ;
+  done
+)
+
+# Strip binaries:
+find $PKG | xargs file | grep -e "executable" -e "shared object" | grep ELF \
+  | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null
+
+find $PKG/usr/man -type f -exec gzip -9 {} \;
+for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
+
+# Compress info files, if any:
+if [ -d $PKG/usr/info ]; then
+  rm -f $PKG/usr/info/dir
+  gzip -9 $PKG/usr/info/*
+fi
+
+mkdir -p $PKG/usr/doc/Mesa-$VERSION/html
+cp -a \
+  docs/COPYING* docs/relnotes/relnotes-${VERSION}*.html docs/README* docs/GL* \
+  $PKG/usr/doc/Mesa-$VERSION
+cp -a docs/*.html $PKG/usr/doc/Mesa-$VERSION/html
+rm -f $PKG/usr/doc/Mesa-$VERSION/html/relnotes*.html
+
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd $PKG
+/sbin/makepkg -l y -c n $OUTPUT/$PKGNAM-$VERSION-$ARCH-$BUILD$TAG.txz

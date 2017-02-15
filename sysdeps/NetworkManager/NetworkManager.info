@@ -1,0 +1,5 @@
+PKGNAM="NetworkManager"
+VERSION="1.6.0"
+HOMEPAGE="http://projects.gnome.org/NetworkManager/"
+DOWNLOAD="https://download.gnome.org/sources/NetworkManager/1.6/NetworkManager-1.6.0.tar.xz"
+MD5SUM="ccdac1d03133a59065cbb93a09fa54b0"

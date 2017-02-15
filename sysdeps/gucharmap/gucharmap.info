@@ -1,0 +1,5 @@
+PKGNAM="gucharmap"
+VERSION="8.0.1"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/gucharmap/8.0/gucharmap-8.0.1.tar.xz"
+MD5SUM="8368d1053f16ea05fe1dd6818146bc8e"

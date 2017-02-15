@@ -1,0 +1,10 @@
+# /etc/NetworkManager/NetworkManager.conf
+#
+# See NetworkManager.conf(5) for more information on this file
+
+[main]
+plugins=keyfile
+dhcp=dhcpcd
+
+[keyfile]
+hostname=yourhostname

@@ -1,0 +1,5 @@
+PKGNAM="avahi"
+VERSION="0.6.32"
+HOMEPAGE="http://avahi.org/"
+DOWNLOAD="https://github.com/lathiat/avahi/releases/download/v0.6.32/avahi-0.6.32.tar.gz"
+MD5SUM="22b5e705d3eabb31d26f2e1e7b074013"

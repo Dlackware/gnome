@@ -1,0 +1,5 @@
+PKGNAM="gcab"
+VERSION="0.7"
+HOMEPAGE="http://live.gnome.org/gcab"
+DOWNLOAD="http://download.gnome.org/sources/gcab/0.7/gcab-0.7.tar.xz"
+MD5SUM="d8c54c340e56d0b6a8fe082fd04d8090"

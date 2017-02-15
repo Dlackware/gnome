@@ -1,0 +1,5 @@
+PKGNAM="wpa_supplicant"
+VERSION="2.3"
+HOMEPAGE="http://w1.fi/"
+DOWNLOAD="http://w1.fi/releases/wpa_supplicant-2.3.tar.gz"
+MD5SUM="f2ed8fef72cf63d8d446a2d0a6da630a"

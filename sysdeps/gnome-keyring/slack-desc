@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+             |-----handy-ruler------------------------------------------------------|
+gnome-keyring: Gnome-keyring (GNOME password management facility)
+gnome-keyring:
+gnome-keyring: Gnome-keyring is a program that keeps passwords and other 
+gnome-keyring: secrets for users.
+gnome-keyring:
+gnome-keyring: This is especially something you want if you use Nautilus to
+gnome-keyring: access password-protected remote fileshares, or if you use
+gnome-keyring: Evolution.
+gnome-keyring:
+gnome-keyring:
+gnome-keyring:

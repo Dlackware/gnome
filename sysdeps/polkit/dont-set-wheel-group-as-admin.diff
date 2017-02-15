@@ -1,0 +1,10 @@
+diff -Nur polkit-0.112.orig/src/polkitbackend/50-default.rules polkit-0.112/src/polkitbackend/50-default.rules
+--- polkit-0.112.orig/src/polkitbackend/50-default.rules	2013-04-29 12:28:57.000000000 -0500
++++ polkit-0.112/src/polkitbackend/50-default.rules	2015-01-01 23:32:40.154400050 -0600
+@@ -8,5 +8,5 @@
+ // about configuring polkit.
+ 
+ polkit.addAdminRule(function(action, subject) {
+-    return ["unix-group:wheel"];
++    return ["unix-user:root"];
+ });

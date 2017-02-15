@@ -1,0 +1,5 @@
+PKGNAM="gnome-keyring"
+VERSION="3.20.0"
+HOMEPAGE="https://wiki.gnome.org/Projects/GnomeKeyring"
+DOWNLOAD="http://download.gnome.org/sources/gnome-keyring/3.20/gnome-keyring-3.20.0.tar.xz"
+MD5SUM="e09efe8021944dae404736b5a2adb98e"

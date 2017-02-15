@@ -1,0 +1,91 @@
+--- a/avahi-core/dns.c
++++ b/avahi-core/dns.c
+@@ -55,6 +55,7 @@
+ 
+     p->size = p->rindex = AVAHI_DNS_PACKET_HEADER_SIZE;
+     p->max_size = max_size;
++    p->res_size = 0;
+     p->name_table = NULL;
+     p->data = NULL;
+ 
+@@ -833,6 +834,25 @@
+     return p->max_size - p->size;
+ }
+ 
++size_t avahi_dns_packet_reserve_size(AvahiDnsPacket *p, size_t res_size) {
++    assert(p);
++
++    assert(p->size + p->res_size <= p->max_size);
++
++    if ((p->size + p->res_size + res_size) <= p->max_size)
++	p->res_size += res_size;
++
++    return p->res_size;
++}
++
++size_t avahi_dns_packet_reserved_space(AvahiDnsPacket *p) {
++    assert(p);
++
++    assert(p->size + p->res_size <= p->max_size);
++
++    return p->max_size - p->size - p->res_size;
++}
++
+ int avahi_rdata_parse(AvahiRecord *record, const void* rdata, size_t size) {
+     int ret;
+     AvahiDnsPacket p;
+--- a/avahi-core/dns.h
++++ b/avahi-core/dns.h
+@@ -30,7 +30,7 @@
+ #define AVAHI_DNS_PACKET_SIZE_MAX (AVAHI_DNS_PACKET_HEADER_SIZE + 256 + 2 + 2 + 4 + 2 + AVAHI_DNS_RDATA_MAX)
+ 
+ typedef struct AvahiDnsPacket {
+-    size_t size, rindex, max_size;
++    size_t size, rindex, max_size, res_size;
+     AvahiHashmap *name_table; /* for name compression */
+     uint8_t *data;
+ } AvahiDnsPacket;
+@@ -78,6 +78,8 @@
+ 
+ int avahi_dns_packet_is_empty(AvahiDnsPacket *p);
+ size_t avahi_dns_packet_space(AvahiDnsPacket *p);
++size_t avahi_dns_packet_reserve_size(AvahiDnsPacket *p, size_t res_size);
++size_t avahi_dns_packet_reserved_space(AvahiDnsPacket *p);
+ 
+ #define AVAHI_DNS_FIELD_ID 0
+ #define AVAHI_DNS_FIELD_FLAGS 1
+--- a/avahi-core/probe-sched.c
++++ b/avahi-core/probe-sched.c
+@@ -179,7 +179,7 @@
+         avahi_record_get_estimate_size(pj->record);
+ 
+     /* Too large */
+-    if (size > avahi_dns_packet_space(p))
++    if (size > avahi_dns_packet_reserved_space(p))
+         return 0;
+ 
+     /* Create the probe query */
+@@ -189,6 +189,9 @@
+     b = !!avahi_dns_packet_append_key(p, k, 0);
+     assert(b);
+ 
++    /* reserve size for record data */
++    avahi_dns_packet_reserve_size(p, avahi_record_get_estimate_size(pj->record));
++
+     /* Mark this job for addition to the packet */
+     pj->chosen = 1;
+ 
+@@ -202,9 +205,12 @@
+             continue;
+ 
+         /* This job wouldn't fit in */
+-        if (avahi_record_get_estimate_size(pj->record) > avahi_dns_packet_space(p))
++        if (avahi_record_get_estimate_size(pj->record) > avahi_dns_packet_reserved_space(p))
+             break;
+ 
++	/* reserve size for record data */
++	avahi_dns_packet_reserve_size(p, avahi_record_get_estimate_size(pj->record));
++
+         /* Mark this job for addition to the packet */
+         pj->chosen = 1;
+     }

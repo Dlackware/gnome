@@ -1,0 +1,5 @@
+PKGNAM="atk"
+VERSION="2.22.0"
+HOMEPAGE="https://developer.gnome.org/atk/"
+DOWNLOAD="http://download.gnome.org/sources/atk/2.22/atk-2.22.0.tar.xz"
+MD5SUM="d53b60b0f1be597e86070954a49cf0c3"

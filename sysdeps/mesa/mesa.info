@@ -1,0 +1,5 @@
+PKGNAM="mesa"
+VERSION="13.0.2"
+HOMEPAGE="http://www.mesa3d.org/"
+DOWNLOAD="ftp://ftp.freedesktop.org/pub/mesa/13.0.2/mesa-13.0.2.tar.xz"
+MD5SUM="9442c2dee914cde3d1f090371ab04113"

@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+                 |-----handy-ruler----------------------------------------------------|
+wayland-protocols: wayland (Wayland Compositor Infrastructure)
+wayland-protocols:
+wayland-protocols: Wayland is a protocol for a compositor to talk to its clients as
+wayland-protocols: well as a C library implementation of that protocol. The compositor
+wayland-protocols: can be a standalone display server running on Linux kernel
+wayland-protocols: modesetting and evdev input devices, an X application, or a wayland
+wayland-protocols: client itself. The clients can be traditional applications, X
+wayland-protocols: servers (rootless or fullscreen) or other display servers.
+wayland-protocols:
+wayland-protocols: http://wayland.freedesktop.org/
+wayland-protocols:

@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+     |-----handy-ruler------------------------------------------------------|
+avahi: avahi (Avahi mDNS/DNS-SD Daemon)
+avahi:
+avahi: Avahi is a system which facilitates service discovery on a local
+avahi: network. This kind of technology is already found in MacOS X
+avahi: (branded 'Rendezvous', 'Bonjour' and sometimes 'Zeroconf') and is
+avahi: very convenient.
+avahi:
+avahi: Avahi enables you to plug your laptop or computer into a network and 
+avahi: instantly be able to view other people who you can chat with, find
+avahi: printers to print to or find files being shared.
+avahi:

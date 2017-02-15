@@ -1,0 +1,20 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+      |-----handy-ruler-----------------------------------------------------|
+polkit: polkit (authentication framework)
+polkit:
+polkit: PolicyKit is an application-level toolkit for defining and handling
+polkit: the policy that allows unprivileged processes to speak to privileged
+polkit: processes.  PolicyKit is specifically targeting applications in rich
+polkit: desktop environments on multi-user UNIX-like operating systems.
+polkit:
+polkit:
+polkit:
+polkit: Home: http://www.freedesktop.org/wiki/Software/PolicyKit
+polkit:
+
