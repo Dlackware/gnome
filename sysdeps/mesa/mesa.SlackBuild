@@ -23,13 +23,13 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=mesa
-VERSION=${VERSION:-13.0.2}
+VERSION=${VERSION:-13.0.4}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 # Be sure this list is up-to-date:
 DRI_DRIVERS="i915,i965,nouveau,r200,radeon,swrast"
-GALLIUM_DRIVERS="nouveau,r300,r600,svga,radeonsi,swrast"
+GALLIUM_DRIVERS="nouveau,r300,r600,svga,radeonsi,swrast,virgl"
 EGL_PLATFORMS="wayland,drm,x11"
 
 NUMJOBS=${NUMJOBS:--j7}
@@ -37,7 +37,7 @@ NUMJOBS=${NUMJOBS:--j7}
 # Automatically determine the architecture we're building on:
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
-    i?86) export ARCH=i486 ;;
+    i?86) export ARCH=i586 ;;
     arm*) export ARCH=arm ;;
        *) export ARCH=$( uname -m ) ;;
   esac
@@ -50,8 +50,8 @@ TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-$PKGNAM
 OUTPUT=${OUTPUT:-/var/cache/dlackware}
 
-if [ "$ARCH" = "i486" ]; then
-  SLKCFLAGS="-O2 -march=i486 -mtune=i686"
+if [ "$ARCH" = "i586" ]; then
+  SLKCFLAGS="-O2 -march=i586 -mtune=i686"
   LIBDIRSUFFIX=""
 elif [ "$ARCH" = "i686" ]; then
   SLKCFLAGS="-O2 -march=i686 -mtune=i686"
@@ -129,8 +129,8 @@ CFLAGS="$SLKCFLAGS" \
   --enable-gles1 \
   --enable-gles2 \
   --enable-vdpau \
-  --enable-gallium-gbm \
-  --enable-gallium-egl \
+  --enable-opencl \
+  --enable-opencl-icd \
   --build=$ARCH-slackware-linux || exit 1
 
 make $NUMJOBS || make || exit 1

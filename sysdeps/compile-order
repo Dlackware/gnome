@@ -1,5 +1,6 @@
 # these are the package to be rebuild/added as base for the gnome build
 glib2
+gobject-introspection
 glib-networking
 polkit
 libdaemon
@@ -11,9 +12,9 @@ libbluray
 mesa
 atk
 at-spi2-core
--at-spi2-atk
--cairo
--pango
+at-spi2-atk
+cairo
+pango
 gdk-pixbuf2
 gtk+3
 shared-mime-info
@@ -29,12 +30,11 @@ NetworkManager
 xorg-server
 xorg-server-xwayland
 adwaita-icon-theme
--hicolor-icon-theme
--gnome-themes-standard
--poppler
--poppler-data
+gnome-themes-standard
 atkmm
+libsigc++
 cairomm
+glibmm
 pangomm
 gtkmm3
 wpa_supplicant

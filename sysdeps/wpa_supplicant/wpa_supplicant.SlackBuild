@@ -22,7 +22,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=wpa_supplicant
-VERSION=${VERSION:-2.5}
+VERSION=${VERSION:-2.6}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -33,7 +33,7 @@ wget -c http://w1.fi/releases/$PKGNAM-$VERSION.tar.gz
 # Automatically determine the architecture we're building on:
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
-    i?86) export ARCH=i486 ;;
+    i?86) export ARCH=i586 ;;
     arm*) export ARCH=arm ;;
     # Unless $ARCH is already set, use uname -m for all other archs:
        *) export ARCH=$( uname -m ) ;;
@@ -42,8 +42,8 @@ fi
 
 NUMJOBS=${NUMJOBS:-" -j7 "}
 
-if [ "$ARCH" = "i486" ]; then
-  SLKCFLAGS="-O2 -march=i486 -mtune=i686"
+if [ "$ARCH" = "i586" ]; then
+  SLKCFLAGS="-O2 -march=i586 -mtune=i686"
   LIBDIRSUFFIX=""
 elif [ "$ARCH" = "s390" ]; then
   SLKCFLAGS="-O2"
@@ -79,7 +79,6 @@ find . \
   -exec chmod 755 {} \; -o \
   \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
   -exec chmod 644 {} \;
-
 
 # Fixup various paths in the dbus service file
 cat $CWD/patches/dbus-service-file-args.diff | patch -p1 --verbose || exit 1

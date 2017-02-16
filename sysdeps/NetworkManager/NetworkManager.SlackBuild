@@ -25,15 +25,15 @@
 # Modified 2011, 2012  by Eric Hameleers, Eindhoven, NL
 
 PKGNAM=NetworkManager
-VERSION=${VERSION:-1.6.0}
-BUILD=${BUILD:-1}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 TAR=$PKGNAM-$VERSION.tar.xz
 
 # Automatically determine the architecture we're building on:
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
-    i?86) export ARCH=i486 ;;
+    i?86) export ARCH=i586 ;;
     arm*) export ARCH=arm ;;
     # Unless $ARCH is already set, use uname -m for all other archs:
        *) export ARCH=$( uname -m ) ;;
@@ -47,8 +47,8 @@ TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-$PKGNAM
 OUTPUT=${OUTPUT:-/var/cache/dlackware}
 
-if [ "$ARCH" = "i486" ]; then
-  SLKCFLAGS="-O2 -march=i486 -mtune=i686"
+if [ "$ARCH" = "i586" ]; then
+  SLKCFLAGS="-O2 -march=i586 -mtune=i686"
   LIBDIRSUFFIX=""
 elif [ "$ARCH" = "i686" ]; then
   SLKCFLAGS="-O2 -march=i686 -mtune=i686"
@@ -87,8 +87,8 @@ PPPD=$(echo /usr/lib${LIBDIRSUFFIX}/pppd/?.?.? | rev | cut -f 1 -d / | rev)
 
 sed -i -e '/^Alias=/aAlias=network.service' data/${PKGNAM}.service.in || exit 1
 
-patch -p1 -E --backup --verbose -i $CWD/02-dbus_access_network_manager.patch
-patch -p1 -E --backup --verbose -i $CWD/disable_set_hostname.patch
+#patch -p1 -E --backup --verbose -i $CWD/02-dbus_access_network_manager.patch
+#patch -p1 -E --backup --verbose -i $CWD/disable_set_hostname.patch
 
 #NOCONFIGURE=1 sh ./autogen.sh || exit $?
 
@@ -109,6 +109,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --with-dhclient=yes \
   --with-modem-manager-1=yes \
   --with-libnm-glib \
+  --disable-json-validation \
   --with-systemd-logind=yes \
   --with-session-tracking=systemd \
   --with-suspend-resume=systemd \
@@ -116,6 +117,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --enable-more-warnings=no \
   --disable-vala \
   --with-nmtui=yes \
+  --with-hostname-persist=slackware \
   --build=$TARGET || exit 1
 
 make $NUMJOBS || exit 1
@@ -151,6 +153,11 @@ chmod 0644 $PKG/etc/rc.d/rc.networkmanager.new
 mkdir -p $PKG/etc/NetworkManager
 cat $CWD/NetworkManager.conf.new > \
     $PKG/etc/NetworkManager/NetworkManager.conf.new
+
+# Set dhcp client to "dhcpcd" and rc-manager to "file" by default
+mkdir -p $PKG/etc/NetworkManager/conf.d
+cat $CWD/conf.d/00-dhcp-client.conf > $PKG/etc/NetworkManager/conf.d/00-dhcp-client.conf.new
+cat $CWD/conf.d/00-rc-manager.conf > $PKG/etc/NetworkManager/conf.d/00-rc-manager.conf.new
 
 # Compress and link manpages, if any:
 if [ -d $PKG/usr/man ]; then

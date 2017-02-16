@@ -1,9 +1,9 @@
---- ./wpa_supplicant/events.c.orig	2014-10-09 09:41:31.000000000 -0500
-+++ ./wpa_supplicant/events.c	2014-12-04 13:09:49.477850355 -0600
-@@ -1330,11 +1330,11 @@
- 		wpa_s->own_scan_running, wpa_s->external_scan_running);
+--- ./wpa_supplicant/events.c.orig	2017-01-05 11:29:16.968898845 -0600
++++ ./wpa_supplicant/events.c	2017-01-05 11:31:13.515907254 -0600
+@@ -1555,11 +1555,11 @@
  	if (wpa_s->last_scan_req == MANUAL_SCAN_REQ &&
- 	    wpa_s->manual_scan_use_id && wpa_s->own_scan_running) {
+ 	    wpa_s->manual_scan_use_id && wpa_s->own_scan_running &&
+ 	    own_request && !(data && data->scan_info.external_scan)) {
 -		wpa_msg_ctrl(wpa_s, MSG_INFO, WPA_EVENT_SCAN_RESULTS "id=%u",
 +		wpa_msg_ctrl(wpa_s, MSG_DEBUG, WPA_EVENT_SCAN_RESULTS "id=%u",
  			     wpa_s->manual_scan_id);

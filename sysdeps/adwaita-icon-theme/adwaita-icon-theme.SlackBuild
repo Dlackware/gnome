@@ -64,9 +64,6 @@ rm -rf $PKGNAM-$VERSION
 tar xvf $CWD/$PKGNAM-$VERSION.tar.?z*
 cd $PKGNAM-$VERSION
 
-# Add Inherits=hicolor to the index.theme
-cat $CWD/inherit-hicolor-theme.diff | patch -p1 --verbose || exit 1
-
 chown -R root:root .
 find -L . \
  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \

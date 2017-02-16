@@ -23,6 +23,7 @@
 PKGNAM=pango
 VERSION=${VERSION:-$(echo pango-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-1}
+TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:
 if [ -z "$ARCH" ]; then
@@ -51,8 +52,9 @@ fi
 NUMJOBS=${NUMJOBS:-" -j7 "}
 
 CWD=$(pwd)
-TMP=${TMP:-/tmp}
+TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-pango
+OUTPUT=${OUTPUT:-/var/cache/dlackware}
 
 rm -rf $PKG
 mkdir -p $TMP $PKG/usr
@@ -117,5 +119,5 @@ mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
 
 cd $PKG
-/sbin/makepkg -l y -c n --prepend $TMP/pango-$VERSION-$ARCH-$BUILD.txz
+/sbin/makepkg -l y -c n --prepend $OUTPUT/pango-$VERSION-$ARCH-$BUILD$TAG.txz
 

@@ -1,0 +1,5 @@
+PKGNAM="cairo"
+VERSION="1.14.8"
+HOMEPAGE="http://cairographics.org/"
+DOWNLOAD="https://www.cairographics.org/releases/cairo-1.14.8.tar.xz"
+MD5SUM="4ef0db2eacb271c74f8a3fd87822aa98"
