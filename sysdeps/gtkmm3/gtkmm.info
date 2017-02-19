@@ -1,0 +1,5 @@
+PKGNAM="gtkmm"
+VERSION="3.22.0"
+HOMEPAGE="http://www.gtkmm.org/"
+DOWNLOAD="http://download.gnome.org/sources/gtkmm/3.22/gtkmm-3.22.0.tar.xz"
+MD5SUM="1f056682a0ffbe8b8678be79b69f7169"
