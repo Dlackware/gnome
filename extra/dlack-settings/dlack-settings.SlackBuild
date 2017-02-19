@@ -1,0 +1,61 @@
+#!/bin/sh
+#
+# Dlackware default settings
+# Copyright 2016  Bart van der Hall, Almere, NL
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+PKGNAM=dlack-settings
+VERSION=${VERSION:-3.22.2}
+BUILD=${BUILD:-1}
+TAG=${TAG:-_dlack}
+
+ARCH=noarch
+
+CWD=$(pwd)
+TMP=${TMP:-/tmp/dlackware}
+PKG=$TMP/package-$PKGNAM
+OUTPUT=${OUTPUT:-/var/cache/dlackware}
+
+set -e # Exit on most errors
+
+rm -rf $PKG
+mkdir -p $OUTPUT
+
+# Lets put the desktop files on their place
+mkdir -p $PKG/etc/xdg/autostart
+install -m 0644 $CWD/desktop/shell-extension.desktop $PKG/etc/xdg/autostart/shell-extension.desktop
+install -m 0644 $CWD/desktop/background.desktop $PKG/etc/xdg/autostart/background.desktop
+install -m 0644 $CWD/desktop/user-theme.desktop $PKG/etc/xdg/autostart/user-theme.desktop
+
+
+# Lets copy the wallpaper to its location
+mkdir -p $PKG/usr/share/backgrounds/gnome
+cp -R $CWD/dlackware.jpg $PKG/usr/share/backgrounds/gnome/
+
+# Lets put the user-theme files on their place
+mkdir -p $PKG/usr/share/themes
+cp -R $CWD/Dlackware $PKG/usr/share/themes
+
+
+mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
+cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
+
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+cat $CWD/doinst.sh > $PKG/install/doinst.sh
+
+cd $PKG
+/sbin/makepkg -l y -c n $OUTPUT/$PKGNAM-$VERSION-$ARCH-$BUILD$TAG.txz

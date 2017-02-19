@@ -1,0 +1,5 @@
+PKGNAM="gnome-calendar"
+VERSION="3.22.2"
+HOMEPAGE="https://wiki.gnome.org/Core/Calendar"
+DOWNLOAD="http://download.gnome.org/sources/gnome-calendar/3.22/gnome-calendar-3.22.2.tar.xz"
+MD5SUM=""

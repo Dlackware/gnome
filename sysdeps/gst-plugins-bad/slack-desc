@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+               |-----handy-ruler------------------------------------------------------|
+gst-plugins-bad: gst-plugins-bad version 1.x (bad set of GStreamer plugins)
+gst-plugins-bad:
+gst-plugins-bad: A set of plugins to expand the usefullness of the
+gst-plugins-bad: GStreamer media framework.
+gst-plugins-bad:
+gst-plugins-bad:
+gst-plugins-bad:
+gst-plugins-bad:
+gst-plugins-bad:
+gst-plugins-bad:
+gst-plugins-bad:

@@ -1,0 +1,5 @@
+PKGNAM="libgusb"
+VERSION="0.2.9"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://people.freedesktop.org/~hughsient/releases/libgusb-0.2.9.tar.xz"
+MD5SUM=""
