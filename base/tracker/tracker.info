@@ -1,5 +1,5 @@
 PKGNAM="tracker"
-VERSION="1.10.4"
+VERSION="1.10.5"
 HOMEPAGE="http://projects.gnome.org/tracker/"
-DOWNLOAD="http://download.gnome.org/sources/tracker/1.10/tracker-1.10.4.tar.xz"
-MD5SUM="5eda28609155c1ab07053666d2460bf2"
+DOWNLOAD="https://download.gnome.org/sources/tracker/1.10/tracker-1.10.5.tar.xz"
+MD5SUM="c2a0c15140d4542eead6902508f08cd7"
