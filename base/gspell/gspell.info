@@ -1,5 +1,5 @@
 PKGNAM="gspell"
-VERSION="1.2.2"
+VERSION="1.2.3"
 HOMEPAGE="https://wiki.gnome.org/Projects/gspell"
-DOWNLOAD="http://download.gnome.org/sources/gspell/1.2/gspell-1.2.2.tar.xz"
-MD5SUM="209dfd8a86ea3d21423ad932ff9da5c4"
+DOWNLOAD="http://download.gnome.org/sources/gspell/1.2/gspell-1.2.3.tar.xz"
+MD5SUM="a9a267ae5f64c22af32d9341828657fb"
