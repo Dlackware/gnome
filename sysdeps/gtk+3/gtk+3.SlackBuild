@@ -113,7 +113,7 @@ echo 'gtk-theme-name="Adwaita"' > $PKG/etc/gtk-3.0/gtkrc.new
 
 # We need to have separate 32-bit and 64-bit binaries
 # for places where we have two copies of the GTK+ package installed.
-# (we might have x86_64 and i486 packages on the same system, for example.)
+# (we might have x86_64 and i586 packages on the same system, for example.)
 case "$host" in
   s390x*|x86_64*)
    mv $PKG/usr/bin/gtk-query-immodules-3.0{,-64}

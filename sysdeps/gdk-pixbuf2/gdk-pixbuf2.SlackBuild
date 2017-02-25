@@ -91,7 +91,7 @@ make install DESTDIR=$PKG || exit 1
 
 # We need to have separate 32-bit and 64-bit binaries
 # for places where we have two copies of the GTK+ package installed.
-# (we might have x86_64 and i486 packages on the same system, for example.)
+# (we might have x86_64 and i586 packages on the same system, for example.)
 host="$ARCH-slackware-linux"
 case "$host" in
   s390x*|x86_64*)
