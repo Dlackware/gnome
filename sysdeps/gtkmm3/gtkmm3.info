@@ -1,4 +1,4 @@
-PKGNAM="gtkmm"
+PKGNAM="gtkmm3"
 VERSION="3.22.0"
 HOMEPAGE="http://www.gtkmm.org/"
 DOWNLOAD="http://download.gnome.org/sources/gtkmm/3.22/gtkmm-3.22.0.tar.xz"
