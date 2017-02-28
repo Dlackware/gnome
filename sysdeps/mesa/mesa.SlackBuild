@@ -43,8 +43,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c ftp://ftp.freedesktop.org/pub/$PKGNAM/$VERSION/$PKGNAM-$VERSION.tar.xz
-
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-$PKGNAM
