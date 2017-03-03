@@ -23,7 +23,7 @@
 PKGNAM=libmusicbrainz5
 SRCNAM=libmusicbrainz
 VERSION=${VERSION:-5.1.0}
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 if [ -z "$ARCH" ]; then
@@ -60,7 +60,7 @@ rm -rf $TMP
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $SRCNAM-release-$VERSION
-tar xvf $CWD/release-$VERSION.tar.gz
+tar xvf $CWD/$PKGNAM-$VERSION.tar.gz
 cd $SRCNAM-release-$VERSION
 chown -R root:root .
 find -L . \

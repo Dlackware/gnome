@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright 2014  Bart van der Hall, Almere, NL
+# Copyright 2014, 2017  Bart van der Hall, Almere, NL
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -23,7 +23,7 @@
 
 PKGNAM=rdflib
 VERSION=${VERSION:-3.1.0}
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlackware}
 
 if [ -z "$ARCH" ]; then
@@ -59,7 +59,7 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PKGNAM-$VERSION
-tar xvf $CWD/$VERSION.tar.gz
+tar xvf $CWD/$PKGNAM-$VERSION.tar.gz
 cd $PKGNAM-$VERSION
 chown -R root:root .
 find -L . \
