@@ -1,4 +1,5 @@
 PKGNAM="webkitgtk1"
+SRCNAM="webkitgtk"
 VERSION="2.4.11"
 HOMEPAGE="http://webkitgtk.org/"
 DOWNLOAD="http://www.webkitgtk.org/releases/webkitgtk-2.4.11.tar.xz"
