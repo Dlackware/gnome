@@ -1,5 +1,5 @@
 PKGNAM="gdm"
-VERSION="3.22.2"
+VERSION="3.22.3"
 HOMEPAGE="https://wiki.gnome.org/Projects/GDM"
-DOWNLOAD="https://download.gnome.org/sources/gdm/3.22/gdm-3.22.2.tar.xz"
-MD5SUM="719c03a1f2c90b3b7416bc5fa5a60e46"
+DOWNLOAD="https://download.gnome.org/sources/gdm/3.22/gdm-3.22.3.tar.xz"
+MD5SUM="565d4ffa2583baf8d2a4fedb74bcd448"
