@@ -1,5 +1,5 @@
 PKGNAM="libmusicbrainz5"
 VERSION="5.1.0"
 HOMEPAGE="http://github.com/metabrainz/"
-DOWNLOAD="https://github.com/metabrainz/libmusicbrainz/archive/release-5.1.0.tar.gz"
+DOWNLOAD="https://github.com/metabrainz/libmusicbrainz/archive/release-5.1.0/libmusicbrainz5-5.1.0.tar.gz"
 MD5SUM="af786baafb8298e3662903748c85bb89"

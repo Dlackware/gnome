@@ -1,4 +1,5 @@
 PKGNAM="py3atspi"
+SRCNAM="pyatspi"
 VERSION="2.20.3"
 HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/accessibility/atk/at-spi/at-spi_on_d-bus"
 DOWNLOAD="http://download.gnome.org/sources/pyatspi/2.20/pyatspi-2.20.3.tar.xz"

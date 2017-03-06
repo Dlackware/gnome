@@ -1,4 +1,5 @@
 PKGNAM="py3cairo"
+SRCNAM="pycairo"
 VERSION="1.10.0"
 HOMEPAGE="http://cairographics.org/pycairo/"
 DOWNLOAD="http://cairographics.org/releases/pycairo-1.10.0.tar.bz2"

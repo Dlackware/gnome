@@ -1,5 +1,6 @@
 PKGNAM="py3gobject3"
+SRCNAM="pygobject"
 VERSION="3.22.0"
 HOMEPAGE="http://www.pygtk.org/"
 DOWNLOAD="http://download.gnome.org/sources/pygobject/3.22/pygobject-3.22.0.tar.xz"
-MD5SUM="0a956f3e785e23b0f136832f2e57a862"
+MD5SUM="ed4117ed5d554d25fd7718807fbf819f"

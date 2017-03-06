@@ -41,7 +41,6 @@ pangomm
 mm-common
 gtkmm3
 wpa_supplicant
-systemd-service-files
 py3cairo
 py3atspi
 py3gobject3
@@ -76,7 +75,7 @@ ibus
 libcryptui
 libdmapsharing
 libdvdcss
-libgit2
+libgit2 - todo
 libgit2-glib
 libgsystem
 libmusicbrainz5
@@ -100,3 +99,4 @@ webkitgtk
 webkitgtk1
 seed
 zeitgeist
+#systemd-service-files
