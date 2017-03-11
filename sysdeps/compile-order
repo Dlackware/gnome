@@ -75,7 +75,7 @@ ibus
 libcryptui
 libdmapsharing
 libdvdcss
-libgit2 - todo
+libgit2
 libgit2-glib
 libgsystem
 libmusicbrainz5
@@ -99,4 +99,4 @@ webkitgtk
 webkitgtk1
 seed
 zeitgeist
-#systemd-service-files
+systemd-service-files
