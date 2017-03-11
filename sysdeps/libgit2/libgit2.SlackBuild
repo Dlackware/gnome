@@ -22,7 +22,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=libgit2
-VERSION=${VERSION:-0.24.2}
+VERSION=${VERSION:-0.24.6}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -60,7 +60,7 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PKGNAM-$VERSION
-tar xvf $CWD/v$VERSION.tar.?z*
+tar xvf $CWD/$PKGNAM-$VERSION.tar.?z*
 cd $PKGNAM-$VERSION
 
 chown -R root:root .
