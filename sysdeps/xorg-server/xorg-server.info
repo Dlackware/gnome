@@ -1,5 +1,5 @@
 PKGNAM="xorg-server"
-VERSION="1.19.1"
+VERSION="1.19.2"
 HOMEPAGE="https://www.x.org/wiki/"
-DOWNLOAD="ftp://ftp.x.org/pub/individual/xserver/xorg-server-1.19.1.tar.bz2"
-MD5SUM="caa8ee7b2950abbf734347d137529fb6"
+DOWNLOAD="ftp://ftp.x.org/pub/individual/xserver/xorg-server-1.19.2.tar.bz2"
+MD5SUM="d9f9e9f216d29f8220e76f8294507d85"
