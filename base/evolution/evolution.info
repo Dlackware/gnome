@@ -1,5 +1,5 @@
 PKGNAM="evolution"
-VERSION="3.22.5"
+VERSION="3.22.6"
 HOMEPAGE="https://wiki.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/evolution/3.22/evolution-3.22.5.tar.xz"
-MD5SUM="64cce71e42ed61f0a955c2e1f8d2272f"
+DOWNLOAD="https://download.gnome.org/sources/evolution/3.22/evolution-3.22.6.tar.xz"
+MD5SUM="0b839838df678bc6e50b41059856fadb"
