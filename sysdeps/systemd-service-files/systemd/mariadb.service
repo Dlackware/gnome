@@ -81,7 +81,7 @@ SendSIGKILL=no
 Restart=on-abort
 RestartSec=5s
 
-UMask=007
+UMask=022
 
 ##############################################################################
 ## USERs can override
