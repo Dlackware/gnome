@@ -1,5 +1,5 @@
 PKGNAM="PackageKit"
-VERSION="1.1.4"
+VERSION="1.1.5"
 HOMEPAGE="http://www.freedesktop.org/software/PackageKit/"
-DOWNLOAD="http://www.freedesktop.org/software/PackageKit/releases/PackageKit-1.1.4.tar.xz"
+DOWNLOAD="http://www.freedesktop.org/software/PackageKit/releases/PackageKit-1.1.5.tar.xz"
 MD5SUM="2f00e3e55656a6e06da55e30ad5ef2f4"
