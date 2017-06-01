@@ -22,7 +22,7 @@
 
 PKGNAM=brasero
 VERSION=${VERSION:-3.12.1}
-BUILD=${BUILD:-2}
+BUILD=${BUILD:-3}
 TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:
@@ -77,6 +77,8 @@ find -L . \
   --localstatedir=/var \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
+  --enable-compile-warnings=no \
+  --enable-cxx-warnings=no \
   --build=$ARCH-slackware-linux
 
 make $NUMJOBS || make || exit 1
