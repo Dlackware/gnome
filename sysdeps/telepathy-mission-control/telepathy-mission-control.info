@@ -1,5 +1,5 @@
 PKGNAM="telepathy-mission-control"
-VERSION="5.16.3"
+VERSION="5.16.4"
 HOMEPAGE="http://telepathy.freedesktop.org/"
-DOWNLOAD="http://telepathy.freedesktop.org/releases/telepathy-mission-control/telepathy-mission-control-5.16.3.tar.gz"
-MD5SUM="af583c41b97c649c37eebba1f2113427"
+DOWNLOAD="http://telepathy.freedesktop.org/releases/telepathy-mission-control/telepathy-mission-control-5.16.4.tar.gz"
+MD5SUM="eab6c941038702edeece1168f395300c"
