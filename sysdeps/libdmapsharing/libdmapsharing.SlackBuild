@@ -22,7 +22,7 @@
 
 
 PKGNAM=libdmapsharing
-VERSION=${VERSION:-2.9.32}
+VERSION=${VERSION:-2.9.37}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -76,6 +76,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --sysconfdir=/etc \
   --localstatedir=/var \
   --mandir=/usr/man \
+  --with-mdns=avahi \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
   --build=$ARCH-slackware-linux
 
