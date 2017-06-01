@@ -22,8 +22,8 @@
 #
 
 PKGNAM=rdflib
-VERSION=${VERSION:-3.1.0}
-BUILD=${BUILD:-2}
+VERSION=${VERSION:-4.2.2}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlackware}
 
 if [ -z "$ARCH" ]; then
@@ -73,7 +73,7 @@ PYSITELIB=$(python -c 'from distutils import sysconfig; print sysconfig.get_pyth
 PYABI=$(python -c 'import sys; print (sys.version[:3])')
 PYVER=$(python -c 'import sys; print sys.version.split(" ")[0]')
 
-python setup.py install --prefix=/usr --root=$PKG || exit 1
+python3 setup.py install --prefix=/usr --root=$PKG || exit 1
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
