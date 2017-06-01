@@ -1,5 +1,5 @@
 PKGNAM="exempi"
-VERSION="2.3.0"
+VERSION="2.4.2"
 HOMEPAGE="http://libopenraw.freedesktop.org/wiki/Exempi"
-DOWNLOAD="http://libopenraw.freedesktop.org/download/exempi-2.3.0.tar.bz2"
-MD5SUM="1cc8c7f005fd4ef631e9000b3d5433a8"
+DOWNLOAD="http://libopenraw.freedesktop.org/download/exempi-2.4.2.tar.bz2"
+MD5SUM="47ed187dd8c007e0ed4d06165814f559"
