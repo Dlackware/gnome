@@ -79,7 +79,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   --mandir=/usr/man \
-  --localstatedir=/var/lib \
+  --localstatedir=/var \
   --enable-python  \
   --build=$ARCH-slackware-linux
 
@@ -87,8 +87,8 @@ make
 make install DESTDIR=$PKG
 
 # Move python3 files to the correct directory
-mkdir -p $PKG/usr/lib64/python3.5/site-packages/gi/overrides/
-cp -R $PKG/usr/lib/python3.5/site-packages/gi/overrides/* $PKG/usr/lib64/python3.5/site-packages/gi/overrides/
+mkdir -p $PKG/usr/lib64/python3.6/site-packages/gi/overrides/
+cp -R $PKG/usr/lib/python3.6/site-packages/gi/overrides/* $PKG/usr/lib64/python3.6/site-packages/gi/overrides/
 rm -rf $PKG/usr/lib/
 
 
