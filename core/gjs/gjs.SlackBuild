@@ -21,7 +21,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=gjs
-VERSION=${VERSION:-1.46.0}
+VERSION=${VERSION:-1.48.3}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -74,7 +74,6 @@ find -L . \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
-  --localstatedir=/var/lib \
   --disable-silent-rules \
   --enable-introspection \
   --mandir=/usr/man \
