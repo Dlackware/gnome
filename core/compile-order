@@ -18,6 +18,8 @@ libgtop
 totem-pl-parser
 grilo
 libmediaart
+libgxps
+libseccomp
 tracker
 nautilus
 gssdp
@@ -32,7 +34,6 @@ gnome-menus
 gnome-session
 libwnck3
 gdm
-libgee
 caribou
 gjs
 zenity
@@ -52,7 +53,6 @@ epiphany
 dconf
 libpeas
 eog
-libgxps
 evince
 gtksourceview
 gnome-calculator
