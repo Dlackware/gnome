@@ -1,5 +1,5 @@
 PKGNAM="zenity"
-VERSION="3.22.0"
+VERSION="3.24.0"
 HOMEPAGE="https://wiki.gnome.org/Projects/Zenity"
-DOWNLOAD="http://download.gnome.org/sources/zenity/3.22/zenity-3.22.0.tar.xz"
-MD5SUM="eaf4cbaac3a356817b837668b5a45a97"
+DOWNLOAD="http://download.gnome.org/sources/zenity/3.24/zenity-3.24.0.tar.xz"
+MD5SUM="c905318c3ca76172d53829ed2471ac53"

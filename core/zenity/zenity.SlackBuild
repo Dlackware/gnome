@@ -21,8 +21,8 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=zenity
-VERSION=${VERSION:-3.22.0}
-BUILD=${BUILD:-2}
+VERSION=${VERSION:-3.24.0}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:
