@@ -24,7 +24,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=gnome-clocks
-VERSION=${VERSION:-3.22.1}
+VERSION=${VERSION:-3.24.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
