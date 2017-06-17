@@ -24,8 +24,8 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=polkit
-VERSION=${VERSION:-0.113}
-BUILD=${BUILD:-3}
+VERSION=${VERSION:-0.113+git_2919920+js38}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:
