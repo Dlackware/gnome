@@ -1,5 +1,5 @@
 PKGNAM="gnome-themes-standard"
-VERSION="3.22.2"
+VERSION="3.22.3"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/gnome-themes-standard/3.22/gnome-themes-standard-3.22.2.tar.xz"
-MD5SUM="84624dbcecab7add32672abae030314d"
+DOWNLOAD="http://download.gnome.org/sources/gnome-themes-standard/3.22/gnome-themes-standard-3.22.3.tar.xz"
+MD5SUM="b51c362b157b6407303d44f93c31ee11"

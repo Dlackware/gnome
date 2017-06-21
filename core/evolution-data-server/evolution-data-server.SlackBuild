@@ -1,7 +1,6 @@
 #!/bin/sh
 
-# Copyright 2014, 2015  Bart van der Hall, Almere, NL
-# All rights reserved.
+# Copyright 2014, 2015 Bart van der Hall, Almere, NL All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
 # permitted provided that the following conditions are met:
@@ -71,24 +70,16 @@ find -L . \
 
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
-./configure \
-  --prefix=/usr \
-  --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --sysconfdir=/etc \
-  --localstatedir=/var/lib \
-  --with-openldap=yes \
-  --with-krb5=yes \
-  --enable-gtk-doc \
-  --disable-uoa \
-  --enable-smime=yes \
-  --enable-ipv6=yes \
-  --enable-largefile \
-  --with-nss-includes=/usr/include/nss \
-  --with-nspr-includes=/usr/include/nspr \
-  --enable-vala-bindings \
-  --mandir=/usr/man \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --build=$ARCH-slackware-linux
+cmake -DCMAKE_INSTALL_PREFIX=/usr   \
+      -DLIB_SUFFIX=64               \
+      -DENABLE_INTROSPECTION=ON     \
+      -DENABLE_UOA=OFF              \
+      -DENABLE_VALA_BINDINGS=ON     \
+      -DENABLE_INSTALLED_TESTS=ON   \
+      -DENABLE_GOOGLE=ON            \
+      -DENABLE_GOOGLE_AUTH=ON       \
+      -DWITH_LDAP=ON                \
+      -DENABLE_INTROSPECTION=ON
 
 make $NUMJOBS || make
 make install DESTDIR=$PKG

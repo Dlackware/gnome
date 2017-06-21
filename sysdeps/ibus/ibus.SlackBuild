@@ -28,8 +28,8 @@
 # Feedback (especially improvements) is encouraged!  :-)
 
 PKGNAM=ibus
-VERSION=${VERSION:-1.5.14}
-BUILD=${BUILD:-2}
+VERSION=${VERSION:-1.5.16}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 if [ -z "$ARCH" ]; then
@@ -94,15 +94,18 @@ CXXFLAGS="$SLKCFLAGS" \
   --enable-wayland \
   --with-python3 \
   --enable-python-library \
-  --with-emoji-json-file=$CWD/emoji.json \
+  --disable-emoji-dict \
   --build=$ARCH-slackware-linux
 
 make
 make DESTDIR=$PKG install
 
+#  --with-emoji-json-file=$CWD/emoji.json \
+
+
 # Add python3 support
-mkdir -p $PKG/usr/lib64/python3.5/site-packages/ibus/
-cp -r $PKG/usr/lib/python2.7/site-packages/ibus/* $PKG/usr/lib64/python3.5/site-packages/ibus/
+mkdir -p $PKG/usr/lib64/python3.6/site-packages/ibus/
+cp -r $PKG/usr/lib/python2.7/site-packages/ibus/* $PKG/usr/lib64/python3.6/site-packages/ibus/
 rm -rf $PKG/usr/lib/
 
 find $PKG | xargs file | grep -e "executable" -e "shared object" | grep ELF \

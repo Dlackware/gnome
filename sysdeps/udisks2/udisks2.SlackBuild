@@ -24,7 +24,7 @@
 
 SRCNAM=udisks
 PKGNAM=udisks2
-VERSION=${VERSION:-2.1.5}
+VERSION=${VERSION:-2.1.8}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 

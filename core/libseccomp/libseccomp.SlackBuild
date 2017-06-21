@@ -1,8 +1,8 @@
 #!/bin/sh
 
-# Slackware build script for libbluray
+# Slackware build script for libseccomp
 
-# Copyright 2011-2016 Larry Hajali <larryhaja[at]gmail[dot]com>
+# Copyright 2016 Willy Sudiarto Raharjo <willysr@slackbuilds.org>
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -11,7 +11,7 @@
 # 1. Redistributions of this script must retain the above copyright
 #    notice, this list of conditions and the following disclaimer.
 #
-#  THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED
+#  THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR IMPLIED
 #  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 #  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO
 #  EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
@@ -21,11 +21,9 @@
 #  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-#
-# Modiefied for dlackware 2016 Bart van der Hall, Almere, NL
 
-PKGNAM=libbluray
-VERSION=${VERSION:-0.9.3}
+PRGNAM=libseccomp
+VERSION=${VERSION:-2.3.2}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -37,12 +35,9 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-#wget -c ftp://ftp.videolan.org/pub/videolan/$PKGNAM/$VERSION/$PKGNAM-$VERSION.tar.bz2
-wget -c https://download.videolan.org/pub/videolan/libbluray/0.9.3/libbluray-0.9.3.tar.bz2
-
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
-PKG=$TMP/package-$PKGNAM
+PKG=$TMP/package-$PRGNAM
 OUTPUT=${OUTPUT:-/var/cache/dlackware}
 
 if [ "$ARCH" = "i586" ]; then
@@ -64,9 +59,9 @@ set -e
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $PKGNAM-$VERSION
-tar xvf $CWD/$PKGNAM-$VERSION.tar.bz2
-cd $PKGNAM-$VERSION
+rm -rf $PRGNAM-$VERSION
+tar xvf $CWD/$PRGNAM-$VERSION.tar.gz
+cd $PRGNAM-$VERSION
 chown -R root:root .
 find -L . \
  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
@@ -74,46 +69,34 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
   -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-# Hack for compiling xine plugin bindings for libbluray.
-sed -i -e '/pkg-config libbluray/d' -e 's|0644|0755|' player_wrappers/xine/Makefile
-
-# If you want bdjava enabled then set BDAJVA=yes to the slackbuild.
-if [ "${BDJAVA:-no}" == 'yes' ]; then
-  OPT_ARGS="--enable-bdjava"
-else
-  OPT_ARGS="--disable-bdjava"
-fi
-
 CFLAGS="$SLKCFLAGS" \
+CXXFLAGS="$SLKCFLAGS" \
+./autogen.sh
 ./configure \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --disable-silent-rules \
+  --sysconfdir=/etc \
+  --localstatedir=/var \
+  --mandir=/usr/man \
   --enable-static=no \
-  --enable-udf \
-  $OPT_ARGS \
+  --docdir=/usr/doc/$PRGNAM-$VERSION \
   --build=$ARCH-slackware-linux
 
 make
 make install DESTDIR=$PKG
 
-### The xine bluray plugin only works with xine-lib > 1.2.
-### Disabling for now.
-# Install the xine bluray plugin
-#CFLAGS="$SLKCFLAGS -I$PKG/usr/include" \
-#LDFLAGS="-L$PKG/usr/lib$LIBDIRSUFFIX" \
-#LIBS_BD="-lbluray" \
-#make -C player_wrappers/xine DESTDIR=$PKG install
-
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
-mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
-cp -a COPYING README.txt player_wrappers/xine/HOWTO $PKG/usr/doc/$PKGNAM-$VERSION
-cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
+find $PKG/usr/man -type f -exec gzip -9 {} \;
+for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
+
+mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
+cp -a CHANGELOG CREDITS LICENSE README.md $PKG/usr/doc/$PRGNAM-$VERSION
+cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
 
 cd $PKG
-/sbin/makepkg -l y -c n $OUTPUT/$PKGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-txz}
+/sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-txz}

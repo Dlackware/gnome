@@ -22,8 +22,8 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=check
-VERSION=${VERSION:-0.10.0}
-BUILD=${BUILD:-2}
+VERSION=${VERSION:-0.11.0}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 NUMJOBS=${NUMJOBS:--j7}
@@ -62,7 +62,7 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PKGNAM-$VERSION
-tar xvf $CWD/${PKGNAM}-$VERSION.tar.?z*
+tar xvf $CWD/$PKGNAM-$VERSION.tar.?z*
 cd $PKGNAM-$VERSION
 
 chown -R root:root .

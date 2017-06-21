@@ -1,5 +1,5 @@
 PKGNAM="gnome-desktop"
-VERSION="3.22.2"
+VERSION="3.24.2"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/gnome-desktop/3.22/gnome-desktop-3.22.2.tar.xz"
-MD5SUM="3d7222d5305f3db022eca31d8108e02d"
+DOWNLOAD="http://download.gnome.org/sources/gnome-desktop/3.24/gnome-desktop-3.24.2.tar.xz"
+MD5SUM="af7c6a243df7a335a010bdc05b34ca93"

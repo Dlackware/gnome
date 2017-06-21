@@ -1,5 +1,5 @@
 PKGNAM="geocode-glib"
-VERSION="3.20.1"
+VERSION="3.23.90"
 HOMEPAGE="https://git.gnome.org/browse/geocode-glib"
-DOWNLOAD="http://download.gnome.org/sources/geocode-glib/3.20/geocode-glib-3.20.1.tar.xz"
-MD5SUM="4d9a4c666f525b8ae534be865c8b7681"
+DOWNLOAD="http://download.gnome.org/sources/geocode-glib/3.23/geocode-glib-3.23.90.tar.xz"
+MD5SUM="c1c599bb0d34e5fe4f7376867d2585b7"

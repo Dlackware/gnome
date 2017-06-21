@@ -1,5 +1,5 @@
 PKGNAM="ibus"
-VERSION="1.5.14"
+VERSION="1.5.16"
 HOMEPAGE="https://github.com/ibus/ibus/wiki"
-DOWNLOAD="https://github.com/ibus/ibus/releases/download/1.5.14/ibus-1.5.14.tar.gz"
-MD5SUM="debfafff1823952b69b248462f7a89a5"
+DOWNLOAD="https://github.com/ibus/ibus/releases/download/1.5.16/ibus-1.5.16.tar.gz"
+MD5SUM="31ea7c1259c7285bd9d71f3000cbd95b"

@@ -1,5 +1,5 @@
 PKGNAM="mesa"
-VERSION="17.0.1"
+VERSION="17.1.1"
 HOMEPAGE="http://www.mesa3d.org/"
-DOWNLOAD="ftp://ftp.freedesktop.org/pub/mesa/mesa-17.0.1.tar.xz"
-MD5SUM="6a7e768241846c8c69bbadbf904dcc58"
+DOWNLOAD="ftp://ftp.freedesktop.org/pub/mesa/mesa-17.1.1.tar.xz"
+MD5SUM="a4844bc6052578574f9629458bcbb749"

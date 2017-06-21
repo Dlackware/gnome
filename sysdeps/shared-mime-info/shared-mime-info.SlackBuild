@@ -23,8 +23,8 @@
 #  Rebuild against systemd by 2015  Bart van der Hall, Almere, NL
 
 PKGNAM=shared-mime-info
-VERSION=${VERSION:-1.6}
-BUILD=${BUILD:-2}
+VERSION=${VERSION:-1.7}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 NUMJOBS=${NUMJOBS:-" -j7 "}

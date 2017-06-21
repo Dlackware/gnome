@@ -1,5 +1,5 @@
 PKGNAM="polkit"
-VERSION="0.113"
+VERSION="0.113+git_2919920+js38"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/PolicyKit"
-DOWNLOAD="http://www.freedesktop.org/software/polkit/releases/polkit-0.113.tar.gz"
+DOWNLOAD="http://anduin.linuxfromscratch.org/BLFS/polkit/polkit-0.113+git_2919920+js38.tar.xz"
 MD5SUM="4b77776c9e4f897dcfe03b2c34198edf"

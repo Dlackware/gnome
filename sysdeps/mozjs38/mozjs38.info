@@ -1,0 +1,6 @@
+PKGNAM="mozjs38"
+SRCNAM="mozjs"
+VERSION="38.8.0esr"
+HOMEPAGE="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey"
+DOWNLOAD="https://ftp.mozilla.org/pub/firefox/releases/38.8.0esr/source/firefox-38.8.0esr.source.tar.bz2"
+MD5SUM=""
