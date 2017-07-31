@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright 2014 Eugene Wissner (belka.ew@gmail.com)
+# Copyright 2014 Eugene Wissner, Dachau, Germany
 # Copyright 2015 Bart van der Hall, Almere, NL
 # All rights reserved.
 #
@@ -24,8 +24,8 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=gedit
-VERSION=${VERSION:-3.22.0}
-BUILD=${BUILD:-2}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:
