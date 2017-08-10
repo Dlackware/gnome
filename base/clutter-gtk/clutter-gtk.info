@@ -1,5 +1,5 @@
 PKGNAM="clutter-gtk"
-VERSION="1.8.2"
+VERSION="1.8.4"
 HOMEPAGE="https://wiki.gnome.org/Projects/Clutter"
-DOWNLOAD="http://download.gnome.org/sources/clutter-gtk/1.8/clutter-gtk-1.8.2.tar.xz"
-MD5SUM="79dc3d7a8645f87d83a9ccca8a08aa8e"
+DOWNLOAD="https://download.gnome.org/sources/clutter-gtk/1.8/clutter-gtk-1.8.4.tar.xz"
+MD5SUM="b363ac9878e2337be887b8ee9e1da00e"
