@@ -23,13 +23,11 @@
 #  Rebuild against systemd by 2015  Bart van der Hall, Almere, NL
 
 PKGNAM=shared-mime-info
-VERSION=${VERSION:-1.7}
-BUILD=${BUILD:-1}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 NUMJOBS=${NUMJOBS:-" -j7 "}
-
-wget -c http://freedesktop.org/~hadess/$PKGNAM-$VERSION.tar.xz
 
 # Automatically determine the architecture we're building on:
 if [ -z "$ARCH" ]; then
@@ -67,6 +65,11 @@ cd $TMP
 rm -rf ${PKGNAM}-$VERSION
 tar xvf $CWD/${PKGNAM}-$VERSION.tar.?z* || exit 1
 cd ${PKGNAM}-$VERSION || exit 1
+
+# Don't use fdatasync() unless you want it to take 1000x longer
+# to update the mime database.  Seriously.
+export ac_cv_func_fdatasync=no
+
 chown -R root:root .
 find . \
  \( -perm 777 -o -perm 775 -o -perm 711 -o -perm 555 -o -perm 511 \) \
