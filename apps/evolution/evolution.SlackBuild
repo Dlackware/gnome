@@ -22,7 +22,7 @@
 
 PKGNAM=evolution
 VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
-BUILD=${BUILD:-2}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 NUMJOBS=${NUMJOBS:-"-j4"}
@@ -70,29 +70,46 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
-./configure \
-  --prefix=/usr \
-  --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --sysconfdir=/etc \
-  --localstatedir=/var/lib \
-  --mandir=/usr/man \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --enable-nss=yes \
-  --disable-pst-import \
-  --enable-smime=yes \
-  --with-openldap \
-  --disable-bogofilter \
-  --disable-spamassassin \
-  --disable-text-highlight \
-  --disable-gtkspell \
-  --disable-autoar \
-  --enable-plugins=all \
-  --enable-contact-maps=yes \
-  --with-sub-version="Dlackware" \
-  --build=$ARCH-slackware-linux
+cmake -DCMAKE_INSTALL_PREFIX=/usr \
+      -DSYSCONF_INSTALL_DIR=/etc  \
+      -DLIB_INSTALL_DIR=/usr/lib${LIBDIRSUFFIX} \
+      -DENABLE_INSTALLED_TESTS=ON \
+      -DENABLE_PST_IMPORT=OFF     \
+      -DENABLE_GTKSPELL=OFF       \
+      -DENABLE_YTNEF=OFF          \
+      -DENABLE_CONTACT_MAPS=ON \
+      -DENABLE_TEXT_HIGHLIGHT=OFF \
+      -DENABLE_SMIME=ON \
+      -DWITH_BOGOFILTER=OFF \
+      -DWITH_SPAMASSASSIN=OFF \
+      -DWITH_SA_LEARN=OFF \
+      -DWITH_GLADE_CATALOG=ON
+
+
+
+
+#./configure \
+#  --prefix=/usr \
+#  --libdir=/usr/lib${LIBDIRSUFFIX} \
+#  --sysconfdir=/etc \
+#  --localstatedir=/var/lib \
+#  --mandir=/usr/man \
+#  --docdir=/usr/doc/$PKGNAM-$VERSION \
+#  --enable-nss=yes \
+#  --disable-pst-import \
+#  --enable-smime=yes \
+#  --with-openldap \
+#  --disable-bogofilter \
+#  --disable-spamassassin \
+#  --disable-text-highlight \
+#  --disable-gtkspell \
+#  --disable-autoar \
+#  --enable-plugins=all \
+#  --enable-contact-maps=yes \
+#  --with-sub-version="Dlackware" \
+#  --build=$ARCH-slackware-linux
 
 make $NUMJOBS
 make install DESTDIR=$PKG
