@@ -1,5 +1,5 @@
 PKGNAM="pango"
-VERSION="1.40.6"
+VERSION="1.40.11"
 HOMEPAGE="http://gnome.org/"
-DOWNLOAD="http://ftp.gnome.org/pub/GNOME/sources/pango/1.40/pango-1.40.6.tar.xz"
-MD5SUM="11fb1e94c486507a94c4a905d86e70ce"
+DOWNLOAD="http://ftp.gnome.org/pub/GNOME/sources/pango/1.40/pango-1.40.11.tar.xz"
+MD5SUM="eee00ed5d0ea50d5cd9e819d25ef5037"
