@@ -1,5 +1,5 @@
 PKGNAM="glibmm"
-VERSION="2.50.1"
+VERSION="2.52.0"
 HOMEPAGE="http://www.gtkmm.org/"
-DOWNLOAD="https://download.gnome.org/sources/glibmm/2.50/glibmm-2.50.1.tar.xz"
-MD5SUM="a5b915dc42fc62983fa78ca8486f4391"
+DOWNLOAD="https://download.gnome.org/sources/glibmm/2.52/glibmm-2.52.0.tar.xz"
+MD5SUM="0ceaccabce7772e6ef6d0657bb0d2de1"
