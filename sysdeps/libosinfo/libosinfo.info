@@ -1,5 +1,5 @@
 PKGNAM="libosinfo"
-VERSION="1.0.0"
+VERSION="1.1.0"
 HOMEPAGE="http://libosinfo.org/"
-DOWNLOAD="https://releases.pagure.org/libosinfo/libosinfo-1.0.0.tar.gz"
-MD5SUM="22a09db53246e4a54be14d82a59b15db"
+DOWNLOAD="https://releases.pagure.org/libosinfo/libosinfo-1.1.0.tar.gz"
+MD5SUM="e7d98c72a643315af36dae7832aff80b"
