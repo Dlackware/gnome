@@ -1,5 +1,5 @@
 PKGNAM="babl"
-VERSION="0.1.26"
+VERSION="0.1.30"
 HOMEPAGE="http://gegl.org"
-DOWNLOAD="http://download.gimp.org/pub/babl/0.1/babl-0.1.26.tar.bz2"
-MD5SUM="c5dd31d249379a75dec224a152bbf8cb"
+DOWNLOAD="http://download.gimp.org/pub/babl/0.1/babl-0.1.30.tar.bz2"
+MD5SUM="fca6926a00130eeacc875cac5465c5e7"
