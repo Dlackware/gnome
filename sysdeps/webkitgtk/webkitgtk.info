@@ -1,5 +1,5 @@
 PKGNAM="webkitgtk"
-VERSION="2.16.3"
+VERSION="2.16.6"
 HOMEPAGE="http://webkitgtk.org/"
-DOWNLOAD="http://www.webkitgtk.org/releases/webkitgtk-2.16.3.tar.xz"
-MD5SUM="2276087cd4b8b82bce2fad5e846cdc74"
+DOWNLOAD="http://www.webkitgtk.org/releases/webkitgtk-2.16.6.tar.xz"
+MD5SUM="0e2d142a586e4ff79cf0324f4fdbf20c"
