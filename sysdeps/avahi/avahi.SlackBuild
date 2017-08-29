@@ -23,8 +23,8 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=avahi
-VERSION=${VERSION:-0.6.32}
-BUILD=${BUILD:-6}
+VERSION=${VERSION:-0.7}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:
@@ -111,10 +111,10 @@ make $NUMJOBS || make || exit 1
 make install DESTDIR=$PKG || exit 1
 
 # Add python3 support
-mkdir -p $PKG/usr/lib64/python3.6/site-packages/avahi/
-cp -r $PKG/usr/lib64/python2.7/site-packages/avahi/* $PKG/usr/lib64/python3.6/site-packages/avahi/
-rm -fv $PKG/usr/lib64/python3.6/site-packages/avahi/*.py{c,o}
-sed -i 's!/usr/bin/python!/usr/bin/python3!' $PKG/usr/lib64/python3.6/site-packages/avahi/ServiceTypeDatabase.py
+#mkdir -p $PKG/usr/lib64/python3.6/site-packages/avahi/
+#cp -r $PKG/usr/lib64/python2.7/site-packages/avahi/* $PKG/usr/lib64/python3.6/site-packages/avahi/
+#rm -fv $PKG/usr/lib64/python3.6/site-packages/avahi/*.py{c,o}
+#sed -i 's!/usr/bin/python!/usr/bin/python3!' $PKG/usr/lib64/python3.6/site-packages/avahi/ServiceTypeDatabase.py
 
 # remove example
 rm -f ${PKG}/etc/avahi/services/ssh.service
