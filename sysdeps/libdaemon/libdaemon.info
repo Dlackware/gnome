@@ -1,5 +1,5 @@
 PKGNAM="libdaemon"
 VERSION="0.14"
 HOMEPAGE="http://git.0pointer.net/libdaemon.git/"
-DOWNLOAD="http://distfiles.alpinelinux.org/distfiles/libdaemon-0.14.tar.gz"
+DOWNLOAD="http://0pointer.de/lennart/projects/libdaemon/libdaemon-0.14.tar.gz"
 MD5SUM="509dc27107c21bcd9fbf2f95f5669563"
