@@ -24,8 +24,8 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=gnome-dictionary
-VERSION=${VERSION:-3.20.0}
-BUILD=${BUILD:-2}
+VERSION=${VERSION:-3.24.0}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 NUMJOBS=${NUMJOBS:--j7}
