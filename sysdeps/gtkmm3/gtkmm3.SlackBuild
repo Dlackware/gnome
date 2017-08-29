@@ -25,7 +25,7 @@
 
 PKGNAM=gtkmm3
 SRCNAM=gtkmm
-VERSION=${VERSION:-3.22.0}
+VERSION=${VERSION:-3.22.1}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
