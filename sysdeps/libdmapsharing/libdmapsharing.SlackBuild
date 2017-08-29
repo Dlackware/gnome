@@ -22,7 +22,7 @@
 
 
 PKGNAM=libdmapsharing
-VERSION=${VERSION:-2.9.37}
+VERSION=${VERSION:-2.9.39}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
