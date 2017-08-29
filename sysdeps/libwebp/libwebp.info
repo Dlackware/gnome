@@ -1,5 +1,0 @@
-PKGNAM="libwebp"
-VERSION="0.5.1"
-HOMEPAGE="https://developers.google.com/speed/webp/"
-DOWNLOAD="https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-0.5.1.tar.gz"
-MD5SUM="3d7db92ebba5b4f679413d25c6040881"
