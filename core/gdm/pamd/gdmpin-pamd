@@ -10,7 +10,6 @@ password    include       password-auth
 password    optional      pam_pin.so
 
 session     required      pam_loginuid.so
-session     optional      pam_console.so
 -session    optional    pam_ck_connector.so
 session     optional      pam_keyinit.so force revoke
 session     required      pam_namespace.so
