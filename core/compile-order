@@ -89,5 +89,8 @@ gtk-vnc
 gnome-characters
 gnome-calendar
 gnome-maps
+bubblewrap
+ostree
+flatpak
 gnome-software
 gnome-initial-setup
