@@ -1,5 +1,5 @@
 PKGNAM="libmediaart"
-VERSION="1.9.1"
+VERSION="1.9.4"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/libmediaart/1.9/libmediaart-1.9.1.tar.xz"
-MD5SUM="f0a098e2bd3577d18e64834acef8a9f5"
+DOWNLOAD="http://download.gnome.org/sources/libmediaart/1.9/libmediaart-1.9.4.tar.xz"
+MD5SUM="9b960a6a764fba38135fb57219f2e6b4"
