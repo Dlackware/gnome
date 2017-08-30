@@ -1,5 +1,5 @@
 PKGNAM="gnome-shell"
-VERSION="3.24.2"
+VERSION="3.24.3"
 HOMEPAGE="https://wiki.gnome.org/Projects/GnomeShell"
-DOWNLOAD="https://download.gnome.org/sources/gnome-shell/3.24/gnome-shell-3.24.2.tar.xz"
-MD5SUM="e84e5813cc87f3a228a9d9ce9bb4a6e4"
+DOWNLOAD="https://download.gnome.org/sources/gnome-shell/3.24/gnome-shell-3.24.3.tar.xz"
+MD5SUM="3cdd93df065ad1ad8d7a15a8ec9eafd0"
