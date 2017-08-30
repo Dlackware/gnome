@@ -1,5 +1,5 @@
 PKGNAM="libgdata"
-VERSION="0.17.8"
+VERSION="0.17.9"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/sources/libgdata/0.17/libgdata-0.17.8.tar.xz"
-MD5SUM="7a67dde280078bf12de3f98bd21c4931"
+DOWNLOAD="https://download.gnome.org/sources/libgdata/0.17/libgdata-0.17.9.tar.xz"
+MD5SUM="cd41fec52a0f0ba999eb60025e0ac806"
