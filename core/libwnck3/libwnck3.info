@@ -1,5 +1,5 @@
 PKGNAM="libwnck3"
-VERSION="3.20.1"
+VERSION="3.24.1"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/libwnck/3.20/libwnck-3.20.1.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/libwnck/3.24/libwnck-3.24.1.tar.xz"
 MD5SUM=""
