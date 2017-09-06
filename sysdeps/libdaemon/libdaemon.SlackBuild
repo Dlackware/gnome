@@ -23,7 +23,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=libdaemon
-VERSION=${VERSION:-0.14}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-3}
 TAG=${TAG:-_dlack}
 
@@ -40,9 +40,6 @@ if [ -z "$ARCH" ]; then
     *)       export ARCH=$MARCH ;;
   esac
 fi
-
-wget -c http://0pointer.de/lennart/projects/$PKGNAM/$PKGNAM-$VERSION.tar.gz
-# wget -c http://distfiles.alpinelinux.org/distfiles/$PKGNAM-$VERSION.tar.gz
 
 if [ "$ARCH" = "i586" ]; then
   SLKCFLAGS="-O2 -march=i586 -mtune=i686"
