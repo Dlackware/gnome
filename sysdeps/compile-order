@@ -99,4 +99,5 @@ telepathy-mission-control
 uhttpmock
 webkitgtk
 webkitgtk1
+PackageKit
 systemd-service-files
