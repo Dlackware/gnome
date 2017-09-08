@@ -24,7 +24,7 @@
 
 SRCNAM=udisks
 PKGNAM=udisks2
-VERSION=${VERSION:-2.1.8}
+VERSION=${VERSION:-2.6.5}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -112,6 +112,7 @@ export LDFLAGS="-pie -Wl,-z,now -Wl,-z,relro ${LDFLAGS}"
   --infodir=/usr/info \
   --mandir=/usr/man \
   --docdir=/usr/doc/${PKGNAM}-${VERSION} \
+  --enable-lvm2 \
   --disable-silent-rules \
   --build=$TARGET || exit $?
 
