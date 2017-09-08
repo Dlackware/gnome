@@ -77,10 +77,6 @@ CFLAGS="$SLKCFLAGS" \
   --disable-docs \
   --build=$ARCH-slackware-linux || exit 1
 
-# Trust defaults:
-#  --enable-mmx \
-#  --disable-sse \
-
 make || exit 1
 make install DESTDIR=$PKG || exit 1
 
