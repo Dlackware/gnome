@@ -5,7 +5,7 @@
 # Updated by Peter Wang <novalazy@gmail.com>
 # Updated by Willy Sudiarto Raharjo <willysr@slackware-id.org>
 
-PRGNAM=valgrind
+PKGNAM=valgrind
 VERSION=${VERSION:-3.13.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
@@ -20,7 +20,7 @@ fi
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
-PKG=$TMP/package-$PRGNAM
+PKG=$TMP/package-$PKGNAM
 OUTPUT=${OUTPUT:-/var/cache/dlackware}
 
 if [ "$ARCH" = "i586" ]; then
@@ -42,9 +42,9 @@ fi
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP || exit 1
-rm -rf $PRGNAM-$VERSION
-tar xvf $CWD/$PRGNAM-$VERSION.tar.bz2 || exit 1
-cd $PRGNAM-$VERSION || exit 1
+rm -rf $PKGNAM-$VERSION
+tar xvf $CWD/$PKGNAM-$VERSION.tar.bz2 || exit 1
+cd $PKGNAM-$VERSION || exit 1
 chown -R root:root .
 find -L . \
  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
@@ -60,7 +60,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --sysconfdir=/etc \
   --localstatedir=/var \
   --mandir=/usr/man \
-  --docdir=/usr/doc/$PRGNAM-$VERSION \
+  --docdir=/usr/doc/$PKGNAM-$VERSION \
   --build=$ARCH-slackware-linux \
   || exit 1
 
@@ -74,19 +74,19 @@ find $PKG -print0 | xargs -0 file | grep -e "executable" | grep ELF \
 find $PKG/usr/man -type f -exec gzip -9 {} \;
 for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
 
-mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
+mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a AUTHORS COPYING* FAQ.txt NEWS README* \
-  $PKG/usr/doc/$PRGNAM-$VERSION
-mv $PKG/usr/share/doc/valgrind/html $PKG/usr/doc/$PRGNAM-$VERSION
+  $PKG/usr/doc/$PKGNAM-$VERSION
+mv $PKG/usr/share/doc/valgrind/html $PKG/usr/doc/$PKGNAM-$VERSION
 # The doc directory is the only thing in $PKG/usr/share, and the only things
 # left in it now are pdf and a ps doc files.  They are large, so we won't keep
 # them around.  If you still want them, uncomment the line below.
 # mv $PKG/usr/share/doc/valgrind/*.{ps,pdf} $PKG/usr/doc/$PRGNAM-$VERSION
 rm -rf $PKG/usr/share
-cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
+cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
 
 cd $PKG
-/sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-txz}
+/sbin/makepkg -l y -c n $OUTPUT/$PKGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-txz}
