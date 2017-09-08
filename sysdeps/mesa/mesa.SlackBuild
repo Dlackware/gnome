@@ -23,7 +23,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=mesa
-VERSION=${VERSION:-17.1.8}
+VERSION=${VERSION:-17.2.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -75,6 +75,9 @@ cd $PKGNAM-$VERSION
 # Let's kill the warning about operating on a dangling symlink:
 rm -f src/gallium/state_trackers/d3d1x/w32api
 
+# Fix for xlocale.h removal:
+cat $CWD/mesa.glibc226.diff | patch -p1 --verbose || exit 1
+
 # Make sure ownerships and permissions are sane:
 chown -R root:root .
 find . \
@@ -116,6 +119,7 @@ CFLAGS="$SLKCFLAGS" \
   --with-egl-platforms="$EGL_PLATFORMS" \
   $VULKAN \
   --enable-gallium-llvm \
+  --enable-llvm \
   --enable-llvm-shared-libs \
   --enable-egl \
   --enable-texture-float \
