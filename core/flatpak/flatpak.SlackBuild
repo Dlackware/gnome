@@ -23,7 +23,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=flatpak
-VERSION=${VERSION:-0.9.8}
+VERSION=${VERSION:-0.9.10}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -69,9 +69,6 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
   -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-#patch -p1 -b < $CWD/260f3df.diff # fixes the polkit hand-off (will be included in 0.8.2 or 0.9.x)
-#atch -p1 -b < $CWD/0bea92b.diff # fixes permissions in ~/.cache sandbox (will be included in 0.8.2 or 0.9.x)
-
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
 ./configure \
@@ -81,8 +78,8 @@ CXXFLAGS="$SLKCFLAGS" \
   --localstatedir=/var \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --build=$ARCH-slackware-linux \
-  --with-system-bubblewrap
+  --with-system-bubblewrap \
+  --build=$ARCH-slackware-linux
 
 make
 make install DESTDIR=$PKG
