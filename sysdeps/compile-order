@@ -1,16 +1,15 @@
 # these are the package to be rebuild/added as base for the gnome build
+mozjs38
 valgrind
 glib2
 gvfs
 gobject-introspection
 glib-networking
-mozjs38
 polkit
 libdaemon
 avahi
 wayland
 wayland-protocols
-libwebp
 mesa
 atk
 at-spi2-core
@@ -64,6 +63,7 @@ libnice
 farstream
 babl
 gexiv2
+lua
 gegl3
 geoclue
 glade
@@ -86,7 +86,6 @@ libgsystem
 libmusicbrainz5
 liboauth
 libosinfo
-lua
 libquvi-scripts
 libquvi
 libxml++
