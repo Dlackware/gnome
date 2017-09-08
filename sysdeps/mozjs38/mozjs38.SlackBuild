@@ -26,7 +26,7 @@ PRGNAM=mozjs38
 VERSION=${VERSION:-38.8.0}
 SRCNAM=firefox-${VERSION}esr.source
 DIRNAM=mozilla-esr38
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 if [ -z "$ARCH" ]; then
@@ -94,6 +94,7 @@ CXXFLAGS="$SLKCFLAGS -fno-delete-null-pointer-checks -fpermissive -fno-tree-vrp 
   --enable-pie \
   --enable-threadsafe \
   --enable-ctypes \
+  --enable-readline \
   --with-system-ffi   \
   --with-system-nspr \
   --with-system-zlib \
