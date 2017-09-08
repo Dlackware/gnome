@@ -23,7 +23,7 @@
 
 PKGNAM=glib2
 VERSION=${VERSION:-$(echo glib-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 NUMJOBS=${NUMJOBS:--j4}
@@ -71,11 +71,11 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-# Patch to work around an issue with Java:
-#cat $CWD/0001-Use-Wl-znodelete-for-all-our-libraries.patch | patch -p1 --verbose || exit 1
+# Fix a race condition when using /etc/mtab:
+cat $CWD/glib.mtab.diff | patch -p1 --verbose || exit 1
 
 # Silly upstream, using the bleeding edge.  Reconf:
-autoreconf --force --install 
+#autoreconf --force --install 
 
 CFLAGS="$SLKCFLAGS" \
 ./configure \
@@ -83,7 +83,7 @@ CFLAGS="$SLKCFLAGS" \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   --mandir=/usr/man \
-  --localstatedir=/var/lib \
+  --disable-libelf \
   --build=$ARCH-slackware-linux
 
 make $NUMJOBS || make || exit 1
