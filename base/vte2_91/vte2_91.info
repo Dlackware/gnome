@@ -1,5 +1,5 @@
 PKGNAM="vte2_91"
-VERSION="0.46.2"
+VERSION="0.46.3"
 HOMEPAGE="https://github.com/GNOME/vte"
-DOWNLOAD="https://download.gnome.org/sources/vte/0.46/vte-0.46.2.tar.xz"
-MD5SUM="7f59a368902547b85317cfbbad4014ef"
+DOWNLOAD="https://download.gnome.org/sources/vte/0.46/vte-0.46.3.tar.xz"
+MD5SUM="8662b6174991ec463f5cfd0192c1de05"
