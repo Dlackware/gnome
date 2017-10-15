@@ -6,14 +6,14 @@
 # customary to leave one space after the ':' except on otherwise blank lines.
 
     |-----handy-ruler------------------------------------------------------|
-ibus: IBus (Intelligent Input Bus for Linux)
+ibus: ibus (Intelligent Input Bus for Linux)
 ibus:
-ibus: IBus is an Intelligent Input Bus.  It is a new input framework for
+ibus: IBus is an Intelligent Input Bus. It is a new input framework for
 ibus: Linux.  It provides a full featured and user friendly input method
-ibus: user interface.  It also may help developers create an input method
+ibus: user interface. It also may help developers create an input method
 ibus: easily.
 ibus:
-ibus: Homepage: http://code.google.com/p/ibus/
+ibus: Homepage: https://github.com/ibus/ibus/wiki
 ibus:
 ibus:
 ibus:
