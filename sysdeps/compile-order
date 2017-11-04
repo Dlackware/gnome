@@ -45,7 +45,6 @@ gtkmm3
 wpa_supplicant
 py3cairo
 py3atspi
-py3gobject3
 pyatspi
 pylint
 GeoIP
