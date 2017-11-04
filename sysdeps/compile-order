@@ -43,7 +43,6 @@ pangomm
 mm-common
 gtkmm3
 wpa_supplicant
-py3cairo
 py3atspi
 pyatspi
 pylint
