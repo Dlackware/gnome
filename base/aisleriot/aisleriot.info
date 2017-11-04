@@ -1,5 +1,5 @@
 PKGNAM="aisleriot"
-VERSION="3.22.3"
+VERSION="3.22.4"
 HOMEPAGE="https://wiki.gnome.org/action/show/Apps/Aisleriot"
-DOWNLOAD="https://download.gnome.org/sources/aisleriot/3.22/aisleriot-3.22.3.tar.xz"
+DOWNLOAD="https://download.gnome.org/sources/aisleriot/3.22/aisleriot-3.22.4.tar.xz"
 MD5SUM="86fbc23030a56013a895ef899688cab5"
