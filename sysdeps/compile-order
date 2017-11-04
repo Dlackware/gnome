@@ -48,7 +48,6 @@ py3atspi
 py3gobject3
 pyatspi
 pylint
-python-requests
 GeoIP
 accountsservice
 autoconf-archive
