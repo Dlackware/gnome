@@ -1,6 +1,0 @@
-PKGNAM="dbus-python3"
-SRCNAM="dbus-python"
-VERSION="1.2.4"
-HOMEPAGE="http://pypi.python.org/pypi/requests"
-DOWNLOAD="http://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.4.tar.gz"
-MD5SUM="7372a588c83a7232b4e08159bfd48fe5"
