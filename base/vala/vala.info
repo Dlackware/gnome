@@ -1,5 +1,5 @@
 PKGNAM="vala"
-VERSION="0.34.12"
+VERSION="0.34.13"
 HOMEPAGE="https://live.gnome.org/Vala"
-DOWNLOAD="https://download.gnome.org/sources/vala/0.34/vala-0.34.12.tar.xz"
-MD5SUM="ed9b7bcf7d17eb01028f440c9018edde"
+DOWNLOAD="https://download.gnome.org/sources/vala/0.34/vala-0.34.13.tar.xz"
+MD5SUM="567fbef080330b961428840c25b1f0bf"
