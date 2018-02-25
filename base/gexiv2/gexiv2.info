@@ -1,5 +1,5 @@
 PKGNAM="gexiv2"
-VERSION="0.10.7"
+VERSION="0.10.8"
 HOMEPAGE="https://wiki.gnome.org/gexiv2"
-DOWNLOAD="https://download.gnome.org/sources/gexiv2/0.10/gexiv2-0.10.7.tar.xz"
-MD5SUM="01e1b860ffe35f5946020c3d5c4c50c9"
+DOWNLOAD="https://download.gnome.org/sources/gexiv2/0.10/gexiv2-0.10.8.tar.xz"
+MD5SUM="fcbaa7233fc076a6743c22da746956be"
