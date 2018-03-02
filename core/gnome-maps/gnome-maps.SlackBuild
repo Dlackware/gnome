@@ -23,7 +23,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=gnome-maps
-VERSION=${VERSION:-3.24.3}
+VERSION=${VERSION:-3.26.2}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 

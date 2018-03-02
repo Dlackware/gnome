@@ -23,7 +23,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=gucharmap
-VERSION=${VERSION:-9.0.4}
+VERSION=${VERSION:-10.0.3}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -75,9 +75,10 @@ CXXFLAGS="$SLKCFLAGS" \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
-  --localstatedir=/var \
+  --localstatedir=/var/lib \
   --enable-instrospection=yes \
   --enable-vala=yes \
+  --enable-static=no \
   --with-gtk=3.0 \
   --with-unicode-data=download \
   --mandir=/usr/man \

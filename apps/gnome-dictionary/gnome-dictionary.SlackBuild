@@ -24,7 +24,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=gnome-dictionary
-VERSION=${VERSION:-3.24.0}
+VERSION=${VERSION:-3.26.1}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -74,19 +74,19 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
+mkdir -pv build
+cd build
+
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
-./configure \
+meson \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
-  --localstatedir=/var/lib \
-  --mandir=/usr/man \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --build=$ARCH-slackware-linux
+  --mandir=/usr/man
 
-make $NUMJOBS
-make install DESTDIR=$PKG
+ninja
+DESTDIR=$PKG ninja install
 
 # Compress and link manpages, if any:
 if [ -d $PKG/usr/man ]; then

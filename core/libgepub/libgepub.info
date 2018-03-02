@@ -1,5 +1,5 @@
 PKGNAM="libgepub"
-VERSION="0.4"
+VERSION="0.5.3"
 HOMEPAGE="http://www.gnome.org"
-DOWNLOAD="http://download.gnome.org/sources/libgepub/0.4/libgepub-0.4.tar.xz"
-MD5SUM="431a1be6408825a6a7df5eb5f2362791"
+DOWNLOAD="http://download.gnome.org/sources/libgepub/0.5/libgepub-0.5.3.tar.xz"
+MD5SUM="3878dbc4c59fb677c591a01d01c27fa6"

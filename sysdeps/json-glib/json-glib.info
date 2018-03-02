@@ -1,5 +1,5 @@
 PKGNAM="json-glib"
-VERSION="1.2.8"
+VERSION="1.4.2"
 HOMEPAGE="http://live.gnome.org/JsonGlib"
-DOWNLOAD="http://download.gnome.org/sources/json-glib/1.2/json-glib-1.2.8.tar.xz"
-MD5SUM="ff31e7d0594df44318e12facda3d086e"
+DOWNLOAD="http://download.gnome.org/sources/json-glib/1.4/json-glib-1.4.2.tar.xz"
+MD5SUM="35107e23a7bbbc70f31c34f7b9adf1c3"

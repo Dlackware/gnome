@@ -1,5 +1,5 @@
 PKGNAM="gnome-dictionary"
-VERSION="3.24.0"
+VERSION="3.26.1"
 HOMEPAGE="https://wiki.gnome.org/Design/Apps/Dictionary"
-DOWNLOAD="http://download.gnome.org/sources/gnome-dictionary/3.24/gnome-dictionary-3.24.0.tar.xz"
-MD5SUM="0d1c46b291bbacd6c96570ab88df4694"
+DOWNLOAD="http://download.gnome.org/sources/gnome-dictionary/3.26/gnome-dictionary-3.26.1.tar.xz"
+MD5SUM="08be36dd1c6d8d4e23a744737519d546"

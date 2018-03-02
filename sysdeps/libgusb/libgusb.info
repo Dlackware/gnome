@@ -1,5 +1,5 @@
 PKGNAM="libgusb"
-VERSION="0.2.11"
+VERSION="0.3.0"
 HOMEPAGE="http://libgusb.github.com"
-DOWNLOAD="http://people.freedesktop.org/~hughsient/releases/libgusb-0.2.11.tar.xz"
-MD5SUM="fa2b41b828c749f9190edf888948a77b"
+DOWNLOAD="http://people.freedesktop.org/~hughsient/releases/libgusb-0.3.0.tar.xz"
+MD5SUM="3c178f1171f808785d6af971b1fdc50c"

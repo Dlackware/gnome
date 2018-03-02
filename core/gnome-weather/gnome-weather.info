@@ -1,5 +1,5 @@
 PKGNAM="gnome-weather"
-VERSION="3.24.0"
+VERSION="3.26.0"
 HOMEPAGE="http://www.gnome.org"
-DOWNLOAD="http://download.gnome.org/sources/gnome-weather/3.24/gnome-weather-3.24.0.tar.xz"
+DOWNLOAD="http://download.gnome.org/sources/gnome-weather/3.26/gnome-weather-3.26.0.tar.xz"
 MD5SUM="eb6832d8a6492d24171df681e1603da4"

@@ -1,5 +1,5 @@
 PKGNAM="atk"
-VERSION="2.24.0"
+VERSION="2.26.1"
 HOMEPAGE="https://developer.gnome.org/atk/"
-DOWNLOAD="http://download.gnome.org/sources/atk/2.24/atk-2.24.0.tar.xz"
-MD5SUM="3747a80089dfa3c0bbcf21adfff9968b"
+DOWNLOAD="http://download.gnome.org/sources/atk/2.26/atk-2.26.1.tar.xz"
+MD5SUM="7cddcc313b9a3efd19b2ddf079ba68f5"

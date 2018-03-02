@@ -71,39 +71,22 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
+mkdir -pv build
+cd build
 
-sed -i -e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' configure.ac || exit 1
-sed -i -e '/LIBEXEC_DIR/s|\"/gvfs|\"gvfs|g' daemon/main.c || exit 1
-
-autoreconf -ivf
-
-CFLAGS="$SLKCFLAGS" \
-./configure \
-  --prefix=/usr \
+meson --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
-  --localstatedir=/var \
-  --mandir=/usr/man \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --enable-gtk-doc \
-  --with-bash-completion-dir=/usr/share/bash-completion/completions \
-  --disable-gdu \
-  --disable-hal \
-  --enable-udisks2 \
-  --enable-keyring \
-  --enable-libsystemd-login \
-  --build=$ARCH-slackware-linux || exit 1
+  --libexecdir=/usr/libexec \
+  -Ddeprecated_programs=true \
+  -Dnfs=false \
+  -Ddnssd=false \
+  -Dgoa=false \
+  -Dgoogle=false \
+  -Dman=true
 
-make $NUMJOBS || exit 1
-make install DESTDIR=$PKG || exit 1
-
-# Don't set AutoMount to true for network volumes.  Doing so leads to long
-# delays in Thunar.  Users may click the network button in Thunar to mount
-# them instead.
-sed -i -e "s/AutoMount=true/AutoMount=false/g" $PKG/usr/share/gvfs/mounts/network.mount
-
-# Don't ship .la files:
-rm -f $PKG/usr/lib${LIBDIRSUFFIX}/*.la
+ninja
+DESTDIR=$PKG ninja install || exit 1
 
 find $PKG | xargs file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null

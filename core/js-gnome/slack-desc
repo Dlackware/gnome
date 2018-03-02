@@ -5,15 +5,16 @@
 # exactly 11 lines for the formatting to be correct.  It's also customary to
 # leave one space after the ':'.
 
-       |-----handy-ruler------------------------------------------------------|
-cairomm: cairomm (C++ bindings for Cairo)
-cairomm:
-cairomm: This library provides a C++ interface to cairo.
-cairomm:
-cairomm:
-cairomm:
-cairomm:
-cairomm:
-cairomm:
-cairomm:
-cairomm:
+        |-----handy-ruler------------------------------------------------------|
+js-gnome: js-gnome (Javascript Engine for Gjs)
+js-gnome:
+js-gnome: JS is Mozilla's JavaScript engine written in C.
+js-gnome: This package is present for GJS.
+js-gnome: 
+js-gnome: 
+js-gnome:
+js-gnome:
+js-gnome:
+js-gnome:
+js-gnome:
+js-gnome:

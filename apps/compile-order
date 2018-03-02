@@ -1,9 +1,9 @@
-gnome-todo
-aisleriot
-dconf-editor
-devhelp
-evolution
-gitg
+#gnome-todo
+#aisleriot
+#dconf-editor
+#devhelp
+#evolution
+#gitg
 gnome-builder
 gnome-devel-docs
 gnome-dictionary

@@ -5,15 +5,15 @@
 # exactly 11 lines for the formatting to be correct.  It's also customary to
 # leave one space after the ':'.
 
-       |-----handy-ruler------------------------------------------------------|
-pangomm: pangomm (Pango C++ bindings)
-pangomm:
-pangomm: Pangomm is a C++ wrapper for pango.
-pangomm:
-pangomm: Homepage: http://www.gtkmm.org/en/
-pangomm:
-pangomm:
-pangomm:
-pangomm:
-pangomm:
-pangomm:
+            |-----handy-ruler------------------------------------------------------|
+autoconf2.13: gjs (Javascript Bindings for GNOME)
+autoconf2.13:
+autoconf2.13:
+autoconf2.13:
+autoconf2.13:
+autoconf2.13:
+autoconf2.13:
+autoconf2.13:
+autoconf2.13:
+autoconf2.13:
+autoconf2.13:

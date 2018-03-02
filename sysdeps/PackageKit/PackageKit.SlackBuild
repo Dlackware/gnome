@@ -23,7 +23,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM="PackageKit"
-VERSION=${VERSION:-1.1.7}
+VERSION=${VERSION:-1.1.9}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -63,12 +63,9 @@ set -e # Exit on most errors
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-#rm -rf $PKGNAM-$VERSION
-rm -rf $PKGNAM-master
-#tar xvf $CWD/$PKGNAM-$VERSION.tar.xz
-tar xvf $CWD/master.tar.gz
-#cd $PKGNAM-$VERSION
-cd $PKGNAM-master
+rm -rf $PKGNAM-$VERSION
+tar xvf $CWD/$PKGNAM-$VERSION.tar.xz
+cd $PKGNAM-$VERSION
 chown -R root:root .
 
 find -L . \
@@ -84,11 +81,22 @@ CXXFLAGS="$SLKCFLAGS" \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   --localstatedir=/var \
+  --libexecdir=/usr/libexec \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --enable-katja \
+  --disable-static \
+  --disable-gtk-doc \
+  --disable-local \
+  --disable-gstreamer-plugin \
+  --disable-gtk-module \
+  --disable-command-not-found \
+  --disable-cron \
+  --disable-dummy \
+  --enable-slack \
   --enable-systemd \
   --build=$ARCH-slackware-linux  || exit 1
+
+sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
 
 make $NUMJOBS
 make install-strip DESTDIR=$PKG

@@ -1,5 +1,5 @@
 PKGNAM="gnome-contacts"
-VERSION="3.22.1"
+VERSION="3.26"
 HOMEPAGE="https://wiki.gnome.org/Design/Apps/Contacts"
-DOWNLOAD="http://download.gnome.org/sources/gnome-contacts/3.22/gnome-contacts-3.22.1.tar.xz"
-MD5SUM="6a2b5adcaab4274feb45c94be8123c88"
+DOWNLOAD="http://download.gnome.org/sources/gnome-contacts/3.26/gnome-contacts-3.26.tar.xz"
+MD5SUM="e30447ec2396c88d313582aa5ef2c9e5"

@@ -1,5 +1,5 @@
 PKGNAM="evince"
-VERSION="3.24.1"
+VERSION="3.26.0"
 HOMEPAGE="https://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/sources/evince/3.24/evince-3.24.1.tar.xz"
-MD5SUM="ea19a7f5903caa1ec9688d98051cdb0d"
+DOWNLOAD="https://download.gnome.org/sources/evince/3.26/evince-3.26.0.tar.xz"
+MD5SUM="51c112ea5448c8aa35c29b8ae8aad7fc"

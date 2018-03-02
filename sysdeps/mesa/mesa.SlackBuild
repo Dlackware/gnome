@@ -23,7 +23,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=mesa
-VERSION=${VERSION:-17.2.0}
+VERSION=${VERSION:-17.3.5}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -48,13 +48,12 @@ TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-$PKGNAM
 OUTPUT=${OUTPUT:-/var/cache/dlackware}
 
+
 if [ "$ARCH" = "i586" ]; then
   SLKCFLAGS="-O2 -march=i586 -mtune=i686"
   LIBDIRSUFFIX=""
-  VULKAN=" --with-vulkan-drivers=intel,radeon "
-elif [ "$ARCH" = "i686" ]; then
-  SLKCFLAGS="-O2 -march=i686 -mtune=i686"
-  LIBDIRSUFFIX=""
+  # I've heard some reports as of late 2016 that Vulkan has some issues on
+  # 32-bit, but we'll try it anyway and see if anything is reported:
   VULKAN=" --with-vulkan-drivers=intel,radeon "
 elif [ "$ARCH" = "x86_64" ]; then
   SLKCFLAGS="-O2 -fPIC"
@@ -75,9 +74,6 @@ cd $PKGNAM-$VERSION
 # Let's kill the warning about operating on a dangling symlink:
 rm -f src/gallium/state_trackers/d3d1x/w32api
 
-# Fix for xlocale.h removal:
-cat $CWD/mesa.glibc226.diff | patch -p1 --verbose || exit 1
-
 # Make sure ownerships and permissions are sane:
 chown -R root:root .
 find . \
@@ -96,15 +92,13 @@ if /bin/ls $CWD/patches/*.patch 1> /dev/null 2> /dev/null ; then
   done
 fi
 
-# Don't worry if Mako is not present:
-#sed -i "s,AX_CHECK_PYTHON_MAKO_MODULE(\$PYTHON_MAKO_REQUIRED),,g" configure.ac
-cat $CWD/mesa.no.mako.diff | patch -p1 --verbose || exit 1
-
 # Fix detection of libLLVM when built with CMake
 sed -i 's/LLVM_SO_NAME=.*/LLVM_SO_NAME=LLVM/' configure.ac
 
 # Seems to need this to avoid tripping over a different libtool version:
 autoreconf -fi
+
+echo "PYTHON=/usr/bin/python3"
 
 CFLAGS="$SLKCFLAGS" \
 ./configure \
@@ -112,13 +106,12 @@ CFLAGS="$SLKCFLAGS" \
   --sysconfdir=/etc \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --mandir=/usr/man \
-  --docdir=/usr/doc/mesa-$VERSION \
+  --docdir=/usr/doc/${PKGNAM}-$VERSION \
   --with-dri-driverdir=/usr/lib${LIBDIRSUFFIX}/xorg/modules/dri \
   --with-dri-drivers="$DRI_DRIVERS" \
   --with-gallium-drivers="$GALLIUM_DRIVERS" \
   --with-egl-platforms="$EGL_PLATFORMS" \
   $VULKAN \
-  --enable-gallium-llvm \
   --enable-llvm \
   --enable-llvm-shared-libs \
   --enable-egl \
@@ -141,6 +134,9 @@ CFLAGS="$SLKCFLAGS" \
 
 make $NUMJOBS || make || exit 1
 make install DESTDIR=$PKG || exit 1
+
+# Install /etc/drirc as a .new file:
+mv $PKG/etc/drirc $PKG/etc/drirc.new
 
 # Now install the demos
 ( cd $TMP
@@ -192,6 +188,7 @@ rm -f $PKG/usr/doc/Mesa-$VERSION/html/relnotes*.html
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
+cat $CWD/doinst.sh > $PKG/install/doinst.sh
 
 cd $PKG
 /sbin/makepkg -l y -c n $OUTPUT/$PKGNAM-$VERSION-$ARCH-$BUILD$TAG.txz

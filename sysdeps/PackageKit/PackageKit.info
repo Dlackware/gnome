@@ -1,5 +1,5 @@
 PKGNAM="PackageKit"
-VERSION="1.1.7"
+VERSION="1.1.9"
 HOMEPAGE="http://www.freedesktop.org/software/PackageKit/"
-DOWNLOAD="https://github.com/hughsie/PackageKit/archive/master.tar.gz"
-MD5SUM="2f00e3e55656a6e06da55e30ad5ef2f4"
+DOWNLOAD="https://kalev.fedorapeople.org/PackageKit/releases/PackageKit-1.1.9.tar.xz"
+MD5SUM="af41d68f08046540a342a9834d9bb8ca"

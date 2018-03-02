@@ -24,7 +24,7 @@
 
 SRCNAM=udisks
 PKGNAM=udisks2
-VERSION=${VERSION:-2.6.5}
+VERSION=${VERSION:-2.7.6}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -42,7 +42,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://udisks.freedesktop.org/releases/$SRCNAM-$VERSION.tar.bz2
+#wget -c http://udisks.freedesktop.org/releases/$SRCNAM-$VERSION.tar.bz2
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
@@ -91,13 +91,13 @@ fi
 
 unset SBO_AUTOGEN
 
-if [ -r ${CWD}/apply-patches.sh ]; then
-  . ${CWD}/apply-patches.sh
-fi
+#if [ -r ${CWD}/apply-patches.sh ]; then
+#  . ${CWD}/apply-patches.sh
+#fi
 
-if [ "${SBO_AUTOGEN}" = "YES" ]; then
-  autoreconf -ivf || exit $?
-fi
+#if [ "${SBO_AUTOGEN}" = "YES" ]; then
+#  autoreconf -ivf || exit $?
+#fi
 
 export CFLAGS="${SLKCFLAGS} -fPIC"
 export CXXFLAGS="${SLKCFLAGS} -fPIC"
@@ -109,10 +109,12 @@ export LDFLAGS="-pie -Wl,-z,now -Wl,-z,relro ${LDFLAGS}"
   --sysconfdir=/etc \
   --localstatedir=/var \
   --disable-static \
+  --with-systemdsystemunitdir=/lib/systemd/system \
   --infodir=/usr/info \
   --mandir=/usr/man \
   --docdir=/usr/doc/${PKGNAM}-${VERSION} \
   --enable-lvm2 \
+  --enable-available-modules \
   --disable-silent-rules \
   --build=$TARGET || exit $?
 

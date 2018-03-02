@@ -74,12 +74,8 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-sed -i 's/unsigned short/char16_t/'            \
-       Source/JavaScriptCore/API/JSStringRef.h \
-       Source/WebKit2/Shared/API/c/WKString.h  &&
-
-sed -i '/stdbool.h/ a#include <uchar.h>' \
-       Source/JavaScriptCore/API/JSBase.h
+mkdir -pv build
+cd build
 
 CFLAGS="$SLKCFLAGS -Wno-expansion-to-defined" \
 CXXFLAGS="$SLKCFLAGS -Wno-expansion-to-defined" \
@@ -90,10 +86,12 @@ cmake -DCMAKE_BUILD_TYPE=Release  \
       -DENABLE_GTKDOC=OFF          \
       -DUSE_SYSTEM_MALLOC=ON      \
       -DCMAKE_INSTALL_DOCDIR=/usr/share/doc \
-      -DCMAKE_INSTALL_LIBDIR=lib64
+      -DLIB_INSTALL_DIR=/usr/lib64 ..
 
 make ${NUMJOBS} -k || exit 1
 make install DESTDIR=${PKG} || exit 1
+
+cd ..
 
 find ${PKG}/usr/lib${LIBDIRSUFFIX} -name '*.la' -delete
 

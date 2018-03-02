@@ -1,5 +1,5 @@
 PKGNAM="gnome-color-manager"
-VERSION="3.24.0"
+VERSION="3.26.0"
 HOMEPAGE="http://www.gnome.org"
-DOWNLOAD="http://download.gnome.org/sources/gnome-color-manager/3.24/gnome-color-manager-3.24.0.tar.xz"
-MD5SUM="47b7f7ef50e9e28f07db14c604ef08c9"
+DOWNLOAD="http://download.gnome.org/sources/gnome-color-manager/3.26/gnome-color-manager-3.26.0.tar.xz"
+MD5SUM="d5d3aba5da3d72d2100060e0a49e9515"

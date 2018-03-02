@@ -1,0 +1,5 @@
+PKGNAM="bytesize"
+VERSION="1.2"
+HOMEPAGE="http://www.freedesktop.org/wiki/Software/udisks"
+DOWNLOAD="https://github.com/storaged-project/libbytesize/releases/download/1.2/libbytesize-1.2.tar.gz"
+MD5SUM=""

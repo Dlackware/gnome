@@ -76,9 +76,9 @@ CXXFLAGS="$SLKCFLAGS" \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
-  --localstatedir=/var/lib \
+  --localstatedir=/var \
   --with-gnome-distributor=Dlackware \
-  --enable-gtk-doc \
+  --disable-gtk-doc \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
   --build=$ARCH-slackware-linux
 

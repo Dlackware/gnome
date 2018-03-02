@@ -26,7 +26,7 @@
 # Modified 2014,2015  by Bart van der Hall for dlackware
 
 PKGNAM=upower
-VERSION=${VERSION:-0.99.5}
+VERSION=${VERSION:-0.99.7}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -84,14 +84,6 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-# Set to YES to enable systemd support
-SBO_SYSTEMD=${SBO_SYSTEMD:-YES}
-
-unset SBO_SYSTEMDOPTS
-[ "${SBO_SYSTEMD}" = "YES" ] || SBO_SYSTEMDOPTS='--enable-deprecated'
-
-
-
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
 ./configure \
@@ -100,14 +92,15 @@ CXXFLAGS="$SLKCFLAGS" \
   --sysconfdir=/etc \
   --localstatedir=/var \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
+  --disable-maintainer-mode \
   --disable-rpath \
   --disable-static \
+  --with-udevrulesdir=/lib/udev/rules.d \
   --enable-man-pages \
   --mandir=/usr/man \
   --enable-gtk-doc \
-  --enable-introspection \
-  ${SBO_SYSTEMDOPTS} \
-  --build=$TARGET
+  --enable-deprecated \
+  --build=$TARGET || exit 1
 
 make $NUMJOBS || make || exit 1
 make install DESTDIR=$PKG || exit 1

@@ -1,5 +1,5 @@
 PKGNAM="epiphany"
-VERSION="3.24.3"
+VERSION="3.26.5.1"
 HOMEPAGE="https://wiki.gnome.org/Apps/Web"
-DOWNLOAD="http://download.gnome.org/sources/epiphany/3.24/epiphany-3.24.3.tar.xz"
-MD5SUM="c0221aec6a08935e6854eaa9de9451ef"
+DOWNLOAD="http://download.gnome.org/sources/epiphany/3.26/epiphany-3.26.5.1.tar.xz"
+MD5SUM="8c2062debde6377320596e2685bb1732"

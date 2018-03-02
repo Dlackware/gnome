@@ -1,0 +1,5 @@
+PKGNAM="volume_key"
+VERSION="0.3.9"
+HOMEPAGE="http://www.freedesktop.org/wiki/Software/udisks"
+DOWNLOAD="https://releases.pagure.org/volume_key/volume_key-0.3.9.tar.xz"
+MD5SUM="a2d14931177c660e1f3ebbcf5f47d8e2"

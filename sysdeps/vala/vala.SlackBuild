@@ -23,7 +23,7 @@
 # Modified 2014 by Bart van der Hall for dlackware
 
 PKGNAM=vala
-VERSION=${VERSION:-0.36.5}
+VERSION=${VERSION:-0.38.4}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -70,6 +70,16 @@ find -L . \
   -o -perm 511 \) -exec chmod 755 {} \; -o \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
+
+# The two sed commands and the autoreconf command below are required
+# if the optional dependency Graphviz is not installed.
+# This will allow building the valadoc prgram and
+# libraries that can be used to generate API documentation in HTML format from Vala source code.
+
+sed -i '101d; 107,123d; 125,126d'  configure.ac
+sed -i '/valadoc/d' Makefile.am
+ACLOCAL= autoreconf -fiv
+
 
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \

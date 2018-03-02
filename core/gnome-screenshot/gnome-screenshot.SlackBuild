@@ -24,8 +24,8 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=gnome-screenshot
-VERSION=${VERSION:-3.22.0}
-BUILD=${BUILD:-2}
+VERSION=${VERSION:-3.26.0}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 NUMJOBS=${NUMJOBS:--j7}

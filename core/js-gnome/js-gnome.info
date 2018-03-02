@@ -1,0 +1,5 @@
+PKGNAM="js-gnome"
+VERSION="52.2.1gnome1"
+HOMEPAGE="http://www.linuxfromscratch.org/blfs/view/svn/general/js52.html"
+DOWNLOAD="http://ftp.gnome.org/pub/gnome/teams/releng/tarballs-needing-help/mozjs/mozjs-52.2.1gnome1.tar.gz"
+MD5SUM=""

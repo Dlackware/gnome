@@ -70,20 +70,20 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-./configure \
-  --prefix=/usr \
+mkdir -pv build
+cd build
+
+meson --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
-  --localstatedir=/var/lib \
-  --disable-silent-rules \
-  --disable-selinux \
-  --enable-introspection \
   --mandir=/usr/man \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --build=$ARCH-slackware-linux
+  -Denable-selinux=false \
+  -Denable-introspection=true
 
-make $NUMJOBS || make || exit 1
-make install DESTDIR=$PKG || exit 1
+ninja
+DESTDIR=$PKG ninja install
+
+cd ..
 
 # Compress and link manpages, if any:
 if [ -d $PKG/usr/man ]; then
@@ -101,8 +101,7 @@ if [ -d $PKG/usr/man ]; then
 fi
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
-cp -a \
-  COPYING NEWS README \
+cp -a NEWS \
   $PKG/usr/doc/$PKGNAM-$VERSION
 
 # If there's a ChangeLog, installing at least part of the recent history

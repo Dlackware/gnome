@@ -1,5 +1,5 @@
 PKGNAM="shared-mime-info"
-VERSION="1.7"
+VERSION="1.9"
 HOMEPAGE="https://www.freedesktop.org/wiki/Software/shared-mime-info/"
-DOWNLOAD="https://freedesktop.org/~hadess/shared-mime-info-1.7.tar.xz"
-MD5SUM="c6fea618f135b3b8e676c84cd9153917"
+DOWNLOAD="https://freedesktop.org/~hadess/shared-mime-info-1.9.tar.xz"
+MD5SUM="45103889b91242850aa47f09325e798b"

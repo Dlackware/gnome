@@ -1,5 +1,5 @@
 PKGNAM="autoconf-archive"
-VERSION="2017.03.21"
+VERSION="2017.09.28"
 HOMEPAGE="https://www.gnu.org/software/autoconf-archive/"
-DOWNLOAD="http://mirror.gutscheinrausch.de/gnu/autoconf-archive/autoconf-archive-2017.03.21.tar.xz"
-MD5SUM="39549f8b3f34d2c910c92e58912e1a64"
+DOWNLOAD="http://ftpmirror.gnu.org/autoconf-archive/autoconf-archive-2017.09.28.tar.xz"
+MD5SUM="1bfea2828cf204d46dcc748cce79ae4b"

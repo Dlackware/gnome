@@ -25,7 +25,7 @@
 # Modified 2014 by Bart van der Hall for dlackware
 
 PKGNAM=glib-networking
-VERSION=${VERSION:-2.50.0}
+VERSION=${VERSION:-2.54.1}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -38,8 +38,6 @@ if [ -z "$ARCH" ]; then
        *) ARCH=$( uname -m ) ;;
   esac
 fi
-
-wget -c http://download.gnome.org/sources/$PKGNAM/2.48/$PKGNAM-$VERSION.tar.xz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}

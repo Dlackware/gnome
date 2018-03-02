@@ -71,8 +71,6 @@ find . \
   \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
   -exec chmod 644 {} \;
 
-zcat $CWD/cairo.c088ba1faab9579efdaed7a524124901a17801b0.diff.gz | patch -p1 --verbose || exit 1
-
 CFLAGS="$SLKCFLAGS" \
 ./configure \
   --prefix=/usr \

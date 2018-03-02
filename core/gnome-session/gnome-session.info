@@ -1,5 +1,5 @@
 PKGNAM="gnome-session"
-VERSION="3.24.1"
+VERSION="3.26.1"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/sources/gnome-session/3.24/gnome-session-3.24.1.tar.xz"
-MD5SUM="210ed46444e5b8da89d2963ec2f62e7e"
+DOWNLOAD="https://download.gnome.org/sources/gnome-session/3.26/gnome-session-3.26.1.tar.xz"
+MD5SUM="4c108adbf6ebe25486d41a9bc8cc340c"

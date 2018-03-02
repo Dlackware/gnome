@@ -1,5 +1,5 @@
 PKGNAM="cairo"
-VERSION="1.14.10"
+VERSION="1.14.12"
 HOMEPAGE="http://cairographics.org/"
-DOWNLOAD="https://www.cairographics.org/releases/cairo-1.14.10.tar.xz"
-MD5SUM="146f5f4d0b4439fc3792fd3452b7b12a"
+DOWNLOAD="https://www.cairographics.org/releases/cairo-1.14.12.tar.xz"
+MD5SUM="9f0db9dbfca0966be8acd682e636d165"

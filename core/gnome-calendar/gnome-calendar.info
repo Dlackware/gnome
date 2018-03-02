@@ -1,5 +1,5 @@
 PKGNAM="gnome-calendar"
-VERSION="3.24.3"
+VERSION="3.26.3"
 HOMEPAGE="https://wiki.gnome.org/Core/Calendar"
-DOWNLOAD="http://download.gnome.org/sources/gnome-calendar/3.24/gnome-calendar-3.24.3.tar.xz"
-MD5SUM="aa03933cc6a3e85022b127010425518c"
+DOWNLOAD="http://download.gnome.org/sources/gnome-calendar/3.26/gnome-calendar-3.26.3.tar.xz"
+MD5SUM="1a0d820f2b455d7d49a4197148552291"

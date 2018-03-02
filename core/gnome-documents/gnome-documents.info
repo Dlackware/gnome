@@ -1,5 +1,5 @@
 PKGNAM="gnome-documents"
-VERSION="3.24.3"
+VERSION="3.26.1"
 HOMEPAGE="https://wiki.gnome.org/Apps/Documents"
-DOWNLOAD="https://download.gnome.org/sources/gnome-documents/3.24/gnome-documents-3.24.3.tar.xz"
-MD5SUM="dc0dc0dfd0a0b52080a7510770180b23"
+DOWNLOAD="https://download.gnome.org/sources/gnome-documents/3.26/gnome-documents-3.26.1.tar.xz"
+MD5SUM="b6d9c0e19214dd362b62207c7ab28899"

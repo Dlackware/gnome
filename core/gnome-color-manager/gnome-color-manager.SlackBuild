@@ -73,19 +73,18 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-CFLAGS="$SLKCFLAGS" \
-CXXFLAGS="$SLKCFLAGS" \
-./configure \
-  --prefix=/usr \
+mkdir -pv build
+cd build
+
+meson --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
-  --mandir=/usr/man \
-  --localstatedir=/var/lib \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --build=$ARCH-slackware-linux
+  --mandir=/usr/man
 
-make $NUMJOBS
-make install DESTDIR=$PKG
+ninja
+DESTDIR=$PKG ninja install
+
+cd ../
 
 # Compress and link manpages, if any:
 if [ -d $PKG/usr/man ]; then

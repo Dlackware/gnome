@@ -23,7 +23,7 @@
 
 PKGNAM=glib2
 VERSION=${VERSION:-$(echo glib-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
-BUILD=${BUILD:-2}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 NUMJOBS=${NUMJOBS:--j4}
@@ -71,8 +71,9 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-# Fix a race condition when using /etc/mtab:
-cat $CWD/glib.mtab.diff | patch -p1 --verbose || exit 1
+# Upstream commit to address high CPU usage with some applications (e.g.
+# LibreOffice and/or WebKit):
+zcat $CWD/glib2.94b38beff.diff.gz | patch -p1 --verbose || exit 1
 
 # Silly upstream, using the bleeding edge.  Reconf:
 #autoreconf --force --install 

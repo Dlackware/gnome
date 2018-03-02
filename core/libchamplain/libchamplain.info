@@ -1,5 +1,5 @@
 PKGNAM="libchamplain"
-VERSION="0.12.15"
+VERSION="0.12.16"
 HOMEPAGE="https://wiki.gnome.org/Projects/libchamplain"
-DOWNLOAD="https://download.gnome.org/sources/libchamplain/0.12/libchamplain-0.12.15.tar.xz"
-MD5SUM="0dea22ea7f50e4ab6133e73730e8f18e"
+DOWNLOAD="https://download.gnome.org/sources/libchamplain/0.12/libchamplain-0.12.16.tar.xz"
+MD5SUM="52a410767f4797657b505e439bf7ce83"

@@ -24,7 +24,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=gnome-tweak-tool
-VERSION=${VERSION:-3.24.1}
+VERSION=${VERSION:-3.26.4}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -74,18 +74,19 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
+mkdir -pv build
+cd build
+
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
-./configure \
-  --prefix=/usr \
+meson --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --sysconfdir=/etc \
-  --localstatedir=/var/lib \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --build=$ARCH-slackware-linux
+  --sysconfdir=/etc
 
-make $NUMJOBS
-make install DESTDIR=$PKG
+ninja
+DESTDIR=$PKG ninja install
+
+cd ..
 
 # Strip binaries:
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \

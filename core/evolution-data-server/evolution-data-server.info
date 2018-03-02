@@ -1,5 +1,5 @@
 PKGNAM="evolution-data-server"
-VERSION="3.24.5"
+VERSION="3.26.4"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/evolution-data-server/3.24/evolution-data-server-3.24.5.tar.xz"
-MD5SUM="fe180f45a5d095ddab4416b43a62dab2"
+DOWNLOAD="http://download.gnome.org/sources/evolution-data-server/3.26/evolution-data-server-3.26.4.tar.xz"
+MD5SUM="a71c7de5c4083231a5725332fd82fbe5"

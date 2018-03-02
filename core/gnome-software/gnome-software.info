@@ -1,5 +1,5 @@
 PKGNAM="gnome-software"
-VERSION="3.24.3"
+VERSION="3.26.5"
 HOMEPAGE="https://wiki.gnome.org/Apps/Software"
-DOWNLOAD="https://download.gnome.org/sources/gnome-software/3.24/gnome-software-3.24.3.tar.xz"
-MD5SUM="e555dfb8581142e3207e02f7c801abe5"
+DOWNLOAD="https://download.gnome.org/sources/gnome-software/3.26/gnome-software-3.26.5.tar.xz"
+MD5SUM="ca7a24dec6149b98d42db32f46c7cee1"

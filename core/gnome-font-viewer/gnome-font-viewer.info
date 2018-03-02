@@ -1,5 +1,5 @@
 PKGNAM="gnome-font-viewer"
-VERSION="3.24.0"
+VERSION="3.26.0"
 HOMEPAGE="https://github.com/GNOME/gnome-font-viewer"
-DOWNLOAD="http://download.gnome.org/sources/gnome-font-viewer/3.24/gnome-font-viewer-3.24.0.tar.xz"
-MD5SUM="c7434e3fb7cd3cfbdc7073d3bf11b6b5"
+DOWNLOAD="http://download.gnome.org/sources/gnome-font-viewer/3.26/gnome-font-viewer-3.26.0.tar.xz"
+MD5SUM="7b6cbf4256a88630eebe45401ebe72f4"

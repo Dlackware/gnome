@@ -1,0 +1,5 @@
+PKGNAM="tracker-miners"
+VERSION="2.0.4"
+HOMEPAGE="http://projects.gnome.org/tracker/"
+DOWNLOAD="http://download.gnome.org/sources/tracker-miners/2.0/tracker-miners-2.0.4.tar.xz"
+MD5SUM="d7e7ef401ce1310d9cde57e2b52de9eb"

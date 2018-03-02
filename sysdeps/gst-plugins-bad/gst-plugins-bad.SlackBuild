@@ -74,29 +74,26 @@ if [ -z "${APIVER}" ] ;then
   exit 1
 fi
 
-CFLAGS="${SLKCFLAGS}" \
-CXXFLAGS="${SLKCFLAGS}" \
-./configure \
-  --prefix=/usr \
+mkdir -pv build
+cd build
+
+meson --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   --localstatedir=/var \
-  --infodir=/usr/info \
-  --mandir=/usr/man \
-  --docdir=/usr/doc/${PKGNAM}-${VERSION} \
-  --enable-introspection=yes \
-  --enable-profiling \
-  --disable-silent-rules \
-  --disable-static \
-  --disable-rpath \
-  --with-package-name="${SLKDIST} ${PKGNAM} package" \
-  --with-package-origin="${SLKDIST} Linux" \
-  --disable-gtk-doc \
-  --enable-experimental \
-  --build=$ARCH-slackware-linux || exit 1
+  -Denable-introspection=true \
+  -Denable-profiling=true \
+  -Ddisable-silent-rules=true \
+  -Ddisable-rpath=true \
+  -Dwith-package-name="${SLKDIST} ${PKGNAM} package" \
+  -Dwith-package-origin="${SLKDIST} Linux" \
+  -Ddisable-gtk-doc=true \
+  -Denable-experimental=true || exit 1
 
-make || exit $?
-make install DESTDIR=${PKG} || exit $?
+ninja
+DESTDIR=${PKG} ninja install || exit $?
+
+cd ..
 
 rm -f ${PKG}/usr/lib*/gstreamer-${APIVER}/*.{a,la}
 rm -f ${PKG}/usr/lib*/*.a

@@ -1,5 +1,5 @@
 PKGNAM="gitg"
-VERSION="3.24.0"
+VERSION="3.26.0"
 HOMEPAGE="http://www.gnome.org"
-DOWNLOAD="http://download.gnome.org/sources/gitg/3.24/gitg-3.24.0.tar.xz"
-MD5SUM="ee4e11a4f62298c59165bdf003924348"
+DOWNLOAD="http://download.gnome.org/sources/gitg/3.26/gitg-3.26.0.tar.xz"
+MD5SUM="099dad2d598e1420bbe451adb0e97fd5"

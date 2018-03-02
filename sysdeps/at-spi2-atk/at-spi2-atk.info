@@ -1,5 +1,5 @@
 PKGNAM="at-spi2-atk"
-VERSION="2.24.1"
+VERSION="2.26.1"
 HOMEPAGE="http://gnome.org/"
-DOWNLOAD="https://ftp.gnome.org/pub/gnome/sources/at-spi2-atk/2.24/at-spi2-atk-2.24.1.tar.xz"
-MD5SUM="79388fbc4dc7f27394556dd389aeb594"
+DOWNLOAD="https://ftp.gnome.org/pub/gnome/sources/at-spi2-atk/2.26/at-spi2-atk-2.26.1.tar.xz"
+MD5SUM="eeec6cead3350dca48a235271c105b3e"
