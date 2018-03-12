@@ -1,5 +1,5 @@
 PKGNAM="pylint"
-VERSION="1.6.4"
+VERSION="1.8.2"
 HOMEPAGE="https://www.pylint.org"
-DOWNLOAD="https://pypi.python.org/packages/4e/4b/2f14a233e6c86bbfff9568d3357860573dea51be7c96eecab9471ab6ca6f/pylint-1.6.4.tar.gz"
+DOWNLOAD="https://github.com/PyCQA/pylint/archive/pylint-1.8.2.tar.gz"
 MD5SUM="66ba9c27e067568bdabcdd7c21303903"

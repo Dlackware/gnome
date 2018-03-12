@@ -25,7 +25,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=pylint
-VERSION=${VERSION:-1.6.4}
+VERSION=${VERSION:-1.8.2}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -47,9 +47,9 @@ set -e
 rm -rf $TMP
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $PKGNAM-$VERSION
+rm -rf pylint-$PKGNAM-$VERSION
 tar xvf $CWD/$PKGNAM-$VERSION.tar.gz
-cd $PKGNAM-$VERSION
+cd pylint-$PKGNAM-$VERSION
 
 chown -R root:root .
 find -L . \
