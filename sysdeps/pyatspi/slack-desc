@@ -6,7 +6,7 @@
 # leave one space after the ':'.
 
        |-----handy-ruler------------------------------------------------------|
-pyatspi: pyatspi (the python at-spi bindings)
+pyatspi: pyatspi (the python 2 and 3 at-spi bindings)
 pyatspi:
 pyatspi: This package includes a python client library for the AT-SPI D-Bus
 pyatspi: accessibility infrastructure.

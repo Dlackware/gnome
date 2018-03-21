@@ -82,6 +82,20 @@ CFLAGS="$SLKCFLAGS" \
 make
 make install DESTDIR=$PKG
 
+make clean
+
+CFLAGS="$SLKCFLAGS" \
+./configure \
+  --prefix=/usr \
+  --libdir=/usr/lib${LIBDIRSUFFIX} \
+  --sysconfdir=/etc \
+  --localstatedir=/var/lib \
+  --with-python=python3 \
+  --build=$ARCH-slackware-linux
+
+make
+make install DESTDIR=$PKG
+
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
