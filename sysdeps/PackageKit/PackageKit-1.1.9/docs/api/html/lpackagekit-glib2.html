@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>packagekit-glib2: PackageKit Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="PackageKit Reference Manual">
+<link rel="up" href="index.html" title="PackageKit Reference Manual">
+<link rel="prev" href="Transaction.html" title="org.freedesktop.PackageKit.Transaction">
+<link rel="next" href="PackageKit-Common-functions.html" title="Common functions">
+<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><img src="up-insensitive.png" width="16" height="16" border="0"></td>
+<td><a accesskey="p" href="Transaction.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="PackageKit-Common-functions.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="reference">
+<div class="titlepage">
+<div><div><h1 class="title">
+<a name="lpackagekit-glib2"></a>packagekit-glib2</h1></div></div>
+<hr>
+</div>
+<div class="partintro">
+<div></div>
+<p>
+        This part documents packagekit-glib2.
+      </p>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl class="toc">
+<dt>
+<span class="refentrytitle"><a href="PackageKit-Common-functions.html">Common functions</a></span><span class="refpurpose"> — Common utility functions</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-Enumerations.html">Enumerations</a></span><span class="refpurpose"> — Enumerations used in packagekit-glib2</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PackageIDs.html">PackageIDs</a></span><span class="refpurpose"> — Functions for process PackageIDs</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-Offline-Updates.html">Offline Updates</a></span><span class="refpurpose"> — Function to perform offline updates</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkBitfield.html">PkBitfield</a></span><span class="refpurpose"> — Bitfield object</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkCategory.html">PkCategory</a></span><span class="refpurpose"> — Category object</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkClient.html">PkClient</a></span><span class="refpurpose"> — For creating new transactions</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkClientHelper.html">PkClientHelper</a></span><span class="refpurpose"> — helper object to run a helper session process for the lifetime of a transaction</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkControl.html">PkControl</a></span><span class="refpurpose"> — For querying data about PackageKit</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkDesktop.html">PkDesktop</a></span><span class="refpurpose"> — Find desktop metadata about a package</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkDetails.html">PkDetails</a></span><span class="refpurpose"> — Details object</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkDistroUpgrade.html">PkDistroUpgrade</a></span><span class="refpurpose"> — DistroUpgrade object</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkError.html">PkError</a></span><span class="refpurpose"> — Error object</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkEulaRequired.html">PkEulaRequired</a></span><span class="refpurpose"> — EulaRequired object</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkFiles.html">PkFiles</a></span><span class="refpurpose"> — Files object</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkItemProgress.html">PkItemProgress</a></span><span class="refpurpose"> — ItemProgress object</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkMediaChangeRequired.html">PkMediaChangeRequired</a></span><span class="refpurpose"> — MediaChangeRequired object</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkPackageSack.html">PkPackageSack</a></span><span class="refpurpose"> — A sack of packages that can be manipulated</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkPackage.html">PkPackage</a></span><span class="refpurpose"> — Package object</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkProgress.html">PkProgress</a></span><span class="refpurpose"> — Transaction progress information</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkRepoDetail.html">PkRepoDetail</a></span><span class="refpurpose"> — RepoDetail object</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkRepoSignatureRequired.html">PkRepoSignatureRequired</a></span><span class="refpurpose"> — RepoSignatureRequired object</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkRequireRestart.html">PkRequireRestart</a></span><span class="refpurpose"> — RequireRestart object</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkResults.html">PkResults</a></span><span class="refpurpose"> — Transaction results</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkSource.html">PkSource</a></span><span class="refpurpose"> — Source object</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkTask.html">PkTask</a></span><span class="refpurpose"> — An abstract package task GObject, dealing with unsigned
+transactions, GPG keys and EULA requests.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkTransactionList.html">PkTransactionList</a></span><span class="refpurpose"> — A nice way to keep a list of the jobs being processed</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkTransactionPast.html">PkTransactionPast</a></span><span class="refpurpose"> — TransactionPast object</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="PackageKit-PkUpdateDetail.html">PkUpdateDetail</a></span><span class="refpurpose"> — UpdateDetail object</span>
+</dt>
+</dl>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.27</div>
+</body>
+</html>

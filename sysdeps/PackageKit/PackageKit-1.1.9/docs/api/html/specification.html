@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PackageKit Specification: PackageKit Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="PackageKit Reference Manual">
+<link rel="up" href="index.html" title="PackageKit Reference Manual">
+<link rel="prev" href="index.html" title="PackageKit Reference Manual">
+<link rel="next" href="introduction.html" title="PackageKit Introduction">
+<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><img src="up-insensitive.png" width="16" height="16" border="0"></td>
+<td><a accesskey="p" href="index.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="introduction.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="reference">
+<div class="titlepage">
+<div><div><h1 class="title">
+<a name="specification"></a>PackageKit Specification</h1></div></div>
+<hr>
+</div>
+<div class="partintro">
+<div></div>
+<p>
+        PackageKit is a D-Bus abstraction layer that allows the session user
+        to manage packages in a secure way using a cross-distro, cross-architecture API.
+        PackageKit is built using a lightweight backend architecture.
+        PackageKit is product and vendor neutral and is currently being developed by a small team
+        of developers.
+      </p>
+<p>
+        This part documents core features of PackageKit.
+      </p>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl class="toc">
+<dt><span class="glossary"><a href="specification.html#annotation-glossary">Annotation Glossary</a></span></dt>
+<dt><span class="chapter"><a href="introduction.html">PackageKit Introduction</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="introduction.html#introduction-description">Overall Description</a></span></dt>
+<dt><span class="sect1"><a href="introduction-backends.html">Backends</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="concepts.html">Important Concepts</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="concepts.html#introduction-ideas-packageid">Package ID</a></span></dt>
+<dt><span class="sect1"><a href="introduction-ideas-filters.html">Filters</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="introduction-ideas-filters.html#introduction-ideas-filters-removeinstalled">Removing installed versions in search results</a></span></dt>
+<dt><span class="sect2"><a href="introduction-ideas-filters.html#introduction-ideas-filters-examples">Filter examples</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="introduction-errors.html">Error Enums</a></span></dt>
+<dt><span class="sect1"><a href="introduction-group-type.html">Group type</a></span></dt>
+<dt><span class="sect1"><a href="introduction-cancellation.html">Cancellation</a></span></dt>
+<dt><span class="sect1"><a href="introduction-ideas-transactions.html">Transactions</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="introduction-ideas-transactions.html#introduction-ideas-transactions-success">Transaction example: Success</a></span></dt>
+<dt><span class="sect2"><a href="introduction-ideas-transactions.html#introduction-ideas-transactions-failure">Transaction example: Failure</a></span></dt>
+<dt><span class="sect2"><a href="introduction-ideas-transactions.html#introduction-ideas-transactions-trusted">Transaction example: Trusted</a></span></dt>
+<dt><span class="sect2"><a href="introduction-ideas-transactions.html#introduction-ideas-transactions-auto-untrusted">Transaction example: Auto Untrusted</a></span></dt>
+<dt><span class="sect2"><a href="introduction-ideas-transactions.html#introduction-ideas-transactions-sig-install">Transaction example: Package signature install</a></span></dt>
+<dt><span class="sect2"><a href="introduction-ideas-transactions.html#introduction-ideas-transactions-download">Transaction example: Download</a></span></dt>
+<dt><span class="sect2"><a href="introduction-ideas-transactions.html#introduction-ideas-transactions-set-locale">Transaction example: Setting the locale</a></span></dt>
+<dt><span class="sect2"><a href="introduction-ideas-transactions.html#introduction-ideas-transactions-repair">Transaction example: Repair</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="introduction-ideas-transactionid.html">Transaction IDs</a></span></dt>
+<dt><span class="sect1"><a href="introduction-ideas-status.html">Status Values</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="backend-compiled.html">Compiled Backends</a></span></dt>
+<dt><span class="chapter"><a href="backend-spawn.html">Spawned Backends</a></span></dt>
+<dd><dl><dt><span class="sect1"><a href="backend-spawn.html#backends-spawn-intro">Introduction</a></span></dt></dl></dd>
+</dl>
+</div>
+</div>
+<div class="glossary">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="annotation-glossary"></a>Annotation Glossary</h2></div></div></div>
+<a name="glsA"></a><h3 class="title">A</h3>
+<dt><span class="glossterm"><a name="annotation-glossterm-array"></a>array</span></dt>
+<dd class="glossdef"><p>Parameter points to an array of items.</p></dd>
+<a name="glsE"></a><h3 class="title">E</h3>
+<dt><span class="glossterm"><a name="annotation-glossterm-element-type"></a>element-type</span></dt>
+<dd class="glossdef"><p>Generics and defining elements of containers and arrays.</p></dd>
+<a name="glsS"></a><h3 class="title">S</h3>
+<dt><span class="glossterm"><a name="annotation-glossterm-scope%20async"></a>scope async</span></dt>
+<dd class="glossdef"><p>The callback is valid until first called.</p></dd>
+<dt><span class="glossterm"><a name="annotation-glossterm-scope%20call"></a>scope call</span></dt>
+<dd class="glossdef"><p>The callback is valid only during the call to the method.</p></dd>
+<dt><span class="glossterm"><a name="annotation-glossterm-scope%20notified"></a>scope notified</span></dt>
+<dd class="glossdef"><p>The callback is valid until the GDestroyNotify argument is called.</p></dd>
+<dt><span class="glossterm"><a name="annotation-glossterm-skip"></a>skip</span></dt>
+<dd class="glossdef"><p>Exposed in C code, not necessarily available in other languages.</p></dd>
+<a name="glsT"></a><h3 class="title">T</h3>
+<dt><span class="glossterm"><a name="annotation-glossterm-transfer%20container"></a>transfer container</span></dt>
+<dd class="glossdef"><p>Free data container after the code is done.</p></dd>
+<dt><span class="glossterm"><a name="annotation-glossterm-transfer%20full"></a>transfer full</span></dt>
+<dd class="glossdef"><p>Free data after the code is done.</p></dd>
+<dt><span class="glossterm"><a name="annotation-glossterm-transfer%20none"></a>transfer none</span></dt>
+<dd class="glossdef"><p>Don't free data after the code is done.</p></dd>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.27</div>
+</body>
+</html>

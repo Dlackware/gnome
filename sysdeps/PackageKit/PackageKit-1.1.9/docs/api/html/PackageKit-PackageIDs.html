@@ -1,0 +1,716 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PackageIDs: PackageKit Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="PackageKit Reference Manual">
+<link rel="up" href="lpackagekit-glib2.html" title="packagekit-glib2">
+<link rel="prev" href="PackageKit-Enumerations.html" title="Enumerations">
+<link rel="next" href="PackageKit-Offline-Updates.html" title="Offline Updates">
+<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#PackageKit-PackageIDs.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="lpackagekit-glib2.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="PackageKit-Enumerations.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="PackageKit-Offline-Updates.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="PackageKit-PackageIDs"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="PackageKit-PackageIDs.top_of_page"></a>PackageIDs</span></h2>
+<p>PackageIDs — Functions for process PackageIDs</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="PackageKit-PackageIDs.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="PackageKit-PackageIDs.html#pk-package-id-build" title="pk_package_id_build ()">pk_package_id_build</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="PackageKit-PackageIDs.html#pk-package-id-check" title="pk_package_id_check ()">pk_package_id_check</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+</td>
+<td class="function_name">
+<a class="link" href="PackageKit-PackageIDs.html#pk-package-id-split" title="pk_package_id_split ()">pk_package_id_split</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="PackageKit-PackageIDs.html#pk-package-id-to-printable" title="pk_package_id_to_printable ()">pk_package_id_to_printable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="PackageKit-PackageIDs.html#pk-package-id-equal-fuzzy-arch" title="pk_package_id_equal_fuzzy_arch ()">pk_package_id_equal_fuzzy_arch</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+</td>
+<td class="function_name">
+<a class="link" href="PackageKit-PackageIDs.html#pk-package-ids-from-id" title="pk_package_ids_from_id ()">pk_package_ids_from_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+</td>
+<td class="function_name">
+<a class="link" href="PackageKit-PackageIDs.html#pk-package-ids-from-string" title="pk_package_ids_from_string ()">pk_package_ids_from_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="PackageKit-PackageIDs.html#pk-package-ids-check" title="pk_package_ids_check ()">pk_package_ids_check</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="PackageKit-PackageIDs.html#pk-package-ids-to-string" title="pk_package_ids_to_string ()">pk_package_ids_to_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="PackageKit-PackageIDs.html#pk-package-ids-present-id" title="pk_package_ids_present_id ()">pk_package_ids_present_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+</td>
+<td class="function_name">
+<a class="link" href="PackageKit-PackageIDs.html#pk-package-ids-add-id" title="pk_package_ids_add_id ()">pk_package_ids_add_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+</td>
+<td class="function_name">
+<a class="link" href="PackageKit-PackageIDs.html#pk-package-ids-add-ids" title="pk_package_ids_add_ids ()">pk_package_ids_add_ids</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+</td>
+<td class="function_name">
+<a class="link" href="PackageKit-PackageIDs.html#pk-package-ids-remove-id" title="pk_package_ids_remove_id ()">pk_package_ids_remove_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="PackageKit-PackageIDs.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="PackageKit-PackageIDs.html#PK-PACKAGE-ID-NAME:CAPS" title="PK_PACKAGE_ID_NAME">PK_PACKAGE_ID_NAME</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="PackageKit-PackageIDs.html#PK-PACKAGE-ID-VERSION:CAPS" title="PK_PACKAGE_ID_VERSION">PK_PACKAGE_ID_VERSION</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="PackageKit-PackageIDs.html#PK-PACKAGE-ID-ARCH:CAPS" title="PK_PACKAGE_ID_ARCH">PK_PACKAGE_ID_ARCH</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="PackageKit-PackageIDs.html#PK-PACKAGE-ID-DATA:CAPS" title="PK_PACKAGE_ID_DATA">PK_PACKAGE_ID_DATA</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="PackageKit-PackageIDs.html#PK-PACKAGE-IDS-DELIM:CAPS" title="PK_PACKAGE_IDS_DELIM">PK_PACKAGE_IDS_DELIM</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="PackageKit-PackageIDs.html#pk-package-ids-from-text" title="pk_package_ids_from_text">pk_package_ids_from_text</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="PackageKit-PackageIDs.html#pk-package-ids-to-text" title="pk_package_ids_to_text">pk_package_ids_to_text</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="PackageKit-PackageIDs.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="PackageKit-PackageIDs.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="pk-package-id-build"></a><h3>pk_package_id_build ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+pk_package_id_build (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *version</code></em>,
+                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *arch</code></em>,
+                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *data</code></em>);</pre>
+<p>Generate a PackageID.</p>
+<div class="refsect3">
+<a name="pk-package-id-build.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>the package name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>version</p></td>
+<td class="parameter_description"><p>the package version</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arch</p></td>
+<td class="parameter_description"><p>the package architecture</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>the package extra data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pk-package-id-build.returns"></a><h4>Returns</h4>
+<p> returns a string to form the PackageID.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-5-0.html#api-index-0.5.0">0.5.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pk-package-id-check"></a><h3>pk_package_id_check ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+pk_package_id_check (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *package_id</code></em>);</pre>
+<p>Check if a Packageid is well formed.</p>
+<div class="refsect3">
+<a name="pk-package-id-check.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>package_id</p></td>
+<td class="parameter_description"><p>the PackageID to check</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pk-package-id-check.returns"></a><h4>Returns</h4>
+<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the PackageID was well formed.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-5-0.html#api-index-0.5.0">0.5.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pk-package-id-split"></a><h3>pk_package_id_split ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+pk_package_id_split (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *package_id</code></em>);</pre>
+<p>Splits a PackageID into the correct number of parts, checking the correct
+number of delimiters are present.</p>
+<div class="refsect3">
+<a name="pk-package-id-split.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>package_id</p></td>
+<td class="parameter_description"><p>the ; delimited PackageID to split</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pk-package-id-split.returns"></a><h4>Returns</h4>
+<p>a GStrv or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if invalid, use <a href="/usr/share/gtk-doc/html/glib/glib-String-Utility-Functions.html#g-strfreev"><code class="function">g_strfreev()</code></a> to free. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-5-3.html#api-index-0.5.3">0.5.3</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pk-package-id-to-printable"></a><h3>pk_package_id_to_printable ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+pk_package_id_to_printable (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *package_id</code></em>);</pre>
+<p>Formats the PackageID to be printable to the user.</p>
+<div class="refsect3">
+<a name="pk-package-id-to-printable.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>package_id</p></td>
+<td class="parameter_description"><p>the PackageID</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pk-package-id-to-printable.returns"></a><h4>Returns</h4>
+<p> the name-version.arch formatted string, use <a href="/usr/share/gtk-doc/html/glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a> to free.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-5-2.html#api-index-0.5.2">0.5.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pk-package-id-equal-fuzzy-arch"></a><h3>pk_package_id_equal_fuzzy_arch ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+pk_package_id_equal_fuzzy_arch (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *package_id1</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *package_id2</code></em>);</pre>
+<p>Only compare the name, version, and arch, where the architecture will fuzzy
+match with i*86.</p>
+<div class="refsect3">
+<a name="pk-package-id-equal-fuzzy-arch.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>package_id1</p></td>
+<td class="parameter_description"><p>the first PackageID</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>package_id2</p></td>
+<td class="parameter_description"><p>the second PackageID</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pk-package-id-equal-fuzzy-arch.returns"></a><h4>Returns</h4>
+<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the PackageIDs can be considered equal.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-5-0.html#api-index-0.5.0">0.5.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pk-package-ids-from-id"></a><h3>pk_package_ids_from_id ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+pk_package_ids_from_id (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *package_id</code></em>);</pre>
+<p>Form a composite string array of package_id's from
+a single package_id</p>
+<div class="refsect3">
+<a name="pk-package-ids-from-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>package_id</p></td>
+<td class="parameter_description"><p>A single package_id</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pk-package-ids-from-id.returns"></a><h4>Returns</h4>
+<p>the string array, or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if invalid, free with <a href="/usr/share/gtk-doc/html/glib/glib-String-Utility-Functions.html#g-strfreev"><code class="function">g_strfreev()</code></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-5-2.html#api-index-0.5.2">0.5.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pk-package-ids-from-string"></a><h3>pk_package_ids_from_string ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+pk_package_ids_from_string (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *package_id</code></em>);</pre>
+<p>Form a composite string array of package_id's from
+a delimited string</p>
+<div class="refsect3">
+<a name="pk-package-ids-from-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>package_id</p></td>
+<td class="parameter_description"><p>A single package_id</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pk-package-ids-from-string.returns"></a><h4>Returns</h4>
+<p>the string array, or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if invalid, free with <a href="/usr/share/gtk-doc/html/glib/glib-String-Utility-Functions.html#g-strfreev"><code class="function">g_strfreev()</code></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-5-2.html#api-index-0.5.2">0.5.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pk-package-ids-check"></a><h3>pk_package_ids_check ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+pk_package_ids_check (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **package_ids</code></em>);</pre>
+<p>Check the string array of package_id's for validity</p>
+<div class="refsect3">
+<a name="pk-package-ids-check.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>package_ids</p></td>
+<td class="parameter_description"><p>a string array of package_id's</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pk-package-ids-check.returns"></a><h4>Returns</h4>
+<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the package_ids are all valid.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-5-2.html#api-index-0.5.2">0.5.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pk-package-ids-to-string"></a><h3>pk_package_ids_to_string ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+pk_package_ids_to_string (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **package_ids</code></em>);</pre>
+<p>Cats the string array of package_id's into one delimited string</p>
+<div class="refsect3">
+<a name="pk-package-ids-to-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>package_ids</p></td>
+<td class="parameter_description"><p>a string array of package_id's</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pk-package-ids-to-string.returns"></a><h4>Returns</h4>
+<p> a string representation of all the package_id's.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-5-2.html#api-index-0.5.2">0.5.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pk-package-ids-present-id"></a><h3>pk_package_ids_present_id ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+pk_package_ids_present_id (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **package_ids</code></em>,
+                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *package_id</code></em>);</pre>
+<p>Finds out if a package ID is present in the list.</p>
+<div class="refsect3">
+<a name="pk-package-ids-present-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>package_ids</p></td>
+<td class="parameter_description"><p>a string array of package_id's</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>package_id</p></td>
+<td class="parameter_description"><p>a single package_id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pk-package-ids-present-id.returns"></a><h4>Returns</h4>
+<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the package ID is present</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-5-2.html#api-index-0.5.2">0.5.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pk-package-ids-add-id"></a><h3>pk_package_ids_add_id ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+pk_package_ids_add_id (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **package_ids</code></em>,
+                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *package_id</code></em>);</pre>
+<p>Adds a package_id to an existing list.</p>
+<div class="refsect3">
+<a name="pk-package-ids-add-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>package_ids</p></td>
+<td class="parameter_description"><p>a string array of package_id's</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>package_id</p></td>
+<td class="parameter_description"><p>a single package_id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pk-package-ids-add-id.returns"></a><h4>Returns</h4>
+<p>the new list, free <a href="/usr/share/gtk-doc/html/glib/glib-String-Utility-Functions.html#g-strfreev"><code class="function">g_strfreev()</code></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-5-2.html#api-index-0.5.2">0.5.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pk-package-ids-add-ids"></a><h3>pk_package_ids_add_ids ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+pk_package_ids_add_ids (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **package_ids</code></em>,
+                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **package_ids_new</code></em>);</pre>
+<p>Adds a package_id to an existing list.</p>
+<div class="refsect3">
+<a name="pk-package-ids-add-ids.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>package_ids</p></td>
+<td class="parameter_description"><p>a string array of package_id's</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>package_ids_new</p></td>
+<td class="parameter_description"><p>a string array of package_id's</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pk-package-ids-add-ids.returns"></a><h4>Returns</h4>
+<p>the new list, free <a href="/usr/share/gtk-doc/html/glib/glib-String-Utility-Functions.html#g-strfreev"><code class="function">g_strfreev()</code></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-5-2.html#api-index-0.5.2">0.5.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pk-package-ids-remove-id"></a><h3>pk_package_ids_remove_id ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+pk_package_ids_remove_id (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **package_ids</code></em>,
+                          <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *package_id</code></em>);</pre>
+<p>Removes a package ID from the the list.</p>
+<div class="refsect3">
+<a name="pk-package-ids-remove-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>package_ids</p></td>
+<td class="parameter_description"><p>a string array of package_id's</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>package_id</p></td>
+<td class="parameter_description"><p>a single package_id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pk-package-ids-remove-id.returns"></a><h4>Returns</h4>
+<p>the new list, free <a href="/usr/share/gtk-doc/html/glib/glib-String-Utility-Functions.html#g-strfreev"><code class="function">g_strfreev()</code></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-5-2.html#api-index-0.5.2">0.5.2</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="PackageKit-PackageIDs.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="PK-PACKAGE-ID-NAME:CAPS"></a><h3>PK_PACKAGE_ID_NAME</h3>
+<pre class="programlisting">#define PK_PACKAGE_ID_NAME 0
+</pre>
+<p>Alias to get a name field from the result of pk_package_id_split</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PK-PACKAGE-ID-VERSION:CAPS"></a><h3>PK_PACKAGE_ID_VERSION</h3>
+<pre class="programlisting">#define PK_PACKAGE_ID_VERSION 1
+</pre>
+<p>Alias to get a version field from the result of pk_package_id_split</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PK-PACKAGE-ID-ARCH:CAPS"></a><h3>PK_PACKAGE_ID_ARCH</h3>
+<pre class="programlisting">#define PK_PACKAGE_ID_ARCH 2
+</pre>
+<p>Alias to get an arch field from the result of pk_package_id_split</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PK-PACKAGE-ID-DATA:CAPS"></a><h3>PK_PACKAGE_ID_DATA</h3>
+<pre class="programlisting">#define PK_PACKAGE_ID_DATA 3
+</pre>
+<p>Alias to get a data field from the result of pk_package_id_split</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PK-PACKAGE-IDS-DELIM:CAPS"></a><h3>PK_PACKAGE_IDS_DELIM</h3>
+<pre class="programlisting">#define PK_PACKAGE_IDS_DELIM "&amp;"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pk-package-ids-from-text"></a><h3>pk_package_ids_from_text</h3>
+<pre class="programlisting">#define pk_package_ids_from_text pk_package_ids_from_string
+</pre>
+<div class="warning">
+<p><code class="literal">pk_package_ids_from_text</code> is deprecated and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="PackageKit-PackageIDs.html#pk-package-ids-from-string" title="pk_package_ids_from_string ()"><code class="function">pk_package_ids_from_string()</code></a></p>
+</div>
+<p>Form a composite string array of package_id's from
+a delimited string</p>
+<div class="refsect3">
+<a name="pk-package-ids-from-text.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>package_id</p></td>
+<td class="parameter_description"><p>A single package_id</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pk-package-ids-from-text.returns"></a><h4>Returns</h4>
+<p>the string array, or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if invalid, free with <a href="/usr/share/gtk-doc/html/glib/glib-String-Utility-Functions.html#g-strfreev"><code class="function">g_strfreev()</code></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pk-package-ids-to-text"></a><h3>pk_package_ids_to_text</h3>
+<pre class="programlisting">#define pk_package_ids_to_text		pk_package_ids_to_string
+</pre>
+<div class="warning">
+<p><code class="literal">pk_package_ids_to_text</code> is deprecated and should not be used in newly-written code.</p>
+<p>pk_package_ids_to_string()</p>
+</div>
+<p>Cats the string array of package_id's into one delimited string</p>
+<div class="refsect3">
+<a name="pk-package-ids-to-text.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>package_ids</p></td>
+<td class="parameter_description"><p>a string array of package_id's</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pk-package-ids-to-text.returns"></a><h4>Returns</h4>
+<p> a string representation of all the package_id's.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.27</div>
+</body>
+</html>

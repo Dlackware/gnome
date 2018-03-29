@@ -1,5 +1,5 @@
 PKGNAM="PackageKit"
 VERSION="1.1.9"
 HOMEPAGE="http://www.freedesktop.org/software/PackageKit/"
-DOWNLOAD="https://kalev.fedorapeople.org/PackageKit/releases/PackageKit-1.1.9.tar.xz"
-MD5SUM="af41d68f08046540a342a9834d9bb8ca"
+DOWNLOAD="https://www.freedesktop.org/software/PackageKit/releases/PackageKit-1.1.9.tar.xz"
+MD5SUM="25669e0eac358befcb8067365902a7b6"

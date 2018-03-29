@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Error Enums: PackageKit Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="PackageKit Reference Manual">
+<link rel="up" href="concepts.html" title="Important Concepts">
+<link rel="prev" href="introduction-ideas-filters.html" title="Filters">
+<link rel="next" href="introduction-group-type.html" title="Group type">
+<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="concepts.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="introduction-ideas-filters.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="introduction-group-type.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="sect1">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="introduction-errors"></a>Error Enums</h2></div></div></div>
+<p>
+      If you have to handle an error, try to use <code class="literal">internal-error</code>
+      as little as possible.
+      Just ask on the mailing list, and we can add some more error enums to
+      cover the type of error in an abstract way as possible.
+    </p>
+<p>
+      Every error should have an enumerated type
+      (e.g. <code class="literal">out-of-memory</code>) and also an error description.
+      The error description is not translated and not converted into the users
+      locale.
+      The error description should be descriptive, as it's for power users
+      and people trying to debug the problem.
+      For instance, "Out of memory" is not helpful as an error description
+      that is reported in a bugzilla, but "Could not create database index" is.
+      For the description use <code class="literal">;</code> to separate the lines if
+      required.
+    </p>
+<p>
+      The following error enumerated types are available for use in all
+      backends:
+    </p>
+<div class="informaltable"><table class="informaltable" border="1">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code class="literal">out-of-memory</code></td>
+<td>There is an out of memory condition</td>
+</tr>
+<tr>
+<td><code class="literal">no-network</code></td>
+<td>There is no network connection that can be used</td>
+</tr>
+<tr>
+<td><code class="literal">not-supported</code></td>
+<td>
+              Not supported by the backend.
+              NOTE: You shouldn't be setting non-NULL in the compiled
+              backend symbol table if you find yourself using this.
+            </td>
+</tr>
+<tr>
+<td><code class="literal">internal-error</code></td>
+<td>
+              There was an unspecified internal error.
+              NOTE: Please try and be more specific.
+              If you are using this then we should probably add a new type.
+            </td>
+</tr>
+<tr>
+<td><code class="literal">no-cache</code></td>
+<td>
+              The operation is trying to read from the cache, but the cache
+              is not present or invalid
+            </td>
+</tr>
+<tr>
+<td><code class="literal">gpg-failure</code></td>
+<td>There was a GPG failure in the transaction</td>
+</tr>
+<tr>
+<td><code class="literal">package-id-invalid</code></td>
+<td>The package ID is not valid for this transaction</td>
+</tr>
+<tr>
+<td><code class="literal">package-not-installed</code></td>
+<td>
+              The package that is trying to be removed or updated is not
+              installed
+            </td>
+</tr>
+<tr>
+<td><code class="literal">package-not-found</code></td>
+<td>
+              The package that is trying to be removed or updated is not
+              installed
+            </td>
+</tr>
+<tr>
+<td><code class="literal">package-already-installed</code></td>
+<td>
+              The (single) package that is trying to be installed or updated is already
+              installed
+            </td>
+</tr>
+<tr>
+<td><code class="literal">all-packages-already-installed</code></td>
+<td>
+	      Multiple package installs were attempted, but all of
+	      them were already installed.  The backend should
+	      generate package-already-installed messages (not errors)
+	      for each package.
+            </td>
+</tr>
+<tr>
+<td><code class="literal">package-download-failed</code></td>
+<td>A package failed to download correctly</td>
+</tr>
+<tr>
+<td><code class="literal">invalid-package-file</code></td>
+<td>
+	      The file that is supposed to contain a package to
+              install is corrupt, or is not a valid package file
+	    </td>
+</tr>
+<tr>
+<td><code class="literal">package-install-blocked</code></td>
+<td>
+	      The backend's configuration or policy prevents the
+              install or updating of a package
+	    </td>
+</tr>
+<tr>
+<td><code class="literal">dep-resolution-failed</code></td>
+<td>Dependency resolution failed</td>
+</tr>
+<tr>
+<td><code class="literal">filter-invalid</code></td>
+<td>
+              The filter was invalid.
+              NOTE: syntax checking is done in the backend loader, so you
+              should only use this if the filter is not supported by the
+              backend.
+            </td>
+</tr>
+<tr>
+<td><code class="literal">group-not-found</code></td>
+<td>
+	      The specified software group was not found.
+            </td>
+</tr>
+<tr>
+<td><code class="literal">create-thread-failed</code></td>
+<td>Failed to create a thread</td>
+</tr>
+<tr>
+<td><code class="literal">transaction-error</code></td>
+<td>
+              There was a generic transaction error, but please give more
+              details in the description
+            </td>
+</tr>
+<tr>
+<td><code class="literal">transaction-cancelled</code></td>
+<td>
+              The transaction was cancelled as the result of a call
+              to Cancel()
+            </td>
+</tr>
+<tr>
+<td><code class="literal">repo-not-found</code></td>
+<td>The repository name could not be found</td>
+</tr>
+<tr>
+<td><code class="literal">repo-configuration-error</code></td>
+<td>One of the enabled repositories has invalid configuration</td>
+</tr>
+<tr>
+<td><code class="literal">repo-not-available</code></td>
+<td>
+	      There was a (possibly transient) problem connecting to a
+	      repository
+	    </td>
+</tr>
+<tr>
+<td><code class="literal">cannot-remove-system-package</code></td>
+<td>
+              Could not remove a protected system package that is needed for
+              stable operation of the system
+            </td>
+</tr>
+<tr>
+<td><code class="literal">process-quit</code></td>
+<td>
+              The process was asked to quit, probably because it was cancelled
+            </td>
+</tr>
+<tr>
+<td><code class="literal">process-kill</code></td>
+<td>
+              The process was forcibly killed, probably because ignored the
+              quit request. This is probably due to it being cancelled
+            </td>
+</tr>
+<tr>
+<td><code class="literal">failed-config-parsing</code></td>
+<td>
+	      Configuration files could not be read or parsed.
+            </td>
+</tr>
+<tr>
+<td><code class="literal">cannot-cancel</code></td>
+<td>
+	      The Cancel() method was called, but it is too late to
+	      cancel the current transaction.
+            </td>
+</tr>
+<tr>
+<td><code class="literal">cannot-get-lock</code></td>
+<td>
+	      The backend could not acquire a lock on the underlying
+	      package management system.
+            </td>
+</tr>
+<tr>
+<td><code class="literal">no-packages-to-update</code></td>
+<td>
+	      UpdatePackages() was called, but there are no packages to update.
+            </td>
+</tr>
+<tr>
+<td><code class="literal">cannot-write-repo-config</code></td>
+<td>
+	      RepoEnable() or RepoSetData() was called, but the
+	      repository configuration file could not be written to.
+            </td>
+</tr>
+<tr>
+<td><code class="literal">local-install-failed</code></td>
+<td>
+	      A local file could not be installed.  The file might not
+	      be readable, or it might not contain a valid package.
+            </td>
+</tr>
+<tr>
+<td><code class="literal">bad-gpg-signature</code></td>
+<td>
+	      The package is signed with a GPG signature, but that
+	      signature is not valid in some way.
+            </td>
+</tr>
+<tr>
+<td><code class="literal">package-corrupt</code></td>
+<td>
+	      The downloaded package is corrupt.
+            </td>
+</tr>
+<tr>
+<td><code class="literal">file-not-found</code></td>
+<td>
+	      The file could not be found on the system.
+            </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.27</div>
+</body>
+</html>

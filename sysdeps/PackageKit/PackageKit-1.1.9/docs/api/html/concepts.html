@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Important Concepts: PackageKit Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="PackageKit Reference Manual">
+<link rel="up" href="specification.html" title="PackageKit Specification">
+<link rel="prev" href="introduction-backends.html" title="Backends">
+<link rel="next" href="introduction-ideas-filters.html" title="Filters">
+<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="specification.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="introduction-backends.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="introduction-ideas-filters.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="concepts"></a>Important Concepts</h2></div></div></div>
+<div class="toc"><dl class="toc">
+<dt><span class="sect1"><a href="concepts.html#introduction-ideas-packageid">Package ID</a></span></dt>
+<dt><span class="sect1"><a href="introduction-ideas-filters.html">Filters</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="introduction-ideas-filters.html#introduction-ideas-filters-removeinstalled">Removing installed versions in search results</a></span></dt>
+<dt><span class="sect2"><a href="introduction-ideas-filters.html#introduction-ideas-filters-examples">Filter examples</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="introduction-errors.html">Error Enums</a></span></dt>
+<dt><span class="sect1"><a href="introduction-group-type.html">Group type</a></span></dt>
+<dt><span class="sect1"><a href="introduction-cancellation.html">Cancellation</a></span></dt>
+<dt><span class="sect1"><a href="introduction-ideas-transactions.html">Transactions</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="introduction-ideas-transactions.html#introduction-ideas-transactions-success">Transaction example: Success</a></span></dt>
+<dt><span class="sect2"><a href="introduction-ideas-transactions.html#introduction-ideas-transactions-failure">Transaction example: Failure</a></span></dt>
+<dt><span class="sect2"><a href="introduction-ideas-transactions.html#introduction-ideas-transactions-trusted">Transaction example: Trusted</a></span></dt>
+<dt><span class="sect2"><a href="introduction-ideas-transactions.html#introduction-ideas-transactions-auto-untrusted">Transaction example: Auto Untrusted</a></span></dt>
+<dt><span class="sect2"><a href="introduction-ideas-transactions.html#introduction-ideas-transactions-sig-install">Transaction example: Package signature install</a></span></dt>
+<dt><span class="sect2"><a href="introduction-ideas-transactions.html#introduction-ideas-transactions-download">Transaction example: Download</a></span></dt>
+<dt><span class="sect2"><a href="introduction-ideas-transactions.html#introduction-ideas-transactions-set-locale">Transaction example: Setting the locale</a></span></dt>
+<dt><span class="sect2"><a href="introduction-ideas-transactions.html#introduction-ideas-transactions-repair">Transaction example: Repair</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="introduction-ideas-transactionid.html">Transaction IDs</a></span></dt>
+<dt><span class="sect1"><a href="introduction-ideas-status.html">Status Values</a></span></dt>
+</dl></div>
+<p>
+    The following sections explain key concepts used internally in PackageKit.
+  </p>
+<div class="sect1">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="introduction-ideas-packageid"></a>Package ID</h2></div></div></div>
+<p>
+      One important idea is the <code class="literal">package_id</code>.
+      This is the <code class="literal">name;version;arch;data</code> in
+      a single string and is meant to represent a single package.
+      This is important when multiple versions of a package are installed and
+      only the correct one is removed.
+    </p>
+<p>
+      The <code class="literal">package_id</code> is parsed and checked carefully in
+      the helper code.
+      The package arch and data is optional, but 3 <code class="literal">;</code>'s must
+      be present.
+      For instance, <code class="literal">gnome-keyring-manager;2.18.0;;</code> is
+      valid but <code class="literal">gnome-keyring-manager;2.18.0</code> is not.
+      The data field is used for the repository name.
+    </p>
+<p>
+      The data field for an installed package must be
+      <code class="literal">installed</code> as this is used to identify which packages
+      are installable or installed in the client tools.
+    </p>
+<p>
+      The data field for an non-installed local package must be
+      <code class="literal">local</code> as this signifies a repository name is not available
+      and that package resides locally on the client system.
+    </p>
+<p>
+      For example:
+    </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>
+          <code class="literal">csup;20060318-5;x86_64;local</code>: for locally available package file.
+        </p></li>
+<li class="listitem"><p>
+          <code class="literal">csup;20060318-5;x86_64;fedora-devel</code>: for package that is not installed
+          and can be downladed from the Fedora development repostory.
+        </p></li>
+<li class="listitem"><p>
+          <code class="literal">csup;20060318-5;x86_64;installed</code>: for locally installed package
+        </p></li>
+</ul></div>
+<div class="informaltable"><table class="informaltable" border="1">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>Situation</th>
+<th>Value</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Searching</td>
+<td><code class="literal">installed</code></td>
+<td>If installed</td>
+</tr>
+<tr>
+<td> </td>
+<td><code class="literal">available</code></td>
+<td>If available to install</td>
+</tr>
+<tr>
+<td>Getting Updates</td>
+<td><code class="literal">low</code></td>
+<td>If update is of low severity</td>
+</tr>
+<tr>
+<td> </td>
+<td><code class="literal">normal</code></td>
+<td>If update is of normal severity</td>
+</tr>
+<tr>
+<td> </td>
+<td><code class="literal">important</code></td>
+<td>If update is very important</td>
+</tr>
+<tr>
+<td> </td>
+<td><code class="literal">security</code></td>
+<td>If the update is security sensitive</td>
+</tr>
+<tr>
+<td>Installing/Updating/Removing</td>
+<td><code class="literal">downloading</code></td>
+<td>If we are downloading this package</td>
+</tr>
+<tr>
+<td> </td>
+<td><code class="literal">updating</code></td>
+<td>If we are updating this package</td>
+</tr>
+<tr>
+<td> </td>
+<td><code class="literal">installing</code></td>
+<td>If we are installing this package</td>
+</tr>
+<tr>
+<td> </td>
+<td><code class="literal">removing</code></td>
+<td>If we are removing this package</td>
+</tr>
+<tr>
+<td>Otherwise</td>
+<td><code class="literal">unknown</code></td>
+<td>If we cannot use any other option</td>
+</tr>
+</tbody>
+</table></div>
+<p>
+      The backend must ensure that the package_id only matches on one
+      single package.
+      A single package_id must be enough to uniquely identify a single object
+      in any repository used on the system.
+    </p>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.27</div>
+</body>
+</html>
