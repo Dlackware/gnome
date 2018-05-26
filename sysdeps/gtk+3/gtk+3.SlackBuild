@@ -77,7 +77,8 @@ autoreconf -vif
 
 # Autoconf changes linux to linux-gnu.
 # Our host is $ARCH-slackware-linux not $ARCH-slackware-linux-gnu:
-sed -i -e 's#linux|linux-gnu|#linux|linux|#' config.sub
+sed -i -e 's#linux|linux-gnu|#linux|linux|#' build-aux/config.sub
+rm gtk/gtkmarshalers.{c,h} # Force regeneration
 
 CFLAGS="$SLKCFLAGS" \
 ./configure \
@@ -89,9 +90,8 @@ CFLAGS="$SLKCFLAGS" \
   --enable-x11-backend \
   --enable-wayland-backend \
   --build=$ARCH-slackware-linux || exit 1
-#  --enable-gtk-doc-html=no \
 
-make $NUMJOBS || make || exit 1
+make $NUMJOBS || exit 1
 
 # Check the host value that is passed to the compile to the one in this script:
 host="$ARCH-slackware-linux"
