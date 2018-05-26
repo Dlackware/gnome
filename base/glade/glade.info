@@ -1,5 +1,5 @@
 PKGNAM="glade"
-VERSION="3.20.3"
+VERSION="3.20.4"
 HOMEPAGE="https://glade.gnome.org"
-DOWNLOAD="https://download.gnome.org/sources/glade/3.20/glade-3.20.3.tar.xz"
-MD5SUM="2cd887d2ad6f36e791fb9e9ee06eadbd"
+DOWNLOAD="https://download.gnome.org/sources/glade/3.20/glade-3.20.4.tar.xz"
+MD5SUM="4187ed0d7a4f62d256523df4c4760d80"
