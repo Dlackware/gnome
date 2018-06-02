@@ -9,8 +9,9 @@
 ## About
 
 Dlackware provides SlackBuild scripts for Gnome 3. The SlackBuilds found here
-can be used seperatly, but are ment to work as a set on top of PAM and
-systemd.
+can be used seperatly, but are ment to work as a set on top of
+[PAM](https://github.com/Dlackware/pam) and
+[systemd](https://github.com/Dlackware/systemd).
 
 It is a sources based project. We currently don't provide pre-built packages.
 Since there are a lot of packages to build, we developed a small build
@@ -23,27 +24,31 @@ maintain them, fill free to create a pull request.
 
 ## Development
 
-master branch is used for development for the latest Slackware stable.
+`master` branch is used for development of the next Dlackware version.
 
+We support only the latest stable Slackware and one Gnome release per Slackware
+version.
+
+### Stable
+
+Currently maintained release of Dlackware is Gnome 3.22 for Slackware 14.2.
+To get this release use `3.22/14.2` branch.
 
 ### Current work
 
-master is now updated for Gnome 3.22. And you can already get a working
-desktop with them. But some work on the build system and some updates
-are still needed.
-
-There is `3.18/14.2` branch, but it is unstable, partly because of
-Xwayland issues. So we hope make 3.22 to the first stable release. 
-
+`master` is now updated for Gnome 3.24 on Slackware Current.
 
 ## Install
 
 Full Slackware installation is required.
 
-For Installation instruction please visit our <a href="https://github.com/Dlackware/gnome/wiki/Install">INSTALL WIKI</a>
+For Installation instruction please visit our
+[INSTALL WIKI](https://github.com/Dlackware/gnome/wiki/Install).
 
 ### Finished, what now?
-- enable or disable services in /lib/systemd/system/ (dont forget gdm) (systemctl enable gdm.service)
-- set graphical-target (init 4) as default (systemctl set-default graphical.target)
-- or anything else you might forget
+
+- Enable or disable services in /lib/systemd/system/ (dont forget gdm) (systemctl enable gdm.service)
+- Set graphical-target (init 4) as default (systemctl set-default graphical.target)
+- Or anything else you might forget
+
 Reboot and have fun.
