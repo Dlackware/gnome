@@ -1,0 +1,11 @@
+--- a/panels/info/info-cleanup.c	2017-03-13 23:56:23.000000000 +0100
++++ b/panels/info/info-cleanup.c	2018-06-17 13:32:40.523279600 +0200
+@@ -115,7 +115,7 @@
+                          0,
+                          &error);
+   g_regex_unref (re);
+-  if (new == NULL)
++  if (new == NULL && old != NULL)
+     {
+       g_warning ("Error replacing string: %s", error->message);
+       g_error_free (error);
