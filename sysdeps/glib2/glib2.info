@@ -1,5 +1,4 @@
 PKGNAM="glib2"
-SRCNAM="glib"
 VERSION="2.52.3"
 HOMEPAGE="http://www.gtk.org/"
 DOWNLOAD="http://download.gnome.org/sources/glib/2.52/glib-2.52.3.tar.xz"

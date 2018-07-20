@@ -1,5 +1,4 @@
 PKGNAM="xorg-server-xwayland"
-SRCNAM="xorg-server"
 VERSION="1.19.3"
 HOMEPAGE="https://www.x.org/wiki/"
 DOWNLOAD="ftp://ftp.x.org/pub/individual/xserver/xorg-server-1.19.3.tar.bz2"
