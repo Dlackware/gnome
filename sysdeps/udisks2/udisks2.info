@@ -1,6 +1,5 @@
 PKGNAM="udisks2"
-SRCNAM="udisks"
-VERSION="2.6.5"
+VERSION="2.7.7"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/udisks"
-DOWNLOAD="https://github.com/storaged-project/udisks/releases/download/udisks-2.6.5/udisks-2.6.5.tar.bz2"
+DOWNLOAD="https://github.com/storaged-project/udisks/releases/download/udisks-2.7.7/udisks-2.7.7.tar.bz2"
 MD5SUM="1e46bdb613cbbc2d175b9df71e43cae8"
