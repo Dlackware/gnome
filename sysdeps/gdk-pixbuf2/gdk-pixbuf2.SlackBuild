@@ -73,21 +73,19 @@ find . \
 # and this patch is the workaround.  ;-)
 cat $CWD/gdk-pixbuf.pnglz.diff | patch -p1 || exit 1
 
-CFLAGS="$SLKCFLAGS" \
-CXXFLAGS="$SLKCFLAGS" \
-./configure \
-  --prefix=/usr \
+mkdir -pv build
+cd build
+
+meson --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
-  --localstatedir=/var \
   --mandir=/usr/man \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --enable-introspection \
-  --with-x11 \
-  --build=$ARCH-slackware-linux
+  --buildtype=release || exit 1
 
-make || exit 1
-make install DESTDIR=$PKG || exit 1
+ninja || exit 1
+DESTDIR=$PKG ninja install || exit 1
+
+cd ..
 
 # We need to have separate 32-bit and 64-bit binaries
 # for places where we have two copies of the GTK+ package installed.
