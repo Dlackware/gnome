@@ -23,7 +23,7 @@
 
 PKGNAM=glib2
 VERSION=${VERSION:-$(echo glib-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
-BUILD=${BUILD:-2}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 NUMJOBS=${NUMJOBS:--j4}
@@ -71,23 +71,26 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-# Fix a race condition when using /etc/mtab:
-cat $CWD/glib.mtab.diff | patch -p1 --verbose || exit 1
-
 # Silly upstream, using the bleeding edge.  Reconf:
 #autoreconf --force --install 
 
-CFLAGS="$SLKCFLAGS" \
-./configure \
-  --prefix=/usr \
-  --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --sysconfdir=/etc \
-  --mandir=/usr/man \
-  --disable-libelf \
-  --build=$ARCH-slackware-linux
+cat ${CWD}/glib2.meson.version.diff | patch -p1 --verbose || exit 1
 
-make $NUMJOBS || make || exit 1
-make install DESTDIR=$PKG
+mkdir -p build
+cd build
+
+meson --prefix=/usr \
+  --libdir=/usr/lib${LIBDIRSUFFIX} \
+  --buildtype=release \
+  --sysconfdir=/etc \
+  --localstatedir=/var \
+  --mandir=/usr/man \
+  -Dselinux=false  || exit 1
+
+ninja || exit 1
+DESTDIR=$PKG ninja install || exit 1
+
+cd ..
 
 mkdir -p ${PKG}/etc/profile.d
 for file in libglib2.csh libglib2.sh ;do
