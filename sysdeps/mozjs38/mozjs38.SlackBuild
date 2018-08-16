@@ -37,8 +37,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-#wget -c https://ftp.mozilla.org/pub/firefox/releases/38.8.0esr/source/firefox-38.8.0esr.source.tar.bz2
-
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
 PKG=$TMP/package-$PRGNAM
