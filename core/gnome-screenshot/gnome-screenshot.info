@@ -1,5 +1,5 @@
 PKGNAM="gnome-screenshot"
-VERSION="3.22.0"
+VERSION="3.30.0"
 HOMEPAGE="https://git.gnome.org/browse/gnome-screenshot/"
-DOWNLOAD="http://download.gnome.org/sources/gnome-screenshot/3.22/gnome-screenshot-3.22.0.tar.xz"
-MD5SUM="d68636fae1e7a5798cb7394b2a202542"
+DOWNLOAD="http://download.gnome.org/sources/gnome-screenshot/3.30/gnome-screenshot-3.30.0.tar.xz"
+MD5SUM="39a4ba8ef7b6c657a951f0822d218a34"

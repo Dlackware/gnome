@@ -87,10 +87,15 @@ PPPD=$(echo /usr/lib${LIBDIRSUFFIX}/pppd/?.?.? | rev | cut -f 1 -d / | rev)
 
 sed -i -e '/^Alias=/aAlias=network.service' data/${PKGNAM}.service.in || exit 1
 
-patch -p1 -E --backup --verbose -i $CWD/02-dbus_access_network_manager.patch
-#patch -p1 -E --backup --verbose -i $CWD/disable_set_hostname.patch
+# Apply bugfix patches from upstream git:
+for dfile in $CWD/patches/* ; do 
+  cat $dfile | patch -p1 --verbose || exit 1
+done
 
-#NOCONFIGURE=1 sh ./autogen.sh || exit $?
+# For git-patched builds
+autoreconf -vif
+automake
+./autogen.sh
 
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
@@ -115,6 +120,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --with-suspend-resume=systemd \
   --with-systemdsystemunitdir=/lib/systemd/system \
   --enable-more-warnings=no \
+  --disable-ovs \
   --disable-vala \
   --with-nmtui=yes \
   --with-hostname-persist=slackware \

@@ -1,5 +1,5 @@
 PKGNAM="orca"
-VERSION="3.24.0"
+VERSION="3.29.92"
 HOMEPAGE="http://www.gnome.org"
-DOWNLOAD="http://download.gnome.org/sources/orca/3.24/orca-3.24.0.tar.xz"
-MD5SUM="d5b4081eafd382d91badfb0f8c0b16c3"
+DOWNLOAD="http://download.gnome.org/sources/orca/3.29/orca-3.29.92.tar.xz"
+MD5SUM="027a5df1570d3964e85471bb7b5b5029"

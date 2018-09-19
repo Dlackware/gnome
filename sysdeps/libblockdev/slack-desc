@@ -1,0 +1,20 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+           |-----handy-ruler------------------------------------------------------|
+libblockdev:  libblockdev (blockdevice manipulation)
+libblockdev:
+libblockdev: libblockdev is a C library supporting GObject introspection for
+libblockdev: manipulation of block devices. It has a plugin-based architecture where
+libblockdev: each technology (like LVM, Btrfs, MD RAID, Swap,...) is implemented
+libblockdev: in a separate plugin, possibly with multiple implementations
+libblockdev: (e.g. using LVM CLI or the new LVM DBus API).
+libblockdev: libblockdev is a C library supporting GObject introspection for
+libblockdev: manipulation of block devices. It has a plugin-based architecture
+libblockdev: where each technology (like LVM, Btrfs, MD RAID, Swap,...)
+libblockdev: is implemented in a separate plugin, possibly with multiple implementations
+libblockdev: (e.g. using LVM CLI or the new LVM DBus API).

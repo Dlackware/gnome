@@ -1,5 +1,5 @@
 PKGNAM="gnome-online-accounts"
-VERSION="3.24.3"
+VERSION="3.30.0"
 HOMEPAGE="https://wiki.gnome.org/Projects/GnomeOnlineAccounts"
-DOWNLOAD="http://download.gnome.org/sources/gnome-online-accounts/3.24/gnome-online-accounts-3.24.3.tar.xz"
-MD5SUM="2f28fc3f3db17d049092700075ca15bd"
+DOWNLOAD="http://download.gnome.org/sources/gnome-online-accounts/3.30/gnome-online-accounts-3.30.0.tar.xz"
+MD5SUM="bb323d5cb449d62fee144ba9dbf8b868"

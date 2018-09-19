@@ -75,8 +75,7 @@ find -L . \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
 sed -i 's/unsigned short/char16_t/'            \
-       Source/JavaScriptCore/API/JSStringRef.h \
-       Source/WebKit2/Shared/API/c/WKString.h  &&
+       Source/JavaScriptCore/API/JSStringRef.h
 
 sed -i '/stdbool.h/ a#include <uchar.h>' \
        Source/JavaScriptCore/API/JSBase.h
@@ -87,10 +86,11 @@ cmake -DCMAKE_BUILD_TYPE=Release  \
       -DCMAKE_INSTALL_PREFIX=/usr \
       -DCMAKE_SKIP_RPATH=ON       \
       -DPORT=GTK                  \
-      -DENABLE_GTKDOC=OFF          \
-      -DUSE_SYSTEM_MALLOC=ON      \
+      -DUSE_WOFF2=OFF             \
+      -DENABLE_GTKDOC=OFF         \
       -DCMAKE_INSTALL_DOCDIR=/usr/share/doc \
-      -DCMAKE_INSTALL_LIBDIR=lib64
+      -DCMAKE_INSTALL_LIBDIR=lib64 \
+      -DPYTHON_EXECUTABLE=/usr/bin/python2 || exit 1
 
 make ${NUMJOBS} -k || exit 1
 make install DESTDIR=${PKG} || exit 1

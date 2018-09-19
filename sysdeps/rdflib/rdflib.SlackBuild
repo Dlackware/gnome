@@ -55,6 +55,8 @@ fi
 
 set -e
 
+mv 4.2.2.tar.gz $PKGNAM-$VERSION.tar.gz
+
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP

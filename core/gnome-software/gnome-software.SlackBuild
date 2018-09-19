@@ -70,23 +70,24 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-./configure \
-  --prefix=/usr \
+
+mkdir -pv build
+cd build
+
+meson --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
-  --localstatedir=/var/lib \
-  --disable-silent-rules \
-  --mandir=/usr/man \
-  --enable-flatpak \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --build=$ARCH-slackware-linux
+  -Dfwupd=false || exit 1
 
-make $NUMJOBS || make || exit 1
-make install DESTDIR=$PKG || exit 1
+ninja
+DESTDIR=$PKG ninja install || exit 1
+
+cd ..
+
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a \
-  COPYING NEWS README \
+  COPYING NEWS \
   $PKG/usr/doc/$PKGNAM-$VERSION
 
 # If there's a ChangeLog, installing at least part of the recent history

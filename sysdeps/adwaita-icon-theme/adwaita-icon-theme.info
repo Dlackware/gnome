@@ -1,5 +1,5 @@
 PKGNAM="adwaita-icon-theme"
-VERSION="3.24.0"
+VERSION="3.30.0"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/adwaita-icon-theme/3.24/adwaita-icon-theme-3.24.0.tar.xz"
-MD5SUM="3ccac0d600ffc936d2adfb80e9245bc5"
+DOWNLOAD="http://download.gnome.org/sources/adwaita-icon-theme/3.30/adwaita-icon-theme-3.30.0.tar.xz"
+MD5SUM="5ad28b28fecde7f997f56e76a903567e"

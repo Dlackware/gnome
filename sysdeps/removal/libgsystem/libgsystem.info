@@ -1,0 +1,5 @@
+PKGNAM="libgsystem"
+VERSION="2015.2"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="https://github.com/GNOME/libgsystem/archive/v2015.2.tar.gz -O libgsystem-2015.2.tar.gz"
+MD5SUM="8dcdd946b98c31809efdb13a9fcbc8dc"

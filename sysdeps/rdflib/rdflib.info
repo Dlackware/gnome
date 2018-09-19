@@ -1,5 +1,5 @@
 PKGNAM="rdflib"
 VERSION="4.2.2"
 HOMEPAGE="https://github.com/RDFLib"
-DOWNLOAD="https://pypi.python.org/packages/c5/77/1fa0f4cffd5faad496b1344ab665902bb2609f56e0fb19bcf80cff485da0/rdflib-4.2.2.tar.gz"
-MD5SUM="534fe35b13c5857d53fa1ac5a41eca67"
+DOWNLOAD="https://github.com/RDFLib/rdflib/archive/4.2.2.tar.gz"
+MD5SUM="1dd95c6443302d6a44a908e4af8fdc5d"

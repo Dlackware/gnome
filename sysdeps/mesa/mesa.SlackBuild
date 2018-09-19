@@ -76,7 +76,7 @@ cd $PKGNAM-$VERSION
 rm -f src/gallium/state_trackers/d3d1x/w32api
 
 # Fix for xlocale.h removal:
-cat $CWD/mesa.glibc226.diff | patch -p1 --verbose || exit 1
+#cat $CWD/mesa.glibc226.diff | patch -p1 --verbose || exit 1
 
 # Make sure ownerships and permissions are sane:
 chown -R root:root .

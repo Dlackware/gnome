@@ -23,7 +23,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=gnome-getting-started-docs
-VERSION=${VERSION:-3.24.1}
+VERSION=${VERSION:-3.28.2}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 

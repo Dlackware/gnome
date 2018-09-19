@@ -1,0 +1,5 @@
+PKGNAM="gmime"
+VERSION="3.2.0"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/gmime/3.2/gmime-3.2.0.tar.xz"
+MD5SUM="933258d9c23e218eb6eec9cc1951b053"

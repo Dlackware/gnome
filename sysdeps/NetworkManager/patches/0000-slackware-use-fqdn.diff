@@ -1,0 +1,31 @@
+--- ./src/nm-hostname-manager.c.orig	2017-11-10 09:46:25.000000000 -0600
++++ ./src/nm-hostname-manager.c	2017-11-10 17:42:41.829996568 -0600
+@@ -134,8 +134,7 @@
+ {
+ 	gs_free char *contents = NULL;
+ 	gs_strfreev char **all_lines = NULL;
+-	char *tmp;
+-	guint i, j = 0;
++	guint i = 0;
+ 
+ 	if (!g_file_get_contents (path, &contents, NULL, NULL))
+ 		return NULL;
+@@ -145,17 +144,7 @@
+ 		g_strstrip (all_lines[i]);
+ 		if (all_lines[i][0] == '#' || all_lines[i][0] == '\0')
+ 			continue;
+-		tmp = &all_lines[i][0];
+-		/* We only want up to the first '.' -- the rest of the */
+-		/* fqdn is defined in /etc/hosts */
+-		while (tmp[j] != '\0') {
+-			if (tmp[j] == '.') {
+-				tmp[j] = '\0';
+-				break;
+-			}
+-			j++;
+-		}
+-		return g_shell_unquote (tmp, NULL);
++		return g_shell_unquote (&all_lines[i][0], NULL);
+ 	}
+ 	return NULL;
+ }

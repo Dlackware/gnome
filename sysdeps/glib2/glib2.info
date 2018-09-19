@@ -1,5 +1,5 @@
 PKGNAM="glib2"
-VERSION="2.56.1"
+VERSION="2.58.0"
 HOMEPAGE="http://www.gtk.org/"
-DOWNLOAD="http://download.gnome.org/sources/glib/2.56/glib-2.56.1.tar.xz"
-MD5SUM="988af38524804ea1ae6bc9a2bad181ff"
+DOWNLOAD="http://download.gnome.org/sources/glib/2.58/glib-2.58.0.tar.xz"
+MD5SUM="9b5d21c802f55bf37171c4fbfe7d32d1"

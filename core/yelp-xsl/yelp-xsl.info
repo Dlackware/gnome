@@ -1,5 +1,5 @@
 PKGNAM="yelp-xsl"
-VERSION="3.20.1"
+VERSION="3.30.0"
 HOMEPAGE="http://projects.gnome.org/yelp/"
-DOWNLOAD="http://download.gnome.org/sources/yelp-xsl/3.20/yelp-xsl-3.20.1.tar.xz"
-MD5SUM="2332716e6e39125a942bc761a6f94211"
+DOWNLOAD="http://download.gnome.org/sources/yelp-xsl/3.30/yelp-xsl-3.30.0.tar.xz"
+MD5SUM="591e75e23d571b7b810716a5ab4c5611"

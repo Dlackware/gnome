@@ -96,7 +96,7 @@ CXXFLAGS="${SLKCFLAGS}" \
   --enable-introspection=yes \
   --with-user=gdm \
   --with-group=gdm \
-  --build=$ARCH-slackware-linux
+  --build=$ARCH-slackware-linux || exit 1
 
 make $NUMJOBS || make || exit 1
 make install DESTDIR=$PKG || exit 1
@@ -135,7 +135,7 @@ install -m 644 $CWD/gnome-shell-theme.gresource $PKG/usr/share/gnome-shell/gnome
 # Add a documentation directory:
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a \
-  README NEWS TODO \
+  NEWS \
   $PKG/usr/doc/$PKGNAM-$VERSION
 cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
 

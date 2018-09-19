@@ -74,7 +74,7 @@ find . \
 # Silly upstream, using the bleeding edge.  Reconf:
 #autoreconf --force --install 
 
-cat ${CWD}/glib2.meson.version.diff | patch -p1 --verbose || exit 1
+#cat ${CWD}/glib2.meson.version.diff | patch -p1 --verbose || exit 1
 
 mkdir -p build
 cd build

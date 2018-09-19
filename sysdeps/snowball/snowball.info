@@ -1,0 +1,5 @@
+PKGNAM="snowball"
+VERSION="337"
+HOMEPAGE="https://github.com/shibukawa/snowball_py"
+DOWNLOAD="https://github.com/snowballstem/snowball/archive/master.tar.gz"
+MD5SUM=""

@@ -1,5 +1,5 @@
 PKGNAM="glib-networking"
-VERSION="2.50.0"
+VERSION="2.58.0"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/glib-networking/2.50/glib-networking-2.50.0.tar.xz"
-MD5SUM="4d06d0224646f274918b1cb6da9a07f6"
+DOWNLOAD="http://download.gnome.org/sources/glib-networking/2.58/glib-networking-2.58.0.tar.xz"
+MD5SUM="75b14b7e73a67753be9ce307751c661d"

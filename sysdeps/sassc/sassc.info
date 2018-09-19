@@ -1,0 +1,5 @@
+PKGNAM="sassc"
+VERSION="3.5.0"
+HOMEPAGE="http://sass-lang.com/libsass"
+DOWNLOAD="https://github.com/sass/sassc/archive/3.5.0/sassc-3.5.0.tar.gz"
+MD5SUM="f5c6aeb4e98c96d093f20295fc490f2c"

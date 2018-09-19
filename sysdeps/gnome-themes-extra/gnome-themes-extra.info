@@ -1,0 +1,5 @@
+PKGNAM="gnome-themes-extra"
+VERSION="3.28"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/gnome-themes-extra/3.28/gnome-themes-extra-3.28.tar.xz"
+MD5SUM="f9f2c6c521948da427f702372e16f826"

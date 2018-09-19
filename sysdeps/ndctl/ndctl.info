@@ -1,0 +1,5 @@
+PKGNAM="ndctl"
+VERSION="62"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="https://github.com/pmem/ndctl/archive/v62.tar.gz"
+MD5SUM="23d0457867d2cb553076280b2bc84106"

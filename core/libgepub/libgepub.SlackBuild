@@ -21,7 +21,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=libgepub
-VERSION=${VERSION:-0.4}
+VERSION=${VERSION:-0.6.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -87,7 +87,7 @@ find $PKG | xargs file | grep -e "executable" -e "shared object" | grep ELF \
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a \
-  INSTALL NEWS README \
+  NEWS README \
   $PKG/usr/doc/$PKGNAM-$VERSION
 
 # If there's a ChangeLog, installing at least part of the recent history

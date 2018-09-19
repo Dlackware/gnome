@@ -25,7 +25,7 @@
 # Modified for dlackware by Bart van der Hall <bartgymnast@hotmail.com>
 
 PKGNAM=yelp-xsl
-VERSION=${VERSION:-3.20.1}
+VERSION=${VERSION:-3.30.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 

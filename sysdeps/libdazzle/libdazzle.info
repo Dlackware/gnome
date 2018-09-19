@@ -1,0 +1,5 @@
+PKGNAM="libdazzle"
+VERSION="3.29.92"
+HOMEPAGE="http://www.gnome.org/"
+DOWNLOAD="http://download.gnome.org/sources/libdazzle/3.29/libdazzle-3.29.92.tar.xz"
+MD5SUM="4d3d824d6fdb6f0d67dcdaf183d8afb4"

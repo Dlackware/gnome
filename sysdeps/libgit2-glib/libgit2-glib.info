@@ -1,5 +1,5 @@
 PKGNAM="libgit2-glib"
-VERSION="0.25.0"
+VERSION="0.26.4"
 HOMEPAGE="https://github.com/GNOME/libgit2-glib"
-DOWNLOAD="http://download.gnome.org/sources/libgit2-glib/0.25/libgit2-glib-0.25.0.tar.xz"
-MD5SUM="adc462f87accb6314adaee401f5f38f3"
+DOWNLOAD="http://download.gnome.org/sources/libgit2-glib/0.26/libgit2-glib-0.26.4.tar.xz"
+MD5SUM="042bbee8f440adacd0532c1e2f389d52"

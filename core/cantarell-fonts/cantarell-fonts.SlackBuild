@@ -65,25 +65,24 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-./configure \
-  --prefix=/usr \
-  --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --sysconfdir=/etc \
-  --localstatedir=/var/lib \
-  --mandir=/usr/man \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --with-configdir=/etc/fonts/conf.avail \
-  --build=$ARCH-slackware-linux
+mkdir -pv build
+cd build
 
-make $NUMJOBS || make || exit 1
-make install DESTDIR=$PKG || exit 1
+meson --prefix=/usr \
+  --libdir=/usr/lib${LIBDIRSUFFIX} \
+  --sysconfdir=/etc || exit 1
+
+ninja
+DESTDIR=$PKG ninja install || exit 1
+
+cd ..
 
 mkdir -p $PKG/etc/fonts/conf.d
 ln -srt $PKG/etc/fonts/conf.d $PKG/etc/fonts/conf.avail/*
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a \
-  COPYING NEWS README \
+  COPYING NEWS \
   $PKG/usr/doc/$PKGNAM-$VERSION
 
 # If there's a ChangeLog, installing at least part of the recent history

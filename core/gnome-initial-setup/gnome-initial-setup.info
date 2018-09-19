@@ -1,5 +1,5 @@
 PKGNAM="gnome-initial-setup"
-VERSION="3.24.2"
+VERSION="3.29.92"
 HOMEPAGE="http://www.gnome.org"
-DOWNLOAD="http://download.gnome.org/sources/gnome-initial-setup/3.24/gnome-initial-setup-3.24.2.tar.xz"
-MD5SUM="33583c43333b7fa17e27a127353bbd12"
+DOWNLOAD="http://download.gnome.org/sources/gnome-initial-setup/3.29/gnome-initial-setup-3.29.92.tar.xz"
+MD5SUM="3735518f12f7cc8628193e63ae2d9df2"

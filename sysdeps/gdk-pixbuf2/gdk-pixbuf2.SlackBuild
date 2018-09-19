@@ -71,7 +71,7 @@ find . \
 
 # There's been this long standing debate about PNG and -lz
 # and this patch is the workaround.  ;-)
-cat $CWD/gdk-pixbuf.pnglz.diff | patch -p1 || exit 1
+#cat $CWD/gdk-pixbuf.pnglz.diff | patch -p1 || exit 1
 
 mkdir -pv build
 cd build

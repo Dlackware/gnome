@@ -23,7 +23,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM="PackageKit"
-VERSION=${VERSION:-1.1.7}
+VERSION=${VERSION:-1.1.10}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -63,12 +63,12 @@ set -e # Exit on most errors
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-#rm -rf $PKGNAM-$VERSION
-rm -rf $PKGNAM-master
-#tar xvf $CWD/$PKGNAM-$VERSION.tar.xz
-tar xvf $CWD/master.tar.gz
-#cd $PKGNAM-$VERSION
-cd $PKGNAM-master
+rm -rf $PKGNAM-$VERSION
+#rm -rf $PKGNAM-master
+tar xvf $CWD/$PKGNAM-$VERSION.tar.xz
+#tar xvf $CWD/master.tar.gz
+cd $PKGNAM-$VERSION
+#cd $PKGNAM-master
 chown -R root:root .
 
 find -L . \
@@ -76,6 +76,8 @@ find -L . \
   -o -perm 511 \) -exec chmod 755 {} \; -o \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
+
+cp -R $CWD/patches/* backends/slack/
 
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
@@ -86,8 +88,9 @@ CXXFLAGS="$SLKCFLAGS" \
   --localstatedir=/var \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --enable-katja \
+  --enable-slack \
   --enable-systemd \
+  --disable-dummy \
   --build=$ARCH-slackware-linux  || exit 1
 
 make $NUMJOBS

@@ -1,11 +1,14 @@
 # these are the package to be rebuild/added as base for the gnome build
-mozjs38
+autoconf2
+mozjs52
+mozjs60
+gmime3
 valgrind
 glib2
+polkit
 gvfs
 gobject-introspection
 glib-networking
-polkit
 libdaemon
 avahi
 wayland
@@ -14,36 +17,33 @@ mesa
 atk
 at-spi2-core
 at-spi2-atk
-cairo
 pango
 gdk-pixbuf2
 adwaita-icon-theme
-gnome-themes-standard
+gnome-themes-extra
 gtk+3
 gst-plugins-bad
 gst-plugins-ugly
 shared-mime-info
 upower
+volume_key
+libbytesize
+ndctl
+libblockdev
 udisks2
 gnome-keyring
-json-glib
-gcab
-appstream-glib
+graphviz
 vala
+gcab
+snowball
+appstream-glib
 gucharmap
 NetworkManager
 network-manager-applet
 xorg-server
 xorg-server-xwayland
-atkmm
-libsigc++
-cairomm
-glibmm
-pangomm
 mm-common
-gtkmm3
 wpa_supplicant
-py3atspi
 pyatspi
 pylint
 GeoIP
@@ -57,9 +57,7 @@ colord-gtk
 exempi
 libnice
 farstream
-gexiv2
 lua
-gegl3
 geoclue
 glade
 gnome-autoar
@@ -77,14 +75,12 @@ libdmapsharing
 libdvdcss
 libgit2
 libgit2-glib
-libgsystem
 libmusicbrainz5
 liboauth
 libosinfo
 libquvi-scripts
 libquvi
 libxml++
-pcre2
 plymouth
 quvi
 rdflib
@@ -93,6 +89,14 @@ telepathy-logger
 telepathy-mission-control
 uhttpmock
 webkitgtk
-webkitgtk1
 PackageKit
 systemd-service-files
+libsass
+sassc
+libdazzle
+enchant2
+
+# The following packages are in removal
+# webkitgtk1, pcre2, atkmm, gtkmm3, glibmm, libgsystem
+# gegl3, gexiv2, pangomm, cairomm, cairo, libsigc++
+# json-glib, mozjs38

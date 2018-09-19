@@ -24,7 +24,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=polkit
-VERSION=${VERSION:-0.113+git_2919920+js38}
+VERSION=${VERSION:-0.115}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -37,8 +37,6 @@ if [ -z "$ARCH" ]; then
        *) export ARCH=$( uname -m ) ;;
   esac
 fi
-
-wget -c http://www.freedesktop.org/software/polkit/releases/$PKGNAM-$VERSION.tar.gz
 
 NUMJOBS=${NUMJOBS:--j6}
 
@@ -93,13 +91,12 @@ CXXFLAGS="$SLKCFLAGS" \
   --sysconfdir=/etc \
   --localstatedir=/var \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --with-mozjs=mozjs185 \
   --enable-man-pages \
   --enable-gtk-doc \
   --mandir=/usr/man \
   --disable-static \
   --disable-samples \
-  --enable-introspection \
+  --enable-introspection=yes \
   --with-authfw=pam \
   --enable-verbose-mode \
   --with-os-type=Slackware \

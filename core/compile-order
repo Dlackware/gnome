@@ -11,6 +11,7 @@ evolution-data-server
 cogl
 clutter
 clutter-gtk
+libseccomp
 gnome-desktop
 gsettings-desktop-schemas
 gnome-settings-daemon
@@ -19,7 +20,6 @@ totem-pl-parser
 grilo
 libmediaart
 libgxps
-libseccomp
 tracker
 nautilus
 gssdp
@@ -34,7 +34,7 @@ gnome-menus
 gnome-session
 libwnck3
 gdm
-caribou
+## caribou
 gjs
 zenity
 mutter
@@ -53,6 +53,7 @@ epiphany
 dconf
 libpeas
 eog
+gspell
 evince
 gtksourceview
 gnome-calculator
@@ -70,10 +71,9 @@ gnome-disk-utility
 gnome-shell-extensions
 libzapojit
 gnome-online-miners
-gtk-engines
+# gtk-engines
 libgnomekbd
 file-roller
-gspell
 gedit
 gsound
 gnome-clocks

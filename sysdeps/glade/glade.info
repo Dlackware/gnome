@@ -1,5 +1,5 @@
 PKGNAM="glade"
-VERSION="3.20.1"
+VERSION="3.22.1"
 HOMEPAGE="http://glade.gnome.org"
-DOWNLOAD="http://download.gnome.org/sources/glade/3.20/glade-3.20.1.tar.xz"
-MD5SUM="60f01ccc4e9a4e5de5a5402d10495dc4"
+DOWNLOAD="http://download.gnome.org/sources/glade/3.22/glade-3.22.1.tar.xz"
+MD5SUM="226802cf3b06861240524805aa6fe6ff"

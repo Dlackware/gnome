@@ -1,0 +1,6 @@
+PKGNAM="enchant2"
+SRCNAM="enchant"
+VERSION="2.2.3"
+HOMEPAGE="https://github.com/AbiWord/"
+DOWNLOAD="https://github.com/AbiWord/enchant/releases/download/v2.2.3/enchant-2.2.3.tar.gz"
+MD5SUM="4b8abb58e00e93363591b3f5ea4f52d5"

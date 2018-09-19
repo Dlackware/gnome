@@ -1,5 +1,5 @@
 PKGNAM="bubblewrap"
-VERSION="0.1.8"
+VERSION="0.3.0"
 HOMEPAGE="https://github.com/projectatomic/bubblewrap/"
-DOWNLOAD="https://github.com/projectatomic/bubblewrap/releases/download/v0.1.8/bubblewrap-0.1.8.tar.xz"
-MD5SUM="b94c0fd774cdb61a548776807300de65"
+DOWNLOAD="https://github.com/projectatomic/bubblewrap/releases/download/v0.3.0/bubblewrap-0.3.0.tar.xz"
+MD5SUM="131da5d48b1400e8726a5ce1089d6e85"

@@ -1,5 +1,5 @@
 PKGNAM="gnome-backgrounds"
-VERSION="3.24.0"
+VERSION="3.30.0"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/gnome-backgrounds/3.24/gnome-backgrounds-3.24.0.tar.xz"
-MD5SUM="10e9c789c36eeaab0f9336ea5ef2e32f"
+DOWNLOAD="http://download.gnome.org/sources/gnome-backgrounds/3.30/gnome-backgrounds-3.30.0.tar.xz"
+MD5SUM="13ecd0e4bb4721a68310948e67dbaaaa"

@@ -68,24 +68,42 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
+#mkdir -pv build
+#cd build
+#
+#meson --prefix=/usr \
+#  --libdir=/usr/lib${LIBDIRSUFFIX} \
+#  --sysconfdir=/etc \
+#  -Dintrospection=yes \
+#  -Dwayland-compositor=yes \
+#  -Dbackends=all \
+#  -Ddrivers=all || exit 1
+#
+#ninja
+#DESTDIR=$PKG ninja install || exit 1
+#
+#cd ..
+
 ./configure \
-  --prefix=/usr \
-  --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --sysconfdir=/etc \
-  --localstatedir=/var \
-  --enable-xinput \
-  --enable-introspection=yes \
-  --enable-wayland-compositor=yes \
-  --enable-wayland-backend=yes \
-  --enable-evdev-input=yes \
-  --enable-egl-backend \
-  --enable-gtk-doc \
-  --mandir=/usr/man \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --build=$ARCH-slackware-linux
+    --prefix=/usr \
+    --libdir=/usr/lib${LIBDIRSUFFIX} \
+    --sysconfdir=/etc \
+    --enable-introspection \
+    --enable-egl-backend \
+    --enable-gdk-backend \
+    --enable-wayland-backend \
+    --enable-x11-backend \
+    --enable-xinput \
+    --enable-evdev-input \
+    --enable-wayland-compositor \
+    --mandir=/usr/man \
+    --docdir=/usr/doc/$PKGNAM-$VERSION \
+    --build=$ARCH-slackware-linux \
+    --enable-gtk-doc || exit 1
 
 make || exit 1
 make install DESTDIR=$PKG || exit 1
+
 
 # Compress and link manpages, if any:
 if [ -d $PKG/usr/man ]; then

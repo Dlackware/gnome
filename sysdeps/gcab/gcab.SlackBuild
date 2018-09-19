@@ -22,8 +22,8 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=gcab
-VERSION=${VERSION:-0.7}
-BUILD=${BUILD:-2}
+VERSION=${VERSION:-1.1}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 if [ -z "$ARCH" ]; then
@@ -33,8 +33,6 @@ if [ -z "$ARCH" ]; then
        *) ARCH=$( uname -m ) ;;
   esac
 fi
-
-wget -c http://download.gnome.org/sources/$PKGNAM/0.7/$PKGNAM-$VERSION.tar.xz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
@@ -70,18 +68,18 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-CFLAGS="$SLKCFLAGS" \
-./configure \
-  --prefix=/usr \
-  --sysconfdir=/etc \
-  --localstatedir=/var \
-  --mandir=/usr/man \
-  --disable-static \
-  --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --build=$ARCH-slackware-linux
+mkdir -pv build
+cd build
 
-make
-make install-strip DESTDIR=$PKG
+meson --prefix=/usr \
+  --libdir=/usr/lib${LIBDIRSUFFIX} \
+  --sysconfdir=/etc \
+  -Dtests=false
+
+ninja
+DESTDIR=$PKG ninja install || exit 1
+
+cd ..
 
 # Compress and link manpages, if any:
 if [ -d $PKG/usr/man ]; then

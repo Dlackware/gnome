@@ -1,5 +1,5 @@
 PKGNAM="GeoIP"
-VERSION="1.6.11"
+VERSION="1.6.12"
 HOMEPAGE="http://www.maxmind.com/app/c"
-DOWNLOAD="https://github.com/maxmind/geoip-api-c/releases/download/v1.6.11/GeoIP-1.6.11.tar.gz"
-MD5SUM="1e08aeb2b87d8908249998b3019d0fd7"
+DOWNLOAD="https://github.com/maxmind/geoip-api-c/releases/download/v1.6.12/GeoIP-1.6.12.tar.gz"
+MD5SUM="77d496cc40daa1dbc2b97365807d64d7"

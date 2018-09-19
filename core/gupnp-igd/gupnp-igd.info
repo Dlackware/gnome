@@ -1,5 +1,5 @@
 PKGNAM="gupnp-igd"
-VERSION="0.2.4"
+VERSION="0.2.5"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/gupnp-igd/0.2/gupnp-igd-0.2.4.tar.xz"
-MD5SUM="124371136b5a7b1056a3681780a62772"
+DOWNLOAD="http://download.gnome.org/sources/gupnp-igd/0.2/gupnp-igd-0.2.5.tar.xz"
+MD5SUM="d164e096d0f140bb1f5d9503727b424a"

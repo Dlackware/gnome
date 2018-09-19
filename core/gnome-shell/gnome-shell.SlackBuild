@@ -74,23 +74,21 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-CFLAGS="$SLKCFLAGS" \
-CXXFLAGS="$SLKCFLAGS" \
-./configure \
-  --prefix=/usr \
+mkdir -pv build
+cd build
+
+meson --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
-  --localstatedir=/var/lib \
-  --enable-introspection \
-  --enable-browser-plugin \
-  --enable-systemd \
-  --mandir=/usr/man \
-  --enable-compile-warnings=no \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --build=$ARCH-slackware-linux || exit 1
+  -Dbrowser_plugin=true \
+  -Dsystemd=true \
+  -Dnetworkmanager=true || exit 1
 
-make $NUMJOBS || exit 1
-make install DESTDIR=$PKG || exit 1
+ninja
+DESTDIR=$PKG ninja install || exit 1
+
+cd ..
+
 
 # Compress and link manpages, if any:
 if [ -d $PKG/usr/man ]; then

@@ -24,7 +24,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=gnome-initial-setup
-VERSION=${VERSION:-3.24.2}
+VERSION=${VERSION:-3.29.92}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 

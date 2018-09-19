@@ -1,0 +1,5 @@
+PKGNAM="autoconf2"
+VERSION="2.13"
+HOMEPAGE="http://www.gnu.org/"
+DOWNLOAD="ftp://ftp.gnu.org/gnu/autoconf/autoconf-2.13.tar.gz"
+MD5SUM="9de56d4a161a723228220b0f425dc711"

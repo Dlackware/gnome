@@ -1,5 +1,5 @@
 PKGNAM="libgxps"
-VERSION="0.2.5"
+VERSION="0.3.0"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/sources/libgxps/0.2/libgxps-0.2.5.tar.xz"
-MD5SUM="c10e1ef5b2d61c88f4da2bd252a9e239"
+DOWNLOAD="https://download.gnome.org/sources/libgxps/0.3/libgxps-0.3.0.tar.xz"
+MD5SUM="f4362c436c6ff99d7b3ea95c05989e44"

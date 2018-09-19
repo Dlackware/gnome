@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+       |-----handy-ruler------------------------------------------------------|
+mozjs60: mozjs60 (SpiderMonkey - Mozilla's JavaScript Engine)
+mozjs60:
+mozjs60: SpiderMonkey is Mozilla's JavaScript engine written in C/C++. 
+mozjs60: It is used in various Mozilla products (including Firefox) and is 
+mozjs60: available under MPL/GPL/LGPL tri-license.
+mozjs60:
+mozjs60: Homepage: http://www.mozilla.org/js/spidermonkey
+mozjs60:
+mozjs60:
+mozjs60:
+mozjs60:

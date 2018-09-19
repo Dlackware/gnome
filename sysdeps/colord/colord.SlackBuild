@@ -21,7 +21,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=colord
-VERSION=${VERSION:-1.3.5}
+VERSION=${VERSION:-1.4.3}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -68,27 +68,26 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-./configure \
-  --prefix=/usr \
-  --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --libexecdir=/usr/libexec/colord \
-  --sysconfdir=/etc \
-  --localstatedir=/var \
-  --infodir=/usr/info \
-  --mandir=/usr/man \
-  --docdir=/usr/doc/${PKGNAM}-${VERSION} \
-  --disable-silent-rules \
-  --disable-static \
-  --disable-rpath \
-  --disable-examples \
-  --disable-dependency-tracking \
-  --with-daemon-user=colord \
-  --enable-systemd-login \
-  --disable-argyllcms-sensor \
-  --build=$ARCH-slackware-linux
+mkdir -pv build
+cd build
 
-make || exit 1
-make install DESTDIR=$PKG || exit 1
+meson --prefix=/usr \
+  --libdir=/usr/lib${LIBDIRSUFFIX} \
+      --sysconfdir=/etc        \
+      --localstatedir=/var     \
+      -Ddaemon_user=colord     \
+      -Dvapi=true              \
+      -Dsystemd=true           \
+      -Dlibcolordcompat=false  \
+      -Dargyllcms_sensor=false \
+      -Dbash_completion=false  \
+      -Ddocs=false             \
+      -Dman=false
+
+ninja
+DESTDIR=$PKG ninja install || exit 1
+
+cd ..
 
 # databases
 touch ${PKG}/var/lib/colord/mapping.db.new
@@ -111,16 +110,8 @@ fi
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a \
-  AUTHORS COPYING ChangeLog NEWS \
+  AUTHORS COPYING NEWS \
   $PKG/usr/doc/$PKGNAM-$VERSION
-
-# If there's a ChangeLog, installing at least part of the recent history
-# is useful, but don't let it get totally out of control:
-if [ -r ChangeLog ]; then
-  DOCSDIR=$(echo $PKG/usr/doc/${PKGNAM}-$VERSION)
-  cat ChangeLog | head -n 1000 > $DOCSDIR/ChangeLog
-  touch -r ChangeLog $DOCSDIR/ChangeLog
-fi
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc

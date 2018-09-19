@@ -1,0 +1,5 @@
+PKGNAM="graphviz"
+VERSION="2.40.1"
+HOMEPAGE="https://www.graphviz.org/"
+DOWNLOAD="https://graphviz.gitlab.io/pub/graphviz/stable/SOURCES/graphviz.tar.gz"
+MD5SUM="4ea6fd64603536406166600bcc296fc8"
