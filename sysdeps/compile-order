@@ -95,6 +95,7 @@ libsass
 sassc
 libdazzle
 enchant2
+polkit-gnome
 
 # The following packages are in removal
 # webkitgtk1, pcre2, atkmm, gtkmm3, glibmm, libgsystem

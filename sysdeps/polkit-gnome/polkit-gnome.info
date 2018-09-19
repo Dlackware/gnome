@@ -1,0 +1,5 @@
+PKGNAM="polkit-gnome"
+VERSION="0.105"
+HOMEPAGE="http://www.freedesktop.org/wiki/Software/PolicyKit"
+DOWNLOAD="http://download.gnome.org/sources/polkit-gnome/0.105/polkit-gnome-0.105.tar.xz"
+MD5SUM="f03b055d6ae5fc8eac76838c7d83d082"
