@@ -1,6 +1,5 @@
 # these are the package to be rebuild/added as base for the gnome build
 autoconf2
-mozjs52
 mozjs60
 gmime3
 valgrind
@@ -100,4 +99,4 @@ polkit-gnome
 # The following packages are in removal
 # webkitgtk1, pcre2, atkmm, gtkmm3, glibmm, libgsystem
 # gegl3, gexiv2, pangomm, cairomm, cairo, libsigc++
-# json-glib, mozjs38
+# json-glib
