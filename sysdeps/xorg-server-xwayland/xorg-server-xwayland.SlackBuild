@@ -71,6 +71,10 @@ find . \
 
 cat $CWD/patch/x11.startwithblackscreen.diff | patch -p1 --verbose
 cat $CWD/patch/xorg-server.combo.mouse.keyboard.layout.patch | patch -p1 --verbose
+cat $CWD/patch/fix-nouveau-segfault.diff | patch -p1 --verbose
+cat $CWD/patch/0001-Always-install-vbe-and-int10-sdk-headers.patch | patch -p1 --verbose
+cat $CWD/patch/0001-autobind-GPUs-to-the-screen.patch | patch -p1 --verbose
+cat $CWD/patch/0001-xfree86-use-modesetting-driver-by-default-on-GeForce.patch | patch -p1 --verbose
 
 # Default font paths to be used by the X server
 DEF_FONTPATH="/usr/share/fonts/local,/usr/share/fonts/TTF,/usr/share/fonts/OTF,/usr/share/fonts/Type1,/usr/share/fonts/misc,/usr/share/fonts/CID,/usr/share/fonts/75dpi/:unscaled,/usr/share/fonts/100dpi/:unscaled,/usr/share/fonts/75dpi,/usr/share/fonts/100dpi,/usr/share/fonts/cyrillic"
@@ -91,7 +95,7 @@ CFLAGS="$SLKCFLAGS" \
   --with-int10=x86emu \
   --with-default-font-path="${DEF_FONTPATH}" \
   --with-module-dir=/usr/lib${LIBDIRSUFFIX}/xorg/modules \
-  --with-os-name="Slackware 14.2 - Dlackware 3.22" \
+  --with-os-name="Slackware 15.0 - Dlackware 3.32" \
   --with-os-vendor="Slackware Linux Project" \
   --with-xkb-path=/etc/X11/xkb \
   --with-xkb-output=/var/lib/xkb \
