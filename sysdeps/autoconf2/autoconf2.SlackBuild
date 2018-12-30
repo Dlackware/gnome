@@ -22,7 +22,7 @@
 
 PKGNAM=autoconf2
 SRCNAM=autoconf
-VERSION=${VERSION:-2.13}
+VERSION=${VERSION:-$(echo $SRCNAM-*.tar.xz | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
