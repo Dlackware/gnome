@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # Copyright 2006, 2007, 2008, 2009, 2010, 2018  Patrick J. Volkerding, Sebeka, MN, USA
+# Copyright 2019 Eugene Wissner, Dachau, Germany
+#
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -20,10 +22,9 @@
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-cd $(dirname $0) ; CWD=$(pwd)
-
-PKGNAM=gmime
-VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | cut -d - -f 2 | rev | cut -f 3- -d . | rev)}
+PKGNAM=gmime3
+SRCNAM=gmime
+VERSION=${VERSION:-$(echo $SRCNAM-*.tar.?z* | cut -d - -f 2 | rev | cut -f 3- -d . | rev)}
 NUMJOBS=${NUMJOBS:-" -j7 "}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
@@ -38,21 +39,13 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-# If the variable PRINT_PACKAGE_NAME is set, then this script will report what
-# the name of the created package would be, and then exit. This information
-# could be useful to other scripts.
-if [ ! -z "${PRINT_PACKAGE_NAME}" ]; then
-  echo "$PKGNAM-$VERSION-$ARCH-$BUILD.txz"
-  exit 0
-fi
-
+CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
-PKG=$TMP/package-${PKGNAM}
+PKG=$TMP/package-$PKGNAM
 OUTPUT=${OUTPUT:-/var/cache/dlackware}
 
-
 rm -rf $PKG
-mkdir -p $TMP $PKG
+mkdir -p $TMP $PKG $OUTPUT
 
 if [ "$ARCH" = "i586" ]; then
   SLKCFLAGS="-O2 -march=i586 -mtune=i686"
@@ -69,9 +62,9 @@ else
 fi
 
 cd $TMP
-rm -rf ${PKGNAM}-${VERSION}
-tar xvf $CWD/${PKGNAM}-$VERSION.tar.?z* || exit 1
-cd ${PKGNAM}-$VERSION
+rm -rf $SRCNAM-$VERSION
+tar xvf $CWD/$SRCNAM-$VERSION.tar.?z* || exit 1
+cd $SRCNAM-$VERSION
 
 # Make sure ownerships and permissions are sane:
 chown -R root:root .
@@ -129,14 +122,13 @@ if [ -d $PKG/usr/info ]; then
 fi
 
 # Add a documentation directory:
-mkdir -p $PKG/usr/doc/${PKGNAM}-$VERSION
+mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a \
   AUTHORS COPYING INSTALL NEWS PORTING README TODO \
-  $PKG/usr/doc/${PKGNAM}-$VERSION
+  $PKG/usr/doc/$PKGNAM-$VERSION
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
 
 cd $PKG
-/sbin/makepkg -l y -c n $OUTPUT/${PKGNAM}3-$VERSION-$ARCH-$BUILD$TAG.txz
-
+/sbin/makepkg -l y -c n $OUTPUT/$PKGNAM-$VERSION-$ARCH-$BUILD$TAG.txz
