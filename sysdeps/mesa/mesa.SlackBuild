@@ -1,6 +1,7 @@
 #!/bin/sh
 # Copyright 2006, 2007, 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016  Patrick J. Volkerding, Sebeka, MN, USA
 # Copyright 2014-2016  Bart van der Hall, Istanbul, TR
+# Copyright 2019 Eugene Wissner, Dachau, Germany
 # All rights reserved.
 #
 #   Permission to use, copy, modify, and distribute this software for
@@ -23,7 +24,8 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=mesa
-VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
+VERSION=${VERSION:-$(echo $PKGNAM-1*.tar.xz | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
+DEMOVERS=${DEMOVERS:-8.4.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -75,9 +77,6 @@ cd $PKGNAM-$VERSION
 # Let's kill the warning about operating on a dangling symlink:
 rm -f src/gallium/state_trackers/d3d1x/w32api
 
-# Fix for xlocale.h removal:
-#cat $CWD/mesa.glibc226.diff | patch -p1 --verbose || exit 1
-
 # Make sure ownerships and permissions are sane:
 chown -R root:root .
 find . \
@@ -85,20 +84,6 @@ find . \
   -exec chmod 755 {} \; -o \
   \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
   -exec chmod 644 {} \;
-
-# Apply patches from git (and maybe elsewhere):
-# Patches obtained by:
-#   git checkout origin/11.0
-#   git format-patch 4c0b48461269d3ede0c5446d86ebe3e81f16788e # 11.0.2 release
-if /bin/ls $CWD/patches/*.patch 1> /dev/null 2> /dev/null ; then
-  for patch in $CWD/patches/*.patch ; do
-    patch -p1 < $patch || exit 1 ;
-  done
-fi
-
-# Don't worry if Mako is not present:
-#sed -i "s,AX_CHECK_PYTHON_MAKO_MODULE(\$PYTHON_MAKO_REQUIRED),,g" configure.ac
-cat $CWD/mesa.no.mako.diff | patch -p1 --verbose || exit 1
 
 # Fix detection of libLLVM when built with CMake
 sed -i 's/LLVM_SO_NAME=.*/LLVM_SO_NAME=LLVM/' configure.ac
