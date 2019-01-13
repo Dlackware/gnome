@@ -2,7 +2,7 @@
 
 # Slackware build script for udisks2
 
-# Copyright 2014 Eugene Wissner, Dachau, Germany
+# Copyright 2014-2019 Eugene Wissner, Dachau, Germany
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -24,7 +24,7 @@
 
 SRCNAM=udisks
 PKGNAM=udisks2
-VERSION=${VERSION:-2.8.0}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -41,8 +41,6 @@ if [ -z "$ARCH" ]; then
     *)       export ARCH=$MARCH ;;
   esac
 fi
-
-wget -c http://udisks.freedesktop.org/releases/$SRCNAM-$VERSION.tar.bz2
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
@@ -89,20 +87,11 @@ if ! grep --quiet '^polkitd:' /etc/passwd ;then
   exit 1
 fi
 
-unset SBO_AUTOGEN
+patch -p0 -E --backup --verbose -i ${CWD}/patches/udisks-2.x-ntfs-3g.patch
 
-if [ -r ${CWD}/apply-patches.sh ]; then
-  . ${CWD}/apply-patches.sh
-fi
-
-if [ "${SBO_AUTOGEN}" = "YES" ]; then
-  autoreconf -ivf || exit $?
-fi
-
-export CFLAGS="${SLKCFLAGS} -fPIC"
-export CXXFLAGS="${SLKCFLAGS} -fPIC"
-export LDFLAGS="-pie -Wl,-z,now -Wl,-z,relro ${LDFLAGS}"
-
+CFLAGS="${SLKCFLAGS} -fPIC" \
+CXXFLAGS="${SLKCFLAGS} -fPIC" \
+LDFLAGS="-pie -Wl,-z,now -Wl,-z,relro ${LDFLAGS}" \
 ./configure \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
