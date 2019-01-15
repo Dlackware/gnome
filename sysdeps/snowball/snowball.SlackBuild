@@ -3,6 +3,7 @@
 # Slackware build script for snowballstemmer
 
 # Copyright 2017,2018 Nikos Giotis <nikos.giotis@gmail.com>, Athens, GR
+# Copyright 2019 Eugene Wissner, Dachau, Germany
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -23,7 +24,8 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=snowball
-VERSION=${VERSION:-337}
+VERSION=${VERSION:-d29510a}
+GITVERSION=${GITVERSION:-d29510ae32702a81cdc29177a133e894df854550}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -59,9 +61,9 @@ set -e
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $PKGNAM-master
-tar xvf $CWD/master.tar.gz
-cd $PKGNAM-master
+rm -rf $PKGNAM-$GITVERSION
+tar xvf $CWD/$PKGNAM-$GITVERSION.tar.gz
+cd $PKGNAM-$GITVERSION
 chown -R root:root .
 find -L . \
  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
@@ -78,20 +80,15 @@ find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | gr
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
-cat COPYING > $PKG/usr/doc/$PKGNAM-$VERSION/snowball-LICENSE
-cat COPYING > $PKG/usr/doc/$PKGNAM-$VERSION/libstemmer-LICENSE
-
-
+cp -a COPYING $PKG/usr/doc/$PKGNAM-$VERSION
 
 install -d "$PKG/usr/bin"
 install -t "$PKG/usr/bin" snowball stemwords
-
 
 install -Dm644 {.,"$PKG"/usr}/include/libstemmer.h
 install -D {.,"$PKG"/usr/lib$LIBDIRSUFFIX}/libstemmer.so.0.0.0
 ln -s libstemmer.so.0.0.0 "$PKG/usr/lib$LIBDIRSUFFIX/libstemmer.so.0"
 ln -s libstemmer.so.0 "$PKG/usr/lib$LIBDIRSUFFIX/libstemmer.so"
-
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
