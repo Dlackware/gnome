@@ -21,7 +21,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=autoconf-archive
-VERSION=${VERSION:-2018.03.13}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -51,6 +51,7 @@ CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
 ./configure \
   --prefix=/usr \
+  --docdir=/usr/doc/$PKGNAM-$VERSION
 
 make
 make DESTDIR=$PKG install
@@ -61,8 +62,6 @@ mkdir -p $PKG/usr/info
 cat $PKG/usr/share/info/autoconf-archive.info | gzip -9 > $PKG/usr/info/autoconf-archive.info.gz
 rm -rf $PKG/usr/share/info
 
-mkdir -p $PKG/usr/doc
-mv $PKG/usr/share/autoconf-archive $PKG/usr/doc/$PKGNAM-$VERSION
 cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
 
 mkdir -p $PKG/install
