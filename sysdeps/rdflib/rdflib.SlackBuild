@@ -24,7 +24,7 @@
 PKGNAM=rdflib
 VERSION=${VERSION:-4.2.2}
 BUILD=${BUILD:-1}
-TAG=${TAG:-_dlackware}
+TAG=${TAG:-_dlack}
 
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
@@ -55,13 +55,11 @@ fi
 
 set -e
 
-mv 4.2.2.tar.gz $PKGNAM-$VERSION.tar.gz
-
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PKGNAM-$VERSION
-tar xvf $CWD/$PKGNAM-$VERSION.tar.gz
+tar xvf $CWD/$VERSION.tar.gz
 cd $PKGNAM-$VERSION
 chown -R root:root .
 find -L . \
