@@ -71,11 +71,6 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-# Silly upstream, using the bleeding edge.  Reconf:
-#autoreconf --force --install 
-
-#cat ${CWD}/glib2.meson.version.diff | patch -p1 --verbose || exit 1
-
 mkdir -p build
 cd build
 
