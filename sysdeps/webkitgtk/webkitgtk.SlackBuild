@@ -28,7 +28,7 @@ VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
-NUMJOBS=${NUMJOBS:-"-j7"}
+NUMJOBS=${NUMJOBS:-"-j3"}
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
@@ -90,10 +90,12 @@ cmake -DCMAKE_BUILD_TYPE=Release  \
       -DENABLE_GTKDOC=OFF         \
       -DCMAKE_INSTALL_DOCDIR=/usr/share/doc \
       -DCMAKE_INSTALL_LIBDIR=lib64 \
-      -DPYTHON_EXECUTABLE=/usr/bin/python2 || exit 1
+      -DPYTHON_EXECUTABLE=/usr/bin/python2 \
+      -GNinja \
+      .
 
-make ${NUMJOBS} -k || exit 1
-make install DESTDIR=${PKG} || exit 1
+ninja $NUMJOBS
+DESTDIR=${PKG} ninja install
 
 find ${PKG}/usr/lib${LIBDIRSUFFIX} -name '*.la' -delete
 
