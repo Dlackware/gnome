@@ -6,14 +6,14 @@
 # leave one space after the ':'.
 
          |-----handy-ruler------------------------------------------------------|
-libdazzle: libdazzle (libdazzle)
+libdazzle: libdazzle (companion library to GObject and Gtk+)
 libdazzle:
-libdazzle:   libdazzle
+libdazzle: libdazzle provides various features that we wish were in the
+libdazzle: underlying library but cannot for various reasons. In most cases,
+libdazzle: they are wildly out of scope for those libraries. In other cases, our
+libdazzle: design isn't quite generic enough to work for everyone.
 libdazzle:
-libdazzle:
-libdazzle:
-libdazzle:
-libdazzle:
+libdazzle: Currently, the primary consumer of libdazzle is the Builder IDE.
 libdazzle:
 libdazzle:
 libdazzle:
