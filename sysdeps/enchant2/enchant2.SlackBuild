@@ -22,8 +22,8 @@
 
 PKGNAM=enchant2
 SRCNAM=enchant
-VERSION=${VERSION:-2.2.3}
-BUILD=${BUILD:-1}
+VERSION=${VERSION:-$(echo SRCNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 if [ -z "$ARCH" ]; then

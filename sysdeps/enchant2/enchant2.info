@@ -1,5 +1,4 @@
 PKGNAM="enchant2"
-SRCNAM="enchant"
 VERSION="2.2.3"
 HOMEPAGE="https://github.com/AbiWord/"
 DOWNLOAD="https://github.com/AbiWord/enchant/releases/download/v2.2.3/enchant-2.2.3.tar.gz"
