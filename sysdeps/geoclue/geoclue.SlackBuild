@@ -2,6 +2,7 @@
 
 # Written by Matteo Bernardini <ponce@slackbuilds.org>
 # Copyright 2015 Bart van der Hall, Almere, NL
+# Copyright 2019 Eugene Wissner, Dachau, Germany
 # All rights reserved.
 #
 #   Permission to use, copy, modify, and distribute this software for
@@ -25,8 +26,8 @@
 
 
 PKGNAM=geoclue
-VERSION=${VERSION:-2.4.12}
-BUILD=${BUILD:-1}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 if [ -z "$ARCH" ]; then
@@ -43,11 +44,6 @@ PKG=$TMP/package-$PKGNAM
 OUTPUT=${OUTPUT:-/var/cache/dlackware}
 
 DOCDIR=/usr/doc/$PKGNAM-$VERSION
-
-# Set to YES for ModemManager support
-SBO_MM=${SBO_MM:-YES}
-# Set to YES for NetworkManager support
-SBO_NM=${SBO_NM:-YES}
 
 if [ "$ARCH" = "i586" ]; then
   SLKCFLAGS="-O2 -march=i586 -mtune=i686"
@@ -80,10 +76,6 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-unset SBO_MMOPTS SBO_NMOPTS
-[ "${SBO_MM}" = "YES" ] || SBO_NMOPTS='--disable-3g-source --disable-modem-gps-source'
-[ "${SBO_NM}" = "YES" ] || SBO_NMOPTS='--disable-wifi-source'
-
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
 ./configure \
@@ -95,7 +87,9 @@ CXXFLAGS="$SLKCFLAGS" \
   --docdir=/usr/doc/$PKGNAM-$VERSION \
   --enable-static=no \
   --with-dbus-service-user=geoclue \
-  ${SBO_MMOPTS} ${SBO_NMOPTS} \
+  --enable-3g-source \
+  --enable-modem-gps-source \
+  --enable-wifi-source \
   --build=$ARCH-slackware-linux
 
 make
