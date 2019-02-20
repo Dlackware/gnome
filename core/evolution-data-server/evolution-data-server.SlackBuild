@@ -81,7 +81,7 @@ cmake -DCMAKE_INSTALL_PREFIX=/usr   \
       -DWITH_LDAP=ON                \
       -DENABLE_INTROSPECTION=ON
 
-make $NUMJOBS || make
+make $NUMJOBS
 make install DESTDIR=$PKG
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
