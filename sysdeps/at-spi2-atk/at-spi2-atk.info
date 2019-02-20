@@ -1,5 +1,5 @@
 PKGNAM="at-spi2-atk"
 VERSION="2.30.0"
-HOMEPAGE="http://gnome.org/"
+HOMEPAGE="https://www.freedesktop.org/wiki/Accessibility/AT-SPI2/"
 DOWNLOAD="https://ftp.gnome.org/pub/gnome/sources/at-spi2-atk/2.30/at-spi2-atk-2.30.0.tar.xz"
 MD5SUM="1ad754b90bcb14244b73ca4d0c14d274"
