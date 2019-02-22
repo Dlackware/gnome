@@ -1,5 +1,5 @@
 PKGNAM="ostree"
-VERSION="2018.8"
+VERSION="2019.1"
 HOMEPAGE="https://github.com/ostreedev/ostree/"
-DOWNLOAD="https://github.com/ostreedev/ostree/releases/download/v2018.8/libostree-2018.8.tar.xz"
-MD5SUM=""
+DOWNLOAD="https://github.com/ostreedev/ostree/releases/download/v2019.1/libostree-2019.1.tar.xz"
+MD5SUM="d1ce091c15202085ac1226fb2527e3a2"
