@@ -22,7 +22,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=gitg
-VERSION=${VERSION:-3.24.0}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -72,19 +72,21 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-CFLAGS="$SLKCFLAGS" \
-CXXFLAGS="$SLKCFLAGS" \
-./configure \
+mkdir -pv build
+cd build
+
+meson \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
-  --mandir=/usr/man \
-  --disable-debug \
   --localstatedir=/var/lib \
-  --build=$ARCH-slackware-linux
+  --mandir=/usr/man \
+  --buildtype=release
 
-make $NUMJOBS
-make install DESTDIR=$PKG
+ninja
+DESTDIR=$PKG ninja install
+
+cd ..
 
 # Strip binaries:
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
