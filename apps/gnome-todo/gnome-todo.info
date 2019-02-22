@@ -1,5 +1,5 @@
 PKGNAM="gnome-todo"
-VERSION="3.24.2"
+VERSION="3.28.1"
 HOMEPAGE="https://wiki.gnome.org/Apps/Todo"
-DOWNLOAD="https://download.gnome.org/sources/gnome-todo/3.24/gnome-todo-3.24.2.tar.xz"
-MD5SUM="1a7d49dd208d1342fa051b253022390e"
+DOWNLOAD="https://download.gnome.org/sources/gnome-todo/3.28/gnome-todo-3.28.1.tar.xz"
+MD5SUM="795ba5027fbc0d790a40742468392cc6"
