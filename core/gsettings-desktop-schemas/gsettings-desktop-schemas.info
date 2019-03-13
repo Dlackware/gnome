@@ -1,5 +1,5 @@
 PKGNAM="gsettings-desktop-schemas"
-VERSION="3.28.1"
+VERSION="3.32.0"
 HOMEPAGE="https://github.com/GNOME/gsettings-desktop-schemas"
-DOWNLOAD="http://download.gnome.org/sources/gsettings-desktop-schemas/3.28/gsettings-desktop-schemas-3.28.1.tar.xz"
-MD5SUM="83bb19d025f126fae495ab43a2f26f40"
+DOWNLOAD="http://download.gnome.org/sources/gsettings-desktop-schemas/3.32/gsettings-desktop-schemas-3.32.0.tar.xz"
+MD5SUM="0c2d468a482c12594757442c983aa8ea"
