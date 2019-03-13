@@ -1,5 +1,5 @@
 PKGNAM="gnome-documents"
-VERSION="3.30.0"
+VERSION="3.32.0"
 HOMEPAGE="https://wiki.gnome.org/Apps/Documents"
-DOWNLOAD="https://download.gnome.org/sources/gnome-documents/3.30/gnome-documents-3.30.0.tar.xz"
-MD5SUM="eabda26c09c6ede672ecc3e3a0243cc4"
+DOWNLOAD="https://download.gnome.org/sources/gnome-documents/3.32/gnome-documents-3.32.0.tar.xz"
+MD5SUM="f430631ed0d1583384018f76618bfd63"
