@@ -1,5 +1,5 @@
 PKGNAM="dconf"
-VERSION="0.30.0"
+VERSION="0.32.0"
 HOMEPAGE="http://live.gnome.org/dconf"
-DOWNLOAD="http://download.gnome.org/sources/dconf/0.30/dconf-0.30.0.tar.xz"
-MD5SUM="0fedc411cb0e12052c1215b777cb8686"
+DOWNLOAD="http://download.gnome.org/sources/dconf/0.32/dconf-0.32.0.tar.xz"
+MD5SUM="e1ac0b6285abefeed69ca9e380e44f5a"
