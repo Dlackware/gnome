@@ -3,6 +3,7 @@
 # Slackware build script for glib-networking
 
 # Copyright 2011, 2012  Robby Workman, Northport, Alabama, USA
+# Copyright 2019 Eugene Wissner, Dachau, Germany
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -25,7 +26,7 @@
 # Modified 2014 by Bart van der Hall for dlackware
 
 PKGNAM=glib-networking
-VERSION=${VERSION:-2.58.0}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
