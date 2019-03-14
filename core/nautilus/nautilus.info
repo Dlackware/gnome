@@ -1,5 +1,5 @@
 PKGNAM="nautilus"
-VERSION="3.30.0"
+VERSION="3.32.0"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/sources/nautilus/3.30/nautilus-3.30.0.tar.xz"
-MD5SUM="f1053e356e6336f36c5229e933da2888"
+DOWNLOAD="https://download.gnome.org/sources/nautilus/3.32/nautilus-3.32.0.tar.xz"
+MD5SUM="f1d08b295544782c14e30f6648f861af"
