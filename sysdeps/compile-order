@@ -2,7 +2,6 @@
 autoconf2
 mozjs60
 gmime3
-valgrind
 glib2
 polkit
 gvfs
@@ -10,8 +9,6 @@ gobject-introspection
 glib-networking
 libdaemon
 avahi
-wayland
-wayland-protocols
 mesa
 atk
 at-spi2-core
