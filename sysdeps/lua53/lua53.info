@@ -1,0 +1,5 @@
+PKGNAM="lua53"
+VERSION="5.3.5"
+HOMEPAGE="https://www.lua.org/"
+DOWNLOAD="https://www.lua.org/ftp/lua-5.3.5.tar.gz"
+MD5SUM="4f4b4f323fd3514a68e0ab3da8ce3455"
