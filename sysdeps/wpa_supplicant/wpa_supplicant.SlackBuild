@@ -80,15 +80,10 @@ find . \
   \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
   -exec chmod 644 {} \;
 
-# Fixup various paths in the dbus service file
-cat $CWD/patches/dbus-service-file-args.diff | patch -p1 --verbose || exit 1
-
-# Eliminate some logspam
-cat $CWD/patches/quiet-scan-results-message.diff | patch -p1 --verbose || exit 1
-
-# Apply a couple of other patches from Fedora
-cat $CWD/patches/assoc-timeout.diff | patch -p1 --verbose || exit 1
-cat $CWD/patches/flush-debug-output.diff | patch -p1 --verbose || exit 1
+# Apply bugfix patches from upstream git:
+for dfile in $CWD/patches/* ; do
+  cat $dfile | patch -p1 --verbose || exit 1
+done
 
 cd wpa_supplicant
 

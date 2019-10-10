@@ -1,7 +1,6 @@
-diff -Nur wpa_supplicant-2.0.orig/src/utils/wpa_debug.c wpa_supplicant-2.0/src/utils/wpa_debug.c
---- wpa_supplicant-2.0.orig/src/utils/wpa_debug.c	2013-01-12 09:42:53.000000000 -0600
-+++ wpa_supplicant-2.0/src/utils/wpa_debug.c	2013-05-11 14:10:37.886101742 -0500
-@@ -75,6 +75,7 @@
+--- wpa_supplicant-0.6.3/src/utils/wpa_debug.c.flush-debug	2007-07-30 23:15:34.000000000 -0400
++++ wpa_supplicant-0.6.3/src/utils/wpa_debug.c	2007-07-30 23:17:06.000000000 -0400
+@@ -157,6 +157,7 @@ void wpa_debug_print_timestamp(void)
  	if (out_file) {
  		fprintf(out_file, "%ld.%06u: ", (long) tv.sec,
  			(unsigned int) tv.usec);
@@ -9,7 +8,7 @@ diff -Nur wpa_supplicant-2.0.orig/src/utils/wpa_debug.c wpa_supplicant-2.0/src/u
  	} else
  #endif /* CONFIG_DEBUG_FILE */
  	printf("%ld.%06u: ", (long) tv.sec, (unsigned int) tv.usec);
-@@ -221,6 +222,7 @@
+@@ -185,6 +186,7 @@ void wpa_printf(int level, char *fmt, ..
  		if (out_file) {
  			vfprintf(out_file, fmt, ap);
  			fprintf(out_file, "\n");
@@ -17,7 +16,7 @@ diff -Nur wpa_supplicant-2.0.orig/src/utils/wpa_debug.c wpa_supplicant-2.0/src/u
  		} else {
  #endif /* CONFIG_DEBUG_FILE */
  		vprintf(fmt, ap);
-@@ -357,6 +359,7 @@
+@@ -217,6 +219,7 @@ static void _wpa_hexdump(int level, cons
  			fprintf(out_file, " [REMOVED]");
  		}
  		fprintf(out_file, "\n");
@@ -25,7 +24,7 @@ diff -Nur wpa_supplicant-2.0.orig/src/utils/wpa_debug.c wpa_supplicant-2.0/src/u
  	} else {
  #endif /* CONFIG_DEBUG_FILE */
  	printf("%s - hexdump(len=%lu):", title, (unsigned long) len);
-@@ -425,12 +428,14 @@
+@@ -262,12 +265,14 @@ static void _wpa_hexdump_ascii(int level
  			fprintf(out_file,
  				"%s - hexdump_ascii(len=%lu): [REMOVED]\n",
  				title, (unsigned long) len);
@@ -40,7 +39,7 @@ diff -Nur wpa_supplicant-2.0.orig/src/utils/wpa_debug.c wpa_supplicant-2.0/src/u
  			return;
  		}
  		fprintf(out_file, "%s - hexdump_ascii(len=%lu):\n",
-@@ -455,6 +460,7 @@
+@@ -292,6 +297,7 @@ static void _wpa_hexdump_ascii(int level
  			pos += llen;
  			len -= llen;
  		}
