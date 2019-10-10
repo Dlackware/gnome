@@ -44,6 +44,10 @@ config etc/NetworkManager/NetworkManager.conf.new
 #fi
 
 if [ -x bin/systemctl ] ; then
+ ${CHROOT} /bin/systemctl stop systemd-networkd 
+ ${CHROOT} /bin/systemctl disable systemd-networkd 
+ ${CHROOT} /bin/systemctl enable NetworkManager
+ ${CHROOT} /bin/systemctl start NetworkManager
  ${CHROOT} /bin/systemctl --system daemon-reload >/dev/null 2>&1
 fi
 

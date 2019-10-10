@@ -114,13 +114,13 @@ CXXFLAGS="$SLKCFLAGS" \
   --with-dhclient=yes \
   --with-modem-manager-1=yes \
   --with-libnm-glib \
-  --disable-json-validation \
   --with-systemd-logind=yes \
   --with-session-tracking=systemd \
   --with-suspend-resume=systemd \
   --with-systemdsystemunitdir=/lib/systemd/system \
   --enable-more-warnings=no \
-  --disable-ovs \
+  --enable-json-validation \
+  --enable-ovs \
   --disable-vala \
   --with-nmtui=yes \
   --with-hostname-persist=slackware \
