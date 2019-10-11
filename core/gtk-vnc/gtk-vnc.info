@@ -1,5 +1,5 @@
 PKGNAM="gtk-vnc"
-VERSION="0.9.0"
+VERSION="1.0.0"
 HOMEPAGE="http://www.gnome.org"
-DOWNLOAD="http://download.gnome.org/sources/gtk-vnc/0.9/gtk-vnc-0.9.0.tar.xz"
-MD5SUM="1eed0aa5d71f849eae9fa00ecf28e247"
+DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/gtk-vnc-1.0.0.tar.xz"
+MD5SUM="ff2e531525f6200be613643b9ee87fbf"
