@@ -1,5 +1,5 @@
 PKGNAM="libgee"
-VERSION="0.20.1"
+VERSION="0.20.2"
 HOMEPAGE="https://wiki.gnome.org/action/show/Projects/Libgee"
-DOWNLOAD="http://download.gnome.org/sources/libgee/0.20/libgee-0.20.1.tar.xz"
-MD5SUM="d224dca55bb909f6730f40cc267337be"
+DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/libgee-0.20.2.tar.xz"
+MD5SUM="45db478f2b300ada8e039ebc6c9458de"
