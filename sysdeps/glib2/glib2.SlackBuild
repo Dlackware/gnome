@@ -71,21 +71,40 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-mkdir -p build
-cd build
-
-meson --prefix=/usr \
-  --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --buildtype=release \
+# Configure, build, and install:
+export CFLAGS="$SLKCFLAGS"
+export CXXFLAGS="$SLKCFLAGS"
+mkdir meson-build
+cd meson-build
+meson setup \
+  --prefix=/usr \
+  --libdir=lib${LIBDIRSUFFIX} \
+  --libexecdir=/usr/libexec \
+  --bindir=/usr/bin \
+  --sbindir=/usr/sbin \
+  --includedir=/usr/include \
+  --datadir=/usr/share \
+  --mandir=/usr/man \
   --sysconfdir=/etc \
   --localstatedir=/var \
-  --mandir=/usr/man \
-  -Dselinux=false  || exit 1
-
-ninja || exit 1
-DESTDIR=$PKG ninja install || exit 1
-
+  --buildtype=release \
+  -Dselinux=disabled \
+  -Dfam=true \
+  -Dman=true \
+  -Dgtk_doc=true \
+  -Dinstalled_tests=false \
+  .. || exit 1
+  "${NINJA:=ninja}" $NUMJOBS || exit 1
+  DESTDIR=$PKG $NINJA install || exit 1
 cd ..
+
+# Don't ship .la files:
+rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
+
+# Since meson isn't listening to options:
+rm -rf $PKG/usr/libexec/installed-tests
+rmdir $PKG/usr/libexec
+
 
 mkdir -p ${PKG}/etc/profile.d
 for file in libglib2.csh libglib2.sh ;do
