@@ -1,5 +1,5 @@
 PKGNAM="gnome-autoar"
 VERSION="0.2.3"
 HOMEPAGE="https://wiki.gnome.org/TingweiLan/GSoC2013Final"
-DOWNLOAD="http://download.gnome.org/sources/gnome-autoar/0.2/gnome-autoar-0.2.3.tar.xz"
+DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/gnome-autoar-0.2.3.tar.xz"
 MD5SUM="39b13fb2fc7752fa3b80616244dc4ef8"
