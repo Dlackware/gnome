@@ -23,9 +23,8 @@
 #   SUCH DAMAGE.
 # -----------------------------------------------------------------------------
 
-PKGNAM=vte2_91
-SRCNAM=vte
-VERSION=${VERSION:-$(echo $SRCNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
+PKGNAM=vte
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -66,9 +65,9 @@ set -e # Exit on most errors
 rm -rf $TMP
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $SRCNAM-$VERSION
-tar xvf $CWD/${SRCNAM}-$VERSION.tar.?z*
-cd $SRCNAM-$VERSION
+rm -rf $PKGNAM-$VERSION
+tar xvf $CWD/${PKGNAM}-$VERSION.tar.?z*
+cd $PKGNAM-$VERSION
 
 chown -R root:root .
 find . \
@@ -77,20 +76,30 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-CFLAGS="$SLKCFLAGS" \
-CXXFLAGS="$SLKCFLAGS" \
-./configure \
+# Configure, build, and install:
+export CFLAGS="$SLKCFLAGS"
+export CXXFLAGS="$SLKCFLAGS"
+mkdir meson-build
+cd meson-build
+meson setup \
   --prefix=/usr \
-  --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --sysconfdir=/etc \
-  --localstatedir=/var/lib \
-  --enable-gnome-pty-helper \
+  --libdir=lib${LIBDIRSUFFIX} \
+  --libexecdir=/usr/libexec \
+  --bindir=/usr/bin \
+  --sbindir=/usr/sbin \
+  --includedir=/usr/include \
+  --datadir=/usr/share \
   --mandir=/usr/man \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --build=$ARCH-slackware-linux
+  --sysconfdir=/etc \
+  --localstatedir=/var \
+  --buildtype=release \
+  .. || exit 1
+  "${NINJA:=ninja}" $NUMJOBS || exit 1
+  DESTDIR=$PKG $NINJA install || exit 1
+cd ..
 
-make $NUMJOBS
-make install DESTDIR=$PKG
+# Don't ship .la files:
+rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
 
 # Strip binaries:
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \

@@ -1,0 +1,5 @@
+PKGNAM="vte"
+VERSION="0.58.1"
+HOMEPAGE="https://github.com/GNOME/vte"
+DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/vte-0.58.1.tar.xz"
+MD5SUM="ba78671a32c523fa43b3782f031c699a"
