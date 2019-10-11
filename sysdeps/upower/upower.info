@@ -1,5 +1,5 @@
 PKGNAM="upower"
-VERSION="0.99.7"
+VERSION="0.99.11"
 HOMEPAGE="http://upower.freedesktop.org/"
-DOWNLOAD="http://upower.freedesktop.org/releases/upower-0.99.7.tar.xz"
-MD5SUM="236bb439d9ff1151450b3d8582399532"
+DOWNLOAD="http://upower.freedesktop.org/releases/upower-0.99.11.tar.xz"
+MD5SUM="abe6acb617f11f2e8dbd9846fcf86e24"
