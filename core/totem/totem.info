@@ -1,5 +1,5 @@
 PKGNAM="totem"
-VERSION="3.26.2"
+VERSION="3.34.1"
 HOMEPAGE="https://www.gnome.org"
-DOWNLOAD="https://download.gnome.org/sources/totem/3.26/totem-3.26.2.tar.xz"
-MD5SUM="dd4ff77e696287532f1c88e42e9ce9fe"
+DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/totem-3.34.1.tar.xz"
+MD5SUM="7f8e99c8f59cf4e53f185cc6b0e7f017"
