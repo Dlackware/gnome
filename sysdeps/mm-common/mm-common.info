@@ -1,5 +1,5 @@
 PKGNAM="mm-common"
-VERSION="0.9.11"
+VERSION="0.9.12"
 HOMEPAGE="http://www.gtkmm.org/"
-DOWNLOAD="http://download.gnome.org/sources/mm-common/0.9/mm-common-0.9.11.tar.xz"
-MD5SUM="d6f2a43589480d2315672da0b5839b56"
+DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/mm-common-0.9.12.tar.xz"
+MD5SUM="be1c61587db989c7677375a729b94672"
