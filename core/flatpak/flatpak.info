@@ -1,5 +1,5 @@
 PKGNAM="flatpak"
-VERSION="1.0.2"
+VERSION="1.5.0"
 HOMEPAGE="http://flatpak.org/"
-DOWNLOAD="https://github.com/flatpak/flatpak/releases/download/1.0.2/flatpak-1.0.2.tar.xz"
-MD5SUM="0574c79017aa83037836db479bd60883"
+DOWNLOAD="https://github.com/flatpak/flatpak/releases/download/1.5.0/flatpak-1.5.0.tar.xz"
+MD5SUM="cb0c851e44c453c9a0f1229002e10cf0"
