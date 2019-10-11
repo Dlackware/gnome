@@ -1,5 +1,5 @@
 PKGNAM="gnome-menus"
 VERSION="3.32.0"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="http://download.gnome.org/sources/gnome-menus/3.32/gnome-menus-3.32.0.tar.xz"
+DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/gnome-menus-3.32.0.tar.xz"
 MD5SUM="4262208c13f266d9ada7d356aada9e1b"
