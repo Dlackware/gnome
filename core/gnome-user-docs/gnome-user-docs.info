@@ -1,5 +1,5 @@
 PKGNAM="gnome-user-docs"
-VERSION="3.32.0"
+VERSION="3.34.0"
 HOMEPAGE="https://wiki.gnome.org/DocumentationProject/Tasks/DesktopHelp"
-DOWNLOAD="http://download.gnome.org/sources/gnome-user-docs/3.32/gnome-user-docs-3.32.0.tar.xz"
-MD5SUM="d9b9c07ae93a08ff5e107b615229cf6c"
+DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/gnome-user-docs-3.34.0.tar.xz"
+MD5SUM="fc49cc3610b4dc6a4bd857d9394a013f"
