@@ -1,5 +1,5 @@
 PKGNAM="gnome-logs"
-VERSION="3.32.0"
+VERSION="3.34.0"
 HOMEPAGE="http://www.gnome.org"
-DOWNLOAD="http://download.gnome.org/sources/gnome-logs/3.32/gnome-logs-3.32.0.tar.xz"
-MD5SUM="53f58b8a4c4a78f2e83796b9a967bee4"
+DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/gnome-logs-3.34.0.tar.xz"
+MD5SUM="3a51b7d67cef66f27128e4aef4b917db"
