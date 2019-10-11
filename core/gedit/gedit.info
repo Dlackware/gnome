@@ -1,5 +1,5 @@
 PKGNAM="gedit"
-VERSION="3.32.0"
+VERSION="3.34.0"
 HOMEPAGE="https://wiki.gnome.org/Apps/Gedit"
-DOWNLOAD="https://download.gnome.org/sources/gedit/3.32/gedit-3.32.0.tar.xz"
-MD5SUM="c2c5ae4cf16f034113a0145101143ae0"
+DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/gedit-3.34.0.tar.xz"
+MD5SUM="ec6632fa73d9ea6c817e74a98d16eab6"
