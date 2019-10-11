@@ -1,5 +1,5 @@
 PKGNAM="rest"
 VERSION="0.8.1"
 HOMEPAGE="https://www.gtk.org/"
-DOWNLOAD="https://download.gnome.org/sources/rest/0.8/rest-0.8.1.tar.xz"
+DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/rest-0.8.1.tar.xz"
 MD5SUM="ece4547298a81105f307369d73c21b9d"
