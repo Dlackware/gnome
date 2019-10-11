@@ -68,26 +68,31 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-CFLAGS="$SLKCFLAGS" \
-CXXFLAGS="$SLKCFLAGS" \
-./configure \
+# Configure, build, and install:
+export CFLAGS="$SLKCFLAGS"
+export CXXFLAGS="$SLKCFLAGS"
+mkdir meson-build
+cd meson-build
+meson setup \
   --prefix=/usr \
-  --libdir=/usr/lib${LIBDIRSUFFIX} \
+  --libdir=lib${LIBDIRSUFFIX} \
+  --libexecdir=/usr/libexec \
+  --bindir=/usr/bin \
+  --sbindir=/usr/sbin \
+  --includedir=/usr/include \
+  --datadir=/usr/share \
+  --mandir=/usr/man \
   --sysconfdir=/etc \
   --localstatedir=/var \
-  --enable-miner-firefox=no \
-  --enable-miner-thunderbird=no \
-  --enable-miner-evolution=no \
-  --disable-nautilus-extension \
-  --disable-tracker-needle \
-  --disable-tracker-preferences \
-  --with-unicode-support=libicu \
-  --mandir=/usr/man \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --build=$ARCH-slackware-linux
+  --buildtype=release \
+  .. || exit 1
+  "${NINJA:=ninja}" $NUMJOBS || exit 1
+  DESTDIR=$PKG $NINJA install || exit 1
 
-make
-make install-strip DESTDIR=$PKG
+cd ..
+
+# Don't ship .la files:
+rm -f $PKG/usr/lib${LIBDIRSUFFIX}/*.la
 
 find $PKG/usr/man -type f -exec gzip -9 {} \;
 for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
