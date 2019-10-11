@@ -21,7 +21,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=ndctl
-VERSION=${VERSION:-62}
+VERSION=${VERSION:-66}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -54,7 +54,7 @@ fi
 
 set -e
 
-mv $CWD/v62.tar.gz $CWD/$PKGNAM-$VERSION.tar.gz
+mv $CWD/v${VERSION}.tar.gz $CWD/$PKGNAM-$VERSION.tar.gz
 
 rm -rf $TMP
 mkdir -p $TMP $PKG $OUTPUT
@@ -76,7 +76,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
+  --disable-docs \
   --build=$ARCH-slackware-linux
 
 make $NUMJOBS || make
