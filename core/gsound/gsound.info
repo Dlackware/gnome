@@ -1,5 +1,5 @@
 PKGNAM="gsound"
 VERSION="1.0.2"
 HOMEPAGE="https://wiki.gnome.org/Projects/GSound"
-DOWNLOAD="http://download.gnome.org/sources/gsound/1.0/gsound-1.0.2.tar.xz"
+DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/gsound-1.0.2.tar.xz"
 MD5SUM="c26fd21c21b9ef6533a202a73fab21db"
