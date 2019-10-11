@@ -125,15 +125,6 @@ if [ -r $PKG/etc/drirc ]; then
   mv $PKG/etc/drirc $PKG/etc/drirc.new
 fi
 
-
-# Install glesv2.pc:
-mkdir -p $PKG/usr/lib${LIBDIRSUFFIX}/pkgconfig
-cat $CWD/glesv2.pc > $PKG/usr/lib${LIBDIRSUFFIX}/pkgconfig/glesv2.pc
-if [ ! "${LIBDIRSUFFIX}" = "64" ]; then
-  sed -i "s/lib64/lib/g" $PKG/usr/lib${LIBDIRSUFFIX}/pkgconfig/glesv2.pc
-fi
-
-
 # Now build/install a small subset of the demos:
 export CWD SLKCFLAGS NUMJOBS PKG
 ( cd $TMP
