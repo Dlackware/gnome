@@ -1,5 +1,5 @@
 PKGNAM="gmime3"
-VERSION="3.2.3"
+VERSION="3.2.4"
 HOMEPAGE="https://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/sources/gmime/3.2/gmime-3.2.3.tar.xz"
-MD5SUM="69ae21a0b1df966a7d39a9431856ac81"
+DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/gmime-3.2.4.tar.xz"
+MD5SUM="b6b4e9fdc8f3336551d23872c83b539a"
