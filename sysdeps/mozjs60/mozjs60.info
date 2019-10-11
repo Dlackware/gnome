@@ -1,5 +1,5 @@
 PKGNAM="mozjs60"
-VERSION="60.1.0"
+VERSION="60.8.0"
 HOMEPAGE="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey"
-DOWNLOAD="http://ftp.gnome.org/pub/gnome/teams/releng/tarballs-needing-help/mozjs/mozjs-60.1.0.tar.bz2"
-MD5SUM="202f71313e53d9b92e7c578107541539"
+DOWNLOAD="http://ftp.gnome.org/pub/gnome/teams/releng/tarballs-needing-help/mozjs/mozjs-60.8.0.tar.bz2"
+MD5SUM="5eda38cc08a3594a3f2c3cc185d4f15b"
