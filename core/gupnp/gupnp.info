@@ -1,5 +1,5 @@
 PKGNAM="gupnp"
-VERSION="1.2.0"
+VERSION="1.2.1"
 HOMEPAGE="https://wiki.gnome.org/Projects/GUPnP"
-DOWNLOAD="http://download.gnome.org/sources/gupnp/1.2/gupnp-1.2.0.tar.xz"
-MD5SUM="5b3eb6cfb7c7d3b68c5a0991b8dde41f"
+DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/gupnp-1.2.1.tar.xz"
+MD5SUM="1d3959408739f4570b2bd3ebf939b283"
