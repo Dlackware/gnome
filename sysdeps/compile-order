@@ -5,17 +5,15 @@ gmime3
 glib2
 polkit
 gvfs
-gobject-introspection
+#gobject-introspection
 glib-networking
 libdaemon
 avahi
 mesa
-atk
-at-spi2-core
-at-spi2-atk
-pango
+#atk
+#at-spi2-core
+#at-spi2-atk
 gdk-pixbuf2
-adwaita-icon-theme
 gnome-themes-extra
 gtk+3
 gst-plugins-bad
@@ -29,11 +27,9 @@ libblockdev
 udisks2
 gnome-keyring
 graphviz
-vala
 gcab
 snowball
 appstream-glib
-gucharmap
 NetworkManager
 network-manager-applet
 xorg-server
@@ -59,9 +55,9 @@ glade
 gnome-autoar
 gnome-common
 gnome-js-common
-gnome-power-manager
 gnome-system-log
 gtkhtml
+enchant2
 gtkspell3
 hyphen
 ibus
@@ -90,8 +86,9 @@ systemd-service-files
 libsass
 sassc
 libdazzle
-enchant2
 polkit-gnome
+pipewire
+lua53
 
 # The following packages are in removal
 # webkitgtk1, pcre2, atkmm, gtkmm3, glibmm, libgsystem
