@@ -1,5 +1,5 @@
 PKGNAM="cheese"
-VERSION="3.32.0"
+VERSION="3.34.0"
 HOMEPAGE="https://wiki.gnome.org/Apps/Cheese"
-DOWNLOAD="http://download.gnome.org/sources/cheese/3.32/cheese-3.32.0.tar.xz"
-MD5SUM="74c7ce28ed2d8d8e353d54feb1eeb403"
+DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/cheese-3.34.0.tar.xz"
+MD5SUM="13f8326689df42b0aedda023705db803"
