@@ -28,7 +28,7 @@ VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
-NUMJOBS=${NUMJOBS:-"-j3"}
+NUMJOBS=${NUMJOBS:-" -j$(expr $(nproc) + 1) "}
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
@@ -80,22 +80,30 @@ sed -i 's/unsigned short/char16_t/'            \
 sed -i '/stdbool.h/ a#include <uchar.h>' \
        Source/JavaScriptCore/API/JSBase.h
 
+
 CFLAGS="$SLKCFLAGS -Wno-expansion-to-defined" \
 CXXFLAGS="$SLKCFLAGS -Wno-expansion-to-defined" \
+mkdir build
+cd build
+
 cmake -DCMAKE_BUILD_TYPE=Release  \
       -DCMAKE_INSTALL_PREFIX=/usr \
       -DCMAKE_SKIP_RPATH=ON       \
       -DPORT=GTK                  \
       -DUSE_WOFF2=OFF             \
       -DENABLE_GTKDOC=OFF         \
+      -DUSE_WPE_RENDERER=OFF      \
+      -DENABLE_MINIBROWSER=ON     \
+      -DENABLE_BUBBLEWRAP_SANDBOX=OFF \
       -DCMAKE_INSTALL_DOCDIR=/usr/share/doc \
       -DCMAKE_INSTALL_LIBDIR=lib64 \
-      -DPYTHON_EXECUTABLE=/usr/bin/python2 \
-      -GNinja \
-      .
+      -DPYTHON_EXECUTABLE=/usr/bin/python3 \
+      -Wno-dev -G Ninja \
+  .. || exit 1
+  "${NINJA:=ninja}" $NUMJOBS || exit 1
+  DESTDIR=$PKG $NINJA install || exit 1
 
-ninja $NUMJOBS
-DESTDIR=${PKG} ninja install
+cd ..
 
 find ${PKG}/usr/lib${LIBDIRSUFFIX} -name '*.la' -delete
 
