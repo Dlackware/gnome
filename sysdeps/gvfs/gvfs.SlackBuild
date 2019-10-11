@@ -71,33 +71,37 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-
-mkdir -pv build
-cd build
-
-meson --prefix=/usr \
-  --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --sysconfdir=/etc \
+# Configure, build, and install:
+export CFLAGS="$SLKCFLAGS"
+export CXXFLAGS="$SLKCFLAGS"
+mkdir meson-build
+cd meson-build
+meson setup \
+  --prefix=/usr \
+  --libdir=lib${LIBDIRSUFFIX} \
   --libexecdir=/usr/libexec \
-      -Dfuse=false      \
-      -Dgphoto2=false   \
-      -Dafc=false       \
-      -Dbluray=false    \
-      -Dnfs=false       \
-      -Dmtp=false       \
-      -Dsmb=false       \
-      -Ddnssd=false     \
-      -Dgoa=false       \
-      -Dgoogle=false    \
-      -Dman=true
+  --bindir=/usr/bin \
+  --sbindir=/usr/sbin \
+  --includedir=/usr/include \
+  --datadir=/usr/share \
+  --mandir=/usr/man \
+  --sysconfdir=/etc \
+  --localstatedir=/var \
+  --buildtype=release \
+  -Ddnssd=true \
+  -Dgoa=true \
+  -Dgoogle=true \
+  -Dlogind=true \
+  -Dman=true \
+  -Dnfs=false \
+  .. || exit 1
+  "${NINJA:=ninja}" $NUMJOBS || exit 1
+  DESTDIR=$PKG $NINJA install || exit 1
 
-ninja
-DESTDIR=$PKG ninja install || exit 1
+cd ..
 
-# Don't set AutoMount to true for network volumes.  Doing so leads to long
-# delays in Thunar.  Users may click the network button in Thunar to mount
-# them instead.
-sed -i -e "s/AutoMount=true/AutoMount=false/g" $PKG/usr/share/gvfs/mounts/network.mount
+# Don't ship .la files:
+rm -f $PKG/usr/lib${LIBDIRSUFFIX}/*.la
 
 find $PKG | xargs file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null
