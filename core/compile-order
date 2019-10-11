@@ -1,4 +1,7 @@
 ### [gnome-suites-core-deps] begin
+libseccomp
+libwnck3
+mousetweaks
 yelp-xsl
 yelp-tools
 geocode-glib
@@ -11,7 +14,6 @@ evolution-data-server
 cogl
 clutter
 clutter-gtk
-libseccomp
 gnome-desktop
 gsettings-desktop-schemas
 gnome-settings-daemon
@@ -29,24 +31,21 @@ gnome-bluetooth
 clutter-gst
 gnome-video-effects
 cheese
+gsound
 gnome-control-center
 gnome-menus
 gnome-session
-libwnck3
 gdm
-## caribou
 gjs
 zenity
 mutter
 gnome-shell
 cantarell-fonts
-mousetweaks
 gnome-backgrounds
 gnome-user-share
-vino
 gnome-user-docs
 baobab
-gupnp-igd
+#gupnp-igd
 folks
 libchamplain
 epiphany
@@ -61,7 +60,7 @@ gnome-contacts
 gnome-font-viewer
 gnome-screenshot
 gnome-system-monitor
-vte2_91
+vte
 gnome-terminal
 sushi
 grilo-plugins
@@ -71,15 +70,12 @@ gnome-disk-utility
 gnome-shell-extensions
 libzapojit
 gnome-online-miners
-# gtk-engines
 libgnomekbd
 file-roller
 gedit
-gsound
 gnome-clocks
 gnome-color-manager
 libgepub
-gnome-documents
 gnome-getting-started-docs
 gnome-logs
 gnome-photos
