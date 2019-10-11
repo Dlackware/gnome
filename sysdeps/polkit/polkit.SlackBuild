@@ -24,7 +24,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=polkit
-VERSION=${VERSION:-0.115}
+VERSION=${VERSION:-$(echo glib-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
