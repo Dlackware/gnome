@@ -30,9 +30,8 @@ BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 # Be sure this list is up-to-date:
-DRI_DRIVERS="i915,i965,nouveau,r200,radeon,swrast"
-GALLIUM_DRIVERS="nouveau,r300,r600,svga,radeonsi,swrast,virgl"
-EGL_PLATFORMS="wayland,drm,x11"
+DRI_DRIVERS="i915,i965,r100,r200,nouveau"
+GALLIUM_DRIVERS="nouveau,r300,r600,svga,radeonsi,swrast,virgl,iris"
 
 NUMJOBS=${NUMJOBS:--j7}
 
@@ -85,49 +84,58 @@ find . \
   \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
   -exec chmod 644 {} \;
 
-# Fix detection of libLLVM when built with CMake
-sed -i 's/LLVM_SO_NAME=.*/LLVM_SO_NAME=LLVM/' configure.ac
-
-# Seems to need this to avoid tripping over a different libtool version:
-autoreconf -fi
-
-CFLAGS="$SLKCFLAGS" \
-./configure \
+# Configure, build, and install:
+export CFLAGS="$SLKCFLAGS"
+export CXXFLAGS="$SLKCFLAGS"
+mkdir meson-build
+cd meson-build
+meson setup \
   --prefix=/usr \
-  --sysconfdir=/etc \
-  --libdir=/usr/lib${LIBDIRSUFFIX} \
+  --libdir=lib${LIBDIRSUFFIX} \
+  --libexecdir=/usr/libexec \
+  --bindir=/usr/bin \
+  --sbindir=/usr/sbin \
+  --includedir=/usr/include \
+  --datadir=/usr/share \
   --mandir=/usr/man \
-  --docdir=/usr/doc/mesa-$VERSION \
-  --with-dri-driverdir=/usr/lib${LIBDIRSUFFIX}/xorg/modules/dri \
-  --with-dri-drivers="$DRI_DRIVERS" \
-  --with-gallium-drivers="$GALLIUM_DRIVERS" \
-  --with-egl-platforms="$EGL_PLATFORMS" \
-  $VULKAN \
-  --enable-gallium-llvm \
-  --enable-llvm \
-  --enable-llvm-shared-libs \
-  --enable-egl \
-  --enable-texture-float \
-  --enable-shared-glapi \
-  --enable-xa \
-  --enable-nine \
-  --enable-osmesa \
-  --enable-dri \
-  --enable-dri3 \
-  --enable-gbm \
-  --enable-glx \
-  --enable-glx-tls \
-  --enable-gles1 \
-  --enable-gles2 \
-  --enable-vdpau \
-  --enable-opencl \
-  --enable-opencl-icd \
-  --build=$ARCH-slackware-linux || exit 1
+  --sysconfdir=/etc \
+  --localstatedir=/var \
+  --buildtype=release \
+  -Dplatforms=wayland,x11,drm,surfaceless \
+  -Dgallium-opencl=icd \
+  -Dgallium-nine=true \
+  -Dosmesa=gallium \
+  -Ddri-drivers=$DRI_DRIVERS \
+  -Dgallium-drivers=$GALLIUM_DRIVERS \
+  -Ddri-drivers-path=/usr/lib${LIBDIRSUFFIX}/xorg/modules/dri \
+  -Dglvnd=true \
+  -Dllvm=true \
+  -Dshared-llvm=true \
+  -Dshared-glapi=true \
+  -Degl=true \
+  -Dgles1=true \
+  -Dgles2=true \
+  .. || exit 1
+  "${NINJA:=ninja}" $NUMJOBS || exit 1
+  DESTDIR=$PKG $NINJA install || exit 1
+cd ..
 
-make $NUMJOBS || make || exit 1
-make install DESTDIR=$PKG || exit 1
+# Install /etc/drirc as a .new file:
+if [ -r $PKG/etc/drirc ]; then
+  mv $PKG/etc/drirc $PKG/etc/drirc.new
+fi
 
-# Now install the demos
+
+# Install glesv2.pc:
+mkdir -p $PKG/usr/lib${LIBDIRSUFFIX}/pkgconfig
+cat $CWD/glesv2.pc > $PKG/usr/lib${LIBDIRSUFFIX}/pkgconfig/glesv2.pc
+if [ ! "${LIBDIRSUFFIX}" = "64" ]; then
+  sed -i "s/lib64/lib/g" $PKG/usr/lib${LIBDIRSUFFIX}/pkgconfig/glesv2.pc
+fi
+
+
+# Now build/install a small subset of the demos:
+export CWD SLKCFLAGS NUMJOBS PKG
 ( cd $TMP
   rm -rf mesa-demos-$DEMOVERS
   tar xvf $CWD/mesa-demos-$DEMOVERS.tar.?z* || exit 1
@@ -135,25 +143,28 @@ make install DESTDIR=$PKG || exit 1
   chown -R root:root .
   find . \
     \( -perm 777 -o -perm 775 -o -perm 711 -o -perm 555 -o -perm 511 \) \
-    -exec chmod 755 {} \; -o \
+    -exec chmod 755 {} \+ -o \
     \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
-    -exec chmod 644 {} \;
+    -exec chmod 644 {} \+
   CFLAGS="$SLKCFLAGS" \
   ./configure \
     --prefix=/usr \
-    --build=$ARCH-slackware-linux
-  # Build and install gears and glinfo, as well as a few other demos
-  make -C src/demos gears glinfo
-  make -C src/xdemos \
-    glthreads glxcontexts glxdemo glxgears glxgears_fbconfig \
-    glxheads glxinfo glxpbdemo glxpixmap
+    --build=$ARCH-slackware-linux || exit 1
+  make $NUMJOBS || exit 1
+  # Install all the demos (including the pointless ones) at first, in a
+  # temporary location:
+  make install DESTDIR=$PKG/cruft || exit 1
+  # Install gears and glinfo, as well as a few other demos:
   mkdir -p $PKG/usr/bin
-  cp -a src/demos/{gears,glinfo} $PKG/usr/bin
-  for i in glthreads glxcontexts glxdemo glxgears glxgears_fbconfig \
-      glxheads glxinfo glxpbdemo glxpixmap ; do
-        cp -a src/xdemos/$i $PKG/usr/bin ;
+  for demo in gears glinfo glthreads glxcontexts glxdemo glxgears \
+    glxgears_fbconfig glxheads glxinfo glxpbdemo glxpixmap ; do
+    mv --verbose $PKG/cruft/usr/bin/$demo $PKG/usr/bin
   done
-)
+  # Remove cruft:
+  rm -rf $PKG/cruft
+) || exit 1
+
+
 
 # Strip binaries:
 find $PKG | xargs file | grep -e "executable" -e "shared object" | grep ELF \
