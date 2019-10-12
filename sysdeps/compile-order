@@ -4,11 +4,11 @@ mozjs60
 gmime3
 glib2
 polkit
+libdaemon
+avahi
 gvfs
 #gobject-introspection
 glib-networking
-libdaemon
-avahi
 mesa
 #atk
 #at-spi2-core
