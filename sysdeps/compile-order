@@ -42,7 +42,7 @@ GeoIP
 accountsservice
 autoconf-archive
 brasero
-check
+# check - supplied by vanilla slack
 libgusb
 colord
 colord-gtk
