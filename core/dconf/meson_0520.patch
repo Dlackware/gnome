@@ -1,0 +1,11 @@
+--- a/client/meson.build	2019-12-22 17:45:13.511377734 +0100
++++ b/client/meson.build	2019-12-22 17:44:20.310378822 +0100
+@@ -28,7 +28,7 @@
+ 
+ libdconf_client_dep = declare_dependency(
+   dependencies: gio_dep,
+-  link_whole: libdconf_client,
++  link_with: libdconf_client,
+ )
+ 
+ libdconf = shared_library(
