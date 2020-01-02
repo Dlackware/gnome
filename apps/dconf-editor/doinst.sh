@@ -3,7 +3,7 @@ chroot . /bin/killall /usr/libexec/dconf-service &> /dev/null
 chroot . /sbin/ldconfig 2> /dev/null
 
 if [ -x /usr/bin/gio-querymodules ] ; then
-  chroot . /usr/bin/gio-querymodules /usr/lib64/gio/modules &> /dev/null
+  chroot . /usr/bin/gio-querymodules @LIBDIR@/gio/modules &> /dev/null
 fi
 
 if [ -x /usr/bin/glib-compile-schemas ] ;then
