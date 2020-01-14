@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+    |-----handy-ruler------------------------------------------------------|
+amtk: Amtk (Actions, Menus and Toolbars Kit for GTK applications)
+amtk:
+amtk: Amtk is the acronym for "Actions, Menus and Toolbar Kit". It is a
+amtk: basic GtkUIManager replacement based on GAction. It is suitable for
+amtk: both a traditional UI or a modern UI with a GtkHeaderBar.
+amtk:
+amtk: Homepage: https://wiki.gnome.org/Projects/Amtk
+amtk:
+amtk:
+amtk:
+amtk:

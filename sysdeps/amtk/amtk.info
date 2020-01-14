@@ -1,0 +1,5 @@
+PKGNAM="amtk"
+VERSION="5.0.1"
+HOMEPAGE="https://wiki.gnome.org/Projects/Amtk"
+DOWNLOAD="https://download.gnome.org/sources/amtk/5.0/amtk-5.0.1.tar.xz"
+MD5SUM="f2cb361b03d4553d3463481c96211f76"

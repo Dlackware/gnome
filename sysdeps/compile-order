@@ -89,8 +89,4 @@ libdazzle
 polkit-gnome
 pipewire
 lua53
-
-# The following packages are in removal
-# webkitgtk1, pcre2, atkmm, gtkmm3, glibmm, libgsystem
-# gegl3, gexiv2, pangomm, cairomm, cairo, libsigc++
-# json-glib
+amtk
