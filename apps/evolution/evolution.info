@@ -1,5 +1,5 @@
 PKGNAM="evolution"
-VERSION="3.32.0"
+VERSION="3.34.3"
 HOMEPAGE="https://wiki.gnome.org/Apps/Evolution/"
-DOWNLOAD="https://download.gnome.org/sources/evolution/3.32/evolution-3.32.0.tar.xz"
-MD5SUM="29cedf9d73adbc67790321b6e96dab09"
+DOWNLOAD="https://download.gnome.org/sources/evolution/3.34/evolution-3.34.3.tar.xz"
+MD5SUM="b28496798c62f467162222af7396a016"
