@@ -1,0 +1,5 @@
+PKGNAM="sysprof"
+VERSION="3.34.1"
+HOMEPAGE="http://www.sysprof.com"
+DOWNLOAD="https://download.gnome.org/sources/sysprof/3.34/sysprof-3.34.1.tar.xz"
+MD5SUM="cc32455277b31afb1965d627ae3e3629"
