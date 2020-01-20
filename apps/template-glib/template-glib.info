@@ -1,0 +1,5 @@
+PKGNAM="template-glib"
+VERSION="3.34.0"
+HOMEPAGE="https://www.gnome.org/Apps/Builder"
+DOWNLOAD="https://download.gnome.org/sources/template-glib/3.34/template-glib-3.34.0.tar.xz"
+MD5SUM="78a64d7c6324ed2dec0b8088428d6774"
