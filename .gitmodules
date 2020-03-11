@@ -1,7 +1,3 @@
-[submodule "pam"]
-	path = pam
-	url = https://github.com/Dlackware/pam.git
-	branch = master
 [submodule "systemd"]
 	path = systemd
 	url = https://github.com/Dlackware/systemd.git
