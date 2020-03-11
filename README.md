@@ -36,7 +36,7 @@ To get this release use `3.22/14.2` branch.
 
 ### Current work
 
-`master` is now updated for Gnome 3.24 on Slackware Current.
+`master` is now updated for Gnome 3.36 on Slackware Current.
 
 ## Install
 
