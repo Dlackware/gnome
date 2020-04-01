@@ -1,5 +1,0 @@
-PKGNAM="check"
-VERSION="0.12.0"
-HOMEPAGE="https://libcheck.github.io/check/"
-DOWNLOAD="https://github.com/libcheck/check/releases/download/0.12.0/check-0.12.0.tar.gz"
-MD5SUM="31b17c6075820a434119592941186f70"
