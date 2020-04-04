@@ -1,5 +1,5 @@
 PKGNAM="gjs"
-VERSION="1.58.1"
+VERSION="1.64.1"
 HOMEPAGE="https://wiki.gnome.org/action/show/Projects/Gjs"
-DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/gjs-1.58.1.tar.xz"
-MD5SUM="49ae54cccbf212e2f80fa1726d5f974c"
+DOWNLOAD="https://download.gnome.org/core/3.36/3.36.1/sources/gjs-1.64.1.tar.xz"
+MD5SUM="8c026b8b683aa1c1d369053de5b752c5"
