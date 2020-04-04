@@ -1,5 +1,5 @@
 PKGNAM="grilo-plugins"
-VERSION="0.3.10"
+VERSION="0.3.11"
 HOMEPAGE="https://wiki.gnome.org/Projects/Grilo"
-DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/grilo-plugins-0.3.10.tar.xz"
-MD5SUM="ec0aa441155fae6bc4939492731b8ff4"
+DOWNLOAD="https://download.gnome.org/core/3.36/3.36.1/sources/grilo-plugins-0.3.11.tar.xz"
+MD5SUM="3218222bff472648aa6663d018ee8cb7"
