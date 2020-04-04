@@ -1,5 +1,5 @@
 PKGNAM="totem-pl-parser"
-VERSION="3.26.3"
+VERSION="3.26.5"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/totem-pl-parser-3.26.3.tar.xz"
-MD5SUM="62be99aeb12273ae95d21f35097c2a41"
+DOWNLOAD="https://download.gnome.org/core/3.36/3.36.1/sources/totem-pl-parser-3.26.5.tar.xz"
+MD5SUM="0798a286af7e98c664d48e2974b77e5a"
