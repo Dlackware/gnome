@@ -1,5 +1,5 @@
 PKGNAM="gnome-settings-daemon"
-VERSION="3.34.0"
+VERSION="3.36.0"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/gnome-settings-daemon-3.34.0.tar.xz"
-MD5SUM="528b0b7cc2dd22c6026a9c8739c71fa7"
+DOWNLOAD="https://download.gnome.org/core/3.36/3.36.1/sources/gnome-settings-daemon-3.36.0.tar.xz"
+MD5SUM="e28f11174ca0bafc56fb7a766591d786"
