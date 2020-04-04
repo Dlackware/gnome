@@ -1,5 +1,5 @@
 PKGNAM="evolution-data-server"
-VERSION="3.36.0"
+VERSION="3.36.1"
 HOMEPAGE="https://wiki.gnome.org/Apps/Evolution/"
-DOWNLOAD="https://download.gnome.org/core/3.36/3.36.0/sources/evolution-data-server-3.36.0.tar.xz"
-MD5SUM="784c00edcfb26cf3468e293c649bf4fa"
+DOWNLOAD="https://download.gnome.org/core/3.36/3.36.1/sources/evolution-data-server-3.36.1.tar.xz"
+MD5SUM="3807d90f2f0d1f664d41e90bf366e8f2"
