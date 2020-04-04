@@ -1,5 +1,5 @@
 PKGNAM="gnome-characters"
-VERSION="3.32.1"
+VERSION="3.34.0"
 HOMEPAGE="https://wiki.gnome.org/Core/Characters"
-DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/gnome-characters-3.32.1.tar.xz"
-MD5SUM="402cb7ff71f4b9181a7ddb7c2862efe5"
+DOWNLOAD="https://download.gnome.org/core/3.36/3.36.1/sources/gnome-characters-3.34.0.tar.xz"
+MD5SUM="3c08f3229a9cefb84e02b3c625a31dd2"
