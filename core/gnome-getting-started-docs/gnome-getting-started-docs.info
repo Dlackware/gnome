@@ -1,5 +1,5 @@
 PKGNAM="gnome-getting-started-docs"
-VERSION="3.34.0"
+VERSION="3.36.1"
 HOMEPAGE="http://www.gnome.org"
-DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/gnome-getting-started-docs-3.34.0.tar.xz"
-MD5SUM="304f3518de5062e4f97193f5555f3aeb"
+DOWNLOAD="https://download.gnome.org/core/3.36/3.36.1/sources/gnome-getting-started-docs-3.36.1.tar.xz"
+MD5SUM="f7342b4a32ad796f58354bb0c10c0426"
