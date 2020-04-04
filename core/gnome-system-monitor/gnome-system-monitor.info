@@ -1,5 +1,5 @@
 PKGNAM="gnome-system-monitor"
-VERSION="3.32.1"
+VERSION="3.36.0"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/gnome-system-monitor-3.32.1.tar.xz"
-MD5SUM="37356a1b8c20939adc6f47f739d2e49a"
+DOWNLOAD="https://download.gnome.org/core/3.36/3.36.1/sources/gnome-system-monitor-3.36.0.tar.xz"
+MD5SUM="99f0d46ff2bc45ec407d383c93213acb"
