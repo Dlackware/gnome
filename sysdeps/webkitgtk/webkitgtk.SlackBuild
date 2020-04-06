@@ -3,7 +3,7 @@
 # Slackware build script for WebKitGTK+3
 #
 # Copyright 2014, 2015  Bart van der Hall, Almere, NL
-# Copyright 2016 Eugene Wissner Dachau, Germany
+# Copyright 2016-2020  Eugene Wissner Dachau, Germany
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -25,7 +25,7 @@
 
 PKGNAM=webkitgtk
 VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
-BUILD=${BUILD:-2}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 NUMJOBS=${NUMJOBS:--j3}
@@ -79,9 +79,6 @@ sed -i 's/unsigned short/char16_t/'            \
 
 sed -i '/stdbool.h/ a#include <uchar.h>' \
        Source/JavaScriptCore/API/JSBase.h
-
-#Fix build with Icu65.1
-patch -p1 -E --backup --verbose -i ${CWD}/icu65_1.patch
 
 CFLAGS="$SLKCFLAGS -Wno-expansion-to-defined" \
 CXXFLAGS="$SLKCFLAGS -Wno-expansion-to-defined" \
