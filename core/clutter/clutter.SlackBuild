@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright 2014, 2015  Bart van der Hall, Almere, NL
+# Copyright 2014-2020  Bart van der Hall, Almere, NL
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -22,7 +22,7 @@
 
 PKGNAM=clutter
 VERSION=${VERSION:-$(echo ${PKGNAM}-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:
@@ -77,10 +77,10 @@ find -L . \
 #  -Dintrospection=yes \
 #  -Dwayland-compositor=yes \
 #  -Dbackends=all \
-#  -Ddrivers=all || exit 1
+#  -Ddrivers=all
 #
 #ninja
-#DESTDIR=$PKG ninja install || exit 1
+#DESTDIR=$PKG ninja install
 #
 #cd ..
 
@@ -97,12 +97,12 @@ find -L . \
     --enable-evdev-input \
     --enable-wayland-compositor \
     --mandir=/usr/man \
+    --enable-gtk-doc \
     --docdir=/usr/doc/$PKGNAM-$VERSION \
-    --build=$ARCH-slackware-linux \
-    --enable-gtk-doc || exit 1
+    --build=$ARCH-slackware-linux
 
-make || exit 1
-make install DESTDIR=$PKG || exit 1
+make
+make install DESTDIR=$PKG
 
 
 # Compress and link manpages, if any:
@@ -122,7 +122,7 @@ fi
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a \
-  COPYING NEWS README \
+  COPYING NEWS README.md \
   $PKG/usr/doc/$PKGNAM-$VERSION
 
 mkdir -p $PKG/install
