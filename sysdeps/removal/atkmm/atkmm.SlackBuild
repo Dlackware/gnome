@@ -24,7 +24,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=atkmm
-VERSION=${VERSION:-2.24.2}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 LIBVERSION=${LIBVERSION:-1.6}
 BUILD=${BUILD:-3}
 TAG=${TAG:-_dlack}

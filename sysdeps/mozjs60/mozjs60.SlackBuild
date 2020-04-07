@@ -23,7 +23,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=mozjs60
-VERSION=${VERSION:-60.8.0}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 SRCNAM=mozjs-${VERSION}
 DIRNAM=mozjs-${VERSION}
 BUILD=${BUILD:-1}

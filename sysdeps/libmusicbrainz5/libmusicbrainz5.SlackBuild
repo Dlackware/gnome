@@ -22,7 +22,7 @@
 
 PKGNAM=libmusicbrainz5
 SRCNAM=libmusicbrainz
-VERSION=${VERSION:-5.1.0}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 

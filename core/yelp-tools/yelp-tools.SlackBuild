@@ -25,7 +25,7 @@
 
 
 PKGNAM=yelp-tools
-VERSION=${VERSION:-3.28.0}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 

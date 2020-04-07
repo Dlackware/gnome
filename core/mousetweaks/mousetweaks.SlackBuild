@@ -24,7 +24,7 @@
 # -----------------------------------------------------------------------------
 
 PKGNAM=mousetweaks
-VERSION=${VERSION:-3.12.0}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-3}
 TAG=${TAG:-_dlack}
 
