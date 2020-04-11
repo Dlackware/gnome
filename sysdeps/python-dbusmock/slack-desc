@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.
+# Line up the first '|' above the ':' following the base package name, and
+# the '|' on the right side marks the last column you can put a character in.
+# You must make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':' except on otherwise blank lines.
+
+               |-----handy-ruler------------------------------------------------------|
+python-dbusmock: dbusmock (mock D-Bus objects for tests)
+python-dbusmock:
+python-dbusmock: With this program/Python library you can easily create mock objects
+python-dbusmock: on D-Bus. This is useful for writing tests for software which talks
+python-dbusmock: to D-Bus services such as upower, systemd, logind, gnome-session or
+python-dbusmock: others, and it is hard (or impossible without root privileges) to
+python-dbusmock: set the state of the real services to what you expect in your tests.
+python-dbusmock:
+python-dbusmock:
+python-dbusmock:
+python-dbusmock:

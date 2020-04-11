@@ -1,0 +1,5 @@
+PKGNAM="python-dbusmock"
+VERSION="0.19"
+HOMEPAGE="https://github.com/martinpitt/python-dbusmock"
+DOWNLOAD="https://files.pythonhosted.org/packages/e7/98/091ea52b18dd55b9e4d882360125031d1286fdbf0d9922fd624fa8f78d4c/python-dbusmock-0.19.tar.gz"
+MD5SUM="565aaae672e065c9c17e7fafd1843701"
