@@ -71,22 +71,23 @@ find -L . \
 
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
-  meson \
-    --libdir lib$LIBDIRSUFFIX \
-    --prefix /usr \
-    --buildtype=plain \
-    build
-
-DESTDIR="$PKG" ninja -C build install
+meson \
+  --wrap-mode=nodownload \
+  --libdir lib$LIBDIRSUFFIX \
+  --prefix /usr \
+  --buildtype=release \
+  -Djack=false \
+  -Dpipewire-jack=false \
+  meson-build
+DESTDIR="$PKG" ninja -C meson-build install
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a \
-  README NEWS PROTOCOL LICENSE GPL LGPL \
+  README.md NEWS PROTOCOL LICENSE \
   $PKG/usr/doc/$PKGNAM-$VERSION
-cat $CWD/README >  $PKG/usr/doc/$PKGNAM-$VERSION/README.SBo
 cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
 
 mkdir -p $PKG/install
