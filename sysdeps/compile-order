@@ -10,9 +10,6 @@ gvfs
 #gobject-introspection
 glib-networking
 mesa
-#atk
-#at-spi2-core
-#at-spi2-atk
 gdk-pixbuf2
 gnome-themes-extra
 gtk+3
