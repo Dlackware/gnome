@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Copyright 2013, 2014, 2015  Bart van der Hall, Almere, NL
+# Copyright 2020  Eugene Wissner, Dachau, Germany
 # All rights reserved.
 #
 #   Permission to use, copy, modify, and distribute this software for
@@ -24,7 +25,7 @@
 
 PKGNAM=gdm
 VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 if [ -z "$ARCH" ]; then
@@ -34,8 +35,6 @@ if [ -z "$ARCH" ]; then
        *) ARCH=$( uname -m ) ;;
   esac
 fi
-
-NUMJOBS=${NUMJOBS:--j7}
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
@@ -96,10 +95,13 @@ CXXFLAGS="${SLKCFLAGS}" \
   --enable-introspection=yes \
   --with-user=gdm \
   --with-group=gdm \
-  --build=$ARCH-slackware-linux || exit 1
+  --with-pam-mod-dir=/lib${LIBDIRSUFFIX}/security \
+  --build=$ARCH-slackware-linux
 
-make $NUMJOBS || make || exit 1
-make install DESTDIR=$PKG || exit 1
+make
+make install DESTDIR=$PKG
+
+rm $PKG/lib${LIBDIRSUFFIX}/security/pam_gdm.la
 
 # Install the xinitrc.gnome file that starts GNOME *correctly*
 mkdir -p $PKG/etc/X11/xinit
@@ -135,30 +137,9 @@ install -m 644 $CWD/gnome-shell-theme.gresource $PKG/usr/share/gnome-shell/gnome
 # Add a documentation directory:
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a \
-  NEWS \
+  README.md NEWS AUTHORS \
   $PKG/usr/doc/$PKGNAM-$VERSION
 cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
-
-# Compress and link manpages, if any:
-if [ -d ${PKG}/usr/share/man ]; then
-  mv ${PKG}/usr/share/man ${PKG}/usr/man
-  rmdir ${PKG}/usr/share
-fi
-if [ -d ${PKG}/usr/man ]; then
-  ( cd ${PKG}/usr/man
-    for manpagedir in $(find . -type d -name "man*") ; do
-      ( cd ${manpagedir}
-        for eachpage in $( find . -type l -maxdepth 1) ; do
-          ln -s $( readlink ${eachpage} ).gz ${eachpage}.gz
-          rm -f ${eachpage}
-        done
-        gzip -9 *.?
-        # Prevent errors
-        rm -f *.gz.gz
-      )
-    done
-  )
-fi
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
