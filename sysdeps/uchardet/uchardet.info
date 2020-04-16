@@ -1,0 +1,5 @@
+PKGNAM="uchardet"
+VERSION="0.0.6"
+HOMEPAGE="https://www.freedesktop.org/wiki/Software/uchardet/"
+DOWNLOAD="https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.6.tar.xz"
+MD5SUM="03425c0bbe5faaf399e15e947d3e03c7"
