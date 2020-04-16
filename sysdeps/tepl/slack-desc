@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.
+# Line up the first '|' above the ':' following the base package name, and
+# the '|' on the right side marks the last column you can put a character in.
+# You must make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':' except on otherwise blank lines.
+
+    |-----handy-ruler------------------------------------------------------|
+tepl: tepl (text editor product line)
+tepl:
+tepl: Tepl is a library that eases the development of GtkSourceView-based
+tepl: text editors and IDEs.
+tepl:
+tepl: Tepl was previously named Gtef (GTK+ text editor framework). The
+tepl: project has been renamed in June 2017 to have a more beautiful name.
+tepl: The end of Tepl is pronounced like in “apple”.
+tepl:
+tepl: Homepage: https://wiki.gnome.org/Projects/Tepl
+tepl:
