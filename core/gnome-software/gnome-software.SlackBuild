@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright 2017 Eugene Wissner, Dachau, Germany
+# Copyright 2017-2020  Eugene Wissner, Dachau, Germany
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -22,7 +22,7 @@
 
 PKGNAM=gnome-software
 VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:
@@ -70,33 +70,21 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-
-mkdir -pv build
-cd build
-
-meson --prefix=/usr \
+meson setup \
+  --wrap-mode=nodownload \
+  --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
-  -Dfwupd=false || exit 1
-
-ninja
-DESTDIR=$PKG ninja install || exit 1
-
-cd ..
-
+  -Dfwupd=false \
+  -Dmalcontent=false \
+  -Dtests=false \
+  meson-build
+DESTDIR=$PKG ninja -C meson-build install
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a \
-  COPYING NEWS \
+  COPYING NEWS README.md \
   $PKG/usr/doc/$PKGNAM-$VERSION
-
-# If there's a ChangeLog, installing at least part of the recent history
-# is useful, but don't let it get totally out of control:
-if [ -r ChangeLog ]; then
-  DOCSDIR=$(echo $PKG/usr/doc/${PKGNAM}-$VERSION)
-  cat ChangeLog | head -n 1000 > $DOCSDIR/ChangeLog
-  touch -r ChangeLog $DOCSDIR/ChangeLog
-fi
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
