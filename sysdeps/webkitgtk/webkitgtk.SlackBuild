@@ -3,7 +3,7 @@
 # Slackware build script for WebKitGTK+3
 #
 # Copyright 2014, 2015  Bart van der Hall, Almere, NL
-# Copyright 2016-2020  Eugene Wissner Dachau, Germany
+# Copyright 2020  Eugene Wissner Dachau, Germany
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -59,7 +59,7 @@ else
   LIBDIRSUFFIX=""
 fi
 
-set -eu
+set -e # Exit on most errors
 
 rm -rf $TMP
 mkdir -p $TMP $PKG $OUTPUT
@@ -74,33 +74,30 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-sed -i 's/unsigned short/char16_t/'            \
-       Source/JavaScriptCore/API/JSStringRef.h
+sed -i 's/unsigned short/char16_t/' Source/JavaScriptCore/API/JSStringRef.h
+sed -i '/stdbool.h/ a#include <uchar.h>' Source/JavaScriptCore/API/JSBase.h
 
-sed -i '/stdbool.h/ a#include <uchar.h>' \
-       Source/JavaScriptCore/API/JSBase.h
-
-CFLAGS="$SLKCFLAGS -Wno-expansion-to-defined" \
-CXXFLAGS="$SLKCFLAGS -Wno-expansion-to-defined" \
 mkdir build
 cd build
 
+CFLAGS="$SLKCFLAGS -Wno-expansion-to-defined" \
+CXXFLAGS="$SLKCFLAGS -Wno-expansion-to-defined" \
 cmake -DCMAKE_BUILD_TYPE=Release  \
-      -DCMAKE_INSTALL_PREFIX=/usr \
-      -DCMAKE_SKIP_RPATH=ON       \
-      -DPORT=GTK                  \
-      -DUSE_WOFF2=OFF             \
-      -DENABLE_GTKDOC=OFF         \
-      -DUSE_WPE_RENDERER=OFF      \
-      -DENABLE_MINIBROWSER=ON     \
-      -DENABLE_BUBBLEWRAP_SANDBOX=OFF \
-      -DCMAKE_INSTALL_DOCDIR=/usr/share/doc \
-      -DCMAKE_INSTALL_LIBDIR=lib64 \
-      -DPYTHON_EXECUTABLE=/usr/bin/python3 \
-      -Wno-dev -G Ninja \
-  .. || exit 1
-  "${NINJA:=ninja}" $NUMJOBS || exit 1
-  DESTDIR=$PKG $NINJA install || exit 1
+  -DCMAKE_INSTALL_PREFIX=/usr \
+  -DCMAKE_SKIP_RPATH=ON \
+  -DPORT=GTK \
+  -DUSE_WOFF2=OFF \
+  -DENABLE_GTKDOC=OFF \
+  -DUSE_WPE_RENDERER=OFF \
+  -DENABLE_MINIBROWSER=ON \
+  -DENABLE_BUBBLEWRAP_SANDBOX=OFF \
+  -DCMAKE_INSTALL_DOCDIR=/usr/doc/$PKGNAM-$VERSION \
+  -DCMAKE_INSTALL_LIBDIR=lib64 \
+  -DPYTHON_EXECUTABLE=/usr/bin/python3 \
+  -Wno-dev \
+  -G Ninja \
+  ..
+DESTDIR=$PKG ninja install
 
 cd ..
 
@@ -109,26 +106,11 @@ find ${PKG}/usr/lib${LIBDIRSUFFIX} -name '*.la' -delete
 find ${PKG} | xargs file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null
 
-# Compress and link manpages, if any:
-if [ -d ${PKG}/usr/share/man ]; then
-  mv ${PKG}/usr/share/man ${PKG}/usr/man
-  rmdir -p ${PKG}/usr/share
-fi
-if [ -d ${PKG}/usr/man ]; then
-  ( cd ${PKG}/usr/man
-    for manpagedir in $(find . -type d -name "man*") ; do
-      ( cd ${manpagedir}
-        for eachpage in $( find . -type l -maxdepth 1) ; do
-          ln -s $( readlink ${eachpage} ).gz ${eachpage}.gz
-          rm -f ${eachpage}
-        done
-        gzip -9 *.?
-        # Prevent errors
-        rm -f *.gz.gz
-      )
-    done
-  )
-fi
+mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
+cp -a \
+  NEWS \
+  $PKG/usr/doc/$PKGNAM-$VERSION
+cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
 
 mkdir -p ${PKG}/install
 cat ${CWD}/slack-desc > ${PKG}/install/slack-desc
