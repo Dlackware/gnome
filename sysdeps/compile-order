@@ -6,7 +6,6 @@ polkit
 libdaemon
 avahi
 gvfs
-#gobject-introspection
 gst-plugins-bad
 gst-plugins-ugly
 shared-mime-info

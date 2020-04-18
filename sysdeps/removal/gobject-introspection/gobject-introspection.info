@@ -1,5 +1,0 @@
-PKGNAM="gobject-introspection"
-VERSION="1.58.0"
-HOMEPAGE="https://wiki.gnome.org/action/show/Projects/GObjectIntrospection"
-DOWNLOAD="http://ftp.gnome.org/mirror/gnome.org/sources/gobject-introspection/1.58/gobject-introspection-1.58.0.tar.xz"
-MD5SUM="94fec875276262037bfcd51226db12fe"
