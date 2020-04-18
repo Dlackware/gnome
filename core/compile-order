@@ -15,7 +15,6 @@ cogl
 clutter
 clutter-gtk
 gnome-desktop
-gsettings-desktop-schemas
 gnome-settings-daemon
 libgtop
 totem-pl-parser
