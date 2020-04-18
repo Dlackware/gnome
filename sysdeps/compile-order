@@ -8,7 +8,6 @@ avahi
 gvfs
 #gobject-introspection
 glib-networking
-gdk-pixbuf2
 gst-plugins-bad
 gst-plugins-ugly
 shared-mime-info
