@@ -7,7 +7,6 @@ libdaemon
 avahi
 gvfs
 #gobject-introspection
-glib-networking
 gst-plugins-bad
 gst-plugins-ugly
 shared-mime-info
