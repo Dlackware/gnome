@@ -71,7 +71,6 @@ systemd-service-files
 libsass
 sassc
 libdazzle
-polkit-gnome
 pipewire
 lua53
 amtk
