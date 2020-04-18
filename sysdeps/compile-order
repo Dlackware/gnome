@@ -9,7 +9,6 @@ avahi
 gvfs
 #gobject-introspection
 glib-networking
-mesa
 gdk-pixbuf2
 gnome-themes-extra
 gtk+3
