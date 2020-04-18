@@ -11,7 +11,6 @@ gvfs
 glib-networking
 gdk-pixbuf2
 gnome-themes-extra
-gtk+3
 gst-plugins-bad
 gst-plugins-ugly
 shared-mime-info
