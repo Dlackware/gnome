@@ -29,7 +29,6 @@ snowball
 appstream-glib
 NetworkManager
 network-manager-applet
-xorg-server
 xorg-server-xwayland
 mm-common
 wpa_supplicant
