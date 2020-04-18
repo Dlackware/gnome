@@ -16,7 +16,6 @@ libbytesize
 ndctl
 libblockdev
 udisks2
-gnome-keyring
 graphviz
 gcab
 snowball
