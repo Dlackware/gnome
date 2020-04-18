@@ -21,7 +21,6 @@ gcab
 snowball
 appstream-glib
 NetworkManager
-network-manager-applet
 mm-common
 wpa_supplicant
 pyatspi
