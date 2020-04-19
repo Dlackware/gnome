@@ -58,7 +58,6 @@ libquvi-scripts
 libquvi
 libxml++
 plymouth
-quvi
 rdflib
 telepathy-glib
 telepathy-logger
