@@ -1,10 +1,15 @@
-# Figure out our root directory
-ROOTDIR=$(pwd)
-unset CHROOT
-if test "${ROOTDIR}" != "/"; then
-  CHROOT="chroot ${ROOTDIR} "
-  ROOTDIR="${ROOTDIR}/"
-fi
+config() {
+  NEW="$1"
+  OLD="$(dirname $NEW)/$(basename $NEW .new)"
+  # If there's no config file by that name, mv it over:
+  if [ ! -r $OLD ]; then
+    mv $NEW $OLD
+  elif [ "$(cat $OLD | md5sum)" = "$(cat $NEW | md5sum)" ]; then
+    # toss the redundant copy
+    rm $NEW
+  fi
+  # Otherwise, we leave the .new copy for the admin to consider...
+}
 
 function free_user_id {
   # Find a free user-ID >= 100 (should be < 1000 so it's not a normal user)
@@ -25,8 +30,8 @@ function free_group_id {
 }
 
 # Set up groups.
-if ! grep --quiet '^gdm:' etc/group ;then
-    ${CHROOT} /usr/sbin/groupadd \
+if ! grep --quiet '^gdm:' etc/group; then
+  chroot . /usr/sbin/groupadd \
     -g $(free_group_id) \
     gdm 2> /dev/null
 fi
@@ -45,16 +50,16 @@ then
   else
     echo -ne "Changing unprivileged user \e[1m${OLD_USER}\e[0m to" 1>&2
   fi
-      ${CHROOT} /usr/sbin/usermod \
-      -d '/var/lib/gdm' \
-      -u ${USER_ID} \
-      -s /bin/false \
-      -g gdm \
-      ${OLD_USER}
+  chroot . /usr/sbin/usermod \
+    -d '/var/lib/gdm' \
+    -u ${USER_ID} \
+    -s /bin/false \
+    -g gdm \
+    ${OLD_USER}
 else
   # Add new user
   echo -n "Creating unprivileged user" 1>&2
-    ${CHROOT} /usr/sbin/useradd \
+  chroot . /usr/sbin/useradd \
     -c 'GDM Daemon Owner' \
     -u $(free_user_id) \
     -g gdm \
@@ -63,23 +68,26 @@ else
     gdm 2> /dev/null
 fi
 
-${CHROOT} usermod -a -G audio gdm &&
-${CHROOT} usermod -a -G video gdm
+chroot . usermod -a -G audio gdm &&
+chroot . usermod -a -G video gdm
 
+config etc/pam.d/gdm-autologin.new
+config etc/pam.d/gdm-fingerprint.new
+config etc/pam.d/gdm-launch-environment.new
+config etc/pam.d/gdm-password.new
+config etc/pam.d/gdm-pin.new
+config etc/pam.d/gdm-smartcard.new
+config etc/gdm/custom.conf.new
 
-if [ ! -d var/lib/gdm ]; then
-  ${CHROOT} mkdir -p /var/lib/gdm
-fi
+chroot . chown -R gdm:gdm /var/lib/gdm /var/cache/gdm /var/log/gdm
+chroot . chmod 0755 /var/lib/gdm /var/cache/gdm /var/log/gdm
 
-${CHROOT} chown -R gdm:gdm /var/lib/gdm /var/cache/gdm /var/log/gdm
-${CHROOT} chmod 0755 /var/lib/gdm /var/cache/gdm /var/log/gdm
+chroot . /usr/bin/dconf update
 
-${CHROOT} /usr/bin/dconf update
-
-${CHROOT} chown -R root:gdm /var/run/gdm
-${CHROOT} chmod 1777 /var/run/gdm
+chroot . chown -R root:gdm /var/run/gdm
+chroot . chmod 1777 /var/run/gdm
 
 if [ -x bin/systemctl ] ; then
-  ${CHROOT} /bin/systemctl --system daemon-reload >/dev/null 2>&1
-  ${CHROOT} /bin/systemctl enable gdm.service
+  chroot . /bin/systemctl --system daemon-reload >/dev/null
+  chroot . /bin/systemctl enable gdm.service
 fi

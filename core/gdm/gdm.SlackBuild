@@ -25,7 +25,7 @@
 
 PKGNAM=gdm
 VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
-BUILD=${BUILD:-2}
+BUILD=${BUILD:-3}
 TAG=${TAG:-_dlack}
 
 if [ -z "$ARCH" ]; then
@@ -108,31 +108,15 @@ mkdir -p $PKG/etc/X11/xinit
 install -m 755 $CWD/xinitrc.gnome $PKG/etc/X11/xinit/xinitrc.gnome
 ln -sf $PKG/etc/X11/xinit/xinitrc.gnome $PKG/etc/X11/xinit/xinitrc
 
-# Copy all those little .desktop files (for the things Slackware ships only)
-# mkdir -p $PKG/usr/share/xsessions
-# for file in blackbox fluxbox fvwm2 kde twm windowmaker ; do
-#   install -m 755 $CWD/desktop/$file.desktop $PKG/usr/share/xsessions/$file.desktop
-# done
+mv $PKG/etc/gdm/custom.conf $PKG/etc/gdm/custom.conf.new
+cat $CWD/custom.conf > $PKG/etc/gdm/custom.conf.new
 
-mkdir -p $PKG/etc/gdm
-install -m 644 $CWD/custom.conf $PKG/etc/gdm/custom.conf
-
-mkdir -p $PKG/etc/pam.d
-cp $CWD/pamd/gdmpin-pamd $PKG/etc/pam.d/gdm-pin
-cp $CWD/pamd/gdmauto-pamd $PKG/etc/pam.d/gdm-autologin
-cp $CWD/pamd/gdmcard-pamd $PKG/etc/pam.d/gdm-smartcard
-cp $CWD/pamd/gdmfinger-pamd $PKG/etc/pam.d/gdm-fingerprint
-cp $CWD/pamd/gdmpass-pamd $PKG/etc/pam.d/gdm-password
-
-install -m 644 $CWD/system.conf $PKG/etc/dbus-1/system.conf
-
-#Install an autostart script for creating xdg-user-dirs
-mkdir -p $PKG/etc/xdg/autostart
-install -m 644 $CWD/xdg-user-dirs.desktop $PKG/etc/xdg/autostart/xdg-user-dirs.desktop
-
-mkdir -p $PKG/usr/share/gnome-shell/theme
-install -m 644 $CWD/login-background.png $PKG/usr/share/gnome-shell/theme/login-background.png
-install -m 644 $CWD/gnome-shell-theme.gresource $PKG/usr/share/gnome-shell/gnome-shell-theme.gresource
+for pamd in $PKG/etc/pam.d/*
+do
+  mv $pamd $pamd.new
+done
+cp $CWD/pamd/gdm-autologin $PKG/etc/pam.d/gdm-autologin.new
+cp $CWD/pamd/gdm-password $PKG/etc/pam.d/gdm-password.new
 
 # Add a documentation directory:
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
