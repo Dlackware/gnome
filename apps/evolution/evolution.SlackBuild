@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Copyright 2014, 2015  Bart van der Hall, Almere, NL
+# Copyright 2020  Eugene Wissner, Dachau, Germany
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -75,6 +76,7 @@ CXXFLAGS="$SLKCFLAGS" \
 cmake -DCMAKE_INSTALL_PREFIX=/usr \
       -DSYSCONF_INSTALL_DIR=/etc  \
       -DLIB_INSTALL_DIR=/usr/lib${LIBDIRSUFFIX} \
+      -DMAN_INSTALL_DIR=/usr/man \
       -DENABLE_INSTALLED_TESTS=ON \
       -DENABLE_PST_IMPORT=OFF     \
       -DENABLE_GTKSPELL=OFF       \
@@ -94,7 +96,11 @@ rm -rf $PKG/usr/lib*/valgrind
 
 # Strip binaries:
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
-	  | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
+  | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
+
+# Compress man pages
+find $PKG/usr/man -type f -exec gzip -9 {} \;
+for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
