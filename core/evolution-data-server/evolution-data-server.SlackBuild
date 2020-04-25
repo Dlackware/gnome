@@ -86,9 +86,6 @@ make install DESTDIR=$PKG
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
-# Fix the annoing bug found later when reading the .pc file
-sed -e 's@Requires: gio-2.0, ,@Requires: gio-2.0@' -i ${PKG}/usr/lib${LIBDIRSUFFIX}/pkgconfig/evolution-data-server-1.2.pc
-
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a COPYING* ChangeLog README $PKG/usr/doc/$PKGNAM-$VERSION
 cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
