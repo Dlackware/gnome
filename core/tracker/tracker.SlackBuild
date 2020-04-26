@@ -2,6 +2,7 @@
 
 # Copyright 2013 Nazarov Micahel <zlob@mail.ru> Samara,Russia
 # Copyright 2015  Bart van der Hall, Almere, NL
+# Copyright 2020  Eugene Wissner, Dachau, Germany
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -23,7 +24,7 @@
 
 PKGNAM=tracker
 VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 if [ -z "$ARCH" ]; then
@@ -69,11 +70,9 @@ find -L . \
  -exec chmod 644 {} \;
 
 # Configure, build, and install:
-export CFLAGS="$SLKCFLAGS"
-export CXXFLAGS="$SLKCFLAGS"
-mkdir meson-build
-cd meson-build
-meson setup \
+CFLAGS="$SLKCFLAGS" \
+CXXFLAGS="$SLKCFLAGS" \
+meson meson-build \
   --prefix=/usr \
   --libdir=lib${LIBDIRSUFFIX} \
   --libexecdir=/usr/libexec \
@@ -84,15 +83,10 @@ meson setup \
   --mandir=/usr/man \
   --sysconfdir=/etc \
   --localstatedir=/var \
+  -Dsystemd_user_services=/usr/lib/systemd/user \
   --buildtype=release \
-  .. || exit 1
-  "${NINJA:=ninja}" $NUMJOBS || exit 1
-  DESTDIR=$PKG $NINJA install || exit 1
-
-cd ..
-
-# Don't ship .la files:
-rm -f $PKG/usr/lib${LIBDIRSUFFIX}/*.la
+  --wrap-mode=nodownload
+DESTDIR=$PKG ninja -C meson-build install
 
 find $PKG/usr/man -type f -exec gzip -9 {} \;
 for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done

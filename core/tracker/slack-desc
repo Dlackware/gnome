@@ -8,12 +8,12 @@
        |-----handy-ruler------------------------------------------------------|
 tracker: tracker (Metadata search engine)
 tracker:
-tracker: Tracker is a tool designed to extract information and metadata about
-tracker: your personal data so that it can be searched easily and quickly.
+tracker: Tracker is an efficient search engine and triplestore for desktop,
+tracker: embedded and mobile.
 tracker:
-tracker:
-tracker:
-tracker:
+tracker: Tracker core contains the database (tracker-store), the database
+tracker: ontologies, the commandline user interface (tracker), and several
+tracker: support libraries.
 tracker:
 tracker:
 tracker:
