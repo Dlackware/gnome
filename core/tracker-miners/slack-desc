@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+              |-----handy-ruler------------------------------------------------------|
+tracker-miners: Tracker Miners (Metadata search engine)
+tracker-miners:
+tracker-miners: Tracker is an efficient search engine and triplestore for desktop,
+tracker-miners: embedded and mobile.
+tracker-miners:
+tracker-miners: Tracker Miners contains the indexer daemon (tracker-miner-fs) and
+tracker-miners: tools to extract metadata from many different filetypes.
+tracker-miners:
+tracker-miners:
+tracker-miners:
+tracker-miners:
