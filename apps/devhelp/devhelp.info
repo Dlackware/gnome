@@ -1,5 +1,5 @@
 PKGNAM="devhelp"
-VERSION="3.34.0"
+VERSION="3.36.2"
 HOMEPAGE="https://wiki.gnome.org/Apps/Devhelp"
-DOWNLOAD="https://download.gnome.org/sources/devhelp/3.34/devhelp-3.34.0.tar.xz"
-MD5SUM="90b35598224076948dd6b2da25de647c"
+DOWNLOAD="https://download.gnome.org/sources/devhelp/3.36/devhelp-3.36.2.tar.xz"
+MD5SUM="18c2cb689da880eb2c8936335bd7c1cd"
