@@ -27,7 +27,7 @@
 PKGNAM=mozjs68
 SRCNAM=mozjs
 VERSION=${VERSION:-$(echo $SRCNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
-BUILD=${BUILD:-2}
+BUILD=${BUILD:-3}
 TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:
@@ -87,8 +87,8 @@ cd js/src
 autoconf2.13
 cd ../../mozjs-build
 
-CFLAGS+="$SLKCFLAGS -fno-delete-null-pointer-checks -fno-strict-aliasing -fno-tree-vrp " \
-CXXFLAGS+="$SLKCFLAGS -fno-delete-null-pointer-checks -fno-strict-aliasing -fno-tree-vrp " \
+CFLAGS="$SLKCFLAGS -fno-delete-null-pointer-checks -fno-strict-aliasing" \
+CXXFLAGS="$SLKCFLAGS -fno-delete-null-pointer-checks -fno-strict-aliasing" \
 ../js/src/configure \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
