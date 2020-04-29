@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright 2016-2020 Eugene Wissner Dachau, Germany
+# Copyright 2016-2020  Eugene Wissner, Dachau, Germany
 # All rights reserved.
 #
 #   Permission to use, copy, modify, and distribute this software for
@@ -71,40 +71,28 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-patch -p1 < $CWD/WIP-build-Fix-link_whole-usage-for-meson-0.52.0.patch
-
-mkdir -pv build
-cd build
+patch -p1 --verbose -i $CWD/generated-lsp-enum.patch
 
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
-meson \
+meson meson-build \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   --localstatedir=/var/lib \
   --mandir=/usr/man \
+  -Dplugin_update_manager=false \
+  --wrap-mode=nodownload \
   --buildtype=release
+DESTDIR=$PKG ninja -C meson-build install
 
-ninja
-DESTDIR=$PKG ninja install
-
-# Compress and link manpages, if any:
-if [ -d $PKG/usr/man ]; then
-  ( cd $PKG/usr/man
-    for manpagedir in $(find . -type d -name "man*") ; do
-      ( cd $manpagedir
-        for eachpage in $( find . -type l -maxdepth 1) ; do
-          ln -s $( readlink $eachpage ).gz $eachpage.gz
-          rm $eachpage
-        done
-        gzip -9 *.?
-      )
-    done
-  )
-fi
+find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
+  | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
+cp -a \
+  COPYING CONTRIBUTING.md AUTHORS README.md NEWS \
+  $PKG/usr/doc/$PKGNAM-$VERSION
 cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
 
 mkdir -p $PKG/install
