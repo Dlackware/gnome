@@ -1,5 +1,5 @@
 PKGNAM="gnome-shell"
-VERSION="3.36.1"
+VERSION="3.36.2"
 HOMEPAGE="https://wiki.gnome.org/Projects/GnomeShell"
-DOWNLOAD="https://download.gnome.org/core/3.36/3.36.1/sources/gnome-shell-3.36.1.tar.xz"
-MD5SUM="e0f5568c4fc9c1784167bf59845b5929"
+DOWNLOAD="https://download.gnome.org/sources/gnome-shell/3.36/gnome-shell-3.36.2.tar.xz"
+MD5SUM="f0cd44e573a82531b4556afa624b1193"
