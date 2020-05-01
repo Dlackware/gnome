@@ -1,5 +1,5 @@
 PKGNAM="gnome-shell-extensions"
-VERSION="3.36.1"
+VERSION="3.36.2"
 HOMEPAGE="https://wiki.gnome.org/Projects/GnomeShell/Extensions"
-DOWNLOAD="https://download.gnome.org/core/3.36/3.36.1/sources/gnome-shell-extensions-3.36.1.tar.xz"
-MD5SUM="cb654d874e175fe600d5d5d12b3b9c32"
+DOWNLOAD="https://download.gnome.org/sources/gnome-shell-extensions/3.36/gnome-shell-extensions-3.36.2.tar.xz"
+MD5SUM="2ac47e148aee43bf5286426e782ffdaf"
