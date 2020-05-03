@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# Copyright 2014 Eugene Wissner (belka.ew@gmail.com)
 # Copyright 2015  Bart van der Hall, Almere, NL
+# Copyright 2014, 2020  Eugene Wissner, Dachau, Germany
 # All rights reserved.
 #
 #   Permission to use, copy, modify, and distribute this software for
@@ -27,8 +27,6 @@ PKGNAM=gnome-weather
 VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
-
-NUMJOBS=${NUMJOBS:--j7}
 
 # Automatically determine the architecture we're building on:
 if [ -z "$ARCH" ]; then
@@ -76,26 +74,28 @@ find . \
 
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
-./configure \
+meson meson-build \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   --localstatedir=/var/lib \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --build=$ARCH-slackware-linux
-
-make $NUMJOBS
-make install DESTDIR=$PKG
+  --wrap-mode=nodownload \
+  --buildtype=release
+DESTDIR=$PKG ninja -C meson-build install
 
 # Strip binaries:
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
-	  | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
+  | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
+cp -a \
+  COPYING.md NEWS README.md \
+  $PKG/usr/doc/$PKGNAM-$VERSION
 cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
+cat $CWD/doinst.sh > $PKG/install/doinst.sh
 
 cd $PKG
 /sbin/makepkg -l y -c n $OUTPUT/$PKGNAM-$VERSION-$ARCH-$BUILD$TAG.txz

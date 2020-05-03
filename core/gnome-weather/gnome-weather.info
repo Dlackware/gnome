@@ -1,5 +1,5 @@
 PKGNAM="gnome-weather"
-VERSION="3.34.0"
-HOMEPAGE="http://www.gnome.org"
-DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/gnome-weather-3.34.0.tar.xz"
+VERSION="3.36.1"
+HOMEPAGE="https://wiki.gnome.org/Design/Apps/Weather"
+DOWNLOAD="https://download.gnome.org/sources/gnome-weather/3.36/gnome-weather-3.36.1.tar.xz"
 MD5SUM="39362771d7abaf0f161ea3e4b1e2dcb1"
