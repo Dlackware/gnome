@@ -32,8 +32,6 @@ libgusb
 colord
 colord-gtk
 exempi
-libnice
-farstream
 lua
 geoclue
 gnome-autoar
