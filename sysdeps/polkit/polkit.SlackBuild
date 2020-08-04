@@ -24,7 +24,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=polkit
-VERSION=${VERSION:-$(echo glib-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
+VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
@@ -37,8 +37,6 @@ if [ -z "$ARCH" ]; then
        *) export ARCH=$( uname -m ) ;;
   esac
 fi
-
-NUMJOBS=${NUMJOBS:--j6}
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
@@ -63,7 +61,7 @@ rm -rf $PKG
 mkdir -p $TMP $PKG
 cd $TMP
 rm -rf $PKGNAM-$VERSION
-tar xvf $CWD/$PKGNAM-$VERSION.tar.?z* || exit 1
+tar xvf $CWD/$PKGNAM-$VERSION.tar.?z || exit 1
 cd $PKGNAM-$VERSION || exit 1
 
 # Make sure ownerships and permissions are sane:
@@ -114,6 +112,9 @@ mkdir -p $PKG/var/lib/polkit
 # Add default policy files for udisks2 and NetworkManager events:
 cat $CWD/10-org.freedesktop.NetworkManager.rules > $PKG/etc/polkit-1/rules.d/10-org.freedesktop.NetworkManager.rules.new
 cat $CWD/20-plugdev-group-mount-override.rules > $PKG/etc/polkit-1/rules.d/20-plugdev-group-mount-override.rules.new
+
+# Make the PAM file .new:
+mv $PKG/etc/pam.d/polkit-1 $PKG/etc/pam.d/polkit-1.new
 
 # Strip binaries:
 find $PKG | xargs file | grep -e "executable" -e "shared object" \
