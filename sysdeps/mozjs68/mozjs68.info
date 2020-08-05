@@ -1,5 +1,0 @@
-PKGNAM="mozjs68"
-VERSION="68.4.2"
-HOMEPAGE="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey"
-DOWNLOAD="https://ftp.acc.umu.se/pub/gnome/teams/releng/tarballs-needing-help/mozjs/mozjs-68.4.2.tar.bz2"
-MD5SUM="cb1ab1983f72d45c737069747c088aa5"

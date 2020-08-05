@@ -1,6 +1,5 @@
 # these are the package to be rebuild/added as base for the gnome build
 autoconf2
-mozjs68
 gmime3
 polkit
 libdaemon
