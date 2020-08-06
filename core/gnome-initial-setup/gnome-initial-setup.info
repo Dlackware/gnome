@@ -1,5 +1,5 @@
 PKGNAM="gnome-initial-setup"
-VERSION="3.36.2"
+VERSION="3.36.4"
 HOMEPAGE="http://www.gnome.org"
-DOWNLOAD="https://download.gnome.org/sources/gnome-initial-setup/3.36/gnome-initial-setup-3.36.2.tar.xz"
-MD5SUM="79583e3bbbfa81717a66bce31c04c26c"
+DOWNLOAD="https://download.gnome.org/sources/gnome-initial-setup/3.36/gnome-initial-setup-3.36.4.tar.xz"
+MD5SUM="3699deb08d25c08ca8135d94b6e25a7f"
