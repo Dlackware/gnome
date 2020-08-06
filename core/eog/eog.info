@@ -1,5 +1,5 @@
 PKGNAM="eog"
-VERSION="3.36.2"
+VERSION="3.36.3"
 HOMEPAGE="https://wiki.gnome.org/Apps/EyeOfGnome"
-DOWNLOAD="https://download.gnome.org/sources/eog/3.36/eog-3.36.2.tar.xz"
-MD5SUM="4947674c706497c1a349dcfd258ae80d"
+DOWNLOAD="https://download.gnome.org/sources/eog/3.36/eog-3.36.3.tar.xz"
+MD5SUM="ac28881108f85354fdf995d6bf4d1c41"
