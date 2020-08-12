@@ -1,5 +1,5 @@
 PKGNAM="baobab"
-VERSION="3.34.0"
+VERSION="3.34.1"
 HOMEPAGE="https://wiki.gnome.org/Apps/Baobab"
-DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/baobab-3.34.0.tar.xz"
-MD5SUM="9c150734fa6e2b61d91c336c2ed6a438"
+DOWNLOAD="https://download.gnome.org/core/3.36/3.36.4/sources/baobab-3.34.1.tar.xz"
+MD5SUM="dbd7893590ed844edf0fc4fd71454b9d"
