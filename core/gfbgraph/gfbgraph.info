@@ -1,5 +1,5 @@
 PKGNAM="gfbgraph"
-VERSION="0.2.3"
+VERSION="0.2.4"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/gfbgraph-0.2.3.tar.xz"
-MD5SUM="81f216f637b40dc9b3a7298651305763"
+DOWNLOAD="https://download.gnome.org/core/3.36/3.36.4/sources/gfbgraph-0.2.4.tar.xz"
+MD5SUM="c38af63e49f8fe8baad99537956b69ba"
