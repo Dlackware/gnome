@@ -1,5 +1,5 @@
 PKGNAM="gnome-music"
-VERSION="3.36.2"
+VERSION="3.36.4.1"
 HOMEPAGE="https://wiki.gnome.org/Apps/Music"
-DOWNLOAD="https://download.gnome.org/sources/gnome-music/3.36/gnome-music-3.36.2.tar.xz"
-MD5SUM="6cc9bf8e66e5ca34c42bc43a8306c95b"
+DOWNLOAD="https://download.gnome.org/sources/gnome-music/3.36/gnome-music-3.36.4.1.tar.xz"
+MD5SUM="d82fa09f5d0a0eae32e318cdf47baaa2"
