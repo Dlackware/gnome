@@ -1,5 +1,5 @@
 PKGNAM="gnome-session"
 VERSION="3.36.0"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/core/3.36/3.36.1/sources/gnome-session-3.36.0.tar.xz"
+DOWNLOAD="https://download.gnome.org/core/3.36/3.36.5/sources/gnome-session-3.36.0.tar.xz"
 MD5SUM="cd23e30c4991ca1f477020c67ea3a540"
