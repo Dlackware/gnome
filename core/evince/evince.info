@@ -1,5 +1,5 @@
 PKGNAM="evince"
 VERSION="3.36.7"
 HOMEPAGE="https://wiki.gnome.org/Apps/Evince"
-DOWNLOAD="https://download.gnome.org/core/3.36/3.36.4/sources/evince-3.36.7.tar.xz"
+DOWNLOAD="https://download.gnome.org/core/3.36/3.36.5/sources/evince-3.36.7.tar.xz"
 MD5SUM="a7ebf1f76552579be71fc63947a15297"
