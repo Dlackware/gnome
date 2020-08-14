@@ -1,5 +1,5 @@
 PKGNAM="gupnp-av"
 VERSION="0.12.11"
 HOMEPAGE="https://wiki.gnome.org/Projects/GUPnP"
-DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/gupnp-av-0.12.11.tar.xz"
+DOWNLOAD="https://download.gnome.org/core/3.36/3.36.5/sources/gupnp-av-0.12.11.tar.xz"
 MD5SUM="f09e99ae20271b0a8cadce806098ae8b"
