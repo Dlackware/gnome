@@ -1,5 +1,5 @@
 PKGNAM="gdm"
-VERSION="3.36.2"
+VERSION="3.36.3"
 HOMEPAGE="https://wiki.gnome.org/Projects/GDM"
-DOWNLOAD="https://download.gnome.org/sources/gdm/3.36/gdm-3.36.2.tar.xz"
-MD5SUM="18384eb8345dbee5a8219916debf7e43"
+DOWNLOAD="https://download.gnome.org/sources/gdm/3.36/gdm-3.36.3.tar.xz"
+MD5SUM="2fb78422269f5e75067024ce5386521c"
