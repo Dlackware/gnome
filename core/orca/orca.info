@@ -1,5 +1,5 @@
 PKGNAM="orca"
-VERSION="3.36.3"
+VERSION="3.36.4"
 HOMEPAGE="http://www.gnome.org"
-DOWNLOAD="https://download.gnome.org/sources/orca/3.36/orca-3.36.3.tar.xz"
-MD5SUM="8eb996877a6377444056392375331a7b"
+DOWNLOAD="https://download.gnome.org/sources/orca/3.36/orca-3.36.4.tar.xz"
+MD5SUM="2c5d6ba9867ea487ca961f9337bc76f8"
