@@ -1,5 +1,5 @@
 PKGNAM="gtksourceview"
-VERSION="4.6.0"
+VERSION="4.6.1"
 HOMEPAGE="https://wiki.gnome.org/Projects/GtkSourceView"
-DOWNLOAD="https://download.gnome.org/core/3.36/3.36.1/sources/gtksourceview-4.6.0.tar.xz"
-MD5SUM="51558b386cd12602b7bb1c460c09bc62"
+DOWNLOAD="https://download.gnome.org/core/3.36/3.36.5/sources/gtksourceview-4.6.1.tar.xz"
+MD5SUM="4d4cff3a57a371bff4793e97d50404ef"
