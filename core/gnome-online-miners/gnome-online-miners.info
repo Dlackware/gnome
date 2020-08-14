@@ -1,5 +1,5 @@
 PKGNAM="gnome-online-miners"
 VERSION="3.34.0"
 HOMEPAGE="https://wiki.gnome.org/Projects/GnomeOnlineMiners"
-DOWNLOAD="https://download.gnome.org/core/3.34/3.34.1/sources/gnome-online-miners-3.34.0.tar.xz"
+DOWNLOAD="https://download.gnome.org/core/3.36/3.36.5/sources/gnome-online-miners-3.34.0.tar.xz"
 MD5SUM="070510f95a8ea5499e9c7e37304abdf9"
