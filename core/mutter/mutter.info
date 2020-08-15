@@ -1,5 +1,5 @@
 PKGNAM="mutter"
-VERSION="3.36.4"
+VERSION="3.36.5"
 HOMEPAGE="https://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/sources/mutter/3.36/mutter-3.36.4.tar.xz"
-MD5SUM="b8efc78dd728792679b1bbe14d0f7f60"
+DOWNLOAD="https://download.gnome.org/sources/mutter/3.36/mutter-3.36.5.tar.xz"
+MD5SUM="064c0d9d60fe3497a5bdf3c09b4e0c52"
