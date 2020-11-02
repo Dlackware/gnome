@@ -8,12 +8,12 @@
            |-----handy-ruler------------------------------------------------------|
 file-roller: file-roller (archive utility)
 file-roller:
-file-roller: File Roller is an archive manager for the GNOME
-file-roller: environment.  This means that you can create and modify 
-file-roller: archives, view the content of an archive, view a file 
-file-roller: contained in the archive, and extract files from the 
+file-roller: File Roller is an archive manager for the GNOME environment. This
+file-roller: means that you can create and modify archives, view the content of an
+file-roller: archive, view a file contained in the archive, and extract files from
 file-roller: archive.
 file-roller:
-file-roller: File Roller is only a front-end (a graphical interface) 
-file-roller: to archiving programs like tar and zip.
+file-roller: File Roller is only a front-end (a graphical interface) to archiving
+file-roller: programs like tar and zip.
+file-roller:
 file-roller:
