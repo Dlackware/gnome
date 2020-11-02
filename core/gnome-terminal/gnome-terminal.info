@@ -1,5 +1,5 @@
 PKGNAM="gnome-terminal"
-VERSION="3.36.2"
+VERSION="3.38.0"
 HOMEPAGE="https://wiki.gnome.org/Apps/Terminal"
-DOWNLOAD="https://download.gnome.org/sources/gnome-terminal/3.36/gnome-terminal-3.36.2.tar.xz"
-MD5SUM="08150cbf2e23dd4f60f959a6eca8ef0c"
+DOWNLOAD="https://download.gnome.org/sources/gnome-terminal/3.38/gnome-terminal-3.38.0.tar.xz"
+MD5SUM="947facc65c12735ac586e9dbf6228502"
