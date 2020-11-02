@@ -73,19 +73,21 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-
-mkdir -pv build
+mkdir build
 cd build
 
-meson --prefix=/usr \
+CFLAGS="$SLKCFLAGS" \
+CXXFLAGS="$SLKCFLAGS" \
+meson .. \
+  --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --sysconfdir=/etc || exit 1
-
+  --sysconfdir=/etc \
+  --buildtype=release \
+  -Dlibportal=false
 ninja
-DESTDIR=$PKG ninja install || exit 1
+DESTDIR=$PKG ninja install
 
 cd ..
-
 
 # Strip binaries:
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
