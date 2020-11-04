@@ -1,4 +1,5 @@
 # these are the package to be rebuild/added as base for the gnome build
+valgrind
 autoconf2
 gmime3
 polkit
