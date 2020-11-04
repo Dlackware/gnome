@@ -62,7 +62,6 @@ telepathy-mission-control
 uhttpmock
 webkitgtk
 PackageKit
-systemd-service-files
 libsass
 sassc
 libdazzle
