@@ -1,5 +1,0 @@
-PKGNAM="sassc"
-VERSION="3.6.1"
-HOMEPAGE="http://sass-lang.com/libsass"
-DOWNLOAD="https://github.com/sass/sassc/archive/3.6.1/sassc-3.6.1.tar.gz"
-MD5SUM="dd675920c7151e50e2d2ac14f0fb222a"
