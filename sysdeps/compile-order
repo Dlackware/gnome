@@ -2,7 +2,6 @@
 valgrind
 autoconf2
 gmime3
-polkit
 libdaemon
 avahi
 gvfs
