@@ -1,5 +1,0 @@
-PKGNAM="libsass"
-VERSION="3.6.2"
-HOMEPAGE="http://sass-lang.com/libsass"
-DOWNLOAD="https://github.com/sass/libsass/archive/3.6.2/libsass-3.6.2.tar.gz"
-MD5SUM="0fcb4b89cd28075663b4c538c5889a8d"

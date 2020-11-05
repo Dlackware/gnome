@@ -61,7 +61,6 @@ telepathy-mission-control
 uhttpmock
 webkitgtk
 PackageKit
-libsass
 sassc
 libdazzle
 pipewire
