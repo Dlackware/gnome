@@ -46,9 +46,9 @@ then
   USER_ID=$(echo ${OLD_ENTRY} | cut --fields=3 --delimiter=':')
   test ${USER_ID} -ge 1000 && USER_ID=$(free_user_id)
   if test "${OLD_USER}" = "gdm"; then
-    echo -n "Updating unprivileged user " 1>&2
+    echo "Updating unprivileged user" 1>&2
   else
-    echo -ne "Changing unprivileged user \e[1m${OLD_USER}\e[0m to" 1>&2
+    echo -e "Changing unprivileged user \e[1m${OLD_USER}\e[0m" 1>&2
   fi
   chroot . /usr/sbin/usermod \
     -d '/var/lib/gdm' \
@@ -86,8 +86,3 @@ chroot . /usr/bin/dconf update
 
 chroot . chown -R root:gdm /var/run/gdm
 chroot . chmod 1777 /var/run/gdm
-
-if [ -x bin/systemctl ] ; then
-  chroot . /bin/systemctl --system daemon-reload >/dev/null
-  chroot . /bin/systemctl enable gdm.service
-fi
