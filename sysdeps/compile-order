@@ -18,7 +18,6 @@ pyatspi
 pylint
 GeoIP
 accountsservice
-autoconf-archive
 brasero
 libgusb
 colord
