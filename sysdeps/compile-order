@@ -9,7 +9,6 @@ gst-plugins-bad
 gst-plugins-ugly
 shared-mime-info
 upower
-volume_key
 libbytesize
 ndctl
 libblockdev
