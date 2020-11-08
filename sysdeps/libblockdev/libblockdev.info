@@ -1,5 +1,0 @@
-PKGNAM="libblockdev"
-VERSION="2.23"
-HOMEPAGE="http://www.freedesktop.org/wiki/Software/udisks"
-DOWNLOAD="https://github.com/storaged-project/libblockdev/releases/download/2.23-1/libblockdev-2.23.tar.gz"
-MD5SUM="b956653be98a677cf004c07b302941b9"
