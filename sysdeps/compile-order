@@ -14,7 +14,6 @@ gcab
 snowball
 appstream-glib
 mm-common
-wpa_supplicant
 pyatspi
 pylint
 GeoIP
