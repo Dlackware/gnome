@@ -1,5 +1,0 @@
-PKGNAM="udisks2"
-VERSION="2.8.4"
-HOMEPAGE="https://www.freedesktop.org/wiki/Software/udisks"
-DOWNLOAD="https://github.com/storaged-project/udisks/releases/download/udisks-2.8.4/udisks-2.8.4.tar.bz2"
-MD5SUM="ee74a32fe2a7ab3dd3aa9e2283b844ea"
