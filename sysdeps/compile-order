@@ -13,7 +13,6 @@ graphviz
 gcab
 snowball
 appstream-glib
-NetworkManager
 mm-common
 wpa_supplicant
 pyatspi

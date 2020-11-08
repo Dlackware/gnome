@@ -1,5 +1,0 @@
-PKGNAM="NetworkManager"
-VERSION="1.20.4"
-HOMEPAGE="http://projects.gnome.org/NetworkManager/"
-DOWNLOAD="https://download.gnome.org/sources/NetworkManager/1.20/NetworkManager-1.20.4.tar.xz"
-MD5SUM="eaebc22528c9320f5ba47dba2683d382"
