@@ -80,7 +80,8 @@ meson meson-build \
   --localstatedir=/var/lib \
   --mandir=/usr/man \
   --wrap-mode=nodownload \
-  --buildtype=release
+  --buildtype=release \
+  -Dsystemdunitdir=no
 DESTDIR=$PKG ninja -C meson-build install
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
