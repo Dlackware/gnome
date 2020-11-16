@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright 2016 Eugene Wissner Dachau, Germany
+# Copyright 2016-2020  Eugene Wissner Dachau, Germany
 # Copyright 2015  Bart van der Hall, Almere, NL
 # All rights reserved.
 #
@@ -27,8 +27,6 @@ PKGNAM=gnome-shell
 VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
-
-NUMJOBS=${NUMJOBS:--j2}
 
 # Automatically determine the architecture we're building on:
 if [ -z "$ARCH" ]; then
@@ -74,21 +72,15 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-mkdir -pv build
-cd build
-
 meson --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   -Dbrowser_plugin=true \
-  -Dsystemd=true \
-  -Dnetworkmanager=true || exit 1
+  -Dsystemd=false \
+  -Dnetworkmanager=true \
+  meson-build
 
-ninja
-DESTDIR=$PKG ninja install || exit 1
-
-cd ..
-
+DESTDIR=$PKG ninja -C meson-build install
 
 # Compress and link manpages, if any:
 if [ -d $PKG/usr/man ]; then
