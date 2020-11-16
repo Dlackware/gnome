@@ -75,27 +75,21 @@ find . \
 
 export PYTHON=/usr/bin/python3
 
-
 mkdir -pv build
 cd build
 
 meson --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --sysconfdir=/etc || exit 1
+  --sysconfdir=/etc
 
 ninja
-DESTDIR=$PKG ninja install || exit 1
+DESTDIR=$PKG ninja install
 
 cd ..
-
 
 # Strip binaries:
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
 	  | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
-
-# Compress man pages:
-#find $PKG/usr/man -type f -exec gzip -9 {} \;
-#for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
