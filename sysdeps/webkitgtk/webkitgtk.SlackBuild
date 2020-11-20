@@ -74,8 +74,7 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-sed -i 's/unsigned short/char16_t/' Source/JavaScriptCore/API/JSStringRef.h
-sed -i '/stdbool.h/ a#include <uchar.h>' Source/JavaScriptCore/API/JSBase.h
+patch -p1 -i $CWD/icu-backward-compatibility.patch
 
 mkdir build
 cd build
@@ -94,6 +93,7 @@ cmake -DCMAKE_BUILD_TYPE=Release  \
   -DCMAKE_INSTALL_DOCDIR=/usr/doc/$PKGNAM-$VERSION \
   -DCMAKE_INSTALL_LIBDIR=lib64 \
   -DPYTHON_EXECUTABLE=/usr/bin/python3 \
+  -DUSE_SYSTEMD=OFF \
   -Wno-dev \
   -G Ninja \
   ..

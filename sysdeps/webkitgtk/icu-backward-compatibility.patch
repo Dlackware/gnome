@@ -1,0 +1,7 @@
+--- a/Source/WTF/wtf/CMakeLists.txt	2020-08-12 11:17:54.000000000 +0200
++++ b/Source/WTF/wtf/CMakeLists.txt	2020-11-02 13:20:05.676000000 +0100
+@@ -569,3 +569,4 @@
+     DESTINATION
+     ${WTF_SCRIPTS_DIR}
+ )
++add_compile_definitions("U_DEFINE_FALSE_AND_TRUE=1")
