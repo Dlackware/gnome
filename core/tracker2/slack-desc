@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+        |-----handy-ruler------------------------------------------------------|
+tracker2: tracker (Metadata search engine)
+tracker2:
+tracker2: Tracker is an efficient search engine and triplestore for desktop,
+tracker2: embedded and mobile.
+tracker2:
+tracker2: Tracker core contains the database (tracker-store), the database
+tracker2: ontologies, the commandline user interface (tracker), and several
+tracker2: support libraries.
+tracker2:
+tracker2:
+tracker2:

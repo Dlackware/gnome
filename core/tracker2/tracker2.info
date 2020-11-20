@@ -1,0 +1,5 @@
+PKGNAM="tracker2"
+VERSION="2.3.6"
+HOMEPAGE="https://gnome.pages.gitlab.gnome.org/tracker/"
+DOWNLOAD="https://download.gnome.org/core/3.38/3.38.1/sources/tracker-2.3.6.tar.xz"
+MD5SUM="f3c8baac2a3089f1c7af1dcb00547c97"
