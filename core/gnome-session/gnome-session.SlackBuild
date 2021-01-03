@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Copyright 2014, 2015  Bart van der Hall, Almere, NL
+# Copyright 2021  Eugen Wissner, Germany, Dachau
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -77,15 +78,14 @@ meson --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   -Dsession_selector=false \
-  -Dsystemd=true \
-  -Dsystemd_journal=true || exit 1
-
+  -Dsystemd=false \
+  -Dsystemd_session="disable" \
+  -Dsystemd_journal=false
 
 ninja
-DESTDIR=$PKG ninja install || exit 1
+DESTDIR=$PKG ninja install
 
 cd ..
-
 
 # Compress and link manpages, if any:
 if [ -d $PKG/usr/man ]; then
