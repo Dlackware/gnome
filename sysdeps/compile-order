@@ -4,7 +4,6 @@ autoconf2
 gmime3
 libdaemon
 avahi
-gvfs
 gst-plugins-bad
 gst-plugins-ugly
 shared-mime-info
