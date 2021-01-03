@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright 2014 Eugene Wissner (belka.ew@gmail.com)
+# Copyright 2014, 2021 Eugen Wissner, Dachau, Germany
 # Copyright 2014, 2015  Bart van der Hall, Almere, NL
 # All rights reserved.
 #
@@ -80,10 +80,11 @@ cd build
 
 meson --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --sysconfdir=/etc || exit 1
+  --sysconfdir=/etc \
+  -Dlogind=libelogind
 
 ninja
-DESTDIR=$PKG ninja install || exit 1
+DESTDIR=$PKG ninja install
 
 cd ..
 
