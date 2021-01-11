@@ -2,7 +2,7 @@
 
 # Slackware build script for tepl
 
-# Copyright 2020  Eugene Wissner, Dachau, Germany
+# Copyright 2020, 2021  Eugene Wissner, Dachau, Germany
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -73,17 +73,15 @@ find -L . \
 
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
-./configure \
+meson \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   --localstatedir=/var \
   --mandir=/usr/man \
-  --docdir=/usr/doc/$PRGNAM-$VERSION \
-  --build=$ARCH-slackware-linux
+  meson-build
 
-make
-make install-strip DESTDIR=$PKG
+DESTDIR=$PKG ninja -C meson-build install
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a \

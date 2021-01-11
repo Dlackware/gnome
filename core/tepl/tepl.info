@@ -1,5 +1,5 @@
 PKGNAM="tepl"
-VERSION="4.4.0"
+VERSION="5.0.1"
 HOMEPAGE="https://wiki.gnome.org/Projects/Tepl"
-DOWNLOAD="https://ftp.acc.umu.se/pub/gnome/sources/tepl/4.4/tepl-4.4.0.tar.xz"
-MD5SUM="013ee8aae178f75cc74e05fac70786b3"
+DOWNLOAD="https://download.gnome.org/sources/tepl/5.0/tepl-5.0.1.tar.xz"
+MD5SUM="5b6b9e022de87ed804266d9edb0e0ff4"
