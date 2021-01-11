@@ -69,10 +69,11 @@ find -L . \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
 # Configure, build, and install:
-export CFLAGS="$SLKCFLAGS"
-export CXXFLAGS="$SLKCFLAGS"
 mkdir meson-build
 cd meson-build
+
+CFLAGS="$SLKCFLAGS" \
+CXXFLAGS="$SLKCFLAGS" \
 meson setup \
   --prefix=/usr \
   --libdir=lib${LIBDIRSUFFIX} \
@@ -85,9 +86,9 @@ meson setup \
   --sysconfdir=/etc \
   --localstatedir=/var/lib \
   --buildtype=release \
-  .. || exit 1
-  "${NINJA:=ninja}" $NUMJOBS || exit 1
-  DESTDIR=$PKG $NINJA install || exit 1
+  ..
+ninja $NUMJOBS
+DESTDIR=$PKG ninja install
 
 cd ..
 
