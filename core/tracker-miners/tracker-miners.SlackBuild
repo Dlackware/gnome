@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright 2020  Eugene Wissner, Dachau, Germany
+# Copyright 2020, 2021  Eugene Wissner, Dachau, Germany
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -22,7 +22,7 @@
 
 PKGNAM=tracker-miners
 VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
-BUILD=${BUILD:-3}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_dlack}
 
 if [ -z "$ARCH" ]; then
@@ -82,7 +82,7 @@ meson meson-build \
   --sysconfdir=/etc \
   --localstatedir=/var \
   -Dminer_rss=false \
-  -Dsystemd_user_services=/usr/lib/systemd/user \
+  -Dsystemd_user_services=false \
   --buildtype=release \
   --wrap-mode=nodownload
 DESTDIR=$PKG ninja -C meson-build install
