@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright 2014 Eugene Wissner (belka.ew@gmail.com)
+# Copyright 2014, 2021  Eugen Wissner, Dachau, Germany
 # Copyright 2015  Bart van der Hall, Almere, NL
 # All rights reserved.
 #
@@ -25,7 +25,7 @@
 
 PKGNAM=gnome-user-share
 VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:
@@ -73,10 +73,8 @@ find . \
  -exec chmod 644 {} \;
 
 # Configure, build, and install:
-export CFLAGS="$SLKCFLAGS"
-export CXXFLAGS="$SLKCFLAGS"
-mkdir meson-build
-cd meson-build
+CFLAGS="$SLKCFLAGS" \
+CXXFLAGS="$SLKCFLAGS" \
 meson setup \
   --prefix=/usr \
   --libdir=lib${LIBDIRSUFFIX} \
@@ -89,11 +87,10 @@ meson setup \
   --sysconfdir=/etc \
   --localstatedir=/var/lib \
   --buildtype=release \
-  .. || exit 1
-  "${NINJA:=ninja}" $NUMJOBS || exit 1
-  DESTDIR=$PKG $NINJA install || exit 1
+  -Dsystemduserunitdir=no \
+  meson-build
 
-cd ..
+DESTDIR=$PKG ninja -C meson-build install
 
 # Don't ship .la files:
 rm -f $PKG/usr/lib${LIBDIRSUFFIX}/*.la
