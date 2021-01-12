@@ -2,7 +2,7 @@
 
 # Slackware build script for PackageKit
 
-# Copyright 2014-2016 Eugene Wissner, Dachau, Germany
+# Copyright 2014-2021  Eugene Wissner, Dachau, Germany
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -36,8 +36,6 @@ if [ -z "$ARCH" ]; then
        *) ARCH=$( uname -m ) ;;
   esac
 fi
-
-NUMJOBS=${NUMJOBS:-"-j4"}
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/dlackware}
@@ -77,26 +75,28 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-cp -R $CWD/patches/* backends/slack/
+patch -p1 -i $CWD/current-config.patch
 
-CFLAGS="$SLKCFLAGS" \
-CXXFLAGS="$SLKCFLAGS" \
-./autogen.sh \
+mkdir -pv meson-build
+cd meson-build
+
+meson \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   --localstatedir=/var \
-  --mandir=/usr/man \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --enable-slack \
-  --enable-systemd \
-  --disable-dummy \
-  --build=$ARCH-slackware-linux  || exit 1
+  -Doffline_update=false \
+  -Dpackaging_backend=slack \
+  -Dsystemd=false \
+  -Ddaemon-tests=false
 
-make $NUMJOBS
-make install-strip DESTDIR=$PKG
+ninja
+DESTDIR=$PKG ninja install
+
+cd ..
 
 # Compress man pages
+mv $PKG/usr/share/man $PKG//usr
 find $PKG/usr/man -type f -exec gzip -9 {} \;
 for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
 

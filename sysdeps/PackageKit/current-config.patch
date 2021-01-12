@@ -1,0 +1,11 @@
+--- a/backends/slack/Slackware.conf.in	2021-01-12 22:35:53.034000000 +0100
++++ b/backends/slack/Slackware.conf.in	2021-01-12 22:36:38.611000000 +0100
+@@ -1,7 +1,7 @@
+ # It is a sample configuration.
+ 
+ [slackware]
+-Mirror=http://mirrors.slackware.com/slackware/@pkgmain@-14.2/
++Mirror=http://mirrors.slackware.com/slackware/@pkgmain@-current/
+ Priority=patches;@pkgmain@;extra;pasture;testing
+ #Blacklist=
+ 
