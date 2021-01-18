@@ -1,5 +1,5 @@
 PKGNAM="libgnomekbd"
 VERSION="3.26.1"
 HOMEPAGE="https://wiki.gnome.org/action/show/Projects/Libgee"
-DOWNLOAD="https://download.gnome.org/core/3.36/3.36.5/sources/libgnomekbd-3.26.1.tar.xz"
+DOWNLOAD="https://download.gnome.org/sources/libgnomekbd/3.26/libgnomekbd-3.26.1.tar.xz"
 MD5SUM="98040022484406e7ebe25f82cef93344"

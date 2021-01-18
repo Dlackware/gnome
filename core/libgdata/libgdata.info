@@ -1,5 +1,5 @@
 PKGNAM="libgdata"
-VERSION="0.17.12"
+VERSION="0.17.13"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/core/3.36/3.36.5/sources/libgdata-0.17.12.tar.xz"
-MD5SUM="9d5692a2308bb949af801be66989e164"
+DOWNLOAD="https://download.gnome.org/sources/libgdata/0.17/libgdata-0.17.13.tar.xz"
+MD5SUM="b1bebb5951f8ef9782cb64c2f2a3b8ad"

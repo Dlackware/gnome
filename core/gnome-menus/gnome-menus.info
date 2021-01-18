@@ -1,5 +1,5 @@
 PKGNAM="gnome-menus"
 VERSION="3.36.0"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/core/3.36/3.36.5/sources/gnome-menus-3.36.0.tar.xz"
+DOWNLOAD="https://download.gnome.org/sources/gnome-menus/3.36/gnome-menus-3.36.0.tar.xz"
 MD5SUM="a8fd71fcf31a87fc799d80396a526829"

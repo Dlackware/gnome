@@ -1,5 +1,5 @@
 PKGNAM="gspell"
-VERSION="1.8.3"
+VERSION="1.8.4"
 HOMEPAGE="https://wiki.gnome.org/Projects/gspell"
-DOWNLOAD="https://download.gnome.org/core/3.36/3.36.5/sources/gspell-1.8.3.tar.xz"
-MD5SUM="d0892000d944e87fd74e8611ef400cdb"
+DOWNLOAD="https://download.gnome.org/sources/gspell/1.8/gspell-1.8.4.tar.xz"
+MD5SUM="378dee938c08c24b559953cbcad83942"

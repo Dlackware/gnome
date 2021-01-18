@@ -1,5 +1,5 @@
 PKGNAM="libdazzle"
-VERSION="3.36.0"
+VERSION="3.38.0"
 HOMEPAGE="https://gitlab.gnome.org/GNOME/libdazzle"
-DOWNLOAD="https://download.gnome.org/core/3.36/3.36.5/sources/libdazzle-3.36.0.tar.xz"
-MD5SUM="154be45a6aac020e7d59f477bd7cafcf"
+DOWNLOAD="https://download.gnome.org/sources/libdazzle/3.38/libdazzle-3.38.0.tar.xz"
+MD5SUM="7dee045bef026ff26af9b16f8252936b"

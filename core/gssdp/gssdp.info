@@ -1,5 +1,5 @@
 PKGNAM="gssdp"
 VERSION="1.2.3"
 HOMEPAGE="https://wiki.gnome.org/Projects/GUPnP"
-DOWNLOAD="https://download.gnome.org/core/3.36/3.36.5/sources/gssdp-1.2.3.tar.xz"
+DOWNLOAD="https://download.gnome.org/sources/gssdp/1.2/gssdp-1.2.3.tar.xz"
 MD5SUM="ef3295a965c06ce0f683522391fbb910"

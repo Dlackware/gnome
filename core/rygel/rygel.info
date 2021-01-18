@@ -1,5 +1,5 @@
 PKGNAM="rygel"
-VERSION="0.38.4"
+VERSION="0.40.0"
 HOMEPAGE="https://wiki.gnome.org/Projects/Rygel"
-DOWNLOAD="https://download.gnome.org/core/3.36/3.36.5/sources/rygel-0.38.4.tar.xz"
-MD5SUM="c104f8994f6d928a20a0119c40c046fd"
+DOWNLOAD="https://download.gnome.org/sources/rygel/0.40/rygel-0.40.0.tar.xz"
+MD5SUM="8526d47477212f7b7e6a1495e9751997"

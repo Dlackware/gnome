@@ -97,7 +97,7 @@ fi
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a \
-  COPYING NEWS README \
+  COPYING NEWS README.md AUTHORS \
   $PKG/usr/doc/$PKGNAM-$VERSION
 
 # If there's a ChangeLog, installing at least part of the recent history

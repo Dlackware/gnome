@@ -1,5 +1,5 @@
 PKGNAM="tracker"
-VERSION="3.0.1"
+VERSION="3.0.3"
 HOMEPAGE="https://gnome.pages.gitlab.gnome.org/tracker/"
-DOWNLOAD="https://download.gnome.org/core/3.38/3.38.2/sources/tracker-3.0.1.tar.xz"
-MD5SUM="173668f5d1a890a494d681457ac7029b"
+DOWNLOAD="https://download.gnome.org/sources/tracker/3.0/tracker-3.0.3.tar.xz"
+MD5SUM="9ba66827bb5271c9e477980639d9873b"

@@ -1,5 +1,5 @@
 PKGNAM="gupnp-dlna"
 VERSION="0.10.5"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/core/3.36/3.36.5/sources/gupnp-dlna-0.10.5.tar.xz"
+DOWNLOAD="https://download.gnome.org/sources/gupnp-dlna/0.10/gupnp-dlna-0.10.5.tar.xz"
 MD5SUM="2d0dc1e4189d0243ac3838ece1e8fea0"

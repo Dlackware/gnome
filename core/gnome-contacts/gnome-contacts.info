@@ -1,5 +1,5 @@
 PKGNAM="gnome-contacts"
 VERSION="3.38.1"
 HOMEPAGE="https://wiki.gnome.org/Design/Apps/Contacts"
-DOWNLOAD="https://download.gnome.org/core/3.38/3.38.2/sources/gnome-contacts-3.38.1.tar.xz"
+DOWNLOAD="https://download.gnome.org/sources/gnome-contacts/3.38/gnome-contacts-3.38.1.tar.xz"
 MD5SUM="2b88637aa758d4df2a3754ca18c82d41"

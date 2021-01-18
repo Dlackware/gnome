@@ -1,5 +1,5 @@
 PKGNAM="tracker-miners"
-VERSION="3.0.1"
+VERSION="3.0.4"
 HOMEPAGE="https://gnome.pages.gitlab.gnome.org/tracker/"
-DOWNLOAD="https://download.gnome.org/core/3.38/3.38.2/sources/tracker-miners-3.0.1.tar.xz"
-MD5SUM="a084d9d982e937b9e445dc600682c5ff"
+DOWNLOAD="https://download.gnome.org/sources/tracker-miners/3.0/tracker-miners-3.0.4.tar.xz"
+MD5SUM="942e928d21b647d5dc236d2b9d1f2eec"

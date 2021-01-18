@@ -1,5 +1,5 @@
 PKGNAM="gnome-user-share"
 VERSION="3.34.0"
 HOMEPAGE="https://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/core/3.38/3.38.2/sources/gnome-user-share-3.34.0.tar.xz"
+DOWNLOAD="https://download.gnome.org/sources/gnome-user-share/3.34/gnome-user-share-3.34.0.tar.xz"
 MD5SUM="a3d983d0cf8357832229ff96172418d8"

@@ -1,5 +1,5 @@
 PKGNAM="gjs"
-VERSION="1.66.0"
+VERSION="1.66.2"
 HOMEPAGE="https://wiki.gnome.org/action/show/Projects/Gjs"
-DOWNLOAD="https://download.gnome.org/sources/gjs/1.66/gjs-1.66.0.tar.xz"
-MD5SUM="d43a936f5edd8ff36ecc54684b26d82a"
+DOWNLOAD="https://download.gnome.org/sources/gjs/1.66/gjs-1.66.2.tar.xz"
+MD5SUM="3c272f27a2ce18c82261698520b1147f"
