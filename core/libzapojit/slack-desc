@@ -6,12 +6,12 @@
 # leave one space after the ':'.
 
           |-----handy-ruler------------------------------------------------------|
-libzapojit: libzapojit (libzapojit)
+libzapojit: libzapojit (GLib wrapper for the SkyDrive and Hotmail REST APIs)
 libzapojit:
-libzapojit: better description needed
+libzapojit: Zapojit is a GLib/GObject wrapper for the SkyDrive and Hotmail REST
+libzapojit: APIs.
 libzapojit:
-libzapojit:
-libzapojit:
+libzapojit: Zapojit is a Czech word that means "connect".
 libzapojit:
 libzapojit:
 libzapojit:
