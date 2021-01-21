@@ -2,7 +2,7 @@
 
 # Copyright 2014  Eugene Wissner, Dachau, Germany
 # Copyright 2015  Bart van der Hall, Almere, NL
-# Copyright 2016-2020  Eugene Wissner, Dachau, Germany
+# Copyright 2016-2021  Eugene Wissner, Dachau, Germany
 # All rights reserved.
 #
 #   Permission to use, copy, modify, and distribute this software for
@@ -26,7 +26,7 @@
 
 PKGNAM=eog
 VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:
@@ -79,11 +79,11 @@ cd build
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
 meson .. \
+  --wrap-mode=nodownload \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
-  --buildtype=release \
-  -Dlibportal=false
+  --buildtype=release
 ninja
 DESTDIR=$PKG ninja install
 
