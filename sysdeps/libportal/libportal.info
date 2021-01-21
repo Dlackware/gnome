@@ -1,0 +1,5 @@
+PKGNAM="libportal"
+VERSION="0.3"
+HOMEPAGE="https://github.com/flatpak/libportal"
+DOWNLOAD="https://github.com/flatpak/libportal/releases/download/0.3/libportal-0.3.tar.xz"
+MD5SUM="dffd58a937dfbabc873e51029dc587f3"
