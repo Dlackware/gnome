@@ -71,20 +71,25 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
+mkdir meson-build
+cd meson-build
+
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
-./configure \
+meson .. \
+  --wrap-mode=nodownload \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
-  --mandir=/usr/man \
   --localstatedir=/var/lib \
-  --enable-gst-launch-plugin \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --build=$ARCH-slackware-linux
+  -Dplugins='["gst-launch"]' \
+  -Dgstreamer=disabled \
+  --mandir=/usr/man \
+  --buildtype=release
+ninja
+DESTDIR=$PKG ninja install
 
-make $NUMJOBS
-make install DESTDIR=$PKG
+cd ..
 
 # Strip binaries:
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
