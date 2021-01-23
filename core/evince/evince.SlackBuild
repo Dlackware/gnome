@@ -70,25 +70,30 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-./configure \
+mkdir meson-build
+cd meson-build
+
+CFLAGS="$SLKCFLAGS" \
+CXXFLAGS="$SLKCFLAGS" \
+meson .. \
+  --wrap-mode=nodownload \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   --localstatedir=/var/lib \
-  --disable-silent-rules \
-  --enable-tiff \
-  --enable-djvu \
-  --enable-comics \
-  --enable-nautilus \
-  --enable-xps \
-  --enable-gtk-doc \
-  --enable-introspection \
+  -Dtiff=enabled \
+  -Ddjvu=enabled \
+  -Dcomics=enabled \
+  -Dnautilus=true \
+  -Dxps=enabled \
+  -Dgtk_doc=true \
+  -Dintrospection=true \
   --mandir=/usr/man \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --build=$ARCH-slackware-linux
+  --buildtype=release
+ninja
+DESTDIR=$PKG ninja install
 
-make $NUMJOBS || make || exit 1
-make install DESTDIR=$PKG || exit 1
+cd ..
 
 # Compress and link manpages, if any:
 if [ -d $PKG/usr/man ]; then
@@ -109,14 +114,6 @@ mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a \
   COPYING NEWS \
   $PKG/usr/doc/$PKGNAM-$VERSION
-
-# If there's a ChangeLog, installing at least part of the recent history
-# is useful, but don't let it get totally out of control:
-if [ -r ChangeLog ]; then
-  DOCSDIR=$(echo $PKG/usr/doc/${PKGNAM}-$VERSION)
-  cat ChangeLog | head -n 1000 > $DOCSDIR/ChangeLog
-  touch -r ChangeLog $DOCSDIR/ChangeLog
-fi
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
