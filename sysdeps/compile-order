@@ -57,6 +57,7 @@ pipewire
 lua53
 amtk
 python-dbusmock
+libhandy0
 libhandy
 uchardet
 libxmlb
