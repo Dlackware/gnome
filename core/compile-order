@@ -16,7 +16,6 @@ clutter-gtk
 gnome-desktop
 gtksourceview
 tepl
-gsettings-desktop-schemas
 gnome-settings-daemon
 libgtop
 totem-pl-parser
