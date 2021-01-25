@@ -1,6 +1,5 @@
 ### [gnome-suites-core-deps] begin
 libseccomp
-libwnck3
 mousetweaks
 yelp-xsl
 yelp-tools
