@@ -17,7 +17,6 @@ gnome-desktop
 gtksourceview
 tepl
 gnome-settings-daemon
-libgtop
 totem-pl-parser
 grilo
 libmediaart

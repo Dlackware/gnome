@@ -1,5 +1,0 @@
-PKGNAM="libgtop"
-VERSION="2.40.0"
-HOMEPAGE="http://library.gnome.org/devel/libgtop/"
-DOWNLOAD="https://download.gnome.org/sources/libgtop/2.40/libgtop-2.40.0.tar.xz"
-MD5SUM="c6d67325cd97b2208b41e07e6cc7b947"
