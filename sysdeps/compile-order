@@ -16,7 +16,6 @@ mm-common
 pyatspi
 pylint
 GeoIP
-accountsservice
 brasero
 libgusb
 colord
