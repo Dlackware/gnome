@@ -38,7 +38,6 @@ gnome-control-center
 gnome-menus
 gnome-session
 gdm
-gjs
 zenity
 mutter
 gnome-shell
