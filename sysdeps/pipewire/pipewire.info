@@ -1,5 +1,0 @@
-PKGNAM="pipewire"
-VERSION="0.3.2"
-HOMEPAGE="https://pipewire.org/"
-DOWNLOAD="https://github.com/PipeWire/pipewire/archive/0.3.2/pipewire-0.3.2.tar.gz"
-MD5SUM="b39c50a59b779982cb888ca36d769d2d"
