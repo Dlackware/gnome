@@ -6,7 +6,6 @@ libdaemon
 avahi
 gst-plugins-bad
 gst-plugins-ugly
-shared-mime-info
 upower
 graphviz
 gcab
