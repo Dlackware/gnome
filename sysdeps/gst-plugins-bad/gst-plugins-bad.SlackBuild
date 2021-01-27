@@ -69,48 +69,22 @@ find . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-# Extract api version
-APIVER="$(grep ^GST_API_VERSION= configure.ac | cut -d= -f2)"
-if [ -z "${APIVER}" ] ;then
-  echo "Variable APIVER not defined"
-  exit 1
-fi
-
-patch -p1 --verbose -i $CWD/0001-vulkan-Drop-use-of-VK_RESULT_BEGIN_RANGE.patch
-
 CFLAGS="${SLKCFLAGS}" \
 CXXFLAGS="${SLKCFLAGS}" \
-./configure \
+meson meson-build \
+  --wrap-mode=nodownload \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   --localstatedir=/var \
   --infodir=/usr/info \
   --mandir=/usr/man \
-  --docdir=/usr/doc/${PKGNAM}-${VERSION} \
-  --enable-introspection=yes \
-  --enable-profiling \
-  --disable-silent-rules \
-  --disable-static \
-  --disable-rpath \
-  --with-package-name="${SLKDIST} ${PKGNAM} package" \
-  --with-package-origin="${SLKDIST} Linux" \
-  --disable-gtk-doc \
-  --enable-experimental \
-  --build=$ARCH-slackware-linux
+  -Dintrospection=enabled \
+  -Dpackage-name="${SLKDIST} ${PKGNAM} package" \
+  -Dpackage-origin="${SLKDIST} Linux" \
+  --buildtype=release
 
-make
-make install DESTDIR=${PKG}
-
-rm -f ${PKG}/usr/lib*/gstreamer-${APIVER}/*.{a,la}
-rm -f ${PKG}/usr/lib*/*.a
-
-if [ -x /usr/bin/chrpath ] ;then
-  chrpath --delete --keepgoing ${PKG}/usr/lib*/*.so*
-  chrpath --delete --keepgoing ${PKG}/usr/lib*/*/*.so*
-fi
-
-rm -rf ${PKG}/usr/share/locale
+DESTDIR=${PKG} ninja -C meson-build install
 
 find ${PKG} | xargs file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null
