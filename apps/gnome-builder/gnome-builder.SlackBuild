@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright 2016-2020  Eugene Wissner, Dachau, Germany
+# Copyright 2016-2021  Eugene Wissner, Dachau, Germany
 # All rights reserved.
 #
 #   Permission to use, copy, modify, and distribute this software for
@@ -24,7 +24,7 @@
 
 PKGNAM=gnome-builder
 VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_dlack}
 
 # Automatically determine the architecture we're building on:
@@ -70,8 +70,6 @@ find . \
  -exec chmod 755 {} \; -o \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
-
-patch -p1 --verbose -i $CWD/generated-lsp-enum.patch
 
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
