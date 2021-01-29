@@ -1,5 +1,5 @@
 PKGNAM="libseccomp"
-VERSION="2.3.2"
+VERSION="2.5.1"
 HOMEPAGE="https://github.com/seccomp/libseccomp"
-DOWNLOAD="https://github.com/seccomp/libseccomp/archive/v2.3.2/libseccomp-2.3.2.tar.gz"
-MD5SUM="710c87d942fecec5e169fab21a26c30a"
+DOWNLOAD="https://github.com/seccomp/libseccomp/archive/v2.5.1/libseccomp-2.5.1.tar.gz"
+MD5SUM="150ccf132ecf26598430c5addf3a543e"
