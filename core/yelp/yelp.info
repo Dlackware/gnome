@@ -1,5 +1,5 @@
 PKGNAM="yelp"
-VERSION="3.38.2"
+VERSION="3.38.3"
 HOMEPAGE="https://wiki.gnome.org/Apps/Yelp"
-DOWNLOAD="https://download.gnome.org/sources/yelp/3.38/yelp-3.38.2.tar.xz"
-MD5SUM="e36148a18c7e7203d69c9eab616cc096"
+DOWNLOAD="https://download.gnome.org/sources/yelp/3.38/yelp-3.38.3.tar.xz"
+MD5SUM="33c319da0f332b535758a5d7b7a138ad"

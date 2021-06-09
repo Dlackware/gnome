@@ -1,5 +1,5 @@
 PKGNAM="gnome-shell"
-VERSION="3.38.2"
+VERSION="3.38.4"
 HOMEPAGE="https://wiki.gnome.org/Projects/GnomeShell"
-DOWNLOAD="https://download.gnome.org/sources/gnome-shell/3.38/gnome-shell-3.38.2.tar.xz"
-MD5SUM="069511072eedd1934b762320467c0ab7"
+DOWNLOAD="https://download.gnome.org/sources/gnome-shell/3.38/gnome-shell-3.38.4.tar.xz"
+MD5SUM="e6c891c430016ced449e38661ddf6dec"

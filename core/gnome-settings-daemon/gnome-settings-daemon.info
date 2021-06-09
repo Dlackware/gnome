@@ -1,5 +1,5 @@
 PKGNAM="gnome-settings-daemon"
-VERSION="3.38.1"
+VERSION="3.38.2"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/sources/gnome-settings-daemon/3.38/gnome-settings-daemon-3.38.1.tar.xz"
-MD5SUM="ac40a03be99379de432b822c0001904e"
+DOWNLOAD="https://download.gnome.org/sources/gnome-settings-daemon/3.38/gnome-settings-daemon-3.38.2.tar.xz"
+MD5SUM="685193013079ea9e7f48038b9cba8912"
