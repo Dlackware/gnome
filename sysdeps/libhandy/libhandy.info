@@ -1,5 +1,5 @@
 PKGNAM="libhandy"
-VERSION="1.0.3"
+VERSION="1.2.2"
 HOMEPAGE="https://source.puri.sm/Librem5/libhandy"
-DOWNLOAD="https://download.gnome.org/sources/libhandy/1.0/libhandy-1.0.3.tar.xz"
-MD5SUM="b2a93c1344f4c78afc0e8a84a6642cf3"
+DOWNLOAD="https://download.gnome.org/sources/libhandy/1.2/libhandy-1.2.2.tar.xz"
+MD5SUM="c039a0cadb4e2fba93b1f805a3a876b8"

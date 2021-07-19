@@ -20,6 +20,7 @@ colord
 colord-gtk
 exempi
 lua
+gtk+4
 geoclue
 gnome-autoar
 gnome-common

@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+         |-----handy-ruler------------------------------------------------------|
+appstream: appstream (Appstream metadata library)
+appstream:
+appstream: This library provides objects and helper methods to help reading and
+appstream: writing AppStream metadata.
+appstream:
+appstream: Homepage: https://people.freedesktop.org/~hughsient/appstream-glib/
+appstream:
+appstream:
+appstream:
+appstream:
+appstream:

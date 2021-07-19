@@ -1,0 +1,5 @@
+PKGNAM="appstream"
+VERSION="0.14.3"
+HOMEPAGE="https://github.com/hughsie/appstream-glib"
+DOWNLOAD="https://www.freedesktop.org/software/appstream/releases/AppStream-0.14.3.tar.xz"
+MD5SUM="fc4c5b9d4c7ace29063e68d16040fbd1"

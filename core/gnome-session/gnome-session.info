@@ -1,5 +1,5 @@
 PKGNAM="gnome-session"
-VERSION="3.38.0"
+VERSION="40.1.1"
 HOMEPAGE="https://wiki.gnome.org/Projects/SessionManagement"
-DOWNLOAD="https://download.gnome.org/sources/gnome-session/3.38/gnome-session-3.38.0.tar.xz"
-MD5SUM="736024b46e2542b9b68adaa43f754f49"
+DOWNLOAD="https://download.gnome.org/sources/gnome-session/40/gnome-session-40.1.1.tar.xz"
+MD5SUM="4fe52c247137b0c9329ca4ddfe9f0070"

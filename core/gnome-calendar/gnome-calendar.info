@@ -1,5 +1,5 @@
 PKGNAM="gnome-calendar"
-VERSION="3.38.2"
+VERSION="40.2"
 HOMEPAGE="https://wiki.gnome.org/Core/Calendar"
-DOWNLOAD="https://download.gnome.org/sources/gnome-calendar/3.38/gnome-calendar-3.38.2.tar.xz"
-MD5SUM="b4edae3a3fa28c92bbf79b014d6a2612"
+DOWNLOAD="https://download.gnome.org/sources/gnome-calendar/40/gnome-calendar-40.2.tar.xz"
+MD5SUM="003a9a645aef0f3b80952836fe2260d3"

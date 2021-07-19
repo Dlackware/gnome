@@ -1,5 +1,5 @@
 PKGNAM="gnome-control-center"
-VERSION="3.38.6"
+VERSION="40.0"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/sources/gnome-control-center/3.38/gnome-control-center-3.38.6.tar.xz"
-MD5SUM="0ec18d55267b7c892b44c50632af1a89"
+DOWNLOAD="https://download.gnome.org/sources/gnome-control-center/40/gnome-control-center-40.0.tar.xz"
+MD5SUM="d704e59afe2df9c24ed876841adb3e0a"

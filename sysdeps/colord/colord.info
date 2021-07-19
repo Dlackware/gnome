@@ -1,5 +1,5 @@
 PKGNAM="colord"
-VERSION="1.4.4"
+VERSION="1.4.5"
 HOMEPAGE="http://www.freedesktop.org/"
-DOWNLOAD="http://www.freedesktop.org/software/colord/releases/colord-1.4.4.tar.xz"
-MD5SUM="32c2709a6002d9ee750483aaed6379c8"
+DOWNLOAD="http://www.freedesktop.org/software/colord/releases/colord-1.4.5.tar.xz"
+MD5SUM="adc4501b54fb8667ee99f64cff87e12d"

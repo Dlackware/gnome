@@ -1,5 +1,5 @@
 PKGNAM="gnome-desktop"
-VERSION="3.38.6"
+VERSION="40.1"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/sources/gnome-desktop/3.38/gnome-desktop-3.38.6.tar.xz"
-MD5SUM="c144b7ba8ae7ff37cebc7f01e4ee681e"
+DOWNLOAD="https://download.gnome.org/sources/gnome-desktop/40/gnome-desktop-40.1.tar.xz"
+MD5SUM="7c1bbf39197e9809ad82b8563cfc172e"

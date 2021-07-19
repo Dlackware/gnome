@@ -1,0 +1,5 @@
+PKGNAM="gtk+4"
+VERSION="4.3.1"
+HOMEPAGE="https://www.gnu.org/"
+DOWNLOAD="https://download-fallback.gnome.org/sources/gtk/4.3/gtk-4.3.1.tar.xz"
+MD5SUM="7bcc8940e4ea3480927f81232d4f9fae"

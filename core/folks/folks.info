@@ -1,5 +1,5 @@
 PKGNAM="folks"
-VERSION="0.14.0"
+VERSION="0.15.2"
 HOMEPAGE="https://wiki.gnome.org/action/show/Projects/Folks"
-DOWNLOAD="https://download.gnome.org/sources/folks/0.14/folks-0.14.0.tar.xz"
-MD5SUM="dc852fceab9e84362b675d5ffcd4803e"
+DOWNLOAD="https://download.gnome.org/sources/folks/0.15/folks-0.15.2.tar.xz"
+MD5SUM="db7d824bcc7b2404c9570451028f1aa6"

@@ -1,5 +1,5 @@
 PKGNAM="libpeas"
-VERSION="1.28.0"
+VERSION="1.30.0"
 HOMEPAGE="http://www.gnome.org/"
-DOWNLOAD="https://download.gnome.org/sources/libpeas/1.28/libpeas-1.28.0.tar.xz"
-MD5SUM="62a5d01e9561f8fafca68e2863640735"
+DOWNLOAD="https://download.gnome.org/sources/libpeas/1.30/libpeas-1.30.0.tar.xz"
+MD5SUM="60b9d9fe2ee9dd518fb12d5d404e296a"

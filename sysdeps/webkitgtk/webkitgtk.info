@@ -1,5 +1,5 @@
 PKGNAM="webkitgtk"
-VERSION="2.30.2"
+VERSION="2.32.1"
 HOMEPAGE="https://webkitgtk.org/"
-DOWNLOAD="https://webkitgtk.org/releases/webkitgtk-2.30.2.tar.xz"
-MD5SUM="2163f1f982c63cb8fa75bf1b36396304"
+DOWNLOAD="https://webkitgtk.org/releases/webkitgtk-2.32.1.tar.xz"
+MD5SUM="b12790ae1209e1d5848aeb4fb70994db"

@@ -1,5 +1,5 @@
 PKGNAM="sushi"
-VERSION="3.38.0"
+VERSION="3.38.1"
 HOMEPAGE="https://git.gnome.org/browse/sushi"
-DOWNLOAD="https://download.gnome.org/sources/sushi/3.38/sushi-3.38.0.tar.xz"
-MD5SUM="64409079d4da33156e53b9ecc3e6ba17"
+DOWNLOAD="https://download.gnome.org/sources/sushi/3.38/sushi-3.38.1.tar.xz"
+MD5SUM="33b28a04af1923a33febe68377de7651"

@@ -70,7 +70,7 @@ gnome-online-miners
 libgnomekbd
 file-roller
 gedit
-gnome-clocks
+#gnome-clocks
 gnome-color-manager
 libgepub
 gnome-getting-started-docs

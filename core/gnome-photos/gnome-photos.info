@@ -1,5 +1,5 @@
 PKGNAM="gnome-photos"
-VERSION="3.38.1"
+VERSION="40.0"
 HOMEPAGE="https://wiki.gnome.org/Apps/Photos"
-DOWNLOAD="https://download.gnome.org/sources/gnome-photos/3.38/gnome-photos-3.38.1.tar.xz"
-MD5SUM="96f87446e960eff4e7d0a4a112181f6b"
+DOWNLOAD="https://download.gnome.org/sources/gnome-photos/40/gnome-photos-40.0.tar.xz"
+MD5SUM="22c5a55020e6b5d05fa93552f56db1c8"

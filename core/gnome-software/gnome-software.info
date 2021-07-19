@@ -1,5 +1,5 @@
 PKGNAM="gnome-software"
-VERSION="3.38.2"
+VERSION="40.2"
 HOMEPAGE="https://wiki.gnome.org/Apps/Software"
-DOWNLOAD="https://download.gnome.org/sources/gnome-software/3.38/gnome-software-3.38.2.tar.xz"
-MD5SUM="daa929cc1df3b9ec55ac03b7f4792a68"
+DOWNLOAD="https://download.gnome.org/sources/gnome-software/40/gnome-software-40.2.tar.xz"
+MD5SUM="69a5ff1c8cbc3839c69a8d553269e797"

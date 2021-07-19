@@ -76,6 +76,7 @@ cd build
 meson --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
+  -Dtests=none \
   -Dselinux=false || exit 1
 
 
